@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/frontend-team/static/css/main.c37223da.chunk.css",
+    "main.js": "/frontend-team/static/js/main.0cc3fcf4.chunk.js",
+    "main.js.map": "/frontend-team/static/js/main.0cc3fcf4.chunk.js.map",
+    "runtime-main.js": "/frontend-team/static/js/runtime-main.9c770acd.js",
+    "runtime-main.js.map": "/frontend-team/static/js/runtime-main.9c770acd.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/frontend-team/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.78982ec8.chunk.js": "/frontend-team/static/js/2.78982ec8.chunk.js",
+    "static/js/2.78982ec8.chunk.js.map": "/frontend-team/static/js/2.78982ec8.chunk.js.map",
+    "index.html": "/frontend-team/index.html",
+    "precache-manifest.289d377ae9933a3a082f3cb2706f4669.js": "/frontend-team/precache-manifest.289d377ae9933a3a082f3cb2706f4669.js",
+    "service-worker.js": "/frontend-team/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/frontend-team/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.c37223da.chunk.css.map": "/frontend-team/static/css/main.c37223da.chunk.css.map",
+    "static/js/2.78982ec8.chunk.js.LICENSE.txt": "/frontend-team/static/js/2.78982ec8.chunk.js.LICENSE.txt",
+    "static/media/Navigation.css": "/frontend-team/static/media/navbarBurgerMenuIcon.fed70ed7.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9c770acd.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.78982ec8.chunk.js",
+    "static/css/main.c37223da.chunk.css",
+    "static/js/main.0cc3fcf4.chunk.js"
+  ]
+}
