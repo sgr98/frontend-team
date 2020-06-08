@@ -1,0 +1,9 @@
+@media (min-width: 700px) {
+  .HomePage {
+    margin: 0 5%;
+  }
+}
+
+.HomePage {
+  margin: 0 2%;
+}
