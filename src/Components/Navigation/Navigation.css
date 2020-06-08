@@ -55,21 +55,17 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 188, 242, 1),
-    rgba(123, 163, 244, 1),
-    rgba(180, 160, 255, 1)
-  );
+  background: linear-gradient(90deg, rgba(0, 188, 242, 1), rgba(123, 163, 244, 1), rgba(180, 160, 255, 1)  );
   transform-origin: bottom right;
-  transition: transform ease-in-out 0.8s;
-  -webkit-transition: transform ease-in-out 0.8s;
-  -moz-transition: transform ease-in-out 0.8s;
-  -ms-transition: transform ease-in-out 0.8s;
-  -o-transition: transform ease-in-out 0.8s;
+  transition: transform ease-in-out 0.5s;
+  -webkit-transition: transform ease-in-out 0.5s;
+  -moz-transition: transform ease-in-out 0.5s;
+  -ms-transition: transform ease-in-out 0.5s;
+  -o-transition: transform ease-in-out 0.5s;
 }
 
-.navigation-link:active::before {
+.navigation-link:active::before,
+.navigation-link:hover::before {
   transform: scaleX(1);
   -webkit-transform: scaleX(1);
   -moz-transform: scaleX(1);
