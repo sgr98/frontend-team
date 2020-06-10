@@ -11,14 +11,10 @@
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
-<<<<<<< HEAD
     "react-icons": "^3.10.0",
     "react-scripts": "3.4.1",
-    "save": "^2.4.0"
-=======
-    "react-scripts": "3.4.1",
+    "save": "^2.4.0",
     "swiper": "^5.4.2"
->>>>>>> e2a7b98a74562581b863e598071349dff723a6f9
   },
   "scripts": {
     "start": "react-scripts start",

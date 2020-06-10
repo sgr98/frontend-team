@@ -1,56 +1,56 @@
-import React, { useEffect } from "react";
-import Swiper from "swiper";
-import "./UpcomingTalks.css";
+import React, { useEffect } from 'react';
+import Swiper from 'swiper';
+import './UpcomingTalks.css';
 
 const data = [
   {
-    title: "Advanced Chaos Theory by Prof. P C Deshmuk",
-    time: "Sunday, 5-12-2020, 2:00 pm",
-    location: "TC1 Transit Campus",
+    title: 'Advanced Chaos Theory by Prof. P C Deshmuk',
+    time: 'Sunday, 5-12-2020, 2:00 pm',
+    location: 'TC1 Transit Campus',
   },
   {
-    title: "Advanced Chaos Theory by Prof. P C Deshmuk",
-    time: "Sunday, 5-12-2020, 2:00 pm",
-    location: "TC1 Transit Campus",
+    title: 'Advanced Chaos Theory by Prof. P C Deshmuk',
+    time: 'Sunday, 5-12-2020, 2:00 pm',
+    location: 'TC1 Transit Campus',
   },
   {
-    title: "Advanced Chaos Theory by Prof. P C Deshmuk",
-    time: "Sunday, 5-12-2020, 2:00 pm",
-    location: "TC1 Transit Campus",
+    title: 'Advanced Chaos Theory by Prof. P C Deshmuk',
+    time: 'Sunday, 5-12-2020, 2:00 pm',
+    location: 'TC1 Transit Campus',
   },
   {
-    title: "Advanced Chaos Theory by Prof. P C Deshmuk",
-    time: "Sunday, 5-12-2020, 2:00 pm",
-    location: "TC1 Transit Campus",
+    title: 'Advanced Chaos Theory by Prof. P C Deshmuk',
+    time: 'Sunday, 5-12-2020, 2:00 pm',
+    location: 'TC1 Transit Campus',
   },
   {
-    title: "Advanced Chaos Theory by Prof. P C Deshmuk",
-    time: "Sunday, 5-12-2020, 2:00 pm",
-    location: "TC1 Transit Campus",
+    title: 'Advanced Chaos Theory by Prof. P C Deshmuk',
+    time: 'Sunday, 5-12-2020, 2:00 pm',
+    location: 'TC1 Transit Campus',
   },
   {
-    title: "Advanced Chaos Theory by Prof. P C Deshmuk",
-    time: "Sunday, 5-12-2020, 2:00 pm",
-    location: "TC1 Transit Campus",
+    title: 'Advanced Chaos Theory by Prof. P C Deshmuk',
+    time: 'Sunday, 5-12-2020, 2:00 pm',
+    location: 'TC1 Transit Campus',
   },
   {
-    title: "Advanced Chaos Theory by Prof. P C Deshmuk",
-    time: "Sunday, 5-12-2020, 2:00 pm",
-    location: "TC1 Transit Campus",
+    title: 'Advanced Chaos Theory by Prof. P C Deshmuk',
+    time: 'Sunday, 5-12-2020, 2:00 pm',
+    location: 'TC1 Transit Campus',
   },
   {
-    title: "Advanced Chaos Theory by Prof. P C Deshmuk",
-    time: "Sunday, 5-12-2020, 2:00 pm",
-    location: "TC1 Transit Campus",
+    title: 'Advanced Chaos Theory by Prof. P C Deshmuk',
+    time: 'Sunday, 5-12-2020, 2:00 pm',
+    location: 'TC1 Transit Campus',
   },
 ];
 
 const UpcomingTalks = () => {
   useEffect(() => {
-    var swiper1 = new Swiper("#UpcomingTalks-swiper-container", {
-      direction: "vertical",
+    const swiper1 = new Swiper('#UpcomingTalks-swiper-container', {
+      direction: 'vertical',
       pagination: {
-        el: ".swiper-pagination",
+        el: '.swiper-pagination',
         clickable: true,
       },
       slidesPerView: 4,
@@ -64,7 +64,7 @@ const UpcomingTalks = () => {
     });
   });
   return (
-    <>
+    <div>
       <div id="UpcomingTalks-center">
         <div className="center heading-carousel">
           Upcoming Talks & Workshops
@@ -80,16 +80,18 @@ const UpcomingTalks = () => {
                 <span id="UpcomingTalksText"> {item.title}</span>
 
                 <span id="UpcomingTalksDate">
-                  {item.time} at {item.location}
+                  {item.time}
+                  at
+                  {item.location}
                 </span>
               </div>
             ))}
           </div>
 
-          <div className="swiper-pagination"></div>
+          <div className="swiper-pagination" />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,63 +1,63 @@
-import React, { useEffect } from "react";
-import "./UpcomingActivities.css";
-import Swiper from "swiper";
-import Modal from "./Modal/Modal";
+import React, { useEffect } from 'react';
+import './UpcomingActivities.css';
+import Swiper from 'swiper';
+import Modal from './Modal/Modal';
 
 const data = [
   {
-    buttonTitle: "Join Telegram",
-    title: "Let’s Download Telegram",
+    buttonTitle: 'Join Telegram',
+    title: 'Let’s Download Telegram',
     description:
-      " Justice League’s Snyder cut realesing exclusively on HBO Max and Telegram in 2021.",
-    postRequestUrl: "localhost",
+      ' Justice League’s Snyder cut realesing exclusively on HBO Max and Telegram in 2021.',
+    postRequestUrl: 'localhost',
     imageUrl:
-      "https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg",
+      'https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg',
   },
   {
-    buttonTitle: "Join Telegram",
-    title: "Let’s Download Telegram",
+    buttonTitle: 'Join Telegram',
+    title: 'Let’s Download Telegram',
     description:
-      " Justice League’s Snyder cut realesing exclusively on HBO Max and Telegram in 2021.",
-    postRequestUrl: "#!",
+      ' Justice League’s Snyder cut realesing exclusively on HBO Max and Telegram in 2021.',
+    postRequestUrl: '#!',
     imageUrl:
-      "https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg",
+      'https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg',
   },
   {
-    buttonTitle: "Join Telegram",
-    title: "Let’s Download Telegram",
+    buttonTitle: 'Join Telegram',
+    title: 'Let’s Download Telegram',
     description:
-      " Justice League’s Snyder cut realesing exclusively on HBO Max and Telegram in 2021.",
-    postRequestUrl: "#!",
+      ' Justice League’s Snyder cut realesing exclusively on HBO Max and Telegram in 2021.',
+    postRequestUrl: '#!',
     imageUrl:
-      "https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg",
+      'https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg',
   },
   {
-    buttonTitle: "Join Telegram",
-    title: "Let’s Download Telegram",
+    buttonTitle: 'Join Telegram',
+    title: 'Let’s Download Telegram',
     description:
-      " Justice League’s Snyder cut realesing exclusively on HBO Max and Telegram in 2021.",
-    postRequestUrl: "#!",
+      ' Justice League’s Snyder cut realesing exclusively on HBO Max and Telegram in 2021.',
+    postRequestUrl: '#!',
     imageUrl:
-      "https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg",
+      'https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg',
   },
   {
-    buttonTitle: "Join Telegram",
-    title: "Let’s Download Telegram",
+    buttonTitle: 'Join Telegram',
+    title: 'Let’s Download Telegram',
     description:
-      " Justice League’s Snyder cut realesing exclusively on HBO Max and Telegram in 2021.",
-    postRequestUrl: "#!",
+      ' Justice League’s Snyder cut realesing exclusively on HBO Max and Telegram in 2021.',
+    postRequestUrl: '#!',
     imageUrl:
-      "https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg",
+      'https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg',
   },
 ];
 
 const UpcomingActivities = () => {
   useEffect(() => {
-    var swiper = new Swiper("#UpcomingActivities-swiper-container", {
-      effect: "coverflow",
+    let swiper = new Swiper('#UpcomingActivities-swiper-container', {
+      effect: 'coverflow',
       grabCursor: true,
       centeredSlides: true,
-      slidesPerView: "auto",
+      slidesPerView: 'auto',
       coverflowEffect: {
         rotate: 20,
         stretch: 0,
@@ -66,7 +66,7 @@ const UpcomingActivities = () => {
         slideShadows: true,
       },
       pagination: {
-        el: "#UpcomingActivities-swiper-pagination",
+        el: '#UpcomingActivities-swiper-pagination',
         clickable: true,
       },
       loop: true,
@@ -76,8 +76,8 @@ const UpcomingActivities = () => {
       },
       lazy: true,
       navigation: {
-        nextEl: "#UpcomingActivities-swiper-button-next",
-        prevEl: "#UpcomingActivities-swiper-button-prev",
+        nextEl: '#UpcomingActivities-swiper-button-next',
+        prevEl: '#UpcomingActivities-swiper-button-prev',
       },
     });
   }, []);

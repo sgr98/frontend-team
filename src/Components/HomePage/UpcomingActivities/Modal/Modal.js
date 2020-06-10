@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Modal, Button, Form } from "react-bootstrap";
+import React, { useState } from 'react';
+import { Modal, Button, Form } from 'react-bootstrap';
 
 function MyVerticallyCenteredModal({
   onEmailSubmit,
@@ -7,7 +7,7 @@ function MyVerticallyCenteredModal({
   description,
   ...props
 }) {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
   return (
     <Modal
       {...props}
@@ -20,9 +20,9 @@ function MyVerticallyCenteredModal({
       </Modal.Header>
       <Modal.Body>
         <h4>{description}</h4>
-        <p>Enter your Colledge Email address to join this Activity</p>
+        <p>Enter your College Email address to join this Activity</p>
         <Form>
-          {" "}
+          {' '}
           <Form.Group controlId="formBasicEmail">
             <Form.Control
               value={email}
@@ -71,9 +71,9 @@ function ModalFunction({ postRequestUrl, title, description, buttonTitle }) {
     try {
       //   await axios.post(postRequestUrl, email, config);
       console.log(postRequestUrl);
-      alert("Successfully Submitted");
+      alert('Successfully Submitted');
     } catch (err) {
-      alert("Something went wrong try again");
+      alert('Something went wrong try again');
     }
   };
   return (

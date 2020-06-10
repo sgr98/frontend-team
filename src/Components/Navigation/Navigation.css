@@ -5,7 +5,7 @@
   font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
 }
 
 @media (min-width: 700px) {
@@ -55,7 +55,12 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background: linear-gradient(90deg, rgba(0, 188, 242, 1), rgba(123, 163, 244, 1), rgba(180, 160, 255, 1)  );
+  background: linear-gradient(
+    90deg,
+    rgba(0, 188, 242, 1),
+    rgba(123, 163, 244, 1),
+    rgba(180, 160, 255, 1)
+  );
   transform-origin: bottom right;
   transition: transform ease-in-out 0.5s;
   -webkit-transition: transform ease-in-out 0.5s;
@@ -64,10 +69,7 @@
   -o-transition: transform ease-in-out 0.5s;
 }
 
-<<<<<<< HEAD
-=======
 .navigation-link:active::before,
->>>>>>> e2a7b98a74562581b863e598071349dff723a6f9
 .navigation-link:hover::before {
   transform: scaleX(1);
   -webkit-transform: scaleX(1);
