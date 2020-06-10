@@ -5,6 +5,7 @@ import Modal from "./Modal/Modal";
 
 const data = [
   {
+    buttonTitle: "Join Telegram",
     title: "Let’s Download Telegram",
     description:
       " Justice League’s Snyder cut realesing exclusively on HBO Max and Telegram in 2021.",
@@ -13,6 +14,7 @@ const data = [
       "https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg",
   },
   {
+    buttonTitle: "Join Telegram",
     title: "Let’s Download Telegram",
     description:
       " Justice League’s Snyder cut realesing exclusively on HBO Max and Telegram in 2021.",
@@ -21,6 +23,7 @@ const data = [
       "https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg",
   },
   {
+    buttonTitle: "Join Telegram",
     title: "Let’s Download Telegram",
     description:
       " Justice League’s Snyder cut realesing exclusively on HBO Max and Telegram in 2021.",
@@ -29,6 +32,7 @@ const data = [
       "https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg",
   },
   {
+    buttonTitle: "Join Telegram",
     title: "Let’s Download Telegram",
     description:
       " Justice League’s Snyder cut realesing exclusively on HBO Max and Telegram in 2021.",
@@ -37,6 +41,7 @@ const data = [
       "https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg",
   },
   {
+    buttonTitle: "Join Telegram",
     title: "Let’s Download Telegram",
     description:
       " Justice League’s Snyder cut realesing exclusively on HBO Max and Telegram in 2021.",
@@ -114,7 +119,12 @@ const UpcomingActivities = () => {
                   {/* <Button id="UpcomingActivities-swipe-btn" variant="outline">
                     Join Telegram
                   </Button> */}
-                  <Modal postRequestUrl={item.postRequestUrl} />
+                  <Modal
+                    postRequestUrl={item.postRequestUrl}
+                    title={item.title}
+                    description={item.description}
+                    buttonTitle={item.buttonTitle}
+                  />
                 </div>
               </div>
             ))}

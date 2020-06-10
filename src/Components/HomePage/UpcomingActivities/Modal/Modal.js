@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 
-function MyVerticallyCenteredModal({ onEmailSubmit, ...props }) {
+function MyVerticallyCenteredModal({
+  onEmailSubmit,
+  title,
+  description,
+  ...props
+}) {
   const [email, setEmail] = useState("");
   return (
     <Modal
@@ -11,12 +16,10 @@ function MyVerticallyCenteredModal({ onEmailSubmit, ...props }) {
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
+        <Modal.Title id="contained-modal-title-vcenter">{title}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Join Telegram</h4>
+        <h4>{description}</h4>
         <p>Enter your Colledge Email address to join this Activity</p>
         <Form>
           {" "}
@@ -55,7 +58,7 @@ function MyVerticallyCenteredModal({ onEmailSubmit, ...props }) {
   );
 }
 
-function ModalFunction({ postRequestUrl }) {
+function ModalFunction({ postRequestUrl, title, description, buttonTitle }) {
   const [modalShow, setModalShow] = useState(false);
 
   const onEmailSubmit = async (email) => {
@@ -80,13 +83,15 @@ function ModalFunction({ postRequestUrl }) {
         variant="outline"
         onClick={() => setModalShow(true)}
       >
-        Join Telegram
+        {buttonTitle}
       </Button>
 
       <MyVerticallyCenteredModal
         show={modalShow}
         onEmailSubmit={onEmailSubmit}
         onHide={() => setModalShow(false)}
+        title={title}
+        description={description}
       />
     </>
   );
