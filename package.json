@@ -1,5 +1,6 @@
 {
   "name": "frontend-team",
+  "homepage": "http://mir-sam-ali.github.io/frontend-team",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,13 +11,17 @@
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-icons": "^3.10.0",
+    "react-scripts": "3.4.1",
+    "save": "^2.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,6 +44,7 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^2.5.1"
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "gh-pages": "^3.0.0"
   }
 }
