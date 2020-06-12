@@ -1,9 +1,10 @@
 .border-div-button-featured {
-  background: linear-gradient(to right, #00bcf2, #01b295);
-
-  padding: 0.5%;
-  width: 50%;
+  /* background: linear-gradient(to right, #00bcf2, #b4a0ff); */
+  background: #00bcf2;
+  padding: 0.3%;
+  width: 30%;
   border-radius: 6px;
+  box-sizing: border-box;
 }
 
 .Button-featured {
@@ -20,8 +21,9 @@
 
 .Button-text-featured {
   font-weight: 200;
-  font-size: 2vw;
-  background: linear-gradient(to right, #00bcf2, #01b295);
+  font-size: 1.5vw;
+  /* background: linear-gradient(to right, #00bcf2, #b4a0ff); */
+  background: #00bcf2;
   letter-spacing: 0.015em;
 
   -webkit-background-clip: text;

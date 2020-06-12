@@ -15,7 +15,7 @@ class ActivitiesShowcase extends Component {
       interval: 3000,
     };
     return (
-      <div style={{ marginTop: '5%' }}>
+      <div style={{ marginTop: '5%' }} className="Activities-Showcase">
         <p className="heading-carousel">Activities Showcase</p>
         <div>
           <Carousel {...settings} className="desktop-carousel">

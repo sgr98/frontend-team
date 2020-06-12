@@ -99,7 +99,7 @@
 }
 
 @media (min-width: 700px) {
-  .carousel-indicators li {
+  .Activities-Showcase .carousel-indicators li {
     height: 8px;
     width: 8px;
     margin: 2px;
@@ -109,11 +109,11 @@
     opacity: 1;
     background-color: inherit;
   }
-  .carousel-indicators .active {
+  .Activities-Showcase .carousel-indicators .active {
     background: #b4a0ff;
     border: 2px solid #b4a0ff;
   }
-  .carousel-indicators {
+  .Activities-Showcase .carousel-indicators {
     margin-bottom: 0;
     bottom: 5%;
   }

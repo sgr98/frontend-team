@@ -9,7 +9,9 @@ const Featured = () => {
     controls: false,
     indicators: true,
     wrap: true,
-    interval: 3000,
+    fade: true,
+    pause: false,
+    interval: 7000,
   };
   return (
     <div className="border-root-featured">
@@ -18,15 +20,22 @@ const Featured = () => {
           <div className="carousel-root-featured">
             <div className="content-div-featured">
               <p className="featured-heading">Featured.</p>
+              <p className="featured-secondary-heading">
+                DIY 3 in 1 CNC Machine designed by a team of six, second year
+                Mechanical engineering students
+              </p>
               <p className="featured-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-                vcsdvsdv ds v button-div-featured-desktopsd
+                Entrepreneurship Cell IIT Madras makes the entrepreneurial world
+                accessible to all group of people part of the IIT Madras
+                ecosystem, cater the audience from startup enthusiast to
+                hardcore entrepreneurs, with plethora of yearlong events like
+                Conclaves, Keynotes, Industry-defined Problems, B-Planning.
+                Entrepreneurship Cell IIT Madras makes the entrepreneurial world
+                accessible to all group of people part of the IIT Madras
+                ecosystem, cater the audience from startup enthusiast to
+                hardcore entrepreneurs. Industry-defined Problems, B-Planning.
+                Entrepreneurship Cell IIT Madras makes the entrepreneurial world
+                accessible to all.
               </p>
               <div className="button-div-featured-desktop">
                 <CustomButton2 text="Read full article" />
@@ -50,9 +59,18 @@ const Featured = () => {
           <div className="carousel-root-featured">
             <div className="content-div-featured">
               <p className="featured-heading">Featured.</p>
+              <p className="featured-secondary-heading">
+                DIY 3 in 1 CNC Machine designed by a team of six
+              </p>
               <p className="featured-description">
-                Featured student projects, awards, news, updates, announcements,
-                activities, articles, etc. go here
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                vcsdvsdv ds v button-div-featured-desktopsd
               </p>
               <div className="button-div-featured-desktop">
                 <CustomButton2 text="Read full article" />
@@ -76,9 +94,19 @@ const Featured = () => {
           <div className="carousel-root-featured">
             <div className="content-div-featured">
               <p className="featured-heading">Featured.</p>
+              <p className="featured-secondary-heading">
+                DIY 3 in 1 CNC Machine designed by a team of six, second year
+                Mechanical engineering students
+              </p>
               <p className="featured-description">
-                Featured student projects, awards, news, updates, announcements,
-                activities, articles, etc. go here
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                vcsdvsdv ds v button-div-featured-desktopsd
               </p>
               <div className="button-div-featured-desktop">
                 <CustomButton2 text="Read full article" />
