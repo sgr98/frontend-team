@@ -8,6 +8,7 @@
 
 .border-root-featured {
   margin-top: 4px;
+  margin: 4px 5% 0 5%;
   /* background: linear-gradient(to right, #00b0e3, #b4a0ff, #00b294); */
   background: rgb(0, 176, 227);
   background: -moz-linear-gradient(

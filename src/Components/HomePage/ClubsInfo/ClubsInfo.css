@@ -1,0 +1,43 @@
+.root-ClubsInfo {
+  margin-top: 20px;
+}
+
+.root-ClubsInfo .carousel-control-prev {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  opacity: 1;
+  width: 5%;
+  height: 60px;
+  margin: auto;
+}
+
+.root-ClubsInfo .carousel-control-next {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  opacity: 1;
+  width: 5%;
+  height: 60px;
+  margin: auto;
+}
+
+.root-ClubsInfo .carousel-control-next-icon {
+  height: 100px;
+  width: 25px;
+  background-image: url(Vector2.png);
+}
+.root-ClubsInfo .carousel-control-prev-icon {
+  height: 100px;
+  width: 25px;
+  background-image: url(Vector1.png);
+}
+
+.root-ClubsInfo .carousel-control-next-icon:hover {
+  height: 110px;
+  width: 25px;
+}
+.root-ClubsInfo .carousel-control-prev-icon:hover {
+  height: 110px;
+  width: 25px;
+}

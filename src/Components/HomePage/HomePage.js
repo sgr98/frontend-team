@@ -6,12 +6,13 @@ import ActivitiesShowcase from './ActivitiesShowcase/ActivitiesShowcase';
 import Featured from './Featured/Featured';
 import UpcomingActivities from './UpcomingActivities/UpcomingActivities';
 import UpcomingTalks from './UpcomingTalks/UpcomingTalks';
+import ClubsInfo from './ClubsInfo/ClubsInfo';
 
 const HomePage = () => {
   return (
     <div className="HomePage">
       <Featured />
-      <ActivitiesShowcase />
+      {/* <ActivitiesShowcase />
       <UpcomingActivities />
       <UpcomingTalks />
       <Calendar
@@ -29,7 +30,8 @@ const HomePage = () => {
             name: 'Lorem Ipsum',
           },
         ]}
-      />
+      /> */}
+      <ClubsInfo />
     </div>
   );
 };
