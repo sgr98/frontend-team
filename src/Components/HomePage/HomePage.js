@@ -7,11 +7,15 @@ import Featured from './Featured/Featured';
 import UpcomingActivities from './UpcomingActivities/UpcomingActivities';
 import UpcomingTalks from './UpcomingTalks/UpcomingTalks';
 import ClubsInfo from './ClubsInfo/ClubsInfo';
+import LimeLightZone from './LimeLightZone/LimeLightZone';
 
 const HomePage = () => {
   return (
     <div className="HomePage">
       <Featured />
+
+      <LimeLightZone />
+
       {/* <ActivitiesShowcase />
       <UpcomingActivities />
       <UpcomingTalks />
@@ -31,7 +35,7 @@ const HomePage = () => {
           },
         ]}
       /> */}
-      <ClubsInfo />
+      {/* <ClubsInfo /> */}
     </div>
   );
 };

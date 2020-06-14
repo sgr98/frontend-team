@@ -4,7 +4,7 @@ import './CustomButton.css';
 const CustomButton = (props) => {
   return (
     <div className="border-div-button">
-      <div className="Button">{props.text}</div>
+      <div className="Button-Custom">{props.text}</div>
     </div>
   );
 };
