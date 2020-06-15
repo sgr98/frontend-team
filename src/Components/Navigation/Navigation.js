@@ -1,13 +1,14 @@
 /* eslint-disable react/prefer-stateless-function */
-import React, { Component } from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './Navigation.css';
+import React, { Component } from "react";
+import { Navbar, Nav } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./Navigation.css";
+import GetInspiredBulbIcon from "./GetInspiredBulbIcon.png";
 
 export class Navigation extends Component {
   render() {
     return (
-      <div className="nav-container">
+      <div className="nav-container ">
         <Navbar collapseOnSelect expand="lg" variant="dark" sticky="bottom">
           <Navbar.Brand className="main-web-name" href="#home">
             Tech Hub IIT Tirupati
@@ -15,26 +16,30 @@ export class Navigation extends Component {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
-              <Nav.Link className="navigation-link" href="#home">
+              <Nav.Link className="nav-link-Navigation " href="#home">
                 Home
               </Nav.Link>
-              <Nav.Link className="navigation-link" href="#about">
+              <Nav.Link className="nav-link-Navigation" href="#about">
                 About
               </Nav.Link>
-              <Nav.Link className="navigation-link" href="#clubs">
+              <Nav.Link className="nav-link-Navigation" href="#events">
+                Events
+              </Nav.Link>
+              <Nav.Link className="nav-link-Navigation" href="#projets">
+                Projects
+              </Nav.Link>
+              <Nav.Link className="nav-link-Navigation" href="#tech-teams">
+                Tech Teams
+              </Nav.Link>
+              <Nav.Link className="nav-link-Navigation" href="#clubs">
                 Clubs
               </Nav.Link>
-              <Nav.Link className="navigation-link" href="#achievements">
-                Achievements
-              </Nav.Link>
-              <Nav.Link className="navigation-link" href="#ongoing-projets">
-                Ongoing Projects
-              </Nav.Link>
-              <Nav.Link className="navigation-link" href="#challenges">
-                Challenges
-              </Nav.Link>
-              <Nav.Link className="navigation-link" href="#faqs">
-                FAQs
+              <Nav.Link
+                className="nav-link-Navigation get-inspired-Navigation"
+                href="#get-inspired"
+              >
+                Get Inspired
+                <img src={GetInspiredBulbIcon} alt="GetInspiredBulbIcon" />
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
