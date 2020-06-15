@@ -12,8 +12,8 @@
   content: "";
   width: 100%;
   position: absolute;
-  background-color: #2f2d2d;
-  height: 1px;
+  background-image: linear-gradient(to right, #1a83a1, #675899 );
+  height: 0.8px;
   left: 0;
   bottom: 0;
 }
@@ -59,7 +59,7 @@ a.nav-link-Navigation.nav-link {
 .navbar-dark .navbar-nav .nav-link:hover {
   color: #f0f0f0;
 }
-
+#collasible-nav-dropdown
 /* underline for the active page  */
 
 .navbar-dark .navbar-nav .nav-link.active::after {
@@ -100,10 +100,10 @@ a.nav-link-Navigation.nav-link {
   );
   transform-origin: bottom right;
   transition: transform ease-in-out 150ms;
-  /* -webkit-transition: transform ease-in-out 0.3s;
-  -moz-transition: transform ease-in-out 0.3s;
-  -ms-transition: transform ease-in-out 0.3s;
-  -o-transition: transform ease-in-out 0.3s; */
+  -webkit-transition: transform ease-in-out 150ms;
+  -moz-transition: transform ease-in-out 150ms;
+  -ms-transition: transform ease-in-out 150ms;
+  -o-transition: transform ease-in-out 150ms;
   border-radius: 15%;
 }
 
@@ -119,8 +119,8 @@ a.nav-link-Navigation.nav-link {
 }
 
 /* ==== GET INSPIRED ==== */
-
-.navbar-dark .navbar-nav .nav-link:last-child {
+/* 
+.navbar-dark .navbar-nav .nav-link:last-child{
   background-image: linear-gradient(0deg, #bf8d1a, #c99912);
   font-weight: 500;
   background-size: 100%;
@@ -145,7 +145,7 @@ a.nav-link-Navigation.nav-link {
 .navbar-dark .navbar-nav .nav-link:last-child img {
   height: 1em;
   margin: 0 0 0.3em 0.5em;
-}
+} */
 
 /* ==== Hamburger Menu ==== */
 
