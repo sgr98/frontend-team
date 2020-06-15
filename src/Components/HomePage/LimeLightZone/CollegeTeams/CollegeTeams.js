@@ -4,13 +4,11 @@ import './CollegeTeams.css';
 import CollegeTeamCard from './CollegeTeamCard/CollegeTeamCard';
 import CustomHR from '../../../CustomHR/CustomHR';
 
-const CollegeTeams = () => {
-  return (
-    <>
-      <CollegeTeamCard />
-      <CustomHR />
-    </>
-  );
-};
+const CollegeTeams = () => (
+  <>
+    <CollegeTeamCard />
+    <CustomHR />
+  </>
+);
 
 export default CollegeTeams;

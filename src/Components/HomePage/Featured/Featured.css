@@ -2,13 +2,14 @@
   display: inline-block;
   width: 40%;
   height: 100%;
-
+  display: flex;
+  align-items: center;
   color: white;
 }
 
 .border-root-featured {
   margin-top: 4px;
-  /* margin: 4px 5% 0 5%; */
+  margin: 4px 5% 0 5%;
   /* background: linear-gradient(to right, #00b0e3, #b4a0ff, #00b294); */
   background: rgb(0, 176, 227);
   background: -moz-linear-gradient(
@@ -111,7 +112,7 @@
 }
 
 .image-featured {
-  margin: 30% 4% auto 0;
+  margin-right: 4%;
 }
 
 .carousel-indicators li {
@@ -131,9 +132,7 @@
 @media (min-width: 700px) {
   .featured-secondary-heading {
     line-height: 2.8vw;
-
-    align-items: center;
-    text-align: justify;
+    text-align: start;
   }
   .featured-description {
     line-height: 1.8vw;
@@ -164,7 +163,7 @@
   }
   .featured-description {
     margin: 4% 5% 0 7%;
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .image-div-featured {
@@ -188,5 +187,59 @@
     display: flex;
     justify-content: center;
     margin-top: 10%;
+  }
+}
+
+@media (max-width: 1060px) and (min-width: 700px) {
+  .carousel-root-featured {
+    height: 560px;
+  }
+  .featured-heading {
+    font-size: 9vw;
+  }
+  .featured-secondary-heading {
+    margin-top: 5%;
+    font-size: 25px;
+  }
+  .featured-description {
+    margin-top: 4%;
+    font-size: 15px;
+    line-height: 2vw;
+  }
+}
+
+@media (max-width: 930px) and (min-width: 700px) {
+  .carousel-root-featured {
+    height: 560px;
+  }
+  .featured-heading {
+    font-size: 9vw;
+  }
+  .featured-secondary-heading {
+    margin-top: 1%;
+    font-size: 25px;
+    line-height: 3vw;
+    text-align: flex-start;
+  }
+  .featured-description {
+    line-height: 2.2vw;
+    margin-top: 4%;
+    font-size: 15px;
+    text-align: flex-start;
+  }
+}
+
+@media (max-width: 930px) and (min-width: 700px) {
+  .featured-secondary-heading {
+    margin-top: 1%;
+    font-size: 25px;
+    line-height: 3.3vw;
+    text-align: flex-start;
+  }
+  .featured-description {
+    line-height: 2.5vw;
+    margin-top: 4%;
+    font-size: 15px;
+    text-align: flex-start;
   }
 }

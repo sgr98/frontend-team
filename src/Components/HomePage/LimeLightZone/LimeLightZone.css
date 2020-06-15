@@ -1,0 +1,25 @@
+.LimeLightZone ::-webkit-scrollbar {
+  width: 4px;
+  height: 3px;
+}
+
+.LimeLightZone ::-webkit-scrollbar:hover {
+  width: 4px;
+  height: 3px;
+}
+
+.LimeLightZone ::-webkit-scrollbar-track :vertical {
+  background-color: #3b3a3a;
+}
+.LimeLightZone ::-webkit-scrollbar-track :horizontal {
+  background-color: inherit;
+}
+.LimeLightZone ::-webkit-scrollbar-corner {
+  /* 6 */
+  display: none;
+}
+
+.LimeLightZone::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00bcf2 0%, #9e039e 100%);
+  border-radius: 3px;
+}

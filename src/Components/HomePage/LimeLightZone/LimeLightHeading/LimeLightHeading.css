@@ -1,0 +1,97 @@
+.heading-LimeLightHeading {
+  display: flex;
+  flex-direction: column;
+  margin: 7% 0 0% 0;
+  padding: 0%;
+  /* background: linear-gradient(
+    90deg,
+    rgba(0, 178, 151, 0.5) 0%,
+    rgba(235, 190, 32, 0.5) 50.52%,
+    rgba(0, 178, 151, 0.5) 100%
+  ); */
+  background: rgb(0, 178, 148);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(0, 178, 148, 1) 0%,
+    rgba(255, 199, 0, 1) 50%,
+    rgba(0, 178, 148, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(0, 178, 148, 1) 0%,
+    rgba(255, 199, 0, 1) 50%,
+    rgba(0, 178, 148, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(0, 178, 148, 1) 0%,
+    rgba(255, 199, 0, 1) 50%,
+    rgba(0, 178, 148, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00b294",endColorstr="#00b294",GradientType=1);
+  opacity: 0.6;
+  width: 100%;
+  height: 120px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.heading-LimeLightHeading h3 {
+  justify-self: center;
+  height: 98%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Roboto Slab', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 80px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #201f1e;
+}
+
+.lineAbove-LimeLightHeading {
+  justify-self: flex-start;
+  height: 2%;
+  box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.8);
+}
+
+.lineBelow-LimeLightHeading {
+  height: 2%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+  background: inherit;
+  justify-self: flex-end;
+}
+
+@media (max-width: 700px) {
+  .heading-LimeLightHeading h3 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 560px) {
+  .heading-LimeLightHeading h3 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .heading-LimeLightHeading h3 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 518px) {
+  .heading-LimeLightHeading {
+    height: 150px;
+  }
+}
+
+@media (max-width: 360px) {
+  .heading-LimeLightHeading h3 {
+    font-size: 50px;
+  }
+}
