@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navigation.css";
-import 'font-awesome/css/font-awesome.min.css';
+import GetInspiredBulbIcon from "./GetInspiredBulbIcon.png";
 
 export class Navigation extends Component {
   render() {
@@ -34,8 +34,12 @@ export class Navigation extends Component {
               <Nav.Link className="nav-link-Navigation" href="#clubs">
                 Clubs
               </Nav.Link>
-              <Nav.Link className="nav-link-Navigation get-inspired-Navigation" href="#get-inspired">
-                Get Inspired<div className="fas fa-lightbulb"></div>
+              <Nav.Link
+                className="nav-link-Navigation get-inspired-Navigation"
+                href="#get-inspired"
+              >
+                Get Inspired
+                <img src={GetInspiredBulbIcon} alt="GetInspiredBulbIcon" />
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
