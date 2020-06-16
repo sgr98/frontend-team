@@ -70,7 +70,7 @@ const Footer = () => (
           </Col>
 
           <Col className="home">
-            <p>featured</p>
+            <p>Featured</p>
             <p>Ideology</p>
             <p>Digital Wizards</p>
             <p>Risha lab</p>
@@ -78,7 +78,7 @@ const Footer = () => (
 
           <Col className="home">
             <p>Announcements</p>
-            <p>club heads</p>
+            <p>Club heads</p>
             <p>Techmaniacs</p>
             <p>Inter IIT Tech Meet</p>
           </Col>
