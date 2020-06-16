@@ -1,12 +1,13 @@
 /* eslint-disable react/prefer-stateless-function */
-import React, { Component } from "react";
-import { Navbar, Nav } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./Navigation.css";
-import GetInspiredBulbIcon from "./GetInspiredBulbIcon.png";
+import React, { Component } from 'react';
+import { Navbar, Nav } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Navigation.css';
+import GetInspiredBulbIcon from './GetInspiredBulbIcon.png';
 
 export class Navigation extends Component {
   render() {
+    console.log('Rendering');
     return (
       <div className="nav-container ">
         <Navbar collapseOnSelect expand="lg" variant="dark" sticky="bottom">

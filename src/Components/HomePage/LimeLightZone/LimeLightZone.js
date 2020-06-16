@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './LimeLightZone.css';
 import RightTeamCard from './RightTeamCard/RightTeamCard';
 import LeftTeamCard from './LeftTeamCard/LeftTeamCard';
-import CustomHR from '../../CustomHR/CustomHR';
+import CustomHR from '../../ReusableComponents/CustomHR/CustomHR';
 import CollegeTeams from './CollegeTeams/CollegeTeams';
 import LimeLightHeading from './LimeLightHeading/LimeLightHeading';
 

@@ -62,7 +62,6 @@
   font-size: 6.7vw;
   font-weight: 300;
   background: linear-gradient(to right, #00bcf2, #b4a0ff);
-  letter-spacing: 0.015em;
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -171,6 +170,7 @@
     width: 100%;
     height: auto;
     margin-top: 10%;
+    margin-bottom: 5%;
     color: white;
     padding: 5%;
   }

@@ -1,0 +1,172 @@
+.root-AnnouncementBar {
+  min-height: 120px;
+  height: auto;
+  width: auto;
+  margin: 4% 50px;
+  display: flex;
+  box-sizing: border-box;
+
+  padding: 3px;
+  background: rgb(0, 188, 242);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(0, 188, 242, 1) 0%,
+    rgba(131, 34, 172, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(0, 188, 242, 1) 0%,
+    rgba(131, 34, 172, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(0, 188, 242, 1) 0%,
+    rgba(131, 34, 172, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00bcf2",endColorstr="#8322ac",GradientType=1);
+}
+
+.current-AnnouncementBar {
+  width: 41%;
+  background: #323130;
+  padding: 0.8% 2%;
+  margin-right: 3px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.current-AnnouncementBar p {
+  font-family: 'Roboto Slab', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 152.88%;
+  /* or 46px */
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #f3f2f1;
+}
+.current-AnnouncementBar a {
+  width: 40%;
+}
+.Button-AnnouncementBar {
+  width: 100%;
+  background: inherit;
+  border: 3px solid #f3f2f1;
+  padding: 0.4% 8%;
+
+  font-family: 'Roboto Slab', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  letter-spacing: -0.015em;
+
+  color: #f3f2f1;
+}
+
+.Button-AnnouncementBar:hover {
+  background: #00bcf2;
+  border-color: #00bcf2;
+  outline: none;
+  color: #2d2a28;
+  transition: 0.2s;
+}
+.Button-AnnouncementBar:focus {
+  outline: none;
+}
+.secondary-AnnouncementBar {
+  width: 41%;
+  background: #3b3a39;
+  margin-right: 3px;
+  padding: 0.8% 2%;
+
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.secondary-AnnouncementBar p {
+  font-family: 'Roboto Slab', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 152.88%;
+
+  text-align: start;
+  letter-spacing: -0.015em;
+
+  color: #f3f2f1;
+}
+
+.box1-AnnouncementBar {
+  width: 6%;
+  background: #605e5c;
+  margin-right: 3px;
+
+  height: auto;
+}
+.box2-AnnouncementBar {
+  width: 6%;
+  background: #8a8886;
+  margin-right: 3px;
+
+  height: auto;
+}
+.box3-AnnouncementBar {
+  width: 6%;
+
+  margin-right: 0px;
+  background: #c8c6c4;
+  height: auto;
+}
+@media screen and (max-width: 1270px) {
+  .secondary-AnnouncementBar p {
+    font-size: 22px;
+  }
+  .current-AnnouncementBar a {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .Button-AnnouncementBar {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .Button-AnnouncementBar {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 679px) {
+  .current-AnnouncementBar a {
+    width: 90%;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

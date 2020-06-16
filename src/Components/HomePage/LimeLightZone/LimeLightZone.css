@@ -1,10 +1,10 @@
 .LimeLightZone ::-webkit-scrollbar {
-  width: 4px;
+  width: 2px;
   height: 3px;
 }
 
 .LimeLightZone ::-webkit-scrollbar:hover {
-  width: 4px;
+  width: 2px;
   height: 3px;
 }
 
