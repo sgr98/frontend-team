@@ -16,101 +16,176 @@ export class Navigation extends Component {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
+              {/* HOME */}
               <Nav.Link className="nav-link-Navigation " href="#home">
                 Home
               </Nav.Link>
 
+              {/* ABOUT */}
               <NavDropdown
-                className="nav-link-Navigation"
+                className="nav-dropdown-Navigation"
                 href="#about"
                 title="About"
                 id="collasible-nav-dropdown"
               >
-                <NavDropdown.Item href="#team2020-21">
+                <NavDropdown.Item
+                  href="#team2020-21"
+                  className="about-menuitem-Navigation"
+                >
                   Team 2020-21
                 </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#alumini">Alumini</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#faqs">FAQs</NavDropdown.Item>
+                <NavDropdown.Item
+                  href="#alumini"
+                  className="about-menuitem-Navigation"
+                >
+                  Alumini
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  href="#faqs"
+                  className="about-menuitem-Navigation"
+                >
+                  FAQs
+                </NavDropdown.Item>
               </NavDropdown>
 
-              <Nav.Link className="nav-link-Navigation" href="#events">
-                Events
-              </Nav.Link>
-
+              {/* EVENTS */}
               <NavDropdown
-                className="nav-link-Navigation"
+                className="nav-dropdown-Navigation"
+                title="Events"
+                id="collasible-nav-dropdown"
+              >
+                <NavDropdown.Item
+                  href="#codeX"
+                  className="events-menuitem-Navigation"
+                >
+                  CodeX
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  href="#robo-wars"
+                  className="events-menuitem-Navigation"
+                >
+                  Robo Wars
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  href="#solo singing"
+                  className="events-menuitem-Navigation"
+                >
+                  Solo Singing
+                </NavDropdown.Item>
+              </NavDropdown>
+
+              {/* PROJECTS */}
+              <NavDropdown
+                className="nav-dropdown-Navigation"
                 title="Projects"
                 id="collasible-nav-dropdown"
               >
-                <NavDropdown.Item href="#projects">Projects</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#faculty-mentor">
+                <NavDropdown.Item
+                  href="#projects"
+                  className="projects-menuitem-Navigation"
+                >
+                  Projects
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  href="#faculty-mentor"
+                  className="projects-menuitem-Navigation"
+                >
                   Faculty Mentor
                 </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#infrastructure">
+                <NavDropdown.Item
+                  href="#infrastructure"
+                  className="projects-menuitem-Navigation"
+                >
                   Infrastructure
                 </NavDropdown.Item>
               </NavDropdown>
 
+              {/* TECH TEAMS */}
               <NavDropdown
-                className="nav-link-Navigation"
+                className="nav-dropdown-Navigation"
                 title="Tech Teams"
                 id="collasible-nav-dropdown"
               >
-                <NavDropdown.Item href="#formula-bharath">
+                <NavDropdown.Item
+                  href="#formula-bharath"
+                  className="techteams-menuitem-Navigation"
+                >
                   Formula Bharath
                 </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#truss-fab">Truss Fab</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#mars-rover">
+                <NavDropdown.Item
+                  href="#truss-fab"
+                  className="techteams-menuitem-Navigation"
+                >
+                  Truss Fab
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  href="#mars-rover"
+                  className="techteams-menuitem-Navigation"
+                >
                   Mars Rover
                 </NavDropdown.Item>
               </NavDropdown>
 
+              {/* CLUBS */}
               <NavDropdown
-                className="nav-link-Navigation"
+                className="nav-dropdown-Navigation"
                 title="Clubs"
                 id="collasible-nav-dropdown"
               >
-                <NavDropdown.Item href="#techmaniacs">
+                <NavDropdown.Item
+                  href="#techmaniacs"
+                  className="clubs-menuitem-Navigation"
+                >
                   Techmaniacs
                 </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#digital-wizards">
+                <NavDropdown.Item
+                  href="#digital-wizards"
+                  className="clubs-menuitem-Navigation"
+                >
                   Digital Wizards
                 </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#gagan-vedhi">
+                <NavDropdown.Item
+                  href="#gagan-vedhi"
+                  className="clubs-menuitem-Navigation"
+                >
                   Gagan Vedhi
                 </NavDropdown.Item>
               </NavDropdown>
 
+              {/* GET INSPIRED */}
               <NavDropdown
-                className="nav-link-Navigation"
-                title="Get Inspired"
+                className="nav-dropdown-Navigation"
+                title={
+                  <span>
+                    Get Inspired
+                    <img
+                      src={GetInspiredBulbIcon}
+                      alt="GetInspiredBulbIcon"
+                      style={{ height: "1em" }}
+                    />
+                  </span>
+                }
                 id="collasible-nav-dropdown"
               >
-                <NavDropdown.Item href="#formula-bharath">
-                  Formula Bharath
+                <NavDropdown.Item
+                  href="#ideas-square"
+                  className="getinspired-menuitem-Navigation"
+                >
+                  Ideas Square
                 </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#truss-fab">Truss Fab</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#mars-rover">
-                  Mars Rover
+                <NavDropdown.Item
+                  href="#e-cell"
+                  className="getinspired-menuitem-Navigation"
+                >
+                  E-cell
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  href="#challenges"
+                  className="getinspired-menuitem-Navigation"
+                >
+                  Challenges
                 </NavDropdown.Item>
               </NavDropdown>
-
-              {/* <Nav.Link
-                className="nav-link-Navigation get-inspired-Navigation"
-                href="#get-inspired"
-              >
-                <img src={GetInspiredBulbIcon} alt="GetInspiredBulbIcon" />"
-              </Nav.Link> */}
             </Nav>
           </Navbar.Collapse>
         </Navbar>
