@@ -50,7 +50,8 @@
   box-sizing: border-box;
 }
 
-a.nav-link-Navigation.nav-link {
+a.nav-link-Navigation.nav-link,
+.nav-dropdown-Navigation {
   display: inline-block;
   position: relative;
   font-size: 120%;
@@ -60,6 +61,10 @@ a.nav-link-Navigation.nav-link {
 
 .navbar-dark .navbar-nav .nav-link:hover {
   color: #f0f0f0;
+}
+
+a#collasible-nav-dropdown.dropdown-toggle.nav-link::after {
+  content: none;
 }
 
 /* underline for the active page  */
@@ -120,8 +125,41 @@ a.nav-link-Navigation.nav-link.active::after {
   transform-origin: bottom left;
   border-radius: 15%;
 }
+/* drop-down menu items styling */
+
+#responsive-navbar-nav
+  > div
+  > div.nav-dropdown-Navigation.show.dropdown.nav-item
+  > div {
+  margin: 0;
+  padding: 0;
+  background-color: #30302f;
+  opacity: 0.98;
+}
+
+.nav-dropdown-Navigation .about-menuitem-Navigation,
+.nav-dropdown-Navigation .events-menuitem-Navigation,
+.nav-dropdown-Navigation .projects-menuitem-Navigation,
+.nav-dropdown-Navigation .techteams-menuitem-Navigation,
+.nav-dropdown-Navigation .clubs-menuitem-Navigation {
+  color: #f0f0f0;
+  background-image: linear-gradient(to right, #8779bb, #0a8baf);
+  border-left: rgba(12, 12, 12, 0.7) 3px solid;
+  border-top: rgba(12, 12, 12, 0.7) 1px solid;
+  border-right: rgba(12, 12, 12, 0.7) 3px solid;
+  border-bottom: rgba(12, 12, 12, 0.7) 3px solid;
+  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  white-space: nowrap;
+}
 
 /* ==== GET INSPIRED ==== */
+
+#collasible-nav-dropdown > span > img {
+  height: 1em;
+  margin: 0 0 0.3em 0.5em;
+}
 
 #collasible-nav-dropdown > span {
   background-image: linear-gradient(0deg, #bf8d1a, #c99912);
@@ -144,10 +182,19 @@ a.nav-link-Navigation.nav-link.active::after {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 }
+/* get inspired menu items gradients */
 
-#collasible-nav-dropdown > span > img {
-  height: 1em;
-  margin: 0 0 0.3em 0.5em;
+.nav-dropdown-Navigation .getinspired-menuitem-Navigation {
+  color: #f0f0f0;
+  background-image: linear-gradient(to right, #bcb209, #b0673e);
+  border-top: rgba(12, 12, 12, 0.7) 1px solid;
+  border-left: rgba(12, 12, 12, 0.7) 3px solid;
+  border-right: rgba(12, 12, 12, 0.7) 3px solid;
+  border-bottom: rgba(12, 12, 12, 0.7) 3px solid;
+  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  white-space: nowrap;
 }
 
 /* ==== Hamburger Menu ==== */
@@ -165,9 +212,22 @@ a.nav-link-Navigation.nav-link.active::after {
 
 /* ==== MEDIA QUERIES ==== */
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1200px) {
+  a.nav-link-Navigation.nav-link,
+  .nav-dropdown-Navigation {
+    font-size: 110%;
+    margin: 0 0.4em;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
   .main-web-name {
     font-size: 180%;
+  }
+  a.nav-link-Navigation.nav-link,
+  .nav-dropdown-Navigation {
+    font-size: 100%;
+    margin: 0 0.2em;
   }
 }
 
@@ -181,36 +241,4 @@ a.nav-link-Navigation.nav-link.active::after {
   .main-web-name {
     font-size: 160%;
   }
-}
-
-a#collasible-nav-dropdown.dropdown-toggle.nav-link::after {
-  content: none;
-}
-
-#responsive-navbar-nav > div > div.nav-dropdown-Navigation.show.dropdown.nav-item > div{
-  margin: 0;
-  padding: 0;
-  background-color: #30302f;
-}
-
-.nav-dropdown-Navigation .about-menuitem-Navigation,
-.nav-dropdown-Navigation .events-menuitem-Navigation,
-.nav-dropdown-Navigation .projects-menuitem-Navigation,
-.nav-dropdown-Navigation .techteams-menuitem-Navigation,
-.nav-dropdown-Navigation .clubs-menuitem-Navigation
- {
-  color: #f0f0f0;
-  background-image: linear-gradient(to right, #8779bb, #0a8baf);
-  border-left: rgba(12, 12, 12, 0.7) 3px  solid;
-  border-right: rgba(12, 12, 12, 0.7) 3px  solid;
-  border-bottom: rgba(12, 12, 12, 0.7) 3px solid;
-  white-space: nowrap;
-}
-.nav-dropdown-Navigation .getinspired-menuitem-Navigation{
-  color: #f0f0f0;
-  background-image: linear-gradient(to right, #bcb209, #b0673e);
-  border-left: rgba(12, 12, 12, 0.7) 3px  solid;
-  border-right: rgba(12, 12, 12, 0.7) 3px  solid;
-  border-bottom: rgba(12, 12, 12, 0.7) 3px solid;
-  white-space: nowrap;
 }
