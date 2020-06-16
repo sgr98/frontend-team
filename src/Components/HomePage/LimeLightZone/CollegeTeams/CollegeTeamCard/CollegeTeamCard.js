@@ -16,11 +16,7 @@ const CollegeTeamCard = (props) => {
             prestigious international competition Formula Student at Silverstone
             circuit, UK with our electric car, "EVoK" currently, and have been
             winning the Formula Student Award by IMechE for being the best
-            non-UK team for the past 5 years. We participate in the prestigious
-            international competition Formula Student at Silverstone circuit, UK
-            with our electric car, "EVoK" currently, and have been winning the
-            Formula Student Award by IMechE for being the best non-UK team for
-            the past 5 years.
+            non-UK team for the past 5 years.
           </p>
           <div className="achievement-CollegeTeamCard">
             #1 st place in formula bharath 2020

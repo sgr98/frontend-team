@@ -1,19 +1,20 @@
 /* eslint-disable arrow-body-style */
 import React from 'react';
-import Calendar from './Calendar/Calendar';
+
 import './HomePage.css';
-import ActivitiesShowcase from './ActivitiesShowcase/ActivitiesShowcase';
+
 import Featured from './Featured/Featured';
-import UpcomingActivities from './UpcomingActivities/UpcomingActivities';
-import UpcomingTalks from './UpcomingTalks/UpcomingTalks';
-import ClubsInfo from './ClubsInfo/ClubsInfo';
+
 import LimeLightZone from './LimeLightZone/LimeLightZone';
+import AnnouncementBar from './Announcementbar/AnnouncementBar';
+import Appgrid from './Appgrid/Appgrid';
 
 const HomePage = () => {
   return (
     <div className="HomePage">
       <Featured />
-
+      <Appgrid />
+      <AnnouncementBar />
       <LimeLightZone />
 
       {/* <ActivitiesShowcase />

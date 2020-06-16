@@ -11,14 +11,16 @@ const LeftTeamCard = (props) => {
           <p className="secondary-heading-LeftTeamCard">
             Writer or the theme of the activity/ article
           </p>
-          <p className="description-LeftTeamCard">
-            Entrepreneurship Cell IIT Madras makes the entrepreneurial world
-            accessible to all group of people part of the IIT Madras ecosystem,
-            cater the audience from startup enthusiast to hardcore
-            entrepreneurs, with plethora of yearlong events like Conclaves,
-            Keynotes, Industry-defined Problems, B-Planning Competitions and
-            Workshops, through both personal and collaboration-based approach
-          </p>
+          <div className="description-LeftTeamCard-parent">
+            <p className="description-LeftTeamCard">
+              Entrepreneurship Cell IIT Madras makes the entrepreneurial world
+              accessible to all group of people part of the IIT Madras
+              ecosystem, cater the audience from startup enthusiast to hardcore
+              entrepreneurs, with plethora of yearlong events like Conclaves,
+              Keynotes, Industry-defined Problems, B-Planning Competitions and
+              Workshops, through both personal and collaboration-based approach
+            </p>
+          </div>
           <div className="button-LeftTeamCard">
             <CustomButton text="Explore more" />
           </div>
