@@ -13,14 +13,14 @@ const LeftTeamCard = (props) => {
             Writer or the theme of the activity/ article
           </p>
           <div className="description-LeftTeamCard-parent">
-            <p className="description-LeftTeamCard">
+            <div className="description-LeftTeamCard">
               <ReadMoreReact
                 text=" Entrepreneurship Cell IIT Madras makes the entrepreneurial world accessible to all group of people part of the IIT Madras ecosystem, cater the audience from startup enthusiast to hardcore entrepreneurs, with plethora of yearlong events like Conclaves, Keynotes, Industry-defined Problems, B-Planning Competitions and Workshops, through both personal and collaboration-based approach "
                 max={550}
                 ideal={480}
                 readMoreText="Read More"
               />
-            </p>
+            </div>
           </div>
           <div className="button-LeftTeamCard">
             <CustomButton text="Explore more" />

@@ -66,6 +66,11 @@
   background: inherit;
   justify-self: flex-end;
 }
+@media (max-width: 1000px) {
+  .heading-LimeLightHeading h3 {
+    font-size: 60px;
+  }
+}
 
 @media (max-width: 700px) {
   .heading-LimeLightHeading h3 {
@@ -79,19 +84,22 @@
   }
 }
 
-@media (max-width: 1000px) {
-  .heading-LimeLightHeading h3 {
-    font-size: 60px;
-  }
-}
 @media (max-width: 518px) {
   .heading-LimeLightHeading {
     height: 150px;
   }
 }
-
-@media (max-width: 360px) {
+@media (max-width: 448px) {
   .heading-LimeLightHeading h3 {
-    font-size: 50px;
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 400px) {
+  .heading-LimeLightHeading h3 {
+    font-size: 35px;
+  }
+  .heading-LimeLightHeading {
+    height: 100px;
   }
 }
