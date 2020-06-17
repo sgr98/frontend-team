@@ -1,5 +1,7 @@
 import React from 'react';
+import ReadMoreReact from 'read-more-react';
 import './RightTeamCard.css';
+
 import CustomButton from '../CustomButton/CustomButton';
 
 const RightTeamCard = (props) => (
@@ -18,17 +20,12 @@ const RightTeamCard = (props) => (
           By Professors and Students
         </p>
         <p className="description-RightTeamCard">
-          Entrepreneurship Cell IIT Madras makes the entrepreneurial world
-          accessible to all group of people part of the IIT Madras ecosystem,
-          cater the audience from startup enthusiast to hardcore entrepreneurs,
-          with plethora of yearlong events like Conclaves, Keynotes,
-          Industry-defined Problems, B-Planning Competitions and Workshops,
-          through both personal and collaboration-based approach like Conclaves,
-          Keynotes, Industry-defined Problems, B-Planning Competitions and
-          Workshops, through both personal and collaboration-based approach like
-          Conclaves, Keynotes, Industry-defined Problems, B-Planning
-          Competitions and Workshops, through both personal and
-          collaboration-based approach
+          <ReadMoreReact
+            text=" Entrepreneurship Cell IIT Madras makes the entrepreneurial world accessible to all group of people part of the IIT Madras ecosystem, cater the audience from startup enthusiast to hardcore entrepreneurs, with plethora of yearlong events like Conclaves, Keynotes, Industry-defined Problems, B-Planning Competitions and Workshops, through both personal and collaboration-based approach cccccccccccc cfskvnfksnvfsnvfjknvjkfdnvk cfskvnfksnvfsnvfjknvjkfdnvk cfskvnfksnvfsnvfjknvjkfdnvk"
+            max={550}
+            ideal={480}
+            readMoreText="Read More"
+          />
         </p>
         <div className="button-RightTeamCard">
           <CustomButton text="Explore more" />

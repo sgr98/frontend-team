@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap');
 
 /* ==== NAVIGATION CONTAINER ==== */
 #root > div > div.nav-container {
   /* .nav-container { */
   background-color: #201f1e;
   opacity: 97%;
-  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
   position: sticky;
   top: -7px;
   z-index: 100;
@@ -13,7 +13,7 @@
   padding: 0 2em;
 }
 .nav-container::before {
-  content: "";
+  content: '';
   width: 100%;
   position: absolute;
   background-image: linear-gradient(to right, #1a83a1, #675899);
@@ -72,7 +72,7 @@ a#collasible-nav-dropdown.dropdown-toggle.nav-link::after {
 /* underline for the active page  */
 
 a.nav-link-Navigation.nav-link.active::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 5%;
@@ -90,7 +90,7 @@ a.nav-link-Navigation.nav-link.active::after {
 /* underline transition for link clicked */
 #collasible-nav-dropdown:link::before,
 .nav-link-Navigation:link::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 90%;
   transform: scaleX(0);

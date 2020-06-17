@@ -1,4 +1,5 @@
 import React from 'react';
+import ReadMoreReact from 'read-more-react';
 import './LeftTeamCard.css';
 import CustomButton from '../CustomButton/CustomButton';
 
@@ -13,12 +14,12 @@ const LeftTeamCard = (props) => {
           </p>
           <div className="description-LeftTeamCard-parent">
             <p className="description-LeftTeamCard">
-              Entrepreneurship Cell IIT Madras makes the entrepreneurial world
-              accessible to all group of people part of the IIT Madras
-              ecosystem, cater the audience from startup enthusiast to hardcore
-              entrepreneurs, with plethora of yearlong events like Conclaves,
-              Keynotes, Industry-defined Problems, B-Planning Competitions and
-              Workshops, through both personal and collaboration-based approach
+              <ReadMoreReact
+                text=" Entrepreneurship Cell IIT Madras makes the entrepreneurial world accessible to all group of people part of the IIT Madras ecosystem, cater the audience from startup enthusiast to hardcore entrepreneurs, with plethora of yearlong events like Conclaves, Keynotes, Industry-defined Problems, B-Planning Competitions and Workshops, through both personal and collaboration-based approach "
+                max={550}
+                ideal={480}
+                readMoreText="Read More"
+              />
             </p>
           </div>
           <div className="button-LeftTeamCard">

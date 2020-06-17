@@ -9,6 +9,18 @@
   color: white;
 }
 
+.root-RightTeamCard .read-more-button {
+  background: linear-gradient(to right, #00bcf2, #b4a0ff);
+  letter-spacing: -0.015em;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+  cursor: pointer;
+  display: inline;
+  margin-left: 2%;
+}
+
 .imageDiv-RightTeamCard,
 .imageDiv-RightTeamCard-Mobile {
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
@@ -84,6 +96,7 @@
 
 .description-RightTeamCard,
 .description-RightTeamCard-Mobile {
+  cursor: default;
   margin: 0;
   padding: 0%;
   padding-right: 30px;
@@ -103,6 +116,12 @@
 
 .button-RightTeamCard {
   margin-top: 4%;
+}
+
+@media screen and (min-width: 1600px) {
+  .description-RightTeamCard {
+    line-height: 36px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -172,13 +191,15 @@
     margin: auto;
     margin-top: 2%;
   }
+
   .secondary-heading-RightTeamCard-Mobile {
     justify-content: center;
     font-size: 3vw;
     margin-top: 1%;
   }
   .description-RightTeamCard-Mobile {
-    font-size: 18px;
+    padding-right: 0;
+    font-size: 17px;
     margin-top: 10%;
   }
 }
