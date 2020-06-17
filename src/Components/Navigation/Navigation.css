@@ -2,7 +2,6 @@
 
 /* ==== NAVIGATION CONTAINER ==== */
 #root > div > div.nav-container {
-  /* .nav-container { */
   background-color: #201f1e;
   opacity: 97%;
   font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
@@ -21,12 +20,12 @@
   left: 0;
   bottom: 0;
 }
-
+/* 
 @media (min-width: 700px) {
   .nav-container {
     padding: 0% 4%;
   }
-}
+} */
 
 /* ==== Tech Hub IIT Tirupati BRAND NAME ==== */
 
@@ -271,11 +270,20 @@ a.nav-link-Navigation.nav-link.active::after {
     transform: scale(0.9);
     font-size: 1.1rem;
   }
+  #root > div > div.nav-container {
+    padding: 0 1em;
+  }
 }
 
 @media only screen and (max-width: 480px) {
   .main-web-name {
     font-size: 160%;
     margin: 0 0.1em;
+  }
+  #root > div > div.nav-container {
+    padding: 0 0;
+  }
+  #root > div > div.nav-container > nav > button{
+    padding: 0;
   }
 }
