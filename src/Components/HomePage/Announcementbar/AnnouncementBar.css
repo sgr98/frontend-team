@@ -27,7 +27,7 @@
 }
 
 .current-AnnouncementBar {
-  width: 41%;
+  width: 82%;
   background: #323130;
   padding: 0.8% 2%;
   margin-right: 3px;
@@ -46,7 +46,7 @@
   /* or 46px */
   text-align: center;
   letter-spacing: -0.015em;
-
+  margin: 0;
   color: #f3f2f1;
 }
 .current-AnnouncementBar a {
@@ -140,6 +140,21 @@
 @media screen and (max-width: 850px) {
   .Button-AnnouncementBar {
     font-size: 17px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .current-AnnouncementBar {
+    width: 100%;
+    margin-right: 0;
+  }
+  .box1-AnnouncementBar {
+    display: none;
+  }
+  .box2-AnnouncementBar {
+    display: none;
+  }
+  .box3-AnnouncementBar {
+    display: none;
   }
 }
 

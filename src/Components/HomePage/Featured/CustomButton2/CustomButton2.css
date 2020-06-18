@@ -28,6 +28,7 @@
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .Button-featured:hover {
@@ -44,15 +45,25 @@
 
   -webkit-text-fill-color: #201f1e;
 }
-
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .Button-text-featured {
-    font-size: 5vw;
+    font-size: 2.3vw;
+  }
+  .border-div-button-featured {
+    padding: 0.3%;
+    width: 50%;
+  }
+}
+
+@media (max-width: 900px) {
+  .Button-text-featured {
+    font-size: 25px;
   }
   .border-div-button-featured {
     padding: 1px;
     width: 200px;
     border-radius: 2px;
+    width: 80%;
   }
   .Button-featured {
     padding: 2%;
@@ -60,16 +71,6 @@
   }
   .Button-text-featured {
     font-weight: 400;
-  }
-}
-
-@media (max-width: 840px) {
-  .Button-text-featured {
-    font-size: 2.3vw;
-  }
-  .border-div-button-featured {
-    padding: 0.3%;
-    width: 50%;
   }
 }
 

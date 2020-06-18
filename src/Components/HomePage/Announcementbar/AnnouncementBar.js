@@ -58,15 +58,15 @@ class AnnouncementBar extends Component {
       this.state.currentIndex
     ];
 
-    let secondAnnouncement = 'Loading..';
-    if (this.state.Announcements.length !== 0) {
-      let index = this.state.currentIndex;
-      index++;
-      if (index >= this.state.Announcements.length) {
-        index = 0;
-      }
-      secondAnnouncement = this.state.Announcements[index].announcement;
-    }
+    // let secondAnnouncement = 'Loading..';
+    // if (this.state.Announcements.length !== 0) {
+    //   let index = this.state.currentIndex;
+    //   index++;
+    //   if (index >= this.state.Announcements.length) {
+    //     index = 0;
+    //   }
+    //   secondAnnouncement = this.state.Announcements[index].announcement;
+    // }
 
     return (
       <div className="root-AnnouncementBar">
@@ -81,16 +81,16 @@ class AnnouncementBar extends Component {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <button type="button" className="Button-AnnouncementBar">
+            {/* <button type="button" className="Button-AnnouncementBar">
               Check it out
-            </button>
+            </button> */}
           </a>
         </div>
-        <div className="secondary-AnnouncementBar">
+        {/* <div className="secondary-AnnouncementBar">
           <p className={this.state.fading ? 'fade-in' : ''}>
             {secondAnnouncement}
           </p>
-        </div>
+        </div> */}
         <div className="box1-AnnouncementBar" />
         <div className="box2-AnnouncementBar" />
         <div className="box3-AnnouncementBar" />

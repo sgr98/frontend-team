@@ -118,19 +118,9 @@
   margin-top: 4%;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1500px) {
   .description-RightTeamCard {
     line-height: 36px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .imageDiv-RightTeamCard {
-    height: 350px;
-    align-self: center;
-  }
-  .description-RightTeamCard {
-    margin-top: 2%;
   }
 }
 
@@ -154,6 +144,11 @@
   .description-RightTeamCard,
   .description-RightTeamCard-Mobile {
     max-height: 200px;
+  }
+}
+@media screen and (min-width: 1460px) {
+  .description-RightTeamCard {
+    max-height: 300px;
   }
 }
 

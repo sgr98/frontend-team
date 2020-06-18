@@ -118,19 +118,14 @@
   display: flex;
   justify-content: flex-end;
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1500px) {
   .description-LeftTeamCard {
     line-height: 36px;
   }
 }
-
-@media (max-width: 1200px) {
-  .imageDiv-LeftTeamCard {
-    height: 350px;
-    align-self: center;
-  }
-  .description-LeftTeamCard {
-    margin-top: 2%;
+@media screen and (min-width: 1460px) {
+  .description-LeftTeamCard-parent {
+    max-height: 300px;
   }
 }
 
