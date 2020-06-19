@@ -112,6 +112,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 5px;
+  padding: 10px;
 }
 #ClubeSlide-logo-title {
   display: flex;
@@ -160,6 +161,8 @@ body {
   margin-bottom: 5px;
   margin-top: 10px;
   width: 30%;
+  padding: 4px;
+  /* height: 30px; */
 }
 #ClubeSlide-btn:hover {
   color: #000;
@@ -189,7 +192,7 @@ body {
   }
 
   #ClubeSlide-club-title {
-    font-size: 20px;
+    font-size: 30px;
   }
   #ClubeSlide-Header {
     flex-direction: column;
