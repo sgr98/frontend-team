@@ -3,7 +3,7 @@
 /* ==== NAVIGATION CONTAINER ==== */
 #root > div > div.nav-container {
   background-color: #201f1e;
-  opacity: 97%;
+  opacity: 0.97;
   font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
   position: sticky;
   top: -7px;
