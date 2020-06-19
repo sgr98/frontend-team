@@ -1,13 +1,11 @@
 /* eslint-disable arrow-body-style */
-import React from 'react';
-
-import './HomePage.css';
-
-import Featured from './Featured/Featured';
-
-import LimeLightZone from './LimeLightZone/LimeLightZone';
-import AnnouncementBar from './Announcementbar/AnnouncementBar';
-import Appgrid from './Appgrid/Appgrid';
+import React from "react";
+import "./HomePage.css";
+import Featured from "./Featured/Featured";
+import LimeLightZone from "./LimeLightZone/LimeLightZone";
+import AnnouncementBar from "./Announcementbar/AnnouncementBar";
+import Appgrid from "./Appgrid/Appgrid";
+import ClubsInfo from "./ClubsInfo/ClubSlide";
 
 const HomePage = () => {
   return (
@@ -36,7 +34,7 @@ const HomePage = () => {
           },
         ]}
       /> */}
-      {/* <ClubsInfo /> */}
+      <ClubsInfo />
     </div>
   );
 };
