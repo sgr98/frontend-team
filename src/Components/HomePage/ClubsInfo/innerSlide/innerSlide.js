@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import Swiper from "swiper";
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import React, { useEffect } from 'react';
+import Swiper from 'swiper';
+import { Container, Row, Col, Image, Button } from 'react-bootstrap';
 
 const InnerSlide = (props) => {
   const width =
@@ -14,8 +14,8 @@ const InnerSlide = (props) => {
       new Swiper(`#ClubeSlideOuter-container`, {
         spaceBetween: 30,
         navigation: {
-          nextEl: "#ClubeSlideOuter-swiper-button-next",
-          prevEl: "#ClubeSlideOuter-swiper-button-prev",
+          nextEl: '#ClubeSlideOuter-swiper-button-next',
+          prevEl: '#ClubeSlideOuter-swiper-button-prev',
         },
         slidesPerView: 1,
         pagination: {
@@ -27,8 +27,8 @@ const InnerSlide = (props) => {
       new Swiper(`#ClubeSlideOuter-container`, {
         spaceBetween: 30,
         navigation: {
-          nextEl: "#ClubeSlideOuter-swiper-button-next",
-          prevEl: "#ClubeSlideOuter-swiper-button-prev",
+          nextEl: '#ClubeSlideOuter-swiper-button-next',
+          prevEl: '#ClubeSlideOuter-swiper-button-prev',
         },
         slidesPerView: 1,
         pagination: {
@@ -130,8 +130,8 @@ const InnerSlide = (props) => {
             </div>
             <div
               style={{
-                flexDirection: "column",
-                display: "flex",
+                flexDirection: 'column',
+                display: 'flex',
                 paddingRight: 3,
               }}
             >
@@ -156,7 +156,7 @@ const InnerSlide = (props) => {
               id="ClubeSlideInner-swiper-slide"
             >
               <img
-                style={{ width: "100%", height: "100%" }}
+                style={{ width: '100%', height: '100%' }}
                 src={imageUrl}
                 alt={`ClubSlide${index}`}
               />

@@ -27,7 +27,21 @@ const CollegeTeamCard = (props) => {
           </div>
         </div>
         <div className="profile-div-CollegeTeamCard">
-          <div> Team head Profile</div>
+          <div className="team-head-profile-div-CollegeTeamCard">
+            <div className="team-head-image-root-CollegeTeamCard">
+              <img
+                src="https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=956&q=80"
+                className="team-head-image-CollegeTeamCard"
+                alt="team head "
+              />
+            </div>
+            <div className="team-head-div-CollegeTeamCard">
+              <p className="team-head-name-CollegeTeamCard">Manoj Kumar J</p>
+              <p className="team-head-description-CollegeTeamCard">
+                Overall Team Head
+              </p>
+            </div>
+          </div>
 
           <div className="imageDiv-CollegeTeamCard">
             <img
@@ -41,9 +55,20 @@ const CollegeTeamCard = (props) => {
 
       <div className="root-CollegeTeamCard-Mobile">
         <p className="heading-CollegeTeamCard-Mobile">Formula Bharat Team</p>
-        <div className="Team-Head-CollegeTeamCard-Mobile">
-          {' '}
-          Team head Profile
+        <div className="team-head-profile-div-CollegeTeamCard">
+          <div className="team-head-image-root-CollegeTeamCard">
+            <img
+              src="https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=956&q=80"
+              className="team-head-image-CollegeTeamCard"
+              alt="team head "
+            />
+          </div>
+          <div className="team-head-div-CollegeTeamCard">
+            <p className="team-head-name-CollegeTeamCard">Manoj Kumar J</p>
+            <p className="team-head-description-CollegeTeamCard">
+              Overall Team Head
+            </p>
+          </div>
         </div>
         <div className="achievement-CollegeTeamCard-Mobile">
           #1 st place in formula bharath 2020
