@@ -103,7 +103,8 @@ const InnerSlide = (props) => {
           </div>
           <div id="ClubeSlide-club-title">{props.data.clubName}</div>
         </div>
-        {width < 760 ? (
+        <hr />
+        {width <= 768 ? (
           <div>
             <span id="ClubeSlide-club-cordinator-title">
               {props.data.clubCordinator}
@@ -112,8 +113,7 @@ const InnerSlide = (props) => {
             <span>Club Cordinator</span>
           </div>
         ) : null}
-        <hr />
-        {width > 760 ? (
+        {width > 768 ? (
           <div id="ClubeSlide-cordinator">
             <div>
               <Container>
@@ -166,12 +166,14 @@ const InnerSlide = (props) => {
       </div>
       <div
         style={{
-          display: 'flex',
-          justifyContent: 'space-around',
-          width: '100%',
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+          width: "100%",
+          marginBottom: "10px",
         }}
       >
-        {width < 760 ? (
+        {width < 768 ? (
           <Button
             href={props.data.buttonUrl[0].url}
             id="ClubeSlide-btn"
