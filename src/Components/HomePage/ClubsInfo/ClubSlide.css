@@ -1,0 +1,210 @@
+body {
+  background: #171514;
+  color: #fff;
+}
+#ClubeSlide-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+}
+#ClubeSlideOuter-container {
+  width: 90%;
+  padding: 4px;
+  border-radius: 13px;
+  background: rgba(0, 176, 227, 1);
+  background: linear-gradient(#171514, #171514),
+    linear-gradient(
+      127deg,
+      rgba(0, 176, 227, 1) 25%,
+      rgba(180, 160, 255, 1) 42%,
+      rgba(0, 178, 148, 1) 100%
+    );
+  background: -moz-linear-gradient(#171514, #171514),
+    -moz-linear-gradient(127deg, rgba(0, 176, 227, 1) 25%, rgba(
+            180,
+            160,
+            255,
+            1
+          )
+          42%, rgba(0, 178, 148, 1) 100%);
+  background: -webkit-linear-gradient(#171514, #171514),
+    -webkit-linear-gradient(127deg, rgba(0, 176, 227, 1) 25%, rgba(
+            180,
+            160,
+            255,
+            1
+          )
+          42%, rgba(0, 178, 148, 1) 100%);
+
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+#ClubeSlideInner-container {
+  padding: 10px;
+  width: 100%;
+  height: 600px;
+}
+#ClubeSlideOuter-swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background-position: center;
+  background-size: cover;
+  width: 500px;
+  height: 700px;
+  padding: 1px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#ClubeSlideInner-swiper-slide {
+  border: 4px solid;
+  border-image: linear-gradient(
+    90deg,
+    rgba(0, 176, 227, 1) 48%,
+    rgba(180, 160, 255, 1) 100%
+  );
+  border-image-slice: 1;
+}
+
+#ClubeSlideOuter-swiper-button-next {
+  right: 0px;
+  background-image: url("./Vector\ 2.png") !important;
+  height: 130px;
+  width: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: none;
+}
+
+#ClubeSlideOuter-swiper-button-prev {
+  left: 0px;
+  background-image: url("./Vector\ 1.png") !important;
+  height: 130px;
+  width: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: unset;
+}
+#ClubeSlideOuter-swiper-button-prev::after {
+  content: "";
+}
+#ClubeSlideOuter-swiper-button-next::after {
+  content: "";
+}
+#ClubeSlide-Header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+}
+#ClubeSlide-logo-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+#ClubeSlide-cordinator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px;
+}
+#ClubeSlide-club-title {
+  padding: 0%;
+  font-family: "Roboto Slab";
+  font-size: 40px;
+  font-weight: 300;
+  background: linear-gradient(to right, #00bcf2, #b4a0ff);
+  letter-spacing: -0.015em;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+  background-clip: text;
+}
+
+#ClubeSlide-club-cordinator-title {
+  padding: 0%;
+  font-family: "Roboto Slab";
+  font-size: 20px;
+  font-weight: 300;
+  background: linear-gradient(to right, #00bcf2, #b4a0ff);
+  letter-spacing: -0.015em;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+  background-clip: text;
+}
+
+#ClubeSlide-btn {
+  border: 2px solid;
+  border-image: linear-gradient(to right, #00bcf2, #b4a0ff, #01b295);
+  border-image-slice: 1;
+  color: rgb(0, 210, 255);
+  font-size: 21px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  width: 30%;
+}
+#ClubeSlide-btn:hover {
+  color: #000;
+  background: #fff;
+}
+
+.swiper-pagination-inner {
+  position: relative !important;
+  /* bottom: -50px; */
+}
+.swiper-pagination-outer {
+  bottom: 0;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  background: #fff !important;
+  padding: 7px;
+  margin: 5px;
+}
+
+#ClubeSlide-club-image {
+  max-width: 100px;
+}
+
+@media (max-width: 768px) {
+  #ClubeSlideOuter-container {
+    width: 100%;
+  }
+
+  #ClubeSlide-club-title {
+    font-size: 20px;
+  }
+  #ClubeSlide-Header {
+    flex-direction: column;
+  }
+  #ClubeSlide-description {
+    font-size: 15px;
+  }
+}
+@media (max-width: 500px) {
+  #ClubeSlide-club-image {
+    max-width: 70px;
+  }
+
+  #ClubeSlide-btn {
+    font-size: 15px;
+    width: 40%;
+  }
+}
