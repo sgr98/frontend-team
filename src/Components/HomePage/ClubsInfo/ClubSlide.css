@@ -1,7 +1,3 @@
-body {
-  background: #171514;
-  color: #fff;
-}
 #ClubeSlide-page-container {
   display: flex;
   justify-content: center;
@@ -42,17 +38,21 @@ body {
 }
 
 #ClubeSlideInner-container {
-  padding: 10px;
+  padding: 20px;
   width: 100%;
   height: 600px;
 }
 #ClubeSlideOuter-swiper-slide {
+  border-radius: 13px;
+  font-family: 'Roboto Slab', sans-serif;
   text-align: center;
   font-size: 18px;
   background-position: center;
   background-size: cover;
   width: 500px;
   height: 700px;
+  background-color: #20201f;
+  color: #fffbfb;
   padding: 1px;
   /* Center slide text vertically */
   display: -webkit-box;
@@ -71,39 +71,45 @@ body {
 }
 
 #ClubeSlideInner-swiper-slide {
-  border: 4px solid;
+  border: 2px solid;
   border-image: linear-gradient(
     90deg,
     rgba(0, 176, 227, 1) 48%,
     rgba(180, 160, 255, 1) 100%
   );
+
   border-image-slice: 1;
 }
 
 #ClubeSlideOuter-swiper-button-next {
-  right: 0px;
-  background-image: url("./Vector\ 2.png") !important;
+  background-image: url('./Vector\ 2.png') !important;
   height: 130px;
   width: 40px;
   background-repeat: no-repeat;
   background-size: cover;
   content: none;
 }
+#ClubeSlideOuter-swiper-button-next:focus {
+  outline: none;
+}
 
 #ClubeSlideOuter-swiper-button-prev {
-  left: 0px;
-  background-image: url("./Vector\ 1.png") !important;
+  background-image: url('./Vector\ 1.png') !important;
   height: 130px;
   width: 40px;
   background-repeat: no-repeat;
   background-size: cover;
   content: unset;
 }
+
+#ClubeSlideOuter-swiper-button-prev:focus {
+  outline: none;
+}
 #ClubeSlideOuter-swiper-button-prev::after {
-  content: "";
+  content: '';
 }
 #ClubeSlideOuter-swiper-button-next::after {
-  content: "";
+  content: '';
 }
 #ClubeSlide-Header {
   width: 100%;
@@ -127,7 +133,7 @@ body {
 }
 #ClubeSlide-club-title {
   padding: 0%;
-  font-family: "Roboto Slab";
+  font-family: 'Roboto Slab';
   font-size: 40px;
   font-weight: 300;
   background: linear-gradient(to right, #00bcf2, #b4a0ff);
@@ -138,9 +144,20 @@ body {
   background-clip: text;
 }
 
+#ClubeSlide-description {
+  font-family: 'Roboto Slab', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  margin: auto 1.5%;
+
+  letter-spacing: -0.015em;
+
+  color: #fffbfb;
+}
+
 #ClubeSlide-club-cordinator-title {
   padding: 0%;
-  font-family: "Roboto Slab";
+  font-family: 'Roboto Slab';
   font-size: 20px;
   font-weight: 300;
   background: linear-gradient(to right, #00bcf2, #b4a0ff);
@@ -155,15 +172,19 @@ body {
   border: 2px solid;
   border-image: linear-gradient(to right, #00bcf2, #b4a0ff, #01b295);
   border-image-slice: 1;
-  color: rgb(0, 210, 255);
+  color: #fff5f5;
   font-size: 21px;
   margin-bottom: 5px;
   margin-top: 10px;
   width: 30%;
 }
 #ClubeSlide-btn:hover {
-  color: #000;
-  background: #fff;
+  background: #e1dfdd;
+  color: #201f1e;
+  -webkit-box-shadow: inset 0px 0px 9px -2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 0px 9px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 9px -2px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
 }
 
 .swiper-pagination-inner {

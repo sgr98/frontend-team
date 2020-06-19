@@ -21,7 +21,7 @@
   height: 340px;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
   padding: 3px;
-  margin-top: 17%;
+  margin-top: 8%;
   background: rgb(0, 188, 242);
   background: -moz-linear-gradient(
     145deg,
@@ -119,6 +119,60 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: #000000;
 }
+.team-head-profile-div-CollegeTeamCard {
+  display: flex;
+  justify-content: flex-end;
+
+  flex-direction: row;
+}
+.team-head-image-root-CollegeTeamCard {
+  width: 78px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0;
+  padding: 2px;
+  background: linear-gradient(to right, #00bcf2, #b4a0ff);
+}
+
+.team-head-image-CollegeTeamCard {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.team-head-div-CollegeTeamCard {
+  height: 78px;
+  margin-left: 2%;
+}
+
+.team-head-name-CollegeTeamCard {
+  font-size: 30px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  margin-bottom: 0;
+
+  background: linear-gradient(to right, #00bcf2, #b4a0ff);
+  letter-spacing: -0.015em;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.team-head-description-CollegeTeamCard {
+  font-family: 'Roboto Slab', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #ffffff;
+}
 
 .achievement-CollegeTeamCard:hover,
 .achievement-CollegeTeamCard-Mobile:hover {
@@ -205,6 +259,10 @@
     display: flex;
     justify-content: center;
   }
+  .team-head-profile-div-CollegeTeamCard {
+    justify-content: center;
+    margin-top: 2%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -228,5 +286,26 @@
 
   .achievement-CollegeTeamCard-Mobile {
     height: 70px;
+  }
+  .team-head-profile-div-CollegeTeamCard {
+    margin: 5% auto;
+  }
+
+  .team-head-image-root-CollegeTeamCard {
+    width: 60px;
+    height: 60px;
+  }
+
+  .team-head-div-CollegeTeamCard {
+    height: 60px;
+    margin-left: 2%;
+  }
+
+  .team-head-name-CollegeTeamCard {
+    font-size: 24px;
+  }
+
+  .team-head-description-CollegeTeamCard {
+    font-size: 14px;
   }
 }

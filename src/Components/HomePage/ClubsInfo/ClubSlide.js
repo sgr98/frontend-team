@@ -1,6 +1,6 @@
-import React from "react";
-import "./ClubSlide.css";
-import InnerSlide from "./innerSlide/innerSlide";
+import React from 'react';
+import './ClubSlide.css';
+import InnerSlide from './innerSlide/innerSlide';
 
 const data = [
   {
@@ -8,45 +8,45 @@ const data = [
     clubImages: [
       {
         imageUrl:
-          "https://image.freepik.com/free-photo/image-human-brain_99433-298.jpg",
+          'https://image.freepik.com/free-photo/image-human-brain_99433-298.jpg',
       },
       {
         imageUrl:
-          "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg",
+          'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
       },
       {
         imageUrl:
-          "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg",
+          'https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg',
       },
       {
         imageUrl:
-          "https://image.freepik.com/free-photo/image-human-brain_99433-298.jpg",
+          'https://image.freepik.com/free-photo/image-human-brain_99433-298.jpg',
       },
       {
         imageUrl:
-          "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg",
+          'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
       },
     ],
-    clubName: "Robotic Club",
+    clubName: 'Robotic Club',
     clubLogo:
-      "https://cdn.thecollegefever.com/upload/21104692-1547408000199.png",
-    clubCordinator: "Saleeq",
+      'https://cdn.thecollegefever.com/upload/21104692-1547408000199.png',
+    clubCordinator: 'Saleeq',
     cordinatorImage:
-      "https://cdn4.iconfinder.com/data/icons/helmet/512/spider-man-spiderman-face-mask-round-avatar-512.png",
+      'https://cdn4.iconfinder.com/data/icons/helmet/512/spider-man-spiderman-face-mask-round-avatar-512.png',
     clubDescription:
-      "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
     buttonUrl: [
       {
-        name: "Visit our Website",
-        url: "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg",
+        name: 'Visit our Website',
+        url: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
       },
       {
-        name: " Club Projects",
-        url: "#!",
+        name: ' Club Projects',
+        url: '#!',
       },
       {
-        name: "Club Resources",
-        url: "#!",
+        name: 'Club Resources',
+        url: '#!',
       },
     ],
   },
@@ -55,45 +55,45 @@ const data = [
     clubImages: [
       {
         imageUrl:
-          "https://image.freepik.com/free-photo/image-human-brain_99433-298.jpg",
+          'https://image.freepik.com/free-photo/image-human-brain_99433-298.jpg',
       },
       {
         imageUrl:
-          "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg",
+          'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
       },
       {
         imageUrl:
-          "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg",
+          'https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg',
       },
       {
         imageUrl:
-          "https://image.freepik.com/free-photo/image-human-brain_99433-298.jpg",
+          'https://image.freepik.com/free-photo/image-human-brain_99433-298.jpg',
       },
       {
         imageUrl:
-          "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg",
+          'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
       },
     ],
-    clubName: "Sargam",
+    clubName: 'Sargam',
     clubLogo:
-      "https://cdn.thecollegefever.com/upload/21104692-1547408000199.png",
-    clubCordinator: "Saleeq",
+      'https://cdn.thecollegefever.com/upload/21104692-1547408000199.png',
+    clubCordinator: 'Saleeq',
     cordinatorImage:
-      "https://cdn4.iconfinder.com/data/icons/helmet/512/spider-man-spiderman-face-mask-round-avatar-512.png",
+      'https://cdn4.iconfinder.com/data/icons/helmet/512/spider-man-spiderman-face-mask-round-avatar-512.png',
     clubDescription:
-      "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
     buttonUrl: [
       {
-        name: "Visit our Website",
-        url: "#!",
+        name: 'Visit our Website',
+        url: '#!',
       },
       {
-        name: " Club Projects",
-        url: "#!",
+        name: ' Club Projects',
+        url: '#!',
       },
       {
-        name: "Club Resources",
-        url: "#!",
+        name: 'Club Resources',
+        url: '#!',
       },
     ],
   },
@@ -102,45 +102,45 @@ const data = [
     clubImages: [
       {
         imageUrl:
-          "https://image.freepik.com/free-photo/image-human-brain_99433-298.jpg",
+          'https://image.freepik.com/free-photo/image-human-brain_99433-298.jpg',
       },
       {
         imageUrl:
-          "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg",
+          'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
       },
       {
         imageUrl:
-          "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg",
+          'https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg',
       },
       {
         imageUrl:
-          "https://image.freepik.com/free-photo/image-human-brain_99433-298.jpg",
+          'https://image.freepik.com/free-photo/image-human-brain_99433-298.jpg',
       },
       {
         imageUrl:
-          "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg",
+          'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
       },
     ],
-    clubName: "Coding Club",
+    clubName: 'Coding Club',
     clubLogo:
-      "https://cdn.thecollegefever.com/upload/21104692-1547408000199.png",
-    clubCordinator: "Saleeq",
+      'https://cdn.thecollegefever.com/upload/21104692-1547408000199.png',
+    clubCordinator: 'Saleeq',
     cordinatorImage:
-      "https://cdn4.iconfinder.com/data/icons/helmet/512/spider-man-spiderman-face-mask-round-avatar-512.png",
+      'https://cdn4.iconfinder.com/data/icons/helmet/512/spider-man-spiderman-face-mask-round-avatar-512.png',
     clubDescription:
-      "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
     buttonUrl: [
       {
-        name: "Visit our Website",
-        url: "#!",
+        name: 'Visit our Website',
+        url: '#!',
       },
       {
-        name: " Club Projects",
-        url: "#!",
+        name: ' Club Projects',
+        url: '#!',
       },
       {
-        name: "Club Resources",
-        url: "#!",
+        name: 'Club Resources',
+        url: '#!',
       },
     ],
   },
@@ -158,9 +158,9 @@ const ClubSlide = () => {
         <div
           className="swiper-container"
           style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <div className="swiper-container" id="ClubeSlideOuter-container">
