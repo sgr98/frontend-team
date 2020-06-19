@@ -61,7 +61,7 @@
   font-weight: 300;
   background: linear-gradient(to right, #00bcf2, #b4a0ff);
   letter-spacing: -0.015em;
-
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -131,7 +131,23 @@
   border-radius: 50%;
   margin: 0;
   padding: 2px;
-  background: linear-gradient(to right, #00bcf2, #b4a0ff);
+  background: rgb(0, 188, 242);
+  background: -moz-linear-gradient(
+    145deg,
+    rgba(0, 188, 242, 1) 0%,
+    rgba(180, 160, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    145deg,
+    rgba(0, 188, 242, 1) 0%,
+    rgba(180, 160, 255, 1) 100%
+  );
+  background: linear-gradient(
+    145deg,
+    rgba(0, 188, 242, 1) 0%,
+    rgba(180, 160, 255, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00bcf2",endColorstr="#b4a0ff",GradientType=1);
 }
 
 .team-head-image-CollegeTeamCard {
@@ -155,7 +171,7 @@
 
   background: linear-gradient(to right, #00bcf2, #b4a0ff);
   letter-spacing: -0.015em;
-
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
