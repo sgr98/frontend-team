@@ -9,7 +9,7 @@ import GetInspiredBulbIcon from './GetInspiredBulbIcon.png';
 export class Navigation extends Component {
   render() {
     return (
-      <div className="nav-container ">
+      <div className="nav-container-Navigation ">
         <Navbar collapseOnSelect expand="lg" variant="dark" sticky="bottom">
           <Navbar.Brand className="main-web-name" href="#home">
             Tech Hub IIT Tirupati
