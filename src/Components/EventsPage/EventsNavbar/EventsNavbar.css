@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300;400;600&display=swap");
+
+/* ==== NAVIGATION CONTAINER ==== */
+#root > div > div:nth-child(1) > div.nav-container-EventsNavbar > nav {
+  background-color: #201f1e;
+  opacity: 0.97;
+  font-family: "Signika", Arial, Helvetica, sans-serif;
+  position: sticky;
+  z-index: 100;
+}
+#root > div > div:nth-child(1) > div.nav-container-EventsNavbar > nav::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(to right, #1a83a1, #675899);
+  height: 0.8px;
+  left: 0;
+  bottom: 0;
+}
+
+/* ==== Tech Hub IIT Tirupati BRAND NAME ==== */
+
+.main-web-name-EventsNavbar {
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-size: 150%;
+  background: linear-gradient(
+    90deg,
+    rgb(0, 185, 214),
+    rgb(3, 167, 177),
+    rgb(3, 163, 137)
+  );
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+/* ==== NAVIGATION LINKS ==== */
+
+a.nav-link-EventsNavbar.nav-link {
+  display: inline-block;
+  position: relative;
+  font-size: 120%;
+  white-space: nowrap;
+  color: red ;
+  text-transform: uppercase;
+  border: 2px blue solid;
+  border-radius: 5%;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #f0f0f0;
+}
+
+
+
+
+
+
+
+
+/* // Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .main-web-name-EventsNavbar {
+    font-size: 170%;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #root > div > div:nth-child(1) > div.nav-container-EventsNavbar > nav > a {
+    display: none;
+  }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
