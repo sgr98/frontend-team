@@ -7,7 +7,7 @@ class EventsNavbar extends Component {
   render() {
     return (
       <div className="nav-container-EventsNavbar">
-        <Navbar collapseOnSelect expand="lg" variant="dark" sticky="bottom">
+        <Navbar collapseOnSelect expand="lg" variant="dark" sticky="top">
           <Navbar.Brand href="#home" className="main-web-name-EventsNavbar">
             Tech Hub IIT Tirupati
           </Navbar.Brand>
@@ -36,7 +36,7 @@ class EventsNavbar extends Component {
 
               <Nav.Link
                 href="#calender-events"
-                className="nav-link-EventsNavbar "
+                className="nav-link-EventsNavbar calender-events-EventsNavbar "
               >
                 CALENDAR EVENTS
               </Nav.Link>

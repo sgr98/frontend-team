@@ -56,6 +56,7 @@
   color: #f0f0f0;
   background-color: #201f1e;
 }
+/* gradient border */
 .nav-link-EventsNavbar::after {
   content: "";
   position: absolute;
@@ -70,9 +71,22 @@
   justify-content: center;
   text-align: center;
 }
-
+/* active nav-link */
 #responsive-navbar-nav > div > a.nav-link-EventsNavbar.nav-link.active {
   background: linear-gradient(90deg, #184653, #443f56);
+}
+
+/* ==== Hamburger Menu ==== */
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url(navbarBurgerMenuIcon.png);
+}
+
+.navbar-dark .navbar-toggler {
+  border-color: rgba(32, 31, 30, 0);
+}
+.navbar-dark .navbar-toggler:hover {
+  outline: none;
 }
 
 /* ==== MEDIA QUERIES ==== */
@@ -113,9 +127,9 @@
     width: 12rem;
   }
   .nav-link-EventsNavbar::after {
-    width: 12.2rem;
+    width: 12.22rem;
     top: -0.1em;
     right: -1%;
-    height: 2.7rem;
+    height: 2.67rem;
   }
 }

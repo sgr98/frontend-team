@@ -265,7 +265,7 @@ a.nav-link-Navigation.nav-link.active::after {
     transform: scale(0.9);
     font-size: 1.1rem;
   }
-  #root > div > div.nav-container {
+  #root > div > div.nav-container-Navigation {
     padding: 0 1em;
   }
 }
@@ -275,10 +275,10 @@ a.nav-link-Navigation.nav-link.active::after {
     font-size: 160%;
     margin: 0 0.1em;
   }
-  #root > div > div.nav-container {
+  #root > div > div.nav-container-Navigation {
     padding: 0 0;
   }
-  #root > div > div.nav-container > nav > button {
+  #root > div > div.nav-container-Navigation > nav > button {
     padding: 0;
   }
 }
