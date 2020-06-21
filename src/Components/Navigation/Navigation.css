@@ -120,6 +120,7 @@ a.nav-link-Navigation.nav-link.active::after {
   transform-origin: bottom left;
   border-radius: 15%;
 }
+
 /* drop-down menu items styling */
 
 #responsive-navbar-nav

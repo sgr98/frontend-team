@@ -2,14 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Signika:wght@300;400;600&display=swap");
 
 /* ==== NAVIGATION CONTAINER ==== */
-#root > div > div:nth-child(1) > div.nav-container-EventsNavbar > nav {
+.nav-container-EventsNavbar {
   background-color: #201f1e;
   opacity: 0.97;
   font-family: "Signika", Arial, Helvetica, sans-serif;
   position: sticky;
   z-index: 100;
+  margin-bottom: 3%;
 }
-#root > div > div:nth-child(1) > div.nav-container-EventsNavbar > nav::before {
+.nav-container-EventsNavbar > nav::before {
   content: "";
   width: 100%;
   position: absolute;
@@ -40,49 +41,81 @@
 
 /* ==== NAVIGATION LINKS ==== */
 
-a.nav-link-EventsNavbar.nav-link {
-  display: inline-block;
+.nav-link-EventsNavbar {
   position: relative;
-  font-size: 120%;
+  font-size: 1rem;
+  font-weight: 300;
   white-space: nowrap;
-  color: red ;
   text-transform: uppercase;
-  border: 2px blue solid;
-  border-radius: 5%;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
+  font-style: normal;
+  line-height: 1.5rem;
+  letter-spacing: -0.015em;
+  width: 12rem;
+  margin: 0.3em auto;
+  border-radius: 3px;
   color: #f0f0f0;
+  background-color: #201f1e;
+}
+.nav-link-EventsNavbar::after {
+  content: "";
+  position: absolute;
+  border-radius: 3px;
+  background: linear-gradient(#00bcf2, #b4a0ff);
+  z-index: -1;
+  width: 12.2rem;
+  top: -0.1em;
+  right: -1%;
+  height: 2.7rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
+#responsive-navbar-nav > div > a.nav-link-EventsNavbar.nav-link.active {
+  background: linear-gradient(90deg, #184653, #443f56);
+}
 
-
-
-
-
-
-
-/* // Extra small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap */
-
-/* // Small devices (landscape phones, 576px and up) */
+/* ==== MEDIA QUERIES ==== */
 @media (min-width: 576px) {
   .main-web-name-EventsNavbar {
     font-size: 170%;
   }
+  .nav-link-EventsNavbar {
+    font-size: 1.08rem;
+  }
 }
 
-/* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 }
 
-/* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   #root > div > div:nth-child(1) > div.nav-container-EventsNavbar > nav > a {
     display: none;
   }
+  .nav-link-EventsNavbar {
+    border-radius: 5px;
+    padding: 2px;
+    width: 10rem;
+  }
+  .nav-link-EventsNavbar::after {
+    border-radius: 5px;
+    width: 10.2rem;
+    top: -0.1em;
+    right: -1%;
+    height: 2rem;
+  }
 }
 
-/* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .nav-link-EventsNavbar {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    width: 12rem;
+  }
+  .nav-link-EventsNavbar::after {
+    width: 12.2rem;
+    top: -0.1em;
+    right: -1%;
+    height: 2.7rem;
+  }
 }
