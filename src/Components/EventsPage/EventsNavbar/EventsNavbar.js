@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./EventsNavbar.css";
 
@@ -17,21 +17,26 @@ class EventsNavbar extends Component {
               <Nav.Link href="#all-events" className="nav-link-EventsNavbar ">
                 ALL EVENTS
               </Nav.Link>
+
               <Nav.Link href="#workshops" className="nav-link-EventsNavbar ">
                 WORKSHOPS
               </Nav.Link>
+
               <Nav.Link href="#talks" className="nav-link-EventsNavbar ">
                 TALKS
               </Nav.Link>
+
               <Nav.Link href="#activities" className="nav-link-EventsNavbar ">
                 ACTIVITIES
               </Nav.Link>
+
               <Nav.Link href="#competitions" className="nav-link-EventsNavbar ">
                 COMPETITIONS
               </Nav.Link>
+
               <Nav.Link
                 href="#calender-events"
-                className="nav-link-EventsNavbar "
+                className="nav-link-EventsNavbar calender-events-EventsNavbar "
               >
                 CALENDAR EVENTS
               </Nav.Link>
