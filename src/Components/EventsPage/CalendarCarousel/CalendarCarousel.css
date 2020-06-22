@@ -37,3 +37,12 @@
 .root-CalendarCarousel .carousel-control-prev-icon:hover {
   height: 108px;
 }
+
+@media (min-width: 1750px) {
+  .root-CalendarCarousel .carousel-control-prev {
+    margin-top: 415px;
+  }
+  .root-CalendarCarousel .carousel-control-next {
+    margin-top: 415px;
+  }
+}

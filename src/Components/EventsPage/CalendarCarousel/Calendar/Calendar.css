@@ -123,6 +123,15 @@
   -webkit-text-fill-color: transparent;
 }
 
+@media (min-width: 1750px) {
+  .th-calendar {
+    width: 300px;
+  }
+  .cell-calendar {
+    height: 130px;
+  }
+}
+
 @media (max-width: 1100px) {
   .table-calendar {
     overflow: scroll;
