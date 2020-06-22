@@ -70,7 +70,7 @@ a#collasible-nav-dropdown.dropdown-toggle.nav-link::after {
 
 /* underline for the active page  */
 
-a.nav-link-Navigation.nav-link.active::after {
+a#navigation-home.nav-link-Navigation.nav-link.active::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -88,7 +88,7 @@ a.nav-link-Navigation.nav-link.active::after {
 
 /* underline transition for link clicked */
 #collasible-nav-dropdown:link::before,
-.nav-link-Navigation:link::before {
+#navigation-home.nav-link-Navigation:link::before {
   content: '';
   position: absolute;
   width: 90%;
@@ -116,7 +116,7 @@ a.nav-link-Navigation.nav-link.active::after {
 }
 
 #collasible-nav-dropdown:focus::before,
-.nav-link-Navigation:active::before {
+#navigation-home.nav-link-Navigation:active::before {
   width: 90%;
   transform: scaleX(1);
   -webkit-transform: scaleX(1);
