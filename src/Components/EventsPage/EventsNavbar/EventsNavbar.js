@@ -8,6 +8,9 @@ export class EventsNavbar extends Component {
         return (
             <div className="nav-container-EventsNavbar">
                 <Navbar collapseOnSelect expand="lg" variant="dark" sticky="bottom">
+                    <Navbar.Brand className="main-web-name-EventsNavbar" href="#home">
+                        Tech Hub IIT Tirupati
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="w-100 justify-content-around">

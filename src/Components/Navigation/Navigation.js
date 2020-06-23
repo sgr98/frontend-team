@@ -1,24 +1,51 @@
 /* eslint-disable react/prefer-stateless-function */
 
-import React, { Component } from 'react';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './Navigation.css';
-import GetInspiredBulbIcon from './GetInspiredBulbIcon.png';
+import React, { Component } from "react";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./Navigation.css";
+import GetInspiredBulbIcon from "./GetInspiredBulbIcon.png";
 
 export class Navigation extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     scrolled: false,
+  //   };
+  // }
+
+  // componentDidMount() {
+  //   const height = document.querySelector('.nav-container')
+  //     .clientHeight;
+  //   window.addEventListener('scroll', () => {
+  //     const isTop = window.scrollY < height;
+
+  //     if (isTop) {
+  //       this.setState({ scrolled: false });
+  //     }
+  //     else {
+  //       this.setState({ scrolled: true });
+  //     }
+  //   });
+  // }
+
   render() {
+    // let rootClass = 'nav-container-Navigation';
+    // if(this.state.scrolled) {
+    //   rootClass += ' nav-container-Navigation-scrolled';
+    // }
+
     return (
-      <div className="nav-container ">
+      <div className="nav-container-Navigation ">
         <Navbar collapseOnSelect expand="lg" variant="dark" sticky="bottom">
-          <Navbar.Brand className="main-web-name" href="#home">
+          <Navbar.Brand className="main-web-name-Navigation" href="#home">
             Tech Hub IIT Tirupati
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
               {/* HOME */}
-              <Nav.Link className="nav-link-Navigation " href="#home" id="navigation-home">
+              <Nav.Link className="nav-link-Navigation " href="#home">
                 Home
               </Nav.Link>
 
@@ -162,7 +189,7 @@ export class Navigation extends Component {
                     <img
                       src={GetInspiredBulbIcon}
                       alt="GetInspiredBulbIcon"
-                      style={{ height: '1em' }}
+                      style={{ height: "1em" }}
                     />
                   </span>
                 }
