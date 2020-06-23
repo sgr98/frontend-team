@@ -1,0 +1,53 @@
+
+body{
+  background-color:#262626;
+}
+.box{
+  height: 260px;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+}
+
+.head img{
+  width: 36px;
+  height: 36px;
+}
+
+.row p{
+  margin-left: 14px;
+  font-size: 30px;
+  color: rgb(58, 156, 185);
+  font-family: Robot Slab;
+}
+
+.container2{
+  width:100%;
+  padding:0px 35px 0px 35px;
+  margin:0px auto 0px auto;
+
+}
+
+.custom{
+  border: 3px solid rgba(0,0,0,0.2);
+  height: 246px;
+  border-radius: 2%;
+  box-shadow: rgba(0,0,0,0.2);
+}
+
+
+@media (max-width:391px){
+  .row p{
+    margin-left: 7px;
+   font-size: 23px;
+   color: rgb(58, 156, 185);
+   font-family: Robot Slab;
+ }
+
+ 
+.head img{
+  width: 28px;
+  height: 28px;
+}
+
+}
