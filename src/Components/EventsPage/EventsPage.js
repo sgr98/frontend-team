@@ -4,7 +4,7 @@ import EventsNavbar from './EventsNavbar/EventsNavbar';
 
 const EventsPage = () => (
   <div>
-    {/* <EventsNavbar /> */}
+    <EventsNavbar />
     <Calendar
       events={[
         {
