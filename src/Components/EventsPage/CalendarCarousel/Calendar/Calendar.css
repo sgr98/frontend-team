@@ -21,8 +21,12 @@
 
 .image-cell-table {
   border-radius: 3px;
+  filter: brightness(50%);
 }
 
+.image-cell-table:hover {
+  filter: brightness(90%);
+}
 .cell-calendar {
   width: 100%;
   height: 100px;
@@ -55,9 +59,22 @@
   position: absolute;
   bottom: 0;
   right: 0.3rem;
-  color: #e1dfde;
+
+  color: #ffffff;
   font-family: 'Roboto Slab', sans-serif;
   font-size: 1.2rem;
+}
+.eventTitle-calendar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Signika', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  color: #e1dfdd;
 }
 
 .th-calendar {

@@ -61,16 +61,10 @@ const Calendar = (props) => {
                   src={props.events[k].image}
                   alt="event"
                 />
-                <span
-                  className="date-calendar"
-                  style={{
-                    position: 'absolute',
-                    bottom: '0',
-                    right: '0.3rem',
-                  }}
-                >
-                  {currDay}
+                <span className="eventTitle-calendar">
+                  {props.events[k].title}
                 </span>
+                <span className="date-calendar">{currDay}</span>
               </div>
             );
             break;
