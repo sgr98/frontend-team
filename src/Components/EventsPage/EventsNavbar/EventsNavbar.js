@@ -1,45 +1,120 @@
-import React, { Component } from "react";
-import { Navbar, Nav } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./EventsNavbar.css";
+import React, { Component } from 'react';
+import { Navbar, Nav } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './EventsNavbar.css';
 
-class EventsNavbar extends Component {
+export class EventsNavbar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      scrolled: false,
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = () => {
+    const height = document.querySelector('.nav-container-EventsNavbar')
+      .clientHeight;
+    const isTop = window.scrollY < height;
+
+    if (isTop) {
+      this.setState({ scrolled: false });
+    } else {
+      this.setState({ scrolled: true });
+    }
+  };
+
   render() {
+    let mainClassName = 'nav-container-EventsNavbar';
+    let navContainerClass = 'nav-link-container-EventsNavbar';
+    let navLinkClass = 'nav-link-EventsNavbar';
+    if (this.state.scrolled) {
+      navContainerClass = 'nav-link-container-EventsNavbar-scrolled';
+      navLinkClass = 'nav-link-EventsNavbar-scrolled';
+      mainClassName += ' BorderBottom-EventsNavbar';
+    }
+
     return (
-      <div className="nav-container-EventsNavbar">
+      <div className={mainClassName}>
         <Navbar collapseOnSelect expand="lg" variant="dark" sticky="top">
-          <Navbar.Brand href="#home" className="main-web-name-EventsNavbar">
-            Tech Hub IIT Tirupati
+          <Navbar.Brand className="main-web-name-EventsNavbar" href="#home">
+            Events
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="w-100 justify-content-around">
-              <Nav.Link href="#all-events" className="nav-link-EventsNavbar ">
-                ALL EVENTS
-              </Nav.Link>
+              {/* ALL EVENTS */}
+              <div className={navContainerClass}>
+                <Nav.Link
+                  className={navLinkClass}
+                  href="#all-events"
+                  id="events-navbar-AllEvents"
+                >
+                  <div>ALL EVENTS</div>
+                </Nav.Link>
+              </div>
 
-              <Nav.Link href="#workshops" className="nav-link-EventsNavbar ">
-                WORKSHOPS
-              </Nav.Link>
+              {/* WORKSHOPS */}
+              <div className={navContainerClass}>
+                <Nav.Link
+                  className={navLinkClass}
+                  href="#workshops"
+                  id="events-navbar-Workshops"
+                >
+                  <div>WORKSHOPS</div>
+                </Nav.Link>
+              </div>
 
-              <Nav.Link href="#talks" className="nav-link-EventsNavbar ">
-                TALKS
-              </Nav.Link>
+              {/* TALKS */}
+              <div className={navContainerClass}>
+                <Nav.Link
+                  className={navLinkClass}
+                  href="#talks"
+                  id="events-navbar-Talks"
+                >
+                  <div>TALKS</div>
+                </Nav.Link>
+              </div>
 
-              <Nav.Link href="#activities" className="nav-link-EventsNavbar ">
-                ACTIVITIES
-              </Nav.Link>
+              {/* ACTIVITIES */}
+              <div className={navContainerClass}>
+                <Nav.Link
+                  className={navLinkClass}
+                  href="#activities"
+                  id="events-navbar-Activities"
+                >
+                  <div>ACTIVITIES</div>
+                </Nav.Link>
+              </div>
 
-              <Nav.Link href="#competitions" className="nav-link-EventsNavbar ">
-                COMPETITIONS
-              </Nav.Link>
+              {/* COMPETITIONS */}
+              <div className={navContainerClass}>
+                <Nav.Link
+                  className={navLinkClass}
+                  href="#competitions"
+                  id="events-navbar-Competitions"
+                >
+                  <div>COMPETITIONS</div>
+                </Nav.Link>
+              </div>
 
-              <Nav.Link
-                href="#calender-events"
-                className="nav-link-EventsNavbar calender-events-EventsNavbar "
-              >
-                CALENDAR EVENTS
-              </Nav.Link>
+              {/* CALENDAR EVENTS */}
+              <div className={navContainerClass}>
+                <Nav.Link
+                  className={navLinkClass}
+                  href="#calendar-events"
+                  id="events-navbar-CalendarEvents"
+                >
+                  <div>CALENDAR EVENTS</div>
+                </Nav.Link>
+              </div>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

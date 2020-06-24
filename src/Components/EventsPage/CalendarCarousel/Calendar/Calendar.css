@@ -21,11 +21,11 @@
 
 .image-cell-table {
   border-radius: 3px;
-  filter: brightness(50%);
+  filter: brightness(80%);
 }
 
 .image-cell-table:hover {
-  filter: brightness(90%);
+  filter: brightness(95%);
 }
 .cell-calendar {
   width: 100%;
@@ -74,7 +74,8 @@
   font-size: 20px;
   text-align: center;
   width: 100%;
-  color: #e1dfdd;
+  color: white;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 .th-calendar {
@@ -118,6 +119,7 @@
 
   background: linear-gradient(to right, #00bcf2, #b2a0ff);
   letter-spacing: 0.015em;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -136,6 +138,7 @@
 
   /* identical to box height */
   background: linear-gradient(to right, #00bcf2, #b2a0ff);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
