@@ -7,36 +7,36 @@ import "./Navigation.css";
 import GetInspiredBulbIcon from "./GetInspiredBulbIcon.png";
 
 export class Navigation extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     scrolled: false,
-  //   };
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      scrolled: false,
+    };
+  }
 
-  // componentDidMount() {
-  //   const height = document.querySelector('.nav-container')
-  //     .clientHeight;
-  //   window.addEventListener('scroll', () => {
-  //     const isTop = window.scrollY < height;
+  componentDidMount() {
+    const height = document.querySelector('.nav-container-Navigation')
+      .clientHeight;
+    window.addEventListener('scroll', () => {
+      const isTop = window.scrollY < height;
 
-  //     if (isTop) {
-  //       this.setState({ scrolled: false });
-  //     }
-  //     else {
-  //       this.setState({ scrolled: true });
-  //     }
-  //   });
-  // }
+      if (isTop) {
+        this.setState({ scrolled: false });
+      }
+      else {
+        this.setState({ scrolled: true });
+      }
+    });
+  }
 
   render() {
-    // let rootClass = 'nav-container-Navigation';
-    // if(this.state.scrolled) {
-    //   rootClass += ' nav-container-Navigation-scrolled';
-    // }
+    let rootClass = '.nav-container-Navigation';
+    if(this.state.scrolled) {
+      rootClass += ' .nav-container-Navigation-scrolled';
+    }
 
     return (
-      <div className="nav-container-Navigation ">
+      <div className="nav-container-Navigation">
         <Navbar collapseOnSelect expand="lg" variant="dark" sticky="bottom">
           <Navbar.Brand className="main-web-name-Navigation" href="#home">
             Tech Hub IIT Tirupati

@@ -9,9 +9,10 @@
     position: sticky;
     top: -7px;
     z-index: 100;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
 }
 
+/* underline to appear when scrolled */
 .nav-container-EventsNavbar > nav::before {
     content: "";
     width: 100%;
@@ -43,6 +44,7 @@
 
 /* ==== EVENTSNAVBAR NAVLINKS ==== */
 
+/* WITHOUT SCROLL */
 .nav-link-container-EventsNavbar {
     position: relative;
     display: flex;  
@@ -78,11 +80,56 @@
     -moz-border-radius: 7px;
     -ms-border-radius: 7px;
     -o-border-radius: 7px;
-    
 }
 
 #responsive-navbar-nav > div > div > a.nav-link-EventsNavbar.nav-link.active {
     background: linear-gradient(90deg, #13657d, #615983);
+}
+
+/* WITH SCROLL */
+.nav-link-container-EventsNavbar-scrolled {
+    position: relative;
+    display: flex;  
+    flex-wrap: wrap;
+    font-size: 1rem;
+    font-weight: 300;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-style: normal;
+    line-height: 1.5rem;
+    letter-spacing: -0.015em;
+    background: linear-gradient(180deg, #00bcf2, #b4a0ff);
+    margin: 0.3em auto;
+    color: #f0f0f0;
+    /* box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08), 2px 2px 3px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(208, 197, 249, 0.005), 10px 10px 10px rgba(0, 0, 0, 0.1); */
+    border-radius: 5px;
+    width: 156px;
+    height: 40px;
+    padding-top: 2.6px;
+    padding-left: 0.3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    justify-content: center;
+}
+
+.nav-link-EventsNavbar-scrolled {
+    height: 95%;
+    border-radius: 5px;
+    width: 98%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#responsive-navbar-nav > div > div > a.nav-link-EventsNavbar-scrolled.nav-link {
+    background: #201f1e;
+}
+
+#responsive-navbar-nav > div > div > a.nav-link-EventsNavbar-scrolled.nav-link.active {
+    background: linear-gradient(90deg, #184653, #443f56);
 }
 
 /* WORD COLORING FOR NAV LINKS */

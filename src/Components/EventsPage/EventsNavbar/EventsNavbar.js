@@ -7,7 +7,7 @@ export class EventsNavbar extends Component {
     render() {
         return (
             <div className="nav-container-EventsNavbar">
-                <Navbar collapseOnSelect expand="lg" variant="dark" sticky="bottom">
+                <Navbar collapseOnSelect expand="lg" variant="dark" sticky="top">
                     <Navbar.Brand className="main-web-name-EventsNavbar" href="#home">
                         Tech Hub IIT Tirupati
                     </Navbar.Brand>
