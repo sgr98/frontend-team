@@ -1,3 +1,8 @@
+.root-CalendarCarousel {
+  margin: 5% 0;
+  transform: ease-in 0.3s;
+}
+
 .root-CalendarCarousel .carousel-control-prev-icon {
   background-image: url('Vector 1.png');
   height: 100px;

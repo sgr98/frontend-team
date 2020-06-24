@@ -21,8 +21,12 @@
 
 .image-cell-table {
   border-radius: 3px;
+  filter: brightness(80%);
 }
 
+.image-cell-table:hover {
+  filter: brightness(95%);
+}
 .cell-calendar {
   width: 100%;
   height: 100px;
@@ -55,9 +59,23 @@
   position: absolute;
   bottom: 0;
   right: 0.3rem;
-  color: #e1dfde;
+
+  color: #ffffff;
   font-family: 'Roboto Slab', sans-serif;
   font-size: 1.2rem;
+}
+.eventTitle-calendar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Signika', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  color: white;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 .th-calendar {
@@ -101,6 +119,7 @@
 
   background: linear-gradient(to right, #00bcf2, #b2a0ff);
   letter-spacing: 0.015em;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -119,6 +138,7 @@
 
   /* identical to box height */
   background: linear-gradient(to right, #00bcf2, #b2a0ff);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
