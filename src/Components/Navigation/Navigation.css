@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap');
 
 /* ==== NAVIGATION CONTAINER ==== */
-
-#root > div > div.nav-container-Navigation {
+.nav-container-Navigation {
   background-color: #201f1e;
   opacity: 0.97;
   font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
@@ -14,18 +13,18 @@
 }
 
 /* underline to appear when scrolled */
-/* .nav-container-Navigation::before {
-  content: '';
-  width: 100%;
-  position: absolute;
-  background: linear-gradient(to right, #1a83a1, #675899);
-  height: 0.8px;
-  left: 0;
-  bottom: 0;
-} */
-
-.nav-container-Navigation-scrolled {
-  border-bottom: 1.8px solid #605e5c;
+.BorderBottom-Navigation {
+  background:
+    linear-gradient(
+      90deg, 
+      #1a83a1, #675899
+    )
+    left 
+    bottom
+    rgba(32, 31, 30, 0.8)    
+    no-repeat;
+  background-size:100% 0.8px;
+  backdrop-filter: blur(30px);
 }
 
 /* ==== Tech Hub IIT Tirupati BRAND NAME ==== */

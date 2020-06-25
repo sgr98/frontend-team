@@ -1,135 +1,144 @@
-@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;600&display=swap');
 
 /* ==== MAIN CONTAINER ==== */
 
 .nav-container-EventsNavbar {
-    background: rgba(32, 31, 30, 0.8);
-    backdrop-filter: blur(30px);
-    font-family: "Signika", Arial, Helvetica, sans-serif;
-    position: sticky;
-    top: -7px;
-    z-index: 100;
-    margin-bottom: 3%;
+  background-color: #20201f;
+  font-family: 'Signika', Arial, Helvetica, sans-serif;
+  position: sticky;
+  top: -7px;
+  z-index: 100;
+  margin-bottom: 3%;
+}
+.nav-container-EventsNavbar .navbar {
+  padding-top: 1%;
 }
 
 /* underline to appear when scrolled */
-.nav-container-EventsNavbar > nav::before {
-    content: "";
-    width: 100%;
-    position: absolute;
-    background: linear-gradient(to right, #1a83a1, #675899);
-    height: 0.8px;
-    left: 0;
-    bottom: 0;
+.BorderBottom-EventsNavbar {
+  background:
+    linear-gradient(
+      90deg, 
+      #1a83a1, #675899
+    )
+    left 
+    bottom
+    rgba(32, 31, 30, 0.8)    
+    no-repeat;
+  background-size:100% 0.8px;
+  backdrop-filter: blur(30px);
 }
 
 /* ==== Tech Hub IIT Tirupati BRAND NAME ==== */
 
 .main-web-name-EventsNavbar {
-    font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
-    font-size: 150%;
-    background: linear-gradient(
-      90deg,
-      rgb(0, 185, 214),
-      rgb(3, 167, 177),
-      rgb(3, 163, 137)
-    );
-    background-size: 100%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-  }
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+  font-size: 150%;
+  background: linear-gradient(
+    90deg,
+    rgb(0, 185, 214),
+    rgb(3, 167, 177),
+    rgb(3, 163, 137)
+  );
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
 
 /* ==== EVENTSNAVBAR NAVLINKS ==== */
 
 /* WITHOUT SCROLL */
 .nav-link-container-EventsNavbar {
-    position: relative;
-    display: flex;  
-    flex-wrap: wrap;
-    font-size: 1rem;
-    font-weight: 300;
-    white-space: nowrap;
-    text-transform: uppercase;
-    font-style: normal;
-    line-height: 1.5rem;
-    letter-spacing: -0.015em;
-    background: #201f1e;
-    margin: 0.3em auto;
-    color: #f0f0f0;
-    box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08), 2px 2px 3px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(208, 197, 249, 0.005), 10px 10px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    width: 156px;
-    height: 40px;
-    padding-top: 2.8px;
-    padding-left: 0.3px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    justify-content: center;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  font-weight: 300;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-style: normal;
+  line-height: 1.5rem;
+  letter-spacing: -0.015em;
+  background: #201f1e;
+  margin: 0.3em auto;
+  color: #f0f0f0;
+  box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08),
+    2px 2px 3px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(208, 197, 249, 0.005),
+    10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 15%;
+  height: 40px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  justify-content: center;
+  padding: 2px 2.5px;
 }
 
 .nav-link-EventsNavbar {
-    height: 94%;
-    border-radius: 7px;
-    width: 97%;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
-    -o-border-radius: 7px;
+  height: 100%;
+  border-radius: 7px;
+  width: 100%;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
 }
 
 #responsive-navbar-nav > div > div > a.nav-link-EventsNavbar.nav-link.active {
-    background: linear-gradient(90deg, #13657d, #615983);
+  background: linear-gradient(90deg, #13657d, #615983);
 }
 
 /* WITH SCROLL */
 .nav-link-container-EventsNavbar-scrolled {
-    position: relative;
-    display: flex;  
-    flex-wrap: wrap;
-    font-size: 1rem;
-    font-weight: 300;
-    white-space: nowrap;
-    text-transform: uppercase;
-    font-style: normal;
-    line-height: 1.5rem;
-    letter-spacing: -0.015em;
-    background: linear-gradient(180deg, #00bcf2, #b4a0ff);
-    margin: 0.3em auto;
-    color: #f0f0f0;
-    /* box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08), 2px 2px 3px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(208, 197, 249, 0.005), 10px 10px 10px rgba(0, 0, 0, 0.1); */
-    border-radius: 5px;
-    width: 156px;
-    height: 40px;
-    padding-top: 2.6px;
-    padding-left: 0.3px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    justify-content: center;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  font-weight: 300;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-style: normal;
+  line-height: 1.5rem;
+  letter-spacing: -0.015em;
+  background: linear-gradient(180deg, #00bcf2, #b4a0ff);
+  margin: 0.3em auto;
+  color: #f0f0f0;
+  /* box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08), 2px 2px 3px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(208, 197, 249, 0.005), 10px 10px 10px rgba(0, 0, 0, 0.1); */
+  border-radius: 5px;
+  width: 15%;
+  height: 40px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  justify-content: center;
+  padding: 2px 2.7px;
 }
 
 .nav-link-EventsNavbar-scrolled {
-    height: 95%;
-    border-radius: 5px;
-    width: 98%;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+  height: 100%;
+  border-radius: 5px;
+  width: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 #responsive-navbar-nav > div > div > a.nav-link-EventsNavbar-scrolled.nav-link {
-    background: #201f1e;
+  background: #201f1e;
 }
 
-#responsive-navbar-nav > div > div > a.nav-link-EventsNavbar-scrolled.nav-link.active {
-    background: linear-gradient(90deg, #184653, #443f56);
+#responsive-navbar-nav
+  > div
+  > div
+  > a.nav-link-EventsNavbar-scrolled.nav-link.active {
+  background: linear-gradient(90deg, #184653, #443f56);
 }
 
 /* WORD COLORING FOR NAV LINKS */
@@ -138,93 +147,147 @@
 #events-navbar-Talks,
 #events-navbar-Activities,
 #events-navbar-Competitions {
-    color: #d1d1d0;
+  color: #d1d1d0;
 }
 
 #events-navbar-AllEvents > div,
 #events-navbar-CalendarEvents > div {
-    font-weight: 400;
-    background: linear-gradient(
-    180deg,
-    #00BCF2,
-    #7593da,
-    #B4A0FF
-    );
-    background-size: 100%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+  font-weight: 400;
+  background: linear-gradient(180deg, #00bcf2, #7593da, #b4a0ff);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 
 #responsive-navbar-nav > div > div > a.nav-link-EventsNavbar.nav-link.active {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 /* ==== HAMBURGER ICON EVENTS NAVBAR ==== */
 
 /* ==== MEDIA QUERIES ==== */
 
-@media only screen and (min-width: 576px) {
-    .main-web-name-EventsNavbar {
-        font-size: 170%;
-      }
-    
-    .nav-link-container-EventsNavbar {
-        width: 18rem;
-    }
+@media only screen and (min-width: 100px) {
+  .main-web-name-EventsNavbar {
+    font-size: 170%;
+  }
 
-    .nav-link-EventsNavbar {
-        font-size: 1.08rem;
-    }
+  .nav-link-container-EventsNavbar {
+    width: 100%;
+  }
+
+  .nav-link-EventsNavbar {
+    font-size: 1.08rem;
+  }
+
+  .nav-link-container-EventsNavbar-scrolled {
+    width: 100%;
+  }
+
+  .nav-link-EventsNavbar-scrolled {
+    font-size: 1.08rem;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-    
 }
-  
+
+@media only screen and (min-width: 1000px) {
+  .nav-link-EventsNavbar {
+    font-size: 1.02rem;
+  }
+
+  .nav-link-EventsNavbar-scrolled {
+    font-size: 1.02rem;
+  }
+}
+
 @media only screen and (min-width: 992px) {
-    #root > div > div:nth-child(1) > div.nav-container-EventsNavbar > nav > a {
-        display: none;
-    }
+  #root > div > div:nth-child(1) > div.nav-container-EventsNavbar > nav > a {
+    display: none;
+  }
 
-    .nav-link-container-EventsNavbar {
-        width: 9.75rem;
-    }
+  .BorderBottom-EventsNavbar {
+    background:
+    linear-gradient(
+      90deg, 
+      #1a83a1, #675899
+    )
+    left 
+    bottom
+    rgba(32, 31, 30, 0.8)    
+    no-repeat;
+    background-size:100% 0.8px;
+  }
 
-    .nav-link-EventsNavbar {
-        border-radius: 5px;
-        padding: 2px;
-        font-size: 1.02rem;
-    }
+  .nav-link-container-EventsNavbar {
+    width: 15%;
+  }
 
-    #events-navbar-AllEvents > div,
-    #events-navbar-Workshops > div,
-    #events-navbar-Talks > div,
-    #events-navbar-Activities > div,
-    #events-navbar-Competitions > div,
-    #events-navbar-CalendarEvents > div {
-        padding-top: 5px;
-    }
+  .nav-link-container-EventsNavbar-scrolled {
+    width: 15%;
+  }
+
+  .nav-link-EventsNavbar {
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 0.9rem;
+  }
+
+  .nav-link-EventsNavbar-scrolled {
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 0.9rem;
+  }
+
+  #events-navbar-AllEvents > div,
+  #events-navbar-Workshops > div,
+  #events-navbar-Talks > div,
+  #events-navbar-Activities > div,
+  #events-navbar-Competitions > div,
+  #events-navbar-CalendarEvents > div {
+    padding-top: 5px;
+  }
 }
-  
-@media only screen and (min-width: 1200px) {
-    .nav-link-container-EventsNavbar {
-        width: 12rem;
-    }
-    
-    .nav-link-EventsNavbar {
-        font-size: 1.1rem;
-    }
 
-    #events-navbar-AllEvents > div,
-    #events-navbar-Workshops > div,
-    #events-navbar-Talks > div,
-    #events-navbar-Activities > div,
-    #events-navbar-Competitions > div,
-    #events-navbar-CalendarEvents > div {
-        padding-top: none;
-        padding-bottom: 10px;
-    }
+@media only screen and (min-width: 1200px) {
+  .nav-link-container-EventsNavbar {
+    width: 15%;
+  }
+  
+  .nav-link-container-EventsNavbar-scrolled {
+    width: 15%;
+  }
+
+  .nav-link-EventsNavbar {
+    font-size: 1.1rem;
+  }
+
+  .nav-link-EventsNavbar-scrolled {
+    font-size: 1.1rem;
+  }
+
+  #events-navbar-AllEvents > div,
+  #events-navbar-Workshops > div,
+  #events-navbar-Talks > div,
+  #events-navbar-Activities > div,
+  #events-navbar-Competitions > div,
+  #events-navbar-CalendarEvents > div {
+    padding-top: none;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .nav-container-EventsNavbar > nav::before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to right, #1a83a1, #675899);
+    height: 0.8px;
+    left: 0;
+    bottom: 0;
+  }
 }

@@ -20,7 +20,7 @@ const Calendar = (props) => {
   const monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
   const currentDate = new Date();
-  const month = currentDate.getMonth();
+  const month = currentDate.getMonth() + props.monthOffset;
   const year = currentDate.getFullYear();
   const firstDay = new Date(year, month).getDay();
   const monthName = months[month];
@@ -57,20 +57,14 @@ const Calendar = (props) => {
               >
                 <img
                   style={{ height: '100%' }}
-                  className="d-block w-100"
+                  className="d-block w-100 image-cell-table"
                   src={props.events[k].image}
                   alt="event"
                 />
-                <span
-                  className="date-calendar"
-                  style={{
-                    position: 'absolute',
-                    bottom: '0',
-                    right: '0.3rem',
-                  }}
-                >
-                  {currDay}
+                <span className="eventTitle-calendar">
+                  {props.events[k].title}
                 </span>
+                <span className="date-calendar">{currDay}</span>
               </div>
             );
             break;
@@ -120,9 +114,9 @@ const Calendar = (props) => {
 
   return (
     <div className="calendar-container">
-      <p className="heading-calendar">Calendar Activities</p>
+      {/* <p className="heading-calendar">Calendar Activities</p> */}
       <p className="month-name-calendar">
-        {`${monthName.toUpperCase()} ${year}`}
+        {`Events Planned for ${monthName} of ${year}`}
       </p>
 
       <div className="table-calendar">
@@ -139,13 +133,7 @@ const Calendar = (props) => {
             </tr>
           </thead>
 
-          <tbody
-            style={{
-              border: '3px solid #8F7FC6',
-            }}
-          >
-            {cells}
-          </tbody>
+          <tbody>{cells}</tbody>
         </Table>
       </div>
     </div>

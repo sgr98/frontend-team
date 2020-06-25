@@ -1,10 +1,10 @@
 /* eslint-disable react/prefer-stateless-function */
 
-import React, { Component } from "react";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./Navigation.css";
-import GetInspiredBulbIcon from "./GetInspiredBulbIcon.png";
+import React, { Component } from 'react';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Navigation.css';
+import GetInspiredBulbIcon from './GetInspiredBulbIcon.png';
 
 export class Navigation extends Component {
   // constructor(props) {
@@ -35,6 +35,7 @@ export class Navigation extends Component {
     //   rootClass += ' .nav-container-Navigation-scrolled';
     // }
 
+  // render() {
     return (
       <div className="nav-container-Navigation">
         <Navbar collapseOnSelect expand="lg" variant="dark" sticky="bottom">
@@ -189,7 +190,7 @@ export class Navigation extends Component {
                     <img
                       src={GetInspiredBulbIcon}
                       alt="GetInspiredBulbIcon"
-                      style={{ height: "1em" }}
+                      style={{ height: '1em' }}
                     />
                   </span>
                 }
