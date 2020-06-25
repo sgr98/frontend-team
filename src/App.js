@@ -9,8 +9,8 @@ import EventsPage from './Components/EventsPage/EventsPage';
 function App() {
   return (
     <div className="App">
-      {/* <Navigation /> */}
-      {/* <HomePage /> */}
+      {/* <Navigation />
+      <HomePage /> */}
       <EventsPage />
       <Footer />
     </div>

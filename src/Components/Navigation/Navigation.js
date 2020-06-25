@@ -7,37 +7,41 @@ import './Navigation.css';
 import GetInspiredBulbIcon from './GetInspiredBulbIcon.png';
 
 export class Navigation extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     scrolled: false,
-  //   };
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      scrolled: false,
+    };
+  }
 
-  // componentDidMount() {
-  //   const height = document.querySelector('.nav-container-Navigation')
-  //     .clientHeight;
-  //   window.addEventListener('scroll', () => {
-  //     const isTop = window.scrollY < height;
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
 
-  //     if (isTop) {
-  //       this.setState({ scrolled: false });
-  //     }
-  //     else {
-  //       this.setState({ scrolled: true });
-  //     }
-  //   });
-  // }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = () => {
+    const height = document.querySelector('.nav-container-Navigation')
+      .clientHeight;
+    const isTop = window.scrollY < height;
+
+    if (isTop) {
+      this.setState({ scrolled: false });
+    } else {
+      this.setState({ scrolled: true });
+    }
+  };
 
   render() {
-    // let rootClass = '.nav-container-Navigation';
-    // if(this.state.scrolled) {
-    //   rootClass += ' .nav-container-Navigation-scrolled';
-    // }
+    let mainClassName = 'nav-container-Navigation';
+    if (this.state.scrolled) {
+      mainClassName += ' BorderBottom-Navigation';
+    }
 
-  // render() {
     return (
-      <div className="nav-container-Navigation">
+      <div className={mainClassName}>
         <Navbar collapseOnSelect expand="lg" variant="dark" sticky="bottom">
           <Navbar.Brand className="main-web-name-Navigation" href="#home">
             Tech Hub IIT Tirupati
