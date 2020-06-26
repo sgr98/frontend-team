@@ -3,24 +3,27 @@
     display: none;
   }
 }
-.EventsPage {
-  display: flex;
-  flex-direction: column;
-}
 
 .event-card-heading {
-  font-family: "Roboto Slab";
+  font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: 300;
-  font-size: 3em;
+  font-size: 2em;
 
-  width: fit-content;
-  margin: 2% auto;
-  margin-bottom: 2%;
-
+  width: 100%;
+  margin: 2% 2%;
+  display: flex;
+  justify-self: flex-start;
+  align-items: center;
   background: linear-gradient(to right, #00bcf2, #b2a0ff);
   letter-spacing: 0.015em;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.event-card-heading img {
+  height: 1.2em;
+  margin-right: 1%;
+  margin-bottom: 0;
 }

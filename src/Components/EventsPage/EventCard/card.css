@@ -64,18 +64,24 @@
   margin-right: 10px;
 }
 .event-card-btn {
-  border: 2px solid;
-  border-image: linear-gradient(to right, #00bcf2, #b4a0ff, #01b295);
+  border: 1px solid;
+  font-family: 'Roboto Slab', sans-serif;
+  border-image: linear-gradient(to right, #00bcf2, #b4a0ff);
   border-image-slice: 1;
   color: rgb(0, 210, 255);
-  font-size: 1vw;
+  font-size: 1.2vw;
   margin-bottom: 5px;
-  margin-top: 10px;
-  width: 30%;
+  margin-top: 0px;
+  width: 40%;
+  padding: 3px;
 }
 .event-card-btn:hover {
-  color: #000;
-  background: #fff;
+  background: #e1dfdd;
+  color: #201f1e;
+  -webkit-box-shadow: inset 0px 0px 9px -2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 0px 9px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 9px -2px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
 }
 
 .event-card-container {
@@ -124,13 +130,18 @@
 .event-card-title {
   font-family: Roboto Slab;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.5vw;
-  line-height: 40px;
+
   display: flex;
   align-items: center;
   letter-spacing: -0.015em;
-  color: #fff;
+
+  background: linear-gradient(to bottom, #00bcf2, #b4a0ff);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .event-card-topic {
@@ -154,6 +165,7 @@
   display: flex;
   align-items: center;
   letter-spacing: -0.015em;
+  text-align: start;
 
   color: #aaaaaa;
 }
@@ -164,7 +176,8 @@
   font-size: 0.8vw;
   /* line-height: 3vh; */
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+
   letter-spacing: -0.015em;
   text-transform: uppercase;
   color: #aaaaaa;
@@ -240,15 +253,19 @@
     width: 33.3333333%;
   }
   .event-card-title {
-    font-size: 1.5vw;
+    font-size: 1.6vw;
   }
   .event-card-topic {
-    font-size: 1vw;
+    font-size: 1.1vw;
   }
   .event-card-description {
-    font-size: 0.8vw;
+    font-size: 0.9vw;
   }
   .event-card-date-location {
     font-size: 1vw;
+  }
+
+  .event-card-content-image {
+    height: 260px;
   }
 }

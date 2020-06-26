@@ -1,6 +1,6 @@
-import React from "react";
-import "./card.css";
-import { Button } from "react-bootstrap";
+import React from 'react';
+import './card.css';
+import { Button } from 'react-bootstrap';
 
 const Card = ({ single }) => {
   return (
@@ -9,7 +9,7 @@ const Card = ({ single }) => {
         <div className="event-card-content-overlay"></div>
         <img
           className="event-card-content-image"
-          src="https://www.nyit.edu/files/degrees/Degree_CoECS_DataScienceMS_Thumb.jpg"
+          src="https://images.unsplash.com/photo-1503560683205-acf61ac68a3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
         />
         <div className="event-card-content-details event-card-fadeIn-bottom">
           <span className="event-card-title">{single.title}</span>
@@ -23,7 +23,7 @@ const Card = ({ single }) => {
           </div>
           <div className="event-card-btn-container">
             <Button variant="outline" className="event-card-btn">
-              {" "}
+              {' '}
               {single.buttonTitle}
             </Button>
           </div>

@@ -83,6 +83,18 @@
   -o-border-radius: 7px;
 }
 
+.nav-container-EventsNavbar a {
+  background: #20201f;
+}
+
+.nav-container-EventsNavbar a.active {
+  background: linear-gradient(90deg, #13657d, #615983);
+}
+
+.nav-container-EventsNavbar a:hover {
+  text-decoration: none;
+}
+
 #responsive-navbar-nav > div > div > a.nav-link-EventsNavbar.nav-link.active {
   background: linear-gradient(90deg, #13657d, #615983);
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
-
+import { NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './EventsNavbar.css';
 
@@ -55,74 +55,68 @@ export class EventsNavbar extends Component {
             <Nav className="w-100 justify-content-around">
               {/* ALL EVENTS */}
               <div className={navContainerClass}>
-                <Nav.Link
+                <NavLink
                   className={navLinkClass}
-                  href={`${url}/AllEvents`}
-                  active={`${url}/AllEvents` === path || `${url}` === path}
+                  to={`${url}/AllEvents`}
                   id="events-navbar-AllEvents"
                 >
                   <div>ALL EVENTS</div>
-                </Nav.Link>
+                </NavLink>
               </div>
 
               {/* WORKSHOPS */}
               <div className={navContainerClass}>
-                <Nav.Link
+                <NavLink
                   className={navLinkClass}
-                  href={`${url}/Workshops`}
-                  active={`${url}/Workshops` === path}
+                  to={`${url}/Workshops`}
                   id="events-navbar-Workshops"
                 >
                   <div>WORKSHOPS</div>
-                </Nav.Link>
+                </NavLink>
               </div>
 
               {/* TALKS */}
               <div className={navContainerClass}>
-                <Nav.Link
+                <NavLink
                   className={navLinkClass}
-                  href={`${url}/Talks`}
-                  active={`${url}/Talks` === path}
+                  to={`${url}/Talks`}
                   id="events-navbar-Talks"
                 >
                   <div>TALKS</div>
-                </Nav.Link>
+                </NavLink>
               </div>
 
               {/* ACTIVITIES */}
               <div className={navContainerClass}>
-                <Nav.Link
+                <NavLink
                   className={navLinkClass}
-                  href={`${url}/Activities`}
-                  active={`${url}/Activities` === path}
+                  to={`${url}/Activities`}
                   id="events-navbar-Activities"
                 >
                   <div>ACTIVITIES</div>
-                </Nav.Link>
+                </NavLink>
               </div>
 
               {/* COMPETITIONS */}
               <div className={navContainerClass}>
-                <Nav.Link
+                <NavLink
                   className={navLinkClass}
-                  href={`${url}/Competitions`}
-                  active={`${url}/Competitions` === path}
+                  to={`${url}/Competitions`}
                   id="events-navbar-Competitions"
                 >
                   <div>COMPETITIONS</div>
-                </Nav.Link>
+                </NavLink>
               </div>
 
               {/* CALENDAR EVENTS */}
               <div className={navContainerClass}>
-                <Nav.Link
+                <NavLink
                   className={navLinkClass}
-                  href={`${url}/CalendarEvents`}
-                  active={`${url}/CalendarEvents` === path}
+                  to={`${url}/CalendarEvents`}
                   id="events-navbar-CalendarEvents"
                 >
                   <div>CALENDAR EVENTS</div>
-                </Nav.Link>
+                </NavLink>
               </div>
             </Nav>
           </Navbar.Collapse>

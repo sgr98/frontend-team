@@ -1,139 +1,204 @@
-
-
-
-
-=======
-import React, { useState }  from 'react';
+import React, { useState } from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import EventsNavbar from './EventsNavbar/EventsNavbar';
 import CalendarCarousel from './CalendarCarousel/CalendarCarousel';
 import Navigation from '../Navigation/Navigation';
 import './EventsPage.css';
-import Card from "./EventCard/card";
-
+import AllEvents from './AllEvents/AllEvents';
+import Workshops from './Workshops/Workshops';
+import Talks from './Talks/Talks';
+import Activities from './Activities/Activities';
+import Competitions from './Competitions/Competitions';
 
 const data = [
   {
-    category: "workshop",
+    category: 'workshop',
     events: [
       {
-        type: "Upcoming Workshops",
+        type: 'Upcoming Workshops',
         events: [
           {
-            title: "Techmanics Club - NSS Activity",
-            topic: "Teaching Robotics to School Children",
+            title: 'Techmanics Club - NSS Activity',
+            topic: 'Teaching Robotics to School Children',
             description:
-              "Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more",
-            date: "Tuesday, 2nd December 2021",
-            location: "TC1, Transit Campus ",
-            time: "8:00 pm",
-            buttonTitle: "Register",
-            buttonUrl: "#!",
+              'Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more',
+            date: 'Tuesday, 2nd December 2021',
+            location: 'TC1, Transit Campus ',
+            time: '8:00 pm',
+            buttonTitle: 'Register',
+            buttonUrl: '#!',
           },
           {
-            title: "Techmanics Club - NSS Activity",
-            topic: "Teaching Robotics to School Children",
+            title: 'Techmanics Club - NSS Activity',
+            topic: 'Teaching Robotics to School Children',
             description:
-              "Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more",
-            date: "Tuesday, 2nd December 2021",
-            location: "TC1, Transit Campus ",
-            time: "8:00 pm",
-            buttonTitle: "Register",
-            buttonUrl: "#!",
+              'Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more',
+            date: 'Tuesday, 2nd December 2021',
+            location: 'TC1, Transit Campus ',
+            time: '8:00 pm',
+            buttonTitle: 'Register',
+            buttonUrl: '#!',
           },
           {
-            title: "Techmanics Club - NSS Activity",
-            topic: "Teaching Robotics to School Children",
+            title: 'Techmaniacs Club - NSS Activity',
+            topic: 'Teaching Robotics to School Children',
             description:
-              "Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more",
-            date: "Tuesday, 2nd December 2021",
-            location: "TC1, Transit Campus ",
-            time: "8:00 pm",
-            buttonTitle: "Register",
-            buttonUrl: "#!",
+              'Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more',
+            date: 'Tuesday, 2nd December 2021',
+            location: 'TC1, Transit Campus ',
+            time: '8:00 pm',
+            buttonTitle: 'Register',
+            buttonUrl: '#!',
           },
           {
-            title: "Techmanics Club - NSS Activity",
-            topic: "Teaching Robotics to School Children",
+            title: 'Techmanics Club - NSS Activity',
+            topic: 'Teaching Robotics to School Children',
             description:
-              "Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more",
-            date: "Tuesday, 2nd December 2021",
-            location: "TC1, Transit Campus ",
-            time: "8:00 pm",
-            buttonTitle: "Register",
-            buttonUrl: "#!",
+              'Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more',
+            date: 'Tuesday, 2nd December 2021',
+            location: 'TC1, Transit Campus ',
+            time: '8:00 pm',
+            buttonTitle: 'Register',
+            buttonUrl: '#!',
           },
         ],
       },
       {
-        type: "Past Workshops Showcase",
+        type: 'Past Workshops Showcase',
         events: [
           {
-            title: "Techmanics Club - NSS Activity",
-            topic: "Teaching Robotics to School Children",
+            title: 'Techmanics Club - NSS Activity',
+            topic: 'Teaching Robotics to School Children',
             description:
-              "Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more",
-            date: "Tuesday, 2nd December 2021",
-            location: "TC1, Transit Campus ",
-            time: "8:00 pm",
-            buttonTitle: "Register",
-            buttonUrl: "#!",
+              'Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more',
+            date: 'Tuesday, 2nd December 2021',
+            location: 'TC1, Transit Campus ',
+            time: '8:00 pm',
+            buttonTitle: 'Register',
+            buttonUrl: '#!',
           },
           {
-            title: "Techmanics Club - NSS Activity",
-            topic: "Teaching Robotics to School Children",
+            title: 'Techmanics Club - NSS Activity',
+            topic: 'Teaching Robotics to School Children',
             description:
-              "Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more",
-            date: "Tuesday, 2nd December 2021",
-            location: "TC1, Transit Campus ",
-            time: "8:00 pm",
-            buttonTitle: "Register",
-            buttonUrl: "#!",
+              'Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more',
+            date: 'Tuesday, 2nd December 2021',
+            location: 'TC1, Transit Campus ',
+            time: '8:00 pm',
+            buttonTitle: 'Register',
+            buttonUrl: '#!',
           },
           {
-            title: "Techmanics Club - NSS Activity",
-            topic: "Teaching Robotics to School Children",
+            title: 'Techmanics Club - NSS Activity',
+            topic: 'Teaching Robotics to School Children',
             description:
-              "Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more",
-            date: "Tuesday, 2nd December 2021",
-            location: "TC1, Transit Campus ",
-            time: "8:00 pm",
-            buttonTitle: "Register",
-            buttonUrl: "#!",
+              'Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more',
+            date: 'Tuesday, 2nd December 2021',
+            location: 'TC1, Transit Campus ',
+            time: '8:00 pm',
+            buttonTitle: 'Register',
+            buttonUrl: '#!',
           },
           {
-            title: "Techmanics Club - NSS Activity",
-            topic: "Teaching Robotics to School Children",
+            title: 'Techmanics Club - NSS Activity',
+            topic: 'Teaching Robotics to School Children',
             description:
-              "Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more",
-            date: "Tuesday, 2nd December 2021",
-            location: "TC1, Transit Campus ",
-            time: "8:00 pm",
-            buttonTitle: "Register",
-            buttonUrl: "#!",
+              'Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more',
+            date: 'Tuesday, 2nd December 2021',
+            location: 'TC1, Transit Campus ',
+            time: '8:00 pm',
+            buttonTitle: 'Register',
+            buttonUrl: '#!',
           },
         ],
       },
     ],
   },
   {
-    category: "talk",
+    category: 'talk',
     events: [],
   },
   {
-    category: "activities",
-    events: [],
-  },
-  {
-    category: "competition",
-    events: [],
-  },
-  {
-    category: "calender-event",
-    events: [],
-  },
-];
+    category: 'activities',
+    events: [
+      {
+        type: 'Upcoming Activities',
+        events: [
+          {
+            title: 'Techmanics Club - NSS Activity',
+            topic: 'Teaching Robotics to School Children',
+            description:
+              'Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more',
+            date: 'Tuesday, 2nd December 2021',
+            location: 'TC1, Transit Campus ',
+            time: '8:00 pm',
+            buttonTitle: 'Register',
+            buttonUrl: '#!',
+          },
 
+          {
+            title: 'Techmanics Club - NSS Activity',
+            topic: 'Teaching Robotics to School Children',
+            description:
+              'Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more',
+            date: 'Tuesday, 2nd December 2021',
+            location: 'TC1, Transit Campus ',
+            time: '8:00 pm',
+            buttonTitle: 'Register',
+            buttonUrl: '#!',
+          },
+        ],
+      },
+      {
+        type: 'Past Activities Showcase',
+        events: [
+          {
+            title: 'Techmanics Club - NSS Activity',
+            topic: 'Teaching Robotics to School Children',
+            description:
+              'Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more',
+            date: 'Tuesday, 2nd December 2021',
+            location: 'TC1, Transit Campus ',
+            time: '8:00 pm',
+            buttonTitle: 'Register',
+            buttonUrl: '#!',
+          },
+
+          {
+            title: 'Techmanics Club - NSS Activity',
+            topic: 'Teaching Robotics to School Children',
+            description:
+              'Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more',
+            date: 'Tuesday, 2nd December 2021',
+            location: 'TC1, Transit Campus ',
+            time: '8:00 pm',
+            buttonTitle: 'Register',
+            buttonUrl: '#!',
+          },
+          {
+            title: 'Techmanics Club - NSS Activity',
+            topic: 'Teaching Robotics to School Children',
+            description:
+              'Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)! ...Read more',
+            date: 'Tuesday, 2nd December 2021',
+            location: 'TC1, Transit Campus ',
+            time: '8:00 pm',
+            buttonTitle: 'Register',
+            buttonUrl: '#!',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    category: 'competition',
+    events: [],
+  },
+  // {
+  //   category: 'calender-event',
+  //   events: [],
+  // },
+];
 
 const EventsPage = () => {
   const { path, url } = useRouteMatch();
@@ -142,43 +207,32 @@ const EventsPage = () => {
       <Navigation />
       <EventsNavbar url={url} />
       {/* <CalendarCarousel /> */}
-    {data.map(({ events }) =>
-        events.map((item, index) => {
-          return (
-            <div key={index}>
-              <div className="event-card-heading">{item.type}</div>
-              {item.events.map((single, index) => (
-                <Card key={index} single={single} />
-              ))}
-            </div>
-          );
-        })
-      )}
+
       <Switch>
         <Route
           path={[`${path}/`, `${path}/AllEvents`]}
           exact
-          component={() => <div style={{ color: 'white' }}>All Events</div>}
+          component={() => <AllEvents data={data} />}
         />
         <Route
           path={`${path}/Workshops`}
           exact
-          component={() => <div style={{ color: 'white' }}>Workshops</div>}
+          component={() => <Workshops data={data} />}
         />
         <Route
           path={`${path}/Talks`}
           exact
-          component={() => <div style={{ color: 'white' }}>Talks</div>}
+          component={() => <Talks data={data} />}
         />
         <Route
           path={`${path}/Activities`}
           exact
-          component={() => <div style={{ color: 'white' }}>Activities</div>}
+          component={() => <Activities data={data} />}
         />
         <Route
           path={`${path}/Competitions`}
           exact
-          component={() => <div style={{ color: 'white' }}>Competitions</div>}
+          component={() => <Competitions data={data} />}
         />
         <Route
           path={`${path}/CalendarEvents`}
@@ -186,7 +240,6 @@ const EventsPage = () => {
           component={CalendarCarousel}
         />
       </Switch>
-
     </div>
   );
 };
