@@ -8,3 +8,7 @@
     margin: 0 2%;
   }
 }
+
+.HomePage .nav-container-Navigation {
+  z-index: 100;
+}

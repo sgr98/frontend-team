@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import { Navigation } from './Components/Navigation/Navigation';
 import HomePage from './Components/HomePage/HomePage';
@@ -8,12 +9,19 @@ import EventsPage from './Components/EventsPage/EventsPage';
 
 function App() {
   return (
-    <div className="App">
-      {/* <Navigation />
-      <HomePage /> */}
-      <EventsPage />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        {/* <Navigation /> */}
+
+        <Switch>
+          <Route path={['/', '/Home']} exact component={HomePage} />
+          <Route path="/Events" component={EventsPage} />
+
+          <Route component={Error} />
+        </Switch>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

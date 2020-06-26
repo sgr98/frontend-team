@@ -16,6 +16,7 @@ class CalendarCarousel extends Component {
         indicators: false,
         pause: false,
         interval: null,
+        touch: false,
       },
     };
   }
