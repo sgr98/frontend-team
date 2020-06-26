@@ -1,6 +1,7 @@
 /* eslint-disable react/prefer-stateless-function */
 
 import React, { Component } from 'react';
+
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Navigation.css';
@@ -9,48 +10,21 @@ import GetInspiredBulbIcon from './GetInspiredBulbIcon.png';
 export class Navigation extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      scrolled: false,
-    };
+    this.state = {};
   }
-
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  }
-
-  handleScroll = () => {
-    const height = document.querySelector('.nav-container-Navigation')
-      .clientHeight;
-    const isTop = window.scrollY < height;
-
-    if (isTop) {
-      this.setState({ scrolled: false });
-    } else {
-      this.setState({ scrolled: true });
-    }
-  };
 
   render() {
-    let mainClassName = 'nav-container-Navigation';
-    if (this.state.scrolled) {
-      mainClassName += ' BorderBottom-Navigation';
-    }
-
     return (
-      <div className={mainClassName}>
+      <div className="nav-container-Navigation BorderBottom-Navigation">
         <Navbar collapseOnSelect expand="lg" variant="dark" sticky="bottom">
-          <Navbar.Brand className="main-web-name-Navigation" href="#home">
+          <Navbar.Brand className="main-web-name-Navigation" href="/Home">
             Tech Hub IIT Tirupati
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
               {/* HOME */}
-              <Nav.Link className="nav-link-Navigation " href="#home">
+              <Nav.Link className="nav-link-Navigation " href="/Home">
                 Home
               </Nav.Link>
 
@@ -88,7 +62,7 @@ export class Navigation extends Component {
                 id="collasible-nav-dropdown"
               >
                 <NavDropdown.Item
-                  href="#codeX"
+                  href="/Events"
                   className="events-menuitem-Navigation"
                 >
                   CodeX

@@ -6,10 +6,12 @@ import LimeLightZone from './LimeLightZone/LimeLightZone';
 import AnnouncementBar from './Announcementbar/AnnouncementBar';
 import Appgrid from './Appgrid/Appgrid';
 import ClubsInfo from './ClubsInfo/ClubSlide';
+import Navigation from '../Navigation/Navigation';
 
 const HomePage = () => {
   return (
     <div className="HomePage">
+      <Navigation />
       <Featured />
       <Appgrid />
       <AnnouncementBar />

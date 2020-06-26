@@ -44,7 +44,7 @@ export class EventsNavbar extends Component {
     return (
       <div className={mainClassName}>
         <Navbar collapseOnSelect expand="lg" variant="dark" sticky="top">
-          <Navbar.Brand className="main-web-name-EventsNavbar" href="#home">
+          <Navbar.Brand className="main-web-name-EventsNavbar" href="/events">
             Events
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -54,7 +54,7 @@ export class EventsNavbar extends Component {
               <div className={navContainerClass}>
                 <Nav.Link
                   className={navLinkClass}
-                  href="#all-events"
+                  href={`${this.props.url}/AllEvents`}
                   id="events-navbar-AllEvents"
                 >
                   <div>ALL EVENTS</div>
@@ -65,7 +65,7 @@ export class EventsNavbar extends Component {
               <div className={navContainerClass}>
                 <Nav.Link
                   className={navLinkClass}
-                  href="#workshops"
+                  href={`${this.props.url}/Workshops`}
                   id="events-navbar-Workshops"
                 >
                   <div>WORKSHOPS</div>
@@ -76,7 +76,7 @@ export class EventsNavbar extends Component {
               <div className={navContainerClass}>
                 <Nav.Link
                   className={navLinkClass}
-                  href="#talks"
+                  href={`${this.props.url}/Talks`}
                   id="events-navbar-Talks"
                 >
                   <div>TALKS</div>
@@ -87,7 +87,7 @@ export class EventsNavbar extends Component {
               <div className={navContainerClass}>
                 <Nav.Link
                   className={navLinkClass}
-                  href="#activities"
+                  href={`${this.props.url}/Activities`}
                   id="events-navbar-Activities"
                 >
                   <div>ACTIVITIES</div>
@@ -98,7 +98,7 @@ export class EventsNavbar extends Component {
               <div className={navContainerClass}>
                 <Nav.Link
                   className={navLinkClass}
-                  href="#competitions"
+                  href={`${this.props.url}/Competitions`}
                   id="events-navbar-Competitions"
                 >
                   <div>COMPETITIONS</div>
@@ -109,7 +109,7 @@ export class EventsNavbar extends Component {
               <div className={navContainerClass}>
                 <Nav.Link
                   className={navLinkClass}
-                  href="#calendar-events"
+                  href={`${this.props.url}/CalendarEvents`}
                   id="events-navbar-CalendarEvents"
                 >
                   <div>CALENDAR EVENTS</div>
