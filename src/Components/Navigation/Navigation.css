@@ -81,7 +81,7 @@ a.nav-link-Navigation.nav-link.active::after {
 
 /* underline transition for link clicked */
 #collasible-nav-dropdown:link::before,
-.nav-link-Navigation:link::before {
+\ .nav-link-Navigation:link::before {
   content: '';
   position: absolute;
   width: 90%;

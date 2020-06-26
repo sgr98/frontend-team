@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './EventsNavbar.css';
 
@@ -32,6 +33,8 @@ export class EventsNavbar extends Component {
   };
 
   render() {
+    const path = window.location.pathname;
+    const { url } = this.props;
     let mainClassName = 'nav-container-EventsNavbar';
     let navContainerClass = 'nav-link-container-EventsNavbar';
     let navLinkClass = 'nav-link-EventsNavbar';
@@ -54,7 +57,8 @@ export class EventsNavbar extends Component {
               <div className={navContainerClass}>
                 <Nav.Link
                   className={navLinkClass}
-                  href={`${this.props.url}/AllEvents`}
+                  href={`${url}/AllEvents`}
+                  active={`${url}/AllEvents` === path || `${url}` === path}
                   id="events-navbar-AllEvents"
                 >
                   <div>ALL EVENTS</div>
@@ -65,7 +69,8 @@ export class EventsNavbar extends Component {
               <div className={navContainerClass}>
                 <Nav.Link
                   className={navLinkClass}
-                  href={`${this.props.url}/Workshops`}
+                  href={`${url}/Workshops`}
+                  active={`${url}/Workshops` === path}
                   id="events-navbar-Workshops"
                 >
                   <div>WORKSHOPS</div>
@@ -76,7 +81,8 @@ export class EventsNavbar extends Component {
               <div className={navContainerClass}>
                 <Nav.Link
                   className={navLinkClass}
-                  href={`${this.props.url}/Talks`}
+                  href={`${url}/Talks`}
+                  active={`${url}/Talks` === path}
                   id="events-navbar-Talks"
                 >
                   <div>TALKS</div>
@@ -87,7 +93,8 @@ export class EventsNavbar extends Component {
               <div className={navContainerClass}>
                 <Nav.Link
                   className={navLinkClass}
-                  href={`${this.props.url}/Activities`}
+                  href={`${url}/Activities`}
+                  active={`${url}/Activities` === path}
                   id="events-navbar-Activities"
                 >
                   <div>ACTIVITIES</div>
@@ -98,7 +105,8 @@ export class EventsNavbar extends Component {
               <div className={navContainerClass}>
                 <Nav.Link
                   className={navLinkClass}
-                  href={`${this.props.url}/Competitions`}
+                  href={`${url}/Competitions`}
+                  active={`${url}/Competitions` === path}
                   id="events-navbar-Competitions"
                 >
                   <div>COMPETITIONS</div>
@@ -109,7 +117,8 @@ export class EventsNavbar extends Component {
               <div className={navContainerClass}>
                 <Nav.Link
                   className={navLinkClass}
-                  href={`${this.props.url}/CalendarEvents`}
+                  href={`${url}/CalendarEvents`}
+                  active={`${url}/CalendarEvents` === path}
                   id="events-navbar-CalendarEvents"
                 >
                   <div>CALENDAR EVENTS</div>
