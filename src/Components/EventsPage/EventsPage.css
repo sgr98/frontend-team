@@ -3,3 +3,24 @@
     display: none;
   }
 }
+.EventsPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card-heading {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 3em;
+
+  width: fit-content;
+  margin: 2% auto;
+  margin-bottom: 2%;
+
+  background: linear-gradient(to right, #00bcf2, #b2a0ff);
+  letter-spacing: 0.015em;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
