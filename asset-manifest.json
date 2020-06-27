@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/frontend-team/static/css/main.aa51c927.chunk.css",
-    "main.js": "/frontend-team/static/js/main.add3fc2a.chunk.js",
-    "main.js.map": "/frontend-team/static/js/main.add3fc2a.chunk.js.map",
+    "main.css": "/frontend-team/static/css/main.df321a6c.chunk.css",
+    "main.js": "/frontend-team/static/js/main.58c16867.chunk.js",
+    "main.js.map": "/frontend-team/static/js/main.58c16867.chunk.js.map",
     "runtime-main.js": "/frontend-team/static/js/runtime-main.9c770acd.js",
     "runtime-main.js.map": "/frontend-team/static/js/runtime-main.9c770acd.js.map",
     "static/css/2.8ae9822a.chunk.css": "/frontend-team/static/css/2.8ae9822a.chunk.css",
-    "static/js/2.8542a45a.chunk.js": "/frontend-team/static/js/2.8542a45a.chunk.js",
-    "static/js/2.8542a45a.chunk.js.map": "/frontend-team/static/js/2.8542a45a.chunk.js.map",
+    "static/js/2.859eee1d.chunk.js": "/frontend-team/static/js/2.859eee1d.chunk.js",
+    "static/js/2.859eee1d.chunk.js.map": "/frontend-team/static/js/2.859eee1d.chunk.js.map",
     "index.html": "/frontend-team/index.html",
-    "precache-manifest.68d540ee7c0ff6576d9c87dd5acec51e.js": "/frontend-team/precache-manifest.68d540ee7c0ff6576d9c87dd5acec51e.js",
+    "precache-manifest.cafb04cb966977001906cf4b7e6f4798.js": "/frontend-team/precache-manifest.cafb04cb966977001906cf4b7e6f4798.js",
     "service-worker.js": "/frontend-team/service-worker.js",
     "static/css/2.8ae9822a.chunk.css.map": "/frontend-team/static/css/2.8ae9822a.chunk.css.map",
-    "static/css/main.aa51c927.chunk.css.map": "/frontend-team/static/css/main.aa51c927.chunk.css.map",
-    "static/js/2.8542a45a.chunk.js.LICENSE.txt": "/frontend-team/static/js/2.8542a45a.chunk.js.LICENSE.txt",
+    "static/css/main.df321a6c.chunk.css.map": "/frontend-team/static/css/main.df321a6c.chunk.css.map",
+    "static/js/2.859eee1d.chunk.js.LICENSE.txt": "/frontend-team/static/js/2.859eee1d.chunk.js.LICENSE.txt",
     "static/media/GetInspiredBulbIcon.png": "/frontend-team/static/media/GetInspiredBulbIcon.9d76ef0b.png",
     "static/media/eventsPageLogo.png": "/frontend-team/static/media/eventsPageLogo.3f6febd1.png",
     "static/media/Navigation.css": "/frontend-team/static/media/navbarBurgerMenuIcon.fed70ed7.png"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.9c770acd.js",
     "static/css/2.8ae9822a.chunk.css",
-    "static/js/2.8542a45a.chunk.js",
-    "static/css/main.aa51c927.chunk.css",
-    "static/js/main.add3fc2a.chunk.js"
+    "static/js/2.859eee1d.chunk.js",
+    "static/css/main.df321a6c.chunk.css",
+    "static/js/main.58c16867.chunk.js"
   ]
 }
