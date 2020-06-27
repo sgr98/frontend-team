@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300;400;600&display=swap");
 
 /* ==== MAIN CONTAINER ==== */
 
 .nav-container-EventsNavbar {
+
   background-color: #20201f;
-  font-family: 'Signika', Arial, Helvetica, sans-serif;
+  font-family: "Signika", Arial, Helvetica, sans-serif;
   position: sticky;
   top: -7px;
   z-index: 0;
@@ -26,7 +27,7 @@
 /* ==== Tech Hub IIT Tirupati BRAND NAME ==== */
 
 .main-web-name-EventsNavbar {
-  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
   font-size: 150%;
   background: linear-gradient(
     90deg,
@@ -46,6 +47,7 @@
 
 /* WITHOUT SCROLL */
 .nav-link-container-EventsNavbar {
+
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -58,6 +60,7 @@
   letter-spacing: -0.015em;
   background: #201f1e;
   margin: 0.3em auto;
+
   color: #f0f0f0;
   box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08),
     2px 2px 3px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(208, 197, 249, 0.005),
@@ -102,6 +105,7 @@
 /* WITH SCROLL */
 .nav-link-container-EventsNavbar-scrolled {
   position: relative;
+
   display: flex;
   flex-wrap: wrap;
   font-size: 1rem;
@@ -148,6 +152,19 @@
   > div
   > a.nav-link-EventsNavbar-scrolled.nav-link.active {
   background: linear-gradient(90deg, #184653, #443f56);
+  color: #f0f0f0;
+}
+
+/* gradient for all events and calender events */
+#responsive-navbar-nav > div > a:nth-child(1) > div,
+#responsive-navbar-nav
+  > div
+  > a.nav-link-EventsNavbar.calender-events-EventsNavbar.nav-link
+  > div {
+  font-weight: 400;
+  background: linear-gradient(#3d91c7, #5a6795);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* WORD COLORING FOR NAV LINKS */
@@ -285,6 +302,7 @@
 @media (max-width: 992px) {
   /* .nav-container-EventsNavbar > nav::before {
     content: '';
+
     width: 100%;
     position: absolute;
     background: linear-gradient(to right, #1a83a1, #675899);
