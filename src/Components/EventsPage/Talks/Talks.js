@@ -13,7 +13,7 @@ const Talks = (props) => {
     margin: 'auto 2%',
   };
   return (
-    <div className={classStyle}>
+    <div style={classStyle}>
       {eventCategory[0].events.map((item, index) => (
         <div key={index}>
           <div className="event-card-heading">

@@ -27,3 +27,26 @@
   margin-right: 1%;
   margin-bottom: 0;
 }
+@media (max-width: 520px) {
+  .event-card-heading {
+    font-size: 1.7em;
+  }
+}
+
+@media (max-width: 490px) {
+  .event-card-heading {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 470px) {
+  .event-card-heading {
+    font-size: 6vw;
+  }
+}
+
+@media (max-width: 395px) {
+  .event-card-heading {
+    font-size: 6vw;
+  }
+}

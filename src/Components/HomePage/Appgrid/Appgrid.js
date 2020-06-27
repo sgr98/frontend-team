@@ -17,40 +17,47 @@ export default class Appgrid extends Component {
           <div className="container2">
             <div className="row">
               <div className="col-lg-2 col-md-4 col-sm-6 box">
-                <div className="custom module-border-wrap">
-                  <img src={TrophyIcon} alt="Trophy Icon" />
-                  <div className="text">
-                    <p>
-                      TALKS &
-                      <br />
-                      WORKSHOPS
-                    </p>
+                <a href="/Events/Talks">
+                  <div className="custom module-border-wrap">
+                    <img src={TrophyIcon} alt="Trophy Icon" />
+                    <div className="text">
+                      <p>
+                        TALKS &
+                        <br />
+                        WORKSHOPS
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div className="col-lg-2 col-md-4 col-sm-6 box">
-                <div className="custom module-border-wrap">
-                  <img src={TrophyIcon} alt="Trophy Icon" />
-                  <div className="text">
-                    <p>
-                      UPCOMING
-                      <br />
-                      ACTIVITIES
-                    </p>
+                <a href="/Events/Activities">
+                  <div className="custom module-border-wrap">
+                    <img src={TrophyIcon} alt="Trophy Icon" />
+                    <div className="text">
+                      <p>
+                        UPCOMING
+                        <br />
+                        ACTIVITIES
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
+
               <div className="col-lg-2 col-md-4 col-sm-6 box">
-                <div className="custom module-border-wrap">
-                  <img src={TrophyIcon} alt="Trophy Icon" />
-                  <div className="text">
-                    <p>
-                      UPCOMING
-                      <br />
-                      COMPETITIONS
-                    </p>
+                <a href="/Events/Competitions">
+                  <div className="custom module-border-wrap">
+                    <img src={TrophyIcon} alt="Trophy Icon" />
+                    <div className="text">
+                      <p>
+                        UPCOMING
+                        <br />
+                        COMPETITIONS
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div className="col-lg-2 col-md-4 col-sm-6 box">
                 <div className="custom module-border-wrap">
@@ -77,16 +84,18 @@ export default class Appgrid extends Component {
                 </div>
               </div>
               <div className="col-lg-2 col-md-4 col-sm-6 box">
-                <div className="custom module-border-wrap">
-                  <img src={TrophyIcon} alt="Trophy Icon" />
-                  <div className="text">
-                    <p>
-                      CALENDER
-                      <br />
-                      EVENTS
-                    </p>
+                <a href="/Events/CalendarEvents">
+                  <div className="custom module-border-wrap">
+                    <img src={TrophyIcon} alt="Trophy Icon" />
+                    <div className="text">
+                      <p>
+                        CALENDER
+                        <br />
+                        EVENTS
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>

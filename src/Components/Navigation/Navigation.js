@@ -1,6 +1,6 @@
 /* eslint-disable react/prefer-stateless-function */
 
-import React, { Component } from 'react';
+import React from 'react';
 
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { useRouteMatch } from 'react-router-dom';
@@ -13,7 +13,7 @@ export function Navigation() {
   return (
     <div className="nav-container-Navigation BorderBottom-Navigation">
       <Navbar collapseOnSelect expand="lg" variant="dark" sticky="bottom">
-        <Navbar.Brand className="main-web-name-Navigation" href="/Home">
+        <Navbar.Brand className="main-web-name-Navigation" href="/home">
           Tech Hub IIT Tirupati
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -22,8 +22,8 @@ export function Navigation() {
             {/* HOME */}
             <Nav.Link
               className="nav-link-Navigation "
-              href="/Home"
-              active={path === '/' || path === '/Home'}
+              href="/home"
+              active={path === '/' || path === '/home'}
             >
               Home
             </Nav.Link>
