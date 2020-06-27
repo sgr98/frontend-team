@@ -3,7 +3,7 @@
 import React from 'react';
 
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import { useRouteMatch } from 'react-router-dom';
+import { useRouteMatch, NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Navigation.css';
 import GetInspiredBulbIcon from './GetInspiredBulbIcon.png';
@@ -13,20 +13,16 @@ export function Navigation() {
   return (
     <div className="nav-container-Navigation BorderBottom-Navigation">
       <Navbar collapseOnSelect expand="lg" variant="dark" sticky="bottom">
-        <Navbar.Brand className="main-web-name-Navigation" href="/home">
-          Tech Hub IIT Tirupati
+        <Navbar.Brand className="main-web-name-Navigation">
+          <NavLink to="/home">Tech Hub IIT Tirupati</NavLink>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
             {/* HOME */}
-            <Nav.Link
-              className="nav-link-Navigation "
-              href="/home"
-              active={path === '/' || path === '/home'}
-            >
+            <NavLink className="nav-link-Navigation " to="/home">
               Home
-            </Nav.Link>
+            </NavLink>
 
             {/* ABOUT */}
             <NavDropdown
@@ -80,13 +76,9 @@ export function Navigation() {
                   Solo Singing
                 </NavDropdown.Item>
               </NavDropdown> */}
-            <Nav.Link
-              className="nav-link-Navigation "
-              href="/Events"
-              active={path === '/Events'}
-            >
+            <NavLink className="nav-link-Navigation " to="/Events">
               Events
-            </Nav.Link>
+            </NavLink>
 
             {/* PROJECTS */}
             <NavDropdown

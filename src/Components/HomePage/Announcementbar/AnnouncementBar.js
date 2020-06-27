@@ -11,21 +11,6 @@ class AnnouncementBar extends Component {
     };
   }
 
-  increment = () => {
-    let current = this.state.currentIndex;
-
-    current++;
-    if (current >= this.state.Announcements.length) {
-      current = 0;
-    }
-    this.setState({ fading: false });
-
-    setTimeout(() => {
-      this.setState({ fading: true });
-      this.setState({ currentIndex: current });
-    }, 500);
-  };
-
   componentDidMount() {
     this.setState({
       Announcements: [
@@ -52,6 +37,21 @@ class AnnouncementBar extends Component {
   shouldComponentUpdate(props, state) {
     return this.state.fading !== state;
   }
+
+  increment = () => {
+    let current = this.state.currentIndex;
+
+    current += 1;
+    if (current >= this.state.Announcements.length) {
+      current = 0;
+    }
+    this.setState({ fading: false });
+
+    setTimeout(() => {
+      this.setState({ fading: true });
+      this.setState({ currentIndex: current });
+    }, 500);
+  };
 
   render() {
     const currentAnnouncement = this.state.Announcements[

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import TrophyIcon from './trophy.png';
 import './Appgrid.css';
 
@@ -17,7 +18,7 @@ export default class Appgrid extends Component {
           <div className="container2">
             <div className="row">
               <div className="col-lg-2 col-md-4 col-sm-6 box">
-                <a href="/Events/Talks">
+                <Link to="/Events/Talks">
                   <div className="custom module-border-wrap">
                     <img src={TrophyIcon} alt="Trophy Icon" />
                     <div className="text">
@@ -28,10 +29,10 @@ export default class Appgrid extends Component {
                       </p>
                     </div>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-lg-2 col-md-4 col-sm-6 box">
-                <a href="/Events/Activities">
+                <Link to="/Events/Activities">
                   <div className="custom module-border-wrap">
                     <img src={TrophyIcon} alt="Trophy Icon" />
                     <div className="text">
@@ -42,11 +43,11 @@ export default class Appgrid extends Component {
                       </p>
                     </div>
                   </div>
-                </a>
+                </Link>
               </div>
 
               <div className="col-lg-2 col-md-4 col-sm-6 box">
-                <a href="/Events/Competitions">
+                <Link to="/Events/Competitions">
                   <div className="custom module-border-wrap">
                     <img src={TrophyIcon} alt="Trophy Icon" />
                     <div className="text">
@@ -57,7 +58,7 @@ export default class Appgrid extends Component {
                       </p>
                     </div>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="col-lg-2 col-md-4 col-sm-6 box">
                 <div className="custom module-border-wrap">
@@ -84,7 +85,7 @@ export default class Appgrid extends Component {
                 </div>
               </div>
               <div className="col-lg-2 col-md-4 col-sm-6 box">
-                <a href="/Events/CalendarEvents">
+                <Link to="/Events/CalendarEvents">
                   <div className="custom module-border-wrap">
                     <img src={TrophyIcon} alt="Trophy Icon" />
                     <div className="text">
@@ -95,7 +96,7 @@ export default class Appgrid extends Component {
                       </p>
                     </div>
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

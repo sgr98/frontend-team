@@ -43,14 +43,28 @@
 .navigation {
   box-sizing: border-box;
 }
-
-a.nav-link-Navigation.nav-link,
+/* NavLink Styling */
+a.nav-link-Navigation,
 .nav-dropdown-Navigation {
   display: inline-block;
   position: relative;
   font-size: 120%;
   margin: 0 0.8em;
   white-space: nowrap;
+}
+
+a.nav-link-Navigation {
+  padding: 0.5rem 1rem;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  margin: 0 0.8em;
+}
+a.nav-link-Navigation:hover,
+a.nav-link-Navigation.active {
+  text-decoration: none;
+  color: #f0f0f0;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
@@ -63,7 +77,8 @@ a#collasible-nav-dropdown.dropdown-toggle.nav-link::after {
 
 /* underline for the active page  */
 
-a.nav-link-Navigation.nav-link.active::after {
+a.nav-link-Navigation.nav-link.active::after,
+a.nav-link-Navigation.active::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -240,7 +255,8 @@ a.nav-link-Navigation.nav-link.active::after {
 
 @media only screen and (max-width: 1200px) {
   a.nav-link-Navigation.nav-link,
-  .nav-dropdown-Navigation {
+  .nav-dropdown-Navigation,
+  a.nav-link-Navigation {
     font-size: 110%;
     margin: 0 0.4em;
   }
@@ -251,7 +267,8 @@ a.nav-link-Navigation.nav-link.active::after {
     font-size: 180%;
   }
   a.nav-link-Navigation.nav-link,
-  .nav-dropdown-Navigation {
+  .nav-dropdown-Navigation,
+  a.nav-link-Navigation {
     font-size: 100%;
     margin: 0 0.2em;
   }
@@ -284,5 +301,11 @@ a.nav-link-Navigation.nav-link.active::after {
   }
   #root > div > div.nav-container-Navigation > nav > button {
     padding: 0;
+  }
+}
+@media (min-width: 992px) {
+  a.nav-link-Navigation {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
   }
 }
