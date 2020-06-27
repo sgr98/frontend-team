@@ -150,32 +150,35 @@
   font-weight: 300;
   font-size: 1vw;
   line-height: 32px;
-
+  cursor: default;
   display: flex;
   align-items: center;
   letter-spacing: -0.015em;
   color: #f0f0f0;
 }
 .event-card-description {
-  font-family: Roboto Slab;
+  font-family: 'Roboto Slab', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 0.8vw;
   /* line-height: 2vh; */
   display: flex;
-  align-items: center;
+  cursor: default;
   letter-spacing: -0.015em;
   text-align: start;
-
+  max-height: 100px;
+  overflow: scroll;
   color: #aaaaaa;
 }
 .event-card-date-location {
+  cursor: default;
   font-family: Roboto Slab;
   font-style: normal;
   font-weight: 300;
   font-size: 0.8vw;
   /* line-height: 3vh; */
   display: flex;
+  margin-top: 5px;
   align-items: flex-start;
 
   letter-spacing: -0.015em;
@@ -268,4 +271,31 @@
   .event-card-content-image {
     height: 260px;
   }
+}
+.event-card-container .read-more-button {
+  color: #00bcf2;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.event-card-container ::-webkit-scrollbar {
+  width: 3px;
+}
+
+.event-card-container ::-webkit-scrollbar:hover {
+  width: 3px;
+  height: 3px;
+}
+
+.event-card-container ::-webkit-scrollbar-track {
+  background-color: inherit;
+}
+.event-card-container ::-webkit-scrollbar-corner {
+  /* 6 */
+  display: none;
+}
+
+.event-card-container ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00bcf2 0%, #9e039e 100%);
+  border-radius: 3px;
 }

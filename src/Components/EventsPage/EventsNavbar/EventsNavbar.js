@@ -33,7 +33,6 @@ export class EventsNavbar extends Component {
   };
 
   render() {
-    const path = window.location.pathname;
     const { url } = this.props;
     let mainClassName = 'nav-container-EventsNavbar';
     let navContainerClass = 'nav-link-container-EventsNavbar';
@@ -109,7 +108,7 @@ export class EventsNavbar extends Component {
               </div>
 
               {/* CALENDAR EVENTS */}
-              <div className={navContainerClass}>
+              <div className={`calendarLink-EventsNavbar ${navContainerClass}`}>
                 <NavLink
                   className={navLinkClass}
                   to={`${url}/CalendarEvents`}

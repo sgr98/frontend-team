@@ -1,5 +1,6 @@
 import React from 'react';
 import './card.css';
+import ReadMoreReact from 'read-more-react';
 import { Button } from 'react-bootstrap';
 
 const Card = ({ single }) => {
@@ -19,7 +20,15 @@ const Card = ({ single }) => {
         <div className="event-card-content-details event-card-fadeIn-bottom">
           <span className="event-card-title">{single.title}</span>
           <span className="event-card-topic">Topic:{single.topic}</span>
-          <p className="event-card-description">{single.description}</p>
+
+          <div className="event-card-description">
+            <ReadMoreReact
+              text={single.description}
+              max={270}
+              ideal={260}
+              readMoreText="Read More"
+            />
+          </div>
           <div className="event-card-date-location">
             <span>{single.date}</span>
             <span>
