@@ -3,7 +3,6 @@
 /* ==== MAIN CONTAINER ==== */
 
 .nav-container-EventsNavbar {
-
   background-color: #20201f;
   font-family: "Signika", Arial, Helvetica, sans-serif;
   position: sticky;
@@ -47,7 +46,6 @@
 
 /* WITHOUT SCROLL */
 .nav-link-container-EventsNavbar {
-
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -300,9 +298,9 @@
   }
 }
 @media (max-width: 992px) {
+
   /* .nav-container-EventsNavbar > nav::before {
     content: '';
-
     width: 100%;
     position: absolute;
     background: linear-gradient(to right, #1a83a1, #675899);
