@@ -134,6 +134,9 @@
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #responsive-navbar-nav > div > div > a.nav-link-EventsNavbar-scrolled.nav-link {
