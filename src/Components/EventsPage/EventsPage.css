@@ -12,9 +12,7 @@
 
   width: 100%;
   margin: 2% 2%;
-  display: flex;
-  justify-self: flex-start;
-  align-items: center;
+  text-align: start;
   background: linear-gradient(to right, #00bcf2, #b2a0ff);
   letter-spacing: 0.015em;
   background-clip: text;

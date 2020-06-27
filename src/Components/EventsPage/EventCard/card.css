@@ -128,14 +128,14 @@
 }
 
 .event-card-title {
-  font-family: Roboto Slab;
+  font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: 400;
   font-size: 1.5vw;
-
-  display: flex;
-  align-items: center;
+  width: 100%;
   letter-spacing: -0.015em;
+  text-align: start;
+  margin: 0;
 
   background: linear-gradient(to bottom, #00bcf2, #b4a0ff);
 

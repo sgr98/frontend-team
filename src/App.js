@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import { Navigation } from './Components/Navigation/Navigation';
 import HomePage from './Components/HomePage/HomePage';
@@ -9,7 +9,7 @@ import EventsPage from './Components/EventsPage/EventsPage';
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div className="App">
         {/* <Navigation /> */}
 
@@ -21,7 +21,7 @@ function App() {
         </Switch>
         <Footer />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

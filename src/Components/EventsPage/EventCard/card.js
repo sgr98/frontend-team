@@ -18,7 +18,7 @@ const Card = ({ single }) => {
           }
         />
         <div className="event-card-content-details event-card-fadeIn-bottom">
-          <span className="event-card-title">{single.title}</span>
+          <p className="event-card-title">{single.title}</p>
           <span className="event-card-topic">Topic:{single.topic}</span>
 
           <div className="event-card-description">
