@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500&display=swap');
+
+/* gradient border */
+.searchBox-border-SearchBar {
+  background: linear-gradient(180deg, #00bcf2, #b4a0ff);
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+  position: relative;
+  top: 1em;
+  left: 3%;
+  width: 45%;
+  height: 1.9em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+/* container for search field and search icon */
+.container-SearchBar {
+  background-color: #201f1e;
+  border-radius: 4px;
+  font-weight: 300;
+  margin: auto 1.2px;
+}
+
+/* searcg field */
+.searchInput-SearchBar {
+  background-color: #201f1e;
+  font-weight: 300;
+  font-style: normal;
+  height: 90%;
+  font-size: 0.9rem;
+  padding: 0.3em 0px 0.35em 4%;
+  border: none;
+  outline: none;
+  text-overflow: ellipsis;
+  color: #A19F9D;
+}
+
+.searchInput-SearchBar:focus {
+  background-color: #201f1e;
+  color: #cccaca;
+}
+
+/* search icon */
+.searchBarIcon-SearchBar {
+  height: 0.8em;
+  margin: 0 0.1em 0.3em 0;
+  border: none;
+  outline: none;
+}
+#root > div > div:nth-child(1) > div > div > div > button {
+  padding: 0px;
+}
+
+/* ==== MEDIA QUERIES ==== */
+@media only screen and (min-width: 500px) {
+  .searchBox-border-SearchBar {
+    width: 40%;
+    height: 2.1em;
+  }
+  .searchInput-SearchBar {
+    height: 90%;
+    font-size: 1.1rem;
+    padding: 0.21em 0px 0.25em 3%;
+  }
+  .searchBarIcon-SearchBar {
+    height: 1em;
+    margin: 0 0.5em 0.3em 0;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .searchBox-border-SearchBar {
+    width: 29%;
+    height: 2.3em;
+  }
+  .searchInput-SearchBar {
+    height: 90%;
+    font-size: 1.2rem;
+    padding: 0.21em 0px 0.25em 3%;
+  }
+ 
+}
