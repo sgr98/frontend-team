@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './EventsNavbar.css';
+import React, { Component } from "react";
+import { Navbar, Nav } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./EventsNavbar.css";
 
 export class EventsNavbar extends Component {
   constructor(props) {
@@ -13,15 +13,15 @@ export class EventsNavbar extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener("scroll", this.handleScroll);
   }
 
   handleScroll = () => {
-    const height = document.querySelector('.nav-container-EventsNavbar')
+    const height = document.querySelector(".nav-container-EventsNavbar")
       .clientHeight;
     const isTop = window.scrollY < height;
 
@@ -34,13 +34,14 @@ export class EventsNavbar extends Component {
 
   render() {
     const { url } = this.props;
-    let mainClassName = 'nav-container-EventsNavbar';
-    let navContainerClass = 'nav-link-container-EventsNavbar';
-    let navLinkClass = 'nav-link-EventsNavbar';
+    let mainClassName = "nav-container-EventsNavbar";
+    let navContainerClass = "nav-link-container-EventsNavbar";
+    let navLinkClass = "nav-link-EventsNavbar";
+
     if (this.state.scrolled) {
-      navContainerClass = 'nav-link-container-EventsNavbar-scrolled';
-      navLinkClass = 'nav-link-EventsNavbar-scrolled';
-      mainClassName += ' BorderBottom-EventsNavbar';
+      navContainerClass = "nav-link-container-EventsNavbar-scrolled";
+      navLinkClass = "nav-link-EventsNavbar-scrolled";
+      mainClassName += " BorderBottom-EventsNavbar";
     }
 
     return (
@@ -53,6 +54,7 @@ export class EventsNavbar extends Component {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="w-100 justify-content-around">
               {/* ALL EVENTS */}
+
               <div className={navContainerClass}>
                 <NavLink
                   className={navLinkClass}
