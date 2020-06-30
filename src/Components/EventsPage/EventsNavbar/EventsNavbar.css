@@ -294,16 +294,6 @@
   .nav-link-EventsNavbar-scrolled {
     font-size: 1.1rem;
   }
-
-  #events-navbar-AllEvents > div,
-  #events-navbar-Workshops > div,
-  #events-navbar-Talks > div,
-  #events-navbar-Activities > div,
-  #events-navbar-Competitions > div,
-  #events-navbar-CalendarEvents > div {
-    padding-top: none;
-    padding-bottom: 10px;
-  }
 }
 @media (max-width: 992px) {
   /* .nav-container-EventsNavbar > nav::before {
