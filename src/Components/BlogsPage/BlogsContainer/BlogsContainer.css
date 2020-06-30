@@ -1,0 +1,71 @@
+.BlogsContainer {
+  margin: 3%;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.Top-Row-BlogsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 650px;
+}
+
+.Top-Row-BlogsContainer .event-card-container {
+  width: 100%;
+}
+.column1-Top-Row-BlogsContainer {
+  width: 66.66667%;
+  height: 100%;
+  padding: 10px;
+}
+
+.column2-Top-Row-BlogsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 33.33333%;
+  justify-content: space-between;
+}
+
+.pagination .page-link {
+  background-color: #20201f;
+  border: none;
+
+  font-family: 'Roboto Slab', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #ffffff;
+}
+
+.page-item.active .page-link {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 188, 242, 0.5) 0%,
+    rgba(180, 160, 255, 0.5) 100%
+  );
+  /* background-color: #00bcf2; */
+  border-radius: 3px;
+}
+
+.pagination li:nth-child(1) .page-link {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 188, 242, 0.5) 0%,
+    rgba(180, 160, 255, 0.5) 100%
+  );
+}
+
+.pagination li:last-child .page-link {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 188, 242, 0.5) 0%,
+    rgba(180, 160, 255, 0.5) 100%
+  );
+}
