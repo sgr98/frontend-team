@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;600&display=swap');
+
+/* ==== MAIN CONTAINER ==== */
+
+.nav-container-BlogsNavbar {
+  background-color: #20201f;
+  font-family: 'Signika', Arial, Helvetica, sans-serif;
+  position: sticky;
+  top: -7px;
+  z-index: 0;
+  margin-bottom: 3%;
+}
+.nav-container-BlogsNavbar .navbar {
+  padding-top: 1%;
+}
+
+/* underline to appear when scrolled */
+.BorderBottom-BlogsNavbar {
+  background: linear-gradient(90deg, #1a83a1, #675899) left bottom
+    rgba(32, 31, 30, 0.8) no-repeat;
+  background-size: 100% 0.8px;
+  backdrop-filter: blur(30px);
+  z-index: 100;
+}
+
+/* ==== Blogs BRAND NAME ==== */
+
+.main-web-name-BlogsNavbar {
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+  font-size: 150%;
+  background: linear-gradient(
+    90deg,
+    rgb(0, 185, 214),
+    rgb(3, 167, 177),
+    rgb(3, 163, 137)
+  );
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+/* ==== BLOGSSNAVBAR NAVLINKS ==== */
+
+/* WITHOUT SCROLL */
+.nav-link-container-BlogsNavbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  font-weight: 400;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-style: normal;
+  line-height: 1.5rem;
+  letter-spacing: -0.015em;
+  background: #201f1e;
+  margin: 0.3em auto;
+  color: #f0f0f0;
+  box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08),
+    2px 2px 3px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(208, 197, 249, 0.005),
+    10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 15%;
+  height: 40px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  justify-content: center;
+  padding: 2px 2.5px;
+}
+
+.nav-link-BlogsNavbar {
+  height: 100%;
+  border-radius: 7px;
+  width: 100%;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.nav-link-container-BlogsNavbar-scrolled a {
+  background: #20201f;
+}
+
+.nav-container-BlogsNavbar a.active {
+  background: linear-gradient(90deg, #13657d, #615983);
+}
+
+.nav-container-BlogsNavbar a:hover {
+  text-decoration: none;
+}
+
+#responsive-navbar-nav > div > div > a.nav-link-BlogsNavbar.nav-link.active {
+  background: linear-gradient(90deg, #13657d, #615983);
+}
+
+/* WITH SCROLL */
+.nav-link-container-BlogsNavbar-scrolled {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  font-weight: 400;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-style: normal;
+  line-height: 1.5rem;
+  letter-spacing: -0.015em;
+  background: linear-gradient(180deg, #00bcf2, #b4a0ff);
+  margin: 0.3em auto;
+  color: #f0f0f0;
+  /* box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08), 2px 2px 3px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(208, 197, 249, 0.005), 10px 10px 10px rgba(0, 0, 0, 0.1); */
+  border-radius: 5px;
+  width: 15%;
+  height: 40px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  justify-content: center;
+  padding: 1px;
+}
+
+.nav-link-BlogsNavbar-scrolled {
+  height: 100%;
+  border-radius: 5px;
+  width: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#responsive-navbar-nav > div > div > a.nav-link-BlogsNavbar-scrolled.nav-link {
+  background: #201f1e;
+}
+
+#responsive-navbar-nav
+  > div
+  > div
+  > a.nav-link-BlogsNavbar-scrolled.nav-link.active {
+  background: linear-gradient(90deg, #184653, #443f56);
+}
+
+/* WORD COLORING FOR NAV LINKS */
+
+#blogs-navbar-Techmaniacs,
+#blogs-navbar-DigitalWizards,
+#blogs-navbar-GaganVedhi,
+#blogs-navbar-3DPrinting {
+  color: #d1d1d0;
+}
+
+#blogs-navbar-General > div,
+#blogs-navbar-FormulaBharath > div {
+  font-weight: 400;
+  background: linear-gradient(180deg, #00bcf2, #7593da, #b4a0ff);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+#responsive-navbar-nav > div > div > a.nav-link-BlogsNavbar.nav-link.active {
+  color: #ffffff;
+}
+
+/* ==== HAMBURGER ICON BLOGS NAVBAR ==== */
+
+/* ==== MEDIA QUERIES ==== */
+
+@media only screen and (min-width: 100px) {
+  .main-web-name-BlogsNavbar {
+    font-size: 170%;
+  }
+
+  .nav-link-container-BlogsNavbar {
+    width: 100%;
+  }
+
+  .nav-link-BlogsNavbar {
+    font-size: 1.08rem;
+  }
+
+  .nav-link-container-BlogsNavbar-scrolled {
+    width: 100%;
+  }
+
+  .nav-link-BlogsNavbar-scrolled {
+    font-size: 1.08rem;
+  }
+
+  #blogs-navbar-General > div,
+  #blogs-navbar-Techmaniacs > div,
+  #blogs-navbar-DigitalWizards > div,
+  #blogs-navbar-GaganVedhi > div,
+  #blogs-navbar-3DPrinting > div,
+  #blogs-navbar-FormulaBharath > div {
+    padding-top: 5px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .nav-link-BlogsNavbar {
+    font-size: 0.7rem;
+  }
+
+  .nav-link-BlogsNavbar-scrolled {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #root > div > div:nth-child(1) > div.nav-container-BlogsNavbar > nav > a {
+    display: none;
+  }
+  .main-web-name-BlogsNavbar {
+    display: none;
+  }
+
+  .BorderBottom-BlogsNavbar {
+    background: linear-gradient(90deg, #1a83a1, #675899) left bottom
+      rgba(32, 31, 30, 0.8) no-repeat;
+    background-size: 100% 0.8px;
+  }
+
+  .nav-link-container-BlogsNavbar {
+    width: 13%;
+  }
+
+  .nav-link-container-BlogsNavbar-scrolled {
+    width: 13%;
+  }
+
+  .nav-link-BlogsNavbar {
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 0.85rem;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+  .nav-link-BlogsNavbar-scrolled {
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 0.85rem;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+  #blogs-navbar-General > div,
+  #blogs-navbar-Techmaniacs > div,
+  #blogs-navbar-DigitalWizards > div,
+  #blogs-navbar-GaganVedhi > div,
+  #blogs-navbar-3DPrinting > div,
+  #blogs-navbar-FormulaBharath > div {
+    padding-top: 5px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .nav-link-container-BlogsNavbar {
+    width: 13%;
+  }
+
+  .nav-link-container-BlogsNavbar-scrolled {
+    width: 13%;
+  }
+
+  .nav-link-BlogsNavbar {
+    font-size: 1.02rem;
+  }
+
+  .nav-link-BlogsNavbar-scrolled {
+    font-size: 1.02rem;
+  }
+}
+@media (max-width: 992px) {
+  /* .nav-container-EventsNavbar-BlogsNavbar > nav::before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to right, #1a83a1, #675899);
+    height: 0.8px;
+    left: 0;
+    bottom: 0;
+  } */
+  .nav-container-BlogsNavbar {
+    z-index: 100;
+    background: linear-gradient(90deg, #1a83a1, #675899) left bottom
+      rgba(32, 31, 30, 0.8) no-repeat;
+    background-size: 100% 1.5px;
+  }
+  .calendarLink-BlogsNavbar {
+    display: none;
+  }
+  .nav-link-BlogsNavbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
