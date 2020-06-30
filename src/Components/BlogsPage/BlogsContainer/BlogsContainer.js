@@ -34,6 +34,16 @@ const BlogsContainer = () => {
     setCurrentPage(pageNumber);
   };
 
+  // next page button handler
+
+  const nextPageHandler = () => {
+    setCurrentPage(currentPage + 1);
+  };
+
+  const prevPageHandler = () => {
+    setCurrentPage(currentPage - 1);
+  };
+
   const data = {
     title: 'Techmanics Club - NSS Activity',
     topic: 'Teaching Robotics to School Children',
@@ -90,6 +100,8 @@ const BlogsContainer = () => {
             paginate={paginate}
             postsPerPage={postsPerPage}
             totalPosts={posts.length}
+            nextPageHandler={nextPageHandler}
+            prevPageHandler={prevPageHandler}
           />
         </>
       )}
