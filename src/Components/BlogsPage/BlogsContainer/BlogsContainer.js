@@ -1,10 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './BlogsContainer.css';
-import { Pagination } from 'react-bootstrap';
+import axios from 'axios';
+
 import Card from '../../EventsPage/EventCard/card';
 import BlogCardRecent from '../BlogCardRecent/BlogCardRecent';
+import PaginationComponent from './Pagination/Pagination';
 
 const BlogsContainer = () => {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(9);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      setLoading(true);
+      const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
+      console.log(res.data);
+      setPosts(res.data);
+      setLoading(false);
+    };
+
+    fetchPosts();
+  }, []);
+
+  // Get current posts
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+  // Change page
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
   const data = {
     title: 'Techmanics Club - NSS Activity',
     topic: 'Teaching Robotics to School Children',
@@ -18,37 +47,52 @@ const BlogsContainer = () => {
     image:
       'https://images.unsplash.com/photo-1544531585-9847b68c8c86?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
   };
+
+  const blogsList = [];
+  let recentBlog = null;
+  if (currentPosts.length !== 0) {
+    if (currentPage === 1) {
+      for (let i = 1; i < currentPosts.length; i += 1) {
+        const single = { ...data };
+        single.title = currentPosts[i].title;
+        blogsList.push(<Card key={i} single={single} />);
+      }
+      const recentBlogData = { ...currentPosts[0] };
+      recentBlogData.subHeading = 'Sameed';
+      recentBlog = <BlogCardRecent key={0} data={recentBlogData} />;
+    } else {
+      for (let i = 0; i < currentPosts.length; i += 1) {
+        const single = { ...data };
+        single.title = currentPosts[i].title;
+        blogsList.push(<Card key={i} single={single} />);
+      }
+    }
+  }
+
   return (
     <div className="BlogsContainer">
-      <div className="Top-Row-BlogsContainer">
-        <div className="column1-Top-Row-BlogsContainer">
-          <BlogCardRecent single={data} />
-        </div>
-        <div className="column2-Top-Row-BlogsContainer">
-          <Card single={data} />
-          <Card single={data} />
-        </div>
-      </div>
-      <div>
-        <Card single={data} />
-        <Card single={data} />
-        <Card single={data} />
-        <Card single={data} />
-        <Card single={data} />
-        <Card single={data} />
-      </div>
-
-      <Pagination>
-        <Pagination.Prev />
-        <Pagination.Item>{1}</Pagination.Item>
-
-        <Pagination.Item>{2}</Pagination.Item>
-        <Pagination.Item active>{3}</Pagination.Item>
-        <Pagination.Item>{4}</Pagination.Item>
-        <Pagination.Item>{5}</Pagination.Item>
-
-        <Pagination.Next />
-      </Pagination>
+      {loading ? (
+        <h1>Loading</h1>
+      ) : (
+        <>
+          {currentPage === 1 ? (
+            <div className="Top-Row-BlogsContainer">
+              <div className="column1-Top-Row-BlogsContainer">{recentBlog}</div>
+              <div className="column2-Top-Row-BlogsContainer">
+                {blogsList.splice(1, 3)}
+              </div>
+            </div>
+          ) : null}
+          <div>
+            {currentPage === 1 ? blogsList.splice(3, postsPerPage) : blogsList}
+          </div>
+          <PaginationComponent
+            paginate={paginate}
+            postsPerPage={postsPerPage}
+            totalPosts={posts.length}
+          />
+        </>
+      )}
     </div>
   );
 };

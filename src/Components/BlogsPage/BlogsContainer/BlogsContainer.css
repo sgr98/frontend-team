@@ -27,7 +27,11 @@
   width: 33.33333%;
   justify-content: space-between;
 }
-
+.pagination {
+  width: fit-content;
+  margin: auto;
+  margin-top: 3%;
+}
 .pagination .page-link {
   background-color: #20201f;
   border: none;
