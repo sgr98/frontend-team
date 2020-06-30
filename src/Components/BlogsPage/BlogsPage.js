@@ -1,13 +1,16 @@
 import React from 'react';
-import EventsNavbar from '../EventsPage/EventsNavbar/EventsNavbar';
+
 import BlogsContainer from './BlogsContainer/BlogsContainer';
 import Navigation from '../Navigation/Navigation';
+import SearchBar from './SearchBar/SearchBar';
+import BlogsNavbar from './BlogsNavbar/BlogsNavbar';
 
 const BlogsPage = () => {
   return (
     <div>
       <Navigation />
-      <EventsNavbar />
+      <BlogsNavbar />
+      <SearchBar />
       <BlogsContainer />
     </div>
   );

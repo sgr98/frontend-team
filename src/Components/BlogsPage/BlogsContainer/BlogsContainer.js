@@ -16,7 +16,7 @@ const BlogsContainer = () => {
     const fetchPosts = async () => {
       setLoading(true);
       const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
-      console.log(res.data);
+
       setPosts(res.data);
       setLoading(false);
     };
@@ -67,6 +67,7 @@ const BlogsContainer = () => {
         single.title = currentPosts[i].title;
         blogsList.push(<Card key={i} single={single} />);
       }
+      console.log(blogsList);
       const recentBlogData = { ...currentPosts[0] };
       recentBlogData.subHeading = 'Sameed';
       recentBlog = <BlogCardRecent key={0} data={recentBlogData} />;
@@ -89,12 +90,14 @@ const BlogsContainer = () => {
             <div className="Top-Row-BlogsContainer">
               <div className="column1-Top-Row-BlogsContainer">{recentBlog}</div>
               <div className="column2-Top-Row-BlogsContainer">
-                {blogsList.splice(1, 3)}
+                {blogsList.slice(0, 2)}
               </div>
             </div>
           ) : null}
           <div>
-            {currentPage === 1 ? blogsList.splice(3, postsPerPage) : blogsList}
+            {currentPage === 1
+              ? blogsList.slice(2, blogsList.length)
+              : blogsList}
           </div>
           <PaginationComponent
             paginate={paginate}
