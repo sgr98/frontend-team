@@ -291,7 +291,23 @@ a.nav-link-Navigation.active::after {
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 700px) {
+  .nav-container-Navigation {
+    padding: 0 0.2em;
+  }
+
+  .navbar {
+    padding: 0.5rem 0.3rem;
+  }
+}
+
+@media only screen and (max-width: 358px) {
+  .main-web-name-Navigation {
+    font-size: 130%;
+  }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 360px) {
   .main-web-name-Navigation {
     font-size: 160%;
     margin: 0 0.1em;
