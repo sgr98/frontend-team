@@ -42,6 +42,10 @@
   );
 }
 
+.pagination .disabled {
+  display: none;
+}
+
 .pagination li:last-child .page-link {
   background: linear-gradient(
     90deg,

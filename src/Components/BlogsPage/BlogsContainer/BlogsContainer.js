@@ -62,7 +62,7 @@ const BlogsContainer = () => {
   let recentBlog = null;
   if (currentPosts.length !== 0) {
     if (currentPage === 1) {
-      for (let i = 1; i < currentPosts.length; i += 1) {
+      for (let i = 0; i < currentPosts.length; i += 1) {
         const single = { ...data };
         single.title = currentPosts[i].title;
         blogsList.push(<Card key={i} single={single} />);
@@ -87,17 +87,24 @@ const BlogsContainer = () => {
       ) : (
         <>
           {currentPage === 1 ? (
-            <div className="Top-Row-BlogsContainer">
+            <div className="Top-Row-BlogsContainer-desktop">
               <div className="column1-Top-Row-BlogsContainer">{recentBlog}</div>
               <div className="column2-Top-Row-BlogsContainer">
-                {blogsList.slice(0, 2)}
+                {blogsList.slice(1, 3)}
               </div>
             </div>
           ) : null}
           <div>
-            {currentPage === 1
-              ? blogsList.slice(2, blogsList.length)
-              : blogsList}
+            {currentPage === 1 ? (
+              <>
+                <div className="Top-Row-BlogsContainer-mobile">
+                  {blogsList.slice(0, 3)}
+                </div>
+                {blogsList.slice(3, blogsList.length)}
+              </>
+            ) : (
+              blogsList
+            )}
           </div>
           <PaginationComponent
             paginate={paginate}
