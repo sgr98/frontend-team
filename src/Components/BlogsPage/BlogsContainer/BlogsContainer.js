@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import './BlogsContainer.css';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import "./BlogsContainer.css";
+import axios from "axios";
 
-import Card from '../../EventsPage/EventCard/card';
-import BlogCardRecent from '../BlogCardRecent/BlogCardRecent';
-import PaginationComponent from './Pagination/Pagination';
+import Card from "../BlogCard/BlogCard";
+import BlogCardRecent from "../BlogCardRecent/BlogCardRecent";
+import PaginationComponent from "./Pagination/Pagination";
 
 const BlogsContainer = () => {
   const [posts, setPosts] = useState([]);
@@ -15,7 +15,7 @@ const BlogsContainer = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       setLoading(true);
-      const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
+      const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
 
       setPosts(res.data);
       setLoading(false);
@@ -45,17 +45,17 @@ const BlogsContainer = () => {
   };
 
   const data = {
-    title: 'Techmanics Club - NSS Activity',
-    topic: 'Teaching Robotics to School Children',
+    title: "Techmanics Club - NSS Activity",
+    topic: "Teaching Robotics to School Children",
     description:
-      'Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)!',
-    date: 'Tuesday, 2nd December 2021',
-    location: 'TC1, Transit Campus ',
-    time: '8:00 pm',
-    buttonTitle: 'Register',
-    buttonUrl: '#!',
+      "Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it?” Answer to each and every question is ROS(Robot Operating System)!",
+    date: "Tuesday, 2nd December 2021",
+    location: "TC1, Transit Campus ",
+    time: "8:00 pm",
+    buttonTitle: "Register",
+    buttonUrl: "#!",
     image:
-      'https://images.unsplash.com/photo-1544531585-9847b68c8c86?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+      "https://images.unsplash.com/photo-1544531585-9847b68c8c86?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
   };
 
   const blogsList = [];
@@ -69,7 +69,7 @@ const BlogsContainer = () => {
       }
       console.log(blogsList);
       const recentBlogData = { ...currentPosts[0] };
-      recentBlogData.subHeading = 'Sameed';
+      recentBlogData.subHeading = "Sameed";
       recentBlog = <BlogCardRecent key={0} data={recentBlogData} />;
     } else {
       for (let i = 0; i < currentPosts.length; i += 1) {
