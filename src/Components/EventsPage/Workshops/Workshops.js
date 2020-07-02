@@ -20,8 +20,8 @@ const Workshops = (props) => {
             <img src={EventIcon} alt="Event" />
             {item.type}
           </div>
-          {item.events.map((single, index) => (
-            <Card key={index} single={single} />
+          {item.events.map((single, index_event) => (
+            <Card key={index_event} single={single} showButton={index === 0} />
           ))}
         </div>
       ))}

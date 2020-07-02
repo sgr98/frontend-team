@@ -3,7 +3,7 @@ import './card.css';
 import ReadMoreReact from 'read-more-react';
 import { Button } from 'react-bootstrap';
 
-const Card = ({ single }) => {
+const Card = ({ single, showButton }) => {
   return (
     <div className="event-card-container">
       <div className="event-card-content">
@@ -35,12 +35,14 @@ const Card = ({ single }) => {
               {single.location} - {single.time}
             </span>
           </div>
-          <div className="event-card-btn-container">
-            <Button variant="outline" className="event-card-btn">
-              {' '}
-              {single.buttonTitle}
-            </Button>
-          </div>
+          {showButton ? (
+            <div className="event-card-btn-container">
+              <Button variant="outline" className="event-card-btn">
+                {' '}
+                {single.buttonTitle}
+              </Button>
+            </div>
+          ) : null}
         </div>
       </div>
     </div>
