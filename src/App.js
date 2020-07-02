@@ -15,8 +15,8 @@ function App() {
         {/* <Navigation /> */}
 
         <Switch>
-          {/* <Route path={['/', '/home']} exact component={HomePage} /> */}
-          <Route path={['/', '/home']} exact component={BlogsPage} />
+          <Route path={['/', '/home']} exact component={HomePage} />
+          <Route path="/Blogs" exact component={BlogsPage} />
           <Route path="/Events" component={EventsPage} />
 
           <Route component={Error} />

@@ -13,8 +13,6 @@ const PaginationComponent = ({
   const [currentPage, setCurrentPage] = useState(1);
   const [pageNumbersToBeShown, setPageNumbersToBeShown] = useState([]);
 
-  //console.log(pageNumbersToBeShown);
-
   const displayNewNumbersNext = (number) => {
     if (number % 5 === 1) {
       const pages = [];
@@ -71,7 +69,10 @@ const PaginationComponent = ({
         </Pagination.Item>
       ))}
       <Pagination.Ellipsis
-        disabled={currentPage === Math.ceil(totalPosts / postsPerPage)}
+        disabled={
+          pageNumbersToBeShown.length < 5 ||
+          pageNumbers[4] === Math.ceil(totalPosts / postsPerPage)
+        }
       />
       <Pagination.Next
         onClick={() => {

@@ -31,20 +31,6 @@ export default class Appgrid extends Component {
                   </div>
                 </Link>
               </div>
-              <div className="col-lg-2 col-md-4 col-sm-6 box">
-                <Link to="/Events/Activities">
-                  <div className="custom module-border-wrap">
-                    <img src={TrophyIcon} alt="Trophy Icon" />
-                    <div className="text">
-                      <p>
-                        UPCOMING
-                        <br />
-                        ACTIVITIES
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              </div>
 
               <div className="col-lg-2 col-md-4 col-sm-6 box">
                 <Link to="/Events/Competitions">
@@ -56,6 +42,16 @@ export default class Appgrid extends Component {
                         <br />
                         COMPETITIONS
                       </p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+              <div className="col-lg-2 col-md-4 col-sm-6 box">
+                <Link to="/Blogs">
+                  <div className="custom module-border-wrap">
+                    <img src={TrophyIcon} alt="Trophy Icon" />
+                    <div className="text">
+                      <p style={{ marginTop: '7%' }}>Blogs</p>
                     </div>
                   </div>
                 </Link>

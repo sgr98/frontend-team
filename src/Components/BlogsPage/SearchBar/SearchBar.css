@@ -4,8 +4,6 @@
 .searchBox-border-SearchBar {
   background: linear-gradient(180deg, #00bcf2, #b4a0ff);
   font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
-  position: relative;
-  top: 1em;
 
   width: 45%;
   height: 1.9em;
@@ -13,7 +11,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 4px;
-  margin-left: 4%;
+  margin-left: 5%;
 }
 
 /* container for search field and search icon */

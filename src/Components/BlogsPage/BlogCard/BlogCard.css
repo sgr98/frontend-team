@@ -56,14 +56,13 @@
   letter-spacing: -0.015em;
 } */
 
-.event-card-btn-container {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 10px;
+.card-btn-container-BlogCard {
+  margin: auto;
+  margin-top: 3%;
 }
-.event-card-btn {
+.card-btn-BlogCard {
   border: 1px solid;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
   border-image: linear-gradient(to right, #00bcf2, #b4a0ff);
   border-image-slice: 1;
   color: rgb(0, 210, 255);
@@ -71,9 +70,9 @@
   margin-bottom: 5px;
   margin-top: 0px;
   width: 40%;
-  padding: 3px;
+  padding: 2px 3px;
 }
-.event-card-btn:hover {
+.card-btn-BlogCard:hover {
   background: #e1dfdd;
   color: #201f1e;
   -webkit-box-shadow: inset 0px 0px 9px -2px rgba(0, 0, 0, 0.5);
@@ -125,14 +124,14 @@
   border-radius: 10px;
 }
 
-.event-card-title {
-  font-family: "Roboto Slab";
+.card-title-BlogCard {
+  font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: 400;
   font-size: 1.5vw;
   width: 100%;
   letter-spacing: -0.015em;
-  text-align: start;
+  text-align: center;
   margin: 0;
 
   background: linear-gradient(to bottom, #00bcf2, #b4a0ff);
@@ -143,7 +142,7 @@
 }
 
 .blog-card-title {
-  font-family: "Roboto Slab";
+  font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: 400;
   font-size: 1.5vw;
@@ -165,36 +164,41 @@
   color: #fff;
   background: rgba(32, 31, 30, 0.9);
   width: 100%;
+  padding-right: 5%;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.event-card-topic {
+.card-topic-BlogCard {
   font-family: Roboto Slab;
   font-style: normal;
   font-weight: 300;
   font-size: 1vw;
   line-height: 32px;
   cursor: default;
+  margin-bottom: 5px;
   display: flex;
+  justify-content: center;
   align-items: center;
   letter-spacing: -0.015em;
-  color: #f0f0f0;
+  color: #aaaaaa;
 }
-.event-card-description {
-  font-family: "Roboto Slab", sans-serif;
+.card-description-BlogCard {
+  font-family: 'Roboto Slab', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 0.8vw;
   /* line-height: 2vh; */
-  display: flex;
+
   cursor: default;
   letter-spacing: -0.015em;
-  text-align: start;
+  display: flex;
+  align-items: center;
+  text-align: justify;
   max-height: 100px;
   overflow: scroll;
-  color: #aaaaaa;
+  color: #c8c6c4;
 }
 .event-card-date-location {
   cursor: default;
@@ -246,20 +250,20 @@
     display: block;
     width: 100%;
   }
-  .event-card-title,
+  .card-title-BlogCard,
   .blog-card-title {
     font-size: 4vw;
   }
-  .event-card-topic {
+  .card-topic-BlogCard {
     font-size: 3vw;
   }
-  .event-card-description {
+  .card-description-BlogCard {
     font-size: 2.5vw;
   }
   .event-card-date-location {
     font-size: 2.8vw;
   }
-  .event-card-btn {
+  .card-btn-BlogCard {
     font-size: 2.5vw;
   }
 }
@@ -268,14 +272,14 @@
   .event-card-container {
     width: 50%;
   }
-  .event-card-title,
+  .card-title-BlogCard,
   .blog-card-title {
     font-size: 2.5vw;
   }
-  .event-card-topic {
+  .card-topic-BlogCard {
     font-size: 2vw;
   }
-  .event-card-description {
+  .card-description-BlogCard {
     font-size: 1.1vw;
   }
   .event-card-date-location {
@@ -286,14 +290,14 @@
   .event-card-container {
     width: 33.3333333%;
   }
-  .event-card-title,
+  .card-title-BlogCard,
   .blog-card-title {
     font-size: 1.6vw;
   }
-  .event-card-topic {
+  .card-topic-BlogCard {
     font-size: 1.1vw;
   }
-  .event-card-description {
+  .card-description-BlogCard {
     font-size: 0.9vw;
   }
   .event-card-date-location {
