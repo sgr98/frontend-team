@@ -32,16 +32,19 @@ const BlogsContainer = () => {
   // Change page
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
+    window.scrollTo(0, 100);
   };
 
   // next page button handler
 
   const nextPageHandler = () => {
     setCurrentPage(currentPage + 1);
+    window.scrollTo(0, 100);
   };
 
   const prevPageHandler = () => {
     setCurrentPage(currentPage - 1);
+    window.scrollTo(0, 100);
   };
 
   const data = {
