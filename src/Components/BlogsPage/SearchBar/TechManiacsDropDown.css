@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;600&display=swap');
+
+.nav-container-TechManiacsDropDown {
+  display: inline-block;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-style: normal;
+  font-family: 'Signika', Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: -0.015em;
+  background: #201f1e;
+  box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08),
+    2px 2px 3px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(208, 197, 249, 0.005),
+    10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  height: 1.9em;
+  width: 10rem;
+  margin: 1% 5%;
+}
+
+#collasible-nav-dropdown-TechManiacsDropDown {
+  background: linear-gradient(90deg, #13657d, #615983);
+  border-radius: 3px;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 9.8rem;
+  height: 1.9rem;
+}
+#collasible-nav-dropdown-TechManiacsDropDown > span {
+  font-weight: 400;
+  background: linear-gradient(180deg, #00bcf2, #7593da, #b4a0ff);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+a#collasible-nav-dropdown-TechManiacsDropDown.nav-link::after {
+  content: none;
+}
+
+#root
+  > div
+  > div.BlogsPage
+  > div.searchBar-techmaniacs-SearchBar
+  > div.nav-container-TechManiacsDropDown
+  > div
+  > div {
+  margin: 0;
+  padding: 0;
+  background-color: #30302f;
+  opacity: 0.99;
+  width: 100%;
+}
+
+.menuitem-TechManiacsDropDown {
+  color: #f0f0f0;
+  background: linear-gradient(to right, #6a5f8e, #106d88);
+  border-left: rgba(12, 12, 12, 0.7) 3px solid;
+  border-top: rgba(12, 12, 12, 0.7) 1px solid;
+  border-right: rgba(12, 12, 12, 0.7) 3px solid;
+  border-bottom: rgba(12, 12, 12, 0.7) 3px solid;
+  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  white-space: nowrap;
+  font-weight: 300;
+    font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==== MEDIA QUERIES ==== */
+@media only screen and (min-width: 800px) {
+  .nav-container-TechManiacsDropDown {
+    margin: 0 1% 0 3%;
+    width: 12rem;
+    font-size: 1.25rem;
+  }
+  #collasible-nav-dropdown-TechManiacsDropDown {
+    width: 11.8rem;
+    height: 2.1rem;
+  }
+}

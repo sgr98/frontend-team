@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500&display=swap');
 
+.searchBar-techmaniacs-SearchBar {
+  display: flex;
+  flex-direction: column;
+  margin: 2px 0;
+}
+
 /* gradient border */
 .searchBox-border-SearchBar {
   background: linear-gradient(180deg, #00bcf2, #b4a0ff);
   font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
-
+  display: inline;
   width: 45%;
   height: 1.9em;
   display: flex;
@@ -31,7 +37,7 @@
   box-sizing: border-box;
   height: 100%;
   font-size: 0.9rem;
-  padding: 0.2rem 0px 0.2rem 4%; 
+  padding: 0.2rem 0px 0.2rem 4%;
   border: none;
   outline: none;
   text-overflow: ellipsis;
@@ -74,6 +80,9 @@
   }
 }
 @media only screen and (min-width: 800px) {
+  .searchBar-techmaniacs-SearchBar {
+    flex-direction: row;
+  }
   .searchBox-border-SearchBar {
     width: 29%;
     height: 2.3em;
