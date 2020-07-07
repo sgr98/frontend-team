@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;600&display=swap');
 
 .nav-container-TechManiacsDropDown {
+  z-index: 1;
   display: inline-block;
   position: relative;
   display: flex;
@@ -74,7 +75,7 @@ a#collasible-nav-dropdown-TechManiacsDropDown.nav-link::after {
   border-bottom-right-radius: 5px;
   white-space: nowrap;
   font-weight: 300;
-    font-size: 1.1rem;
+  font-size: 1.1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
