@@ -7,6 +7,7 @@ import Footer from './Components/Footer/Footer';
 import 'swiper/css/swiper.css';
 import EventsPage from './Components/EventsPage/EventsPage';
 import BlogsPage from './Components/BlogsPage/BlogsPage';
+import ClubsPage from './Components/ClubsPage/ClubsPage';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         {/* <Navigation /> */}
 
         <Switch>
-          <Route path={['/', '/home']} exact component={HomePage} />
+          {/* <Route path={['/', '/home']} exact component={HomePage} /> */}
+          <Route path={['/', '/home']} exact component={ClubsPage} />
           <Route path="/Blogs" exact component={BlogsPage} />
           <Route path="/Events" component={EventsPage} />
 
