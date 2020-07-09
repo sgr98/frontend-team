@@ -59,7 +59,14 @@
   border: none;
   outline: none;
 }
-#root > div > div:nth-child(1) > div > div > div > button {
+#root
+  > div
+  > div.BlogsPage
+  > div.searchBar-techmaniacs-SearchBar
+  > div.searchBox-border-SearchBar
+  > div
+  > div
+  > button {
   padding: 0px;
 }
 

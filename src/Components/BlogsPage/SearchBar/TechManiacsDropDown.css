@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;600&display=swap');
 
+/* ==== TECH-MANIACS DROPDOWN ==== */
+/* container */
 .nav-container-TechManiacsDropDown {
   z-index: 1;
   display: inline-block;
@@ -24,6 +26,7 @@
   margin: 1% 5%;
 }
 
+/* gradient background */
 #collasible-nav-dropdown-TechManiacsDropDown {
   background: linear-gradient(90deg, #13657d, #615983);
   border-radius: 3px;
@@ -34,6 +37,8 @@
   width: 9.8rem;
   height: 1.9rem;
 }
+
+/* gradient text */
 #collasible-nav-dropdown-TechManiacsDropDown > span {
   font-weight: 400;
   background: linear-gradient(180deg, #00bcf2, #7593da, #b4a0ff);
@@ -49,6 +54,7 @@ a#collasible-nav-dropdown-TechManiacsDropDown.nav-link::after {
   content: none;
 }
 
+/* menuitems styles */
 #root
   > div
   > div.BlogsPage
