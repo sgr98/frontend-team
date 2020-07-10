@@ -25,7 +25,7 @@ export const CardData = ({ member }) => {
       <div>
         <Card className={memberStyle}>
           <Card.Body className="alumini-textBody-CardData">
-            <Card.Title style={{ fontWeight: '700', fontSize: '150%' }}>
+            <Card.Title className="meet-our-alumini-CardData">
               {member.name}
             </Card.Title>
           </Card.Body>

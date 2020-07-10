@@ -6,9 +6,17 @@ import './ClubsTeamInfo.css';
 export const ClubsTeamInfo = () => {
   const [members, setMembers] = useState([
     { rollNo: 'CS19B003', name: 'Amit Kesari', designation: 'Coordinator' },
-    { rollNo: 'CS19B003', name: 'Amit Subhash Chandra Kesari', designation: 'Co-Coordinator' },
+    {
+      rollNo: 'CS19B003',
+      name: 'Amit Subhash Chandra Kesari',
+      designation: 'Co-Coordinator',
+    },
     { rollNo: 'CS19B003', name: 'Amit Kesari', designation: 'Co-Coordinator' },
-    { rollNo: 'CS19B003', name: 'Amit Subhash Chandra K.', designation: 'Co-Coordinator' },
+    {
+      rollNo: 'CS19B003',
+      name: 'Amit Subhash Chandra K.',
+      designation: 'Co-Coordinator',
+    },
     { rollNo: 'CS19B003', name: 'Amit Kesari', designation: 'Co-Coordinator' },
     { rollNo: 'CS19B003', name: 'Amit Kesari', designation: 'Co-Coordinator' },
     { rollNo: 'CS19B003', name: 'Amit Kesari', designation: 'Co-Coordinator' },
@@ -24,7 +32,7 @@ export const ClubsTeamInfo = () => {
         <Row>
           {members.map((member) => {
             return (
-              <Col sm={6} md={4}>
+              <Col sm={6} lg={4} key={Math.random()}>
                 <CardData member={member} />
               </Col>
             );
