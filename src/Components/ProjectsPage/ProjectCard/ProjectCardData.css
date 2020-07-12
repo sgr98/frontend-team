@@ -1,0 +1,47 @@
+.projectCard-container-ProjectCardData {
+  font-family: Roboto, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  height: 18rem;
+  margin: 1.5% 0;
+  border: 1px solid #f0f0f0;
+  border-radius: 0;
+  box-sizing: border-box;
+  background: #323130;
+  text-align: justify;
+  color: #f0f0f0;
+  overflow: auto;
+}
+
+.textBody-ProjectCardData {
+  font-style: normal;
+  font-weight: 500;
+  display: inline-block;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.heading-ProjectCardData {
+  font-size: 2rem;
+  color: #e1dfdd;
+}
+
+.team-ProjectCardData,
+.guide-ProjectCardData {
+  font-size: 1.2rem;
+  color: #c8c6c4;
+}
+
+.synopsis-ProjectCardData {
+  text-transform: initial;
+  color: #e0e0e0;
+  font-size: 1.2rem;
+}
+
+.projectPicture-ProjectCardData {
+  width: 16em;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  float: right;
+}
