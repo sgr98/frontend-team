@@ -1,5 +1,6 @@
 import React from 'react';
 import ReadMoreReact from 'read-more-react';
+import Remark from '../../../ReusableComponents/Remark/Remark';
 import './RightTeamCard.css';
 
 import CustomButton from '../CustomButton/CustomButton';
@@ -15,6 +16,7 @@ const RightTeamCard = (props) => (
         />
       </div>
       <div className="content_div-RightTeamCard">
+        <Remark text="UPCOMING" />
         <p className="heading-RightTeamCard">Featured Achievements</p>
         <p className="secondary-heading-RightTeamCard">
           By Professors and Students

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReadMoreReact from 'read-more-react';
+import Remark from '../../../ReusableComponents/Remark/Remark';
 import './LeftTeamCard.css';
 import CustomButton from '../CustomButton/CustomButton';
 
@@ -8,6 +9,7 @@ const LeftTeamCard = (props) => {
     <>
       <div className="root-LeftTeamCard">
         <div className="content_div-LeftTeamCard">
+          <Remark text="UPCOMING" />
           <p className="heading-LeftTeamCard">Articles & Activities</p>
           <p className="secondary-heading-LeftTeamCard">
             Writer or the theme of the activity/ article

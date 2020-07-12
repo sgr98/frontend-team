@@ -40,38 +40,6 @@
   padding-right: 2%;
 }
 
-.recentTag-BlogCardRecent {
-  display: flex;
-  cursor: default;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 188, 242, 0.45) 0%,
-    rgba(180, 160, 255, 0.45) 100%
-  );
-  height: auto;
-  width: auto;
-  border-radius: 2px;
-}
-
-.recentTag-BlogCardRecent span {
-  font-family: 'Signika', sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 1.5vw;
-
-  margin: 1px 10px;
-
-  letter-spacing: -0.015em;
-  text-transform: uppercase;
-  background: linear-gradient(to bottom, #00bcf2, #b4a0ff);
-
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .card-title-BlogCardRecent {
   font-family: 'Roboto Slab';
   font-style: normal;
