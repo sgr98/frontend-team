@@ -8,6 +8,7 @@ import 'swiper/css/swiper.css';
 import EventsPage from './Components/EventsPage/EventsPage';
 import BlogsPage from './Components/BlogsPage/BlogsPage';
 import ClubsPage from './Components/ClubsPage/ClubsPage';
+import ProjectsPage from './Components/ProjectsPage/ProjectsPage';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           <Route path={['/', '/home']} exact component={ClubsPage} />
           <Route path="/Blogs" exact component={BlogsPage} />
           <Route path="/Events" component={EventsPage} />
-
+          <Route path="/Projects" component={ProjectsPage} />
           <Route component={Error} />
         </Switch>
         <Footer />
