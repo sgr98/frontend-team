@@ -8,6 +8,7 @@ const ClubsPage = () => {
   return (
     <div>
       Clubs
+      <ClubsNavbar />
       <ClubsTeamInfo />
       {/* <CustomHR /> */}
       <ContactForm />
