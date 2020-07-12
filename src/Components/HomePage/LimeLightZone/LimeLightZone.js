@@ -16,11 +16,11 @@ class LimeLightZone extends Component {
     return (
       <div className="LimeLightZone">
         <LimeLightHeading />
-        <RightTeamCard />
+        <RightTeamCard remarkText="UPCOMING" buttonText="EXPLORE MORE" />
         <CustomHR />
         <LeftTeamCard />
         <CustomHR />
-        <RightTeamCard />
+        <RightTeamCard remarkText="UPCOMING" buttonText="EXPLORE MORE" />
         <CustomHR />
         <CollegeTeams />
       </div>

@@ -16,7 +16,7 @@ const RightTeamCard = (props) => (
         />
       </div>
       <div className="content_div-RightTeamCard">
-        <Remark text="UPCOMING" />
+        <Remark text={props.remarkText} />
         <p className="heading-RightTeamCard">Featured Achievements</p>
         <p className="secondary-heading-RightTeamCard">
           By Professors and Students
@@ -30,7 +30,7 @@ const RightTeamCard = (props) => (
           />
         </div>
         <div className="button-RightTeamCard">
-          <CustomButton text="Explore more" />
+          <CustomButton text={props.buttonText} />
         </div>
       </div>
     </div>

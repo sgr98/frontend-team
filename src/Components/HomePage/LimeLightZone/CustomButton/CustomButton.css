@@ -8,7 +8,7 @@
 
 .Button-Custom {
   font-family: 'Roboto Slab';
-
+  cursor: pointer;
   background: #20201f;
   color: white;
   text-align: center;
