@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500&display=swap');
+
+/* ==== CARD VIEW ==== */
+.data-container-CardData {
+  position: relative;
+  height: 5rem;
+  margin: 1.5% 0;
+  border: 4px solid #201f1e;
+  box-sizing: border-box;
+  box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08),
+    2px 2px 3px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(208, 197, 249, 0.005),
+    10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+  color: #f0f0f0;
+}
+
+/* ==== TEXT ALLIGHNMENT AND STYLING ==== */
+.textBody-CardData {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+
+  padding-top: 4px;
+  padding-right: 1%;
+  padding-bottom: 1px;
+  padding-left: 1%;
+}
+
+.rollNo-CardData {
+  align-self: flex-start;
+  text-align: left;
+  margin: 1px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-size: 0.8rem;
+}
+.name-CardData {
+  align-self: flex-start;
+  text-align: left;
+  margin: 1px;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.designation-CardData {
+  align-self: flex-start;
+  text-align: left;
+  margin: 1px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* background based on Designation */
+.Co-Coordinator-CardData {
+  background: rgba(96, 94, 92, 0.6);
+}
+
+.Coordinator-CardData {
+  background: linear-gradient(
+      90deg,
+      rgba(227, 0, 140, 0.4) 0%,
+      rgba(158, 3, 158, 0.4) 100%
+    ),
+    rgba(96, 94, 92, 0.2);
+}
+
+.Alumini-CardData {
+  background: rgba(48, 46, 44, 0.6);
+}
+
+/* Alumini card styles */
+.alumini-textBody-CardData {
+  font-family: Roboto, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  color: #a19f9d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin: 0;
+}
+
+.meet-our-alumini-CardData {
+  font-weight: 700;
+  font-size: 115%;
+  margin-bottom: 0;
+  position: relative;
+}
+
+/* ==== DISPLAY PICTURE STYLING ==== */
+
+.dPicture-border-CardData {
+  box-sizing: border-box;
+  position: relative;
+  margin: auto 2% auto 7%;
+  /* height: 6.5em; */
+  width: 4rem;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #e3008c, #724dff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.displayPicture-CardData {
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+
+/* ==== MEDIA QUERIES ==== */
+
+@media only screen and (min-width: 576px) {
+  .data-container-CardData {
+    height: 6rem;
+    margin: 2% 0;
+  }
+  .dPicture-border-CardData {
+    width: 5rem;
+  }
+  /* text sizing */
+  .textBody-CardData {
+    padding-top: 10px;
+    padding-left: 6%;
+  }
+  .rollNo-CardData {
+    font-size: 0.8rem;
+  }
+  .name-CardData {
+    font-size: 1.2rem;
+  }
+  .designation-CardData {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .data-container-CardData {
+    height: 6.7rem;
+  }
+  .textBody-CardData {
+    padding-top: 4%;
+    padding-left: 3%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .data-container-CardData {
+    height: 7rem;
+  }
+  .dPicture-border-CardData {
+    width: 5.6rem;
+    margin: auto 3% auto 7%;
+  }
+  .meet-our-alumini-CardData {
+    font-size: 135%;
+  }
+  /* text sizing */
+  .textBody-CardData {
+    padding-top: 4%;
+    padding-left: 8%;
+  }
+  .rollNo-CardData {
+    font-size: 0.9rem;
+  }
+  .name-CardData {
+    font-size: 1.25rem;
+  }
+  .designation-CardData {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .data-container-CardData {
+    height: 8rem;
+  }
+  .dPicture-border-CardData {
+    width: 6.2rem;
+  }
+  .meet-our-alumini-CardData {
+    font-size: 155%;
+  }
+
+  /* text sizing */
+  .textBody-CardData {
+    padding-top: 4%;
+    padding-left: 4%;
+  }
+  .name-CardData {
+    font-size: 1.4rem;
+  }
+  .designation-CardData {
+    font-size: 1.2rem;
+  }
+}
