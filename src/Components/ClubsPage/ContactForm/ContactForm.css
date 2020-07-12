@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.root-ContactForm {
+  display: flex;
+  margin-top: 5%;
+}
+
+.heading-ContactForm {
+  font-family: Roboto Slab, sans-serif;
+  background: linear-gradient(to right, #00bcf2, #b4a0ff);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+  background-clip: text;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 95px;
+  /* identical to box height */
+  display: flex;
+  align-items: flex-start;
+  letter-spacing: -0.015em;
+  text-transform: capitalize;
+}
+
+.label-ContactForm {
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 23px;
+  letter-spacing: 0.07em;
+  text-align: start;
+  margin-bottom: 2px;
+  color: #aaaaaa;
+}
+
+.input-ContactForm {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  color: white;
+  background: rgba(96, 94, 92, 0.2);
+  border: 2px solid #201f1e;
+  box-sizing: border-box;
+  box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08),
+    2px 2px 3px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(208, 197, 249, 0.005),
+    10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+
+  font-size: 15px;
+
+  font-family: Roboto Slab, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+
+  line-height: 26px;
+
+  letter-spacing: 0.07em;
+}
+
+.input-ContactForm:focus {
+  outline: none;
+}
+
+.inputGroup-ContactForm {
+  margin: 1.5%;
+}
+
+.subject-ContactForm {
+  height: 80px;
+  min-height: 80px;
+  background: rgba(96, 94, 92, 0.6);
+}
+
+.message-ContactForm {
+  height: 190px;
+  min-height: 190px;
+}
+
+.button-ContactForm {
+  width: 150px;
+  height: 45px;
+  background: linear-gradient(
+    0deg,
+    rgba(224, 224, 224, 0.4),
+    rgba(224, 224, 224, 0.4)
+  );
+  border: 3px solid #201f1e;
+  box-sizing: border-box;
+  box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08),
+    2px 2px 3px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(208, 197, 249, 0.005),
+    10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+
+  line-height: 28px;
+
+  letter-spacing: 0.07em;
+
+  color: #262625;
+}
+
+.button-ContactForm:focus {
+  outline: none;
+}
+
+.SendIcon-ContactForm {
+  height: 50%;
+  margin-right: 1%;
+}
+
+.buttonDiv-ContactForm {
+  display: flex;
+  margin: 10px;
+}
+
+.ContactImage-ContactForm {
+  width: 80%;
+}
+.ContactImageDiv-ContactForm {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-ContactForm {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 950px) {
+  .ContactImageDiv-ContactForm {
+    display: none;
+  }
+  .form-ContactForm {
+    width: 100%;
+    margin: 5%;
+  }
+}
+
+@media (max-width: 390px) {
+  .heading-ContactForm {
+    font-size: 50px;
+  }
+}
