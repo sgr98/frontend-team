@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/* ==== PROJECT CARD ==== */
+.projectCard-container-ProjectCardData {
+  font-family: Roboto, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  height: 19rem;
+  margin: 1.2% 0;
+  border: 1px solid #f0f0f0;
+  border-radius: 0;
+  box-sizing: border-box;
+  background: #323130;
+  text-align: justify;
+  color: #f0f0f0;
+  overflow: auto;
+  display: inline-block;
+}
+
+/* general text styles */
+.textBody-ProjectCardData {
+  font-style: normal;
+  font-weight: 400;
+  display: inline-block;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* heading */
+.heading-ProjectCardData {
+  font-size: 1.3rem;
+  color: #e1dfdd;
+  margin-bottom: 1%;
+}
+
+/* team and guide */
+.team-ProjectCardData,
+.guide-ProjectCardData {
+  font-size: 0.8rem;
+  color: #c8c6c4;
+  margin-bottom: 1px;
+  line-height: 1.4em;
+}
+.guide-ProjectCardData {
+  margin-bottom: 1%;
+}
+
+/* synopsis */
+p.synopsis-ProjectCardData div.read-more-button,
+.synopsis-ProjectCardData {
+  position: relative;
+  text-transform: initial;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  display: inline;
+  font-weight: 300;
+  line-height: 1.45em;
+}
+
+p.synopsis-ProjectCardData div.read-more-button {
+  color: #028edc;
+  cursor: pointer;
+}
+
+/* ==== VIEW PROJECT BUTTON ==== */
+.buttonText-ProjectCardData {
+  background: #605e5c;
+  border: 1px solid #e1dfdd;
+  box-sizing: border-box;
+  border-radius: 0px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f0f0f0;
+  font-size: 0.75rem;
+  margin-top: 1.6%;
+  padding: 0.5em 1.5em;
+}
+
+/* ==== PROJECT PICTURE ==== */
+.projectPicture-ProjectCardData {
+  width: 30vw;
+  float: left;
+  margin: 4%;
+  padding: 0px;
+  margin-top: 0em;
+}
+
+/* ==== MEDIA QUERIES ==== */
+
+@media only screen and (min-width: 576px) {
+  /* text sizing */
+  .heading-ProjectCardData {
+    font-size: 1.4rem;
+  }
+  .team-ProjectCardData,
+  .guide-ProjectCardData {
+    font-size: 0.95rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* text sizing */
+  .heading-ProjectCardData {
+    font-size: 1.6rem;
+  }
+  p.synopsis-ProjectCardData div.read-more-button,
+  .synopsis-ProjectCardData {
+    font-size: 1rem;
+  }
+  .buttonText-ProjectCardData {
+    font-size: 0.8rem;
+    margin-top: 1.5%;
+    padding: 0.6em 1.7em;
+  }
+  /* project picture sizing */
+  .projectPicture-ProjectCardData {
+    width: 27vw;
+    float: right;
+    margin: 4%;
+    margin-top: 10%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  /* text sizing */
+  .heading-ProjectCardData {
+    font-size: 1.8rem;
+  }
+  .team-ProjectCardData,
+  .guide-ProjectCardData {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  p.synopsis-ProjectCardData div.read-more-button,
+  .synopsis-ProjectCardData {
+    font-size: 1.1rem;
+  }
+  /* project picture sizing */
+  .projectPicture-ProjectCardData {
+    width: 21vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  /* text sizing */
+  .projectCard-container-ProjectCardData {
+    height: 19rem;
+  }
+  .textBody-ProjectCardData {
+    padding-bottom: 1em;
+  }
+  .heading-ProjectCardData {
+    font-size: 1.9rem;
+  }
+  .team-ProjectCardData,
+  .guide-ProjectCardData {
+    font-size: 1.05rem;
+    line-height: 1.4em;
+  }
+  p.synopsis-ProjectCardData div.read-more-button,
+  .synopsis-ProjectCardData {
+    font-size: 1.2rem;
+  }
+  .buttonText-ProjectCardData {
+    font-size: 0.85rem;
+    margin-top: 1.5%;
+    padding: 0.6em 2em;
+  }
+  /* project picture sizing */
+  .projectPicture-ProjectCardData {
+    width: 18.5vw;
+    margin: 4%;
+    margin-bottom: 0%;
+  }
+}
