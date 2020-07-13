@@ -7,7 +7,7 @@ import './ProjectCardData.css';
 
 export const ProjectCardData = ({ project }) => {
   const showImage = project.showImage ? (
-    <Col md={3} className="p-2">
+    <Col md={4} lg={3} xl={3} className=" p-0">
       <Card.Img
         src={ProjectPicture}
         alt="ProjectPicture"
@@ -33,16 +33,20 @@ export const ProjectCardData = ({ project }) => {
                   GUIDE: {project.guide}
                 </Card.Text>
                 <p className="synopsis-ProjectCardData">
-                  <span>Synopsis:</span>
                   <ReadMoreReact
                     text={project.synopsis}
-                    max={270}
-                    ideal={260}
+                    max={1000}
+                    ideal={400}
                     readMoreText="...Read More"
                   />
                 </p>
 
-                <Button variant="primary">{project.buttonText}</Button>
+                <Button
+                  variant="secondary"
+                  className="buttonText-ProjectCardData"
+                >
+                  {project.buttonText}
+                </Button>
               </Card.Body>
             </Col>
             {showImage}
