@@ -318,4 +318,9 @@
     align-items: center;
     justify-content: center;
   }
+  .nav-container-EventsNavbar .navbar-collapse {
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+  }
+  
 }
