@@ -1,13 +1,14 @@
 import React from 'react';
-import ProjectCard from './ProjectCard/ProjectCard';
+import './ProjectsPage.css';
+import ProjectsContainer from './ProjectCard/ProjectsContainer';
 import ProjectFooter from './ProjectFooter/ProjectFooter';
 import Navigation from '../Navigation/Navigation';
 
 const ProjectsPage = () => {
   return (
-    <div>
+    <div className="root-ProjectsPage">
       <Navigation />
-      <ProjectCard />
+      <ProjectsContainer />
       <ProjectFooter />
     </div>
   );

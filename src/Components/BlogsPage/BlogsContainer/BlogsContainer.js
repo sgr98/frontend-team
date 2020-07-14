@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import BlogCard from '../BlogCard/BlogCard';
 import BlogCardRecent from '../BlogCardRecent/BlogCardRecent';
-import PaginationComponent from './Pagination/Pagination';
+import PaginationComponent from '../../ReusableComponents/Pagination/Pagination';
 
 const BlogsContainer = () => {
   const [posts, setPosts] = useState([]);

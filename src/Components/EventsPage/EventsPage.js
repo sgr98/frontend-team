@@ -9,6 +9,7 @@ import Workshops from './Workshops/Workshops';
 import Talks from './Talks/Talks';
 import Activities from './Activities/Activities';
 import Competitions from './Competitions/Competitions';
+import Footer from '../Footer/Footer';
 
 const data = [
   {
@@ -355,44 +356,47 @@ const data = [
 const EventsPage = () => {
   const { path, url } = useRouteMatch();
   return (
-    <div className="EventsPage">
-      <Navigation />
-      <EventsNavbar url={url} />
-      {/* <CalendarCarousel /> */}
+    <>
+      <div className="EventsPage">
+        <Navigation />
+        <EventsNavbar url={url} />
+        {/* <CalendarCarousel /> */}
 
-      <Switch>
-        <Route
-          path={[`${path}/`, `${path}/AllEvents`]}
-          exact
-          component={() => <AllEvents data={data} />}
-        />
-        <Route
-          path={`${path}/Workshops`}
-          exact
-          component={() => <Workshops data={data} />}
-        />
-        <Route
-          path={`${path}/Talks`}
-          exact
-          component={() => <Talks data={data} />}
-        />
-        <Route
-          path={`${path}/Activities`}
-          exact
-          component={() => <Activities data={data} />}
-        />
-        <Route
-          path={`${path}/Competitions`}
-          exact
-          component={() => <Competitions data={data} />}
-        />
-        <Route
-          path={`${path}/CalendarEvents`}
-          exact
-          component={CalendarCarousel}
-        />
-      </Switch>
-    </div>
+        <Switch>
+          <Route
+            path={[`${path}/`, `${path}/AllEvents`]}
+            exact
+            component={() => <AllEvents data={data} />}
+          />
+          <Route
+            path={`${path}/Workshops`}
+            exact
+            component={() => <Workshops data={data} />}
+          />
+          <Route
+            path={`${path}/Talks`}
+            exact
+            component={() => <Talks data={data} />}
+          />
+          <Route
+            path={`${path}/Activities`}
+            exact
+            component={() => <Activities data={data} />}
+          />
+          <Route
+            path={`${path}/Competitions`}
+            exact
+            component={() => <Competitions data={data} />}
+          />
+          <Route
+            path={`${path}/CalendarEvents`}
+            exact
+            component={CalendarCarousel}
+          />
+        </Switch>
+      </div>
+      <Footer />
+    </>
   );
 };
 

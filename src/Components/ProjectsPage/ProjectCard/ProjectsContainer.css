@@ -1,0 +1,21 @@
+/* Overriding styling for pagination component. */
+.container-ProjectsContainer .page-item.active .page-link {
+  background: #605e5c;
+  border: 1px solid #323130;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.container-ProjectsContainer .pagination li:nth-child(1) .page-link {
+  background: #605e5c;
+  border: 1px solid #323130;
+  box-sizing: border-box;
+  border-radius: 8px 3px 3px 8px;
+}
+
+.container-ProjectsContainer .pagination li:last-child .page-link {
+  background: #605e5c;
+  border: 1px solid #323130;
+  box-sizing: border-box;
+  border-radius: 3px 8px 8px 3px;
+}
