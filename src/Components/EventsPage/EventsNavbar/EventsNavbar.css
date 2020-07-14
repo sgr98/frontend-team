@@ -214,14 +214,14 @@
     font-size: 1.08rem;
   }
 
-  #events-navbar-AllEvents > div,
+  /* #events-navbar-AllEvents > div,
   #events-navbar-Workshops > div,
   #events-navbar-Talks > div,
   #events-navbar-Activities > div,
   #events-navbar-Competitions > div,
   #events-navbar-CalendarEvents > div {
     padding-top: 5px;
-  }
+  } */
 }
 
 @media only screen and (min-width: 1000px) {
@@ -274,7 +274,7 @@
   #events-navbar-Activities > div,
   #events-navbar-Competitions > div,
   #events-navbar-CalendarEvents > div {
-    padding-top: 5px;
+    padding: 5px;
   }
 }
 
@@ -320,4 +320,9 @@
     align-items: center;
     justify-content: center;
   }
+  .nav-container-EventsNavbar .navbar-collapse {
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+  }
+
 }
