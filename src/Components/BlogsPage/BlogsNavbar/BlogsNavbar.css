@@ -205,14 +205,14 @@
     font-size: 1.08rem;
   }
 
-  #blogs-navbar-General > div,
+  /* #blogs-navbar-General > div,
   #blogs-navbar-Techmaniacs > div,
   #blogs-navbar-DigitalWizards > div,
   #blogs-navbar-GaganVedhi > div,
   #blogs-navbar-3DPrinting > div,
   #blogs-navbar-FormulaBharath > div {
     padding-top: 5px;
-  }
+  } */
 }
 
 @media only screen and (min-width: 1000px) {
@@ -273,7 +273,7 @@
   #blogs-navbar-GaganVedhi > div,
   #blogs-navbar-3DPrinting > div,
   #blogs-navbar-FormulaBharath > div {
-    padding-top: 5px;
+    padding: 5px;
   }
 }
 
