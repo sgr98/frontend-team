@@ -5,7 +5,7 @@ import ReadMoreReact from 'read-more-react';
 import ProjectPicture from './ProjectPicture.png';
 import './ProjectCardData.css';
 
-export const ProjectCardData = ({ project }) => {
+const ProjectCardData = ({ project }) => {
   const showImage = project.showImage ? (
     <Col md={4} lg={3} xl={3} className=" p-0">
       <Card.Img
@@ -56,3 +56,5 @@ export const ProjectCardData = ({ project }) => {
     </div>
   );
 };
+
+export default ProjectCardData;

@@ -24,7 +24,7 @@ function App() {
           <Route path="/Projects" component={ProjectsPage} />
           <Route component={Error} />
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </HashRouter>
   );

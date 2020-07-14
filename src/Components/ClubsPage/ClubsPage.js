@@ -4,6 +4,7 @@ import ContactForm from './ContactForm/ContactForm';
 import CustomHR from '../ReusableComponents/CustomHR/CustomHR';
 import ClubsHighlights from './ClubsHighlights/ClubsHighlights';
 import ClubsNavbar from './ClubsNavbar/ClubsNavbar';
+// import ClubsFooter from './ClubsFooter/ClubsFooter';
 
 const ClubsPage = () => {
   return (

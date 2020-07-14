@@ -1,11 +1,14 @@
 import React from 'react';
-import { ProjectCard } from './ProjectCard/ProjectCard';
+import ProjectCard from './ProjectCard/ProjectCard';
+import ProjectFooter from './ProjectFooter/ProjectFooter';
+import Navigation from '../Navigation/Navigation';
 
 const ProjectsPage = () => {
   return (
     <div>
-      projectPage
+      <Navigation />
       <ProjectCard />
+      <ProjectFooter />
     </div>
   );
 };

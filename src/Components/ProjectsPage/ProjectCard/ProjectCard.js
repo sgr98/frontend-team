@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import * as uuid from 'uuid';
 import { Container, Row, Col } from 'react-bootstrap';
-import { ProjectCardData } from './ProjectCardData';
+import ProjectCardData from './ProjectCardData';
 
-export const ProjectCard = () => {
+const ProjectCard = () => {
   const [projects, setProjects] = useState([
     {
       heading: 'CNC IDEX 3D Printer - Router - Laser Engraver',
@@ -80,3 +80,5 @@ export const ProjectCard = () => {
     </div>
   );
 };
+
+export default ProjectCard;
