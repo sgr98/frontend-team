@@ -1,6 +1,6 @@
 import React from 'react';
 import './ProjectsPage.css';
-import ProjectsContainer from './ProjectCard/ProjectsContainer';
+import ProjectsContainer from './ProjectsContainer/ProjectsContainer';
 import ProjectFooter from './ProjectFooter/ProjectFooter';
 import Navigation from '../Navigation/Navigation';
 
