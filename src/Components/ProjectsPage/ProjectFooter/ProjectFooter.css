@@ -1,4 +1,4 @@
-.wrapper {
+.ProjectFooter .wrapper {
   background: linear-gradient(
     90deg,
     rgba(91, 135, 255, 0.4) 0%,
@@ -12,23 +12,23 @@
   margin-top: 5%;
 }
 
-.quickLinks {
+.ProjectFooter .quickLinks {
   font-size: larger;
   position: relative;
   top: 5px;
 }
 
-.faq p {
+.ProjectFooter .faq p {
   position: relative;
   left: 15%;
 }
 
-.infa p {
+.ProjectFooter .infa p {
   position: relative;
   left: 11%;
 }
 
-.all p {
+.ProjectFooter .all p {
   position: relative;
   top: 10%;
   text-transform: uppercase;
@@ -37,207 +37,207 @@
   margin: 3px;
 }
 
-.fac p {
+.ProjectFooter .fac p {
   position: relative;
   left: 5%;
 }
 
-.cont {
+.ProjectFooter .cont {
   display: flex;
   justify-content: space-evenly;
 }
 
-.lower-two {
+.ProjectFooter .lower-two {
   font-size: 16px;
   text-align: center;
 }
 
-.connect {
+.ProjectFooter .connect {
   font-size: 12px;
   text-align: center;
   justify-content: center;
 }
 
-.icn {
+.ProjectFooter .icn {
   font-size: 24px;
   cursor: pointer;
 }
 
-.youtube {
+.ProjectFooter .youtube {
   font-size: 27px;
   position: relative;
   top: -2px;
 }
 
-.icons {
+.ProjectFooter .icons {
   display: flex;
   justify-content: space-evenly;
 }
 
-.lower-three {
+.ProjectFooter .lower-three {
   font-size: 12px;
   text-align: left;
 }
 
-.lower-three p {
+.ProjectFooter .lower-three p {
   position: relative;
   top: 10px;
 }
 
 @media (max-width: 890px) and (min-width: 768px) {
-  .all p {
+  .ProjectFooter .all p {
     font-size: 11px;
   }
 
-  .lower-three p {
+  .ProjectFooter .lower-three p {
     font-size: 10px;
   }
 
-  .lower-two {
+  .ProjectFooter .lower-two {
     font-size: 14px;
   }
 
-  .lower-two p {
+  .ProjectFooter .lower-two p {
     font-size: 14px;
   }
 
-  .lower-two strong {
+  .ProjectFooter .lower-two strong {
     font-size: 14px;
   }
 }
 
 @media (max-width: 768px) and (min-width: 640px) {
-  .quickLinks {
+  .ProjectFooter .quickLinks {
     display: none;
   }
 
-  .youtube {
+  .ProjectFooter .youtube {
     position: relative;
     top: -2px;
   }
 
-  .all p {
+  .ProjectFooter .all p {
     font-size: 12px;
   }
 
-  .connect {
+  .ProjectFooter .connect {
     font-size: 10px;
   }
 
-  .lower-three p {
+  .ProjectFooter .lower-three p {
     font-size: 9px;
   }
 
-  .lower-two {
+  .ProjectFooter .lower-two {
     font-size: 12px;
   }
 
-  .lower-two p {
+  .ProjectFooter .lower-two p {
     font-size: 12px;
   }
 
-  .lower-two strong {
+  .ProjectFooter .lower-two strong {
     font-size: 12px;
   }
 }
 
 @media (max-width: 640px) and (min-width: 576px) {
-  .quickLinks {
+  .ProjectFooter .quickLinks {
     display: none;
   }
 
-  .all p {
+  .ProjectFooter .all p {
     font-size: 9px;
   }
 
-  .youtube {
+  .ProjectFooter .youtube {
     font-size: 24px;
     position: relative;
     top: 1px;
   }
 
-  .icn {
+  .ProjectFooter .icn {
     font-size: 20px;
   }
 
-  .connect {
+  .ProjectFooter .connect {
     font-size: 9px;
   }
 
-  .lower-three p {
+  .ProjectFooter .lower-three p {
     font-size: 7px;
   }
 
-  .lower-two {
+  .ProjectFooter .lower-two {
     font-size: 11px;
   }
 
-  .lower-two p {
+  .ProjectFooter .lower-two p {
     font-size: 11px;
   }
 
-  .lower-two strong {
+  .ProjectFooter .lower-two strong {
     font-size: 11px;
   }
 }
 
 @media (max-width: 575px) and (min-width: 522px) {
-  .quickLinks {
+  .ProjectFooter .quickLinks {
     display: none;
   }
 
-  .fac {
+  .ProjectFooter .fac {
     display: none;
   }
 
-  .youtube {
+  .ProjectFooter .youtube {
     font-size: 24px;
     position: relative;
     top: 1px;
   }
 
-  .icons {
+  .ProjectFooter .icons {
     display: flex;
     justify-content: center;
   }
 
-  .icn {
+  .ProjectFooter .icn {
     margin: 5px;
   }
 
-  .all p {
+  .ProjectFooter .all p {
     font-size: 9px;
   }
 
-  .icn {
+  .ProjectFooter .icn {
     font-size: 20px;
   }
 
-  .connect {
+  .ProjectFooter .connect {
     font-size: 10px;
   }
 
-  .lower-three p {
+  .ProjectFooter .lower-three p {
     font-size: 9px;
   }
 
-  .lower-two {
+  .ProjectFooter .lower-two {
     font-size: 10px;
   }
 
-  .lower-two p {
+  .ProjectFooter .lower-two p {
     font-size: 10px;
   }
 
-  .lower-two strong {
+  .ProjectFooter .lower-two strong {
     font-size: 10px;
   }
 
-  .bt {
+  .ProjectFooter .bt {
     margin: 5px;
   }
 
-  .lower-three {
+  .ProjectFooter .lower-three {
     display: flex;
     justify-content: center;
     position: relative;
@@ -246,62 +246,62 @@
 }
 
 @media (max-width: 522px) and (min-width: 400px) {
-  .quickLinks {
+  .ProjectFooter .quickLinks {
     display: none;
   }
 
-  .youtube {
+  .ProjectFooter .youtube {
     font-size: 26px;
     position: relative;
     top: 1px;
   }
 
-  .fac {
+  .ProjectFooter .fac {
     display: none;
   }
 
-  .icons {
+  .ProjectFooter .icons {
     display: flex;
     justify-content: center;
   }
 
-  .icn {
+  .ProjectFooter .icn {
     margin: 5px;
   }
 
-  .all p {
+  .ProjectFooter .all p {
     font-size: 9px;
   }
 
-  .icn {
+  .ProjectFooter .icn {
     font-size: 20px;
   }
 
-  .connect {
+  .ProjectFooter .connect {
     font-size: 10px;
   }
 
-  .lower-three p {
+  .ProjectFooter .lower-three p {
     font-size: 9px;
   }
 
-  .lower-two {
+  .ProjectFooter .lower-two {
     font-size: 10px;
   }
 
-  .lower-two p {
+  .ProjectFooter .lower-two p {
     font-size: 10px;
   }
 
-  .lower-two strong {
+  .ProjectFooter .lower-two strong {
     font-size: 10px;
   }
 
-  .bt {
+  .ProjectFooter .bt {
     margin: 5px;
   }
 
-  .lower-three {
+  .ProjectFooter .lower-three {
     display: flex;
     justify-content: center;
     position: relative;
@@ -310,78 +310,78 @@
 }
 
 @media (max-width: 400px) {
-  .bt {
+  .ProjectFooter .bt {
     margin: 2px;
   }
 
-  .lower-three {
+  .ProjectFooter .lower-three {
     display: flex;
     justify-content: center;
     position: relative;
     top: -20px;
   }
 
-  .youtube {
+  .ProjectFooter .youtube {
     font-size: 22px;
     position: relative;
     top: 1px;
   }
 
-  .icn {
+  .ProjectFooter .icn {
     margin: 5px;
   }
 
-  .icons {
+  .ProjectFooter .icons {
     display: flex;
     justify-content: center;
   }
 
-  .fac {
+  .ProjectFooter .fac {
     display: none;
   }
-  .quickLinks {
+  .ProjectFooter .quickLinks {
     display: none;
   }
 
-  .all p {
+  .ProjectFooter .all p {
     font-size: 6.5px;
   }
 
-  .icn {
+  .ProjectFooter .icn {
     font-size: 15px;
   }
 
-  .connect {
+  .ProjectFooter .connect {
     font-size: 10px;
   }
 
-  .lower-three p {
+  .ProjectFooter .lower-three p {
     font-size: 9px;
   }
 
-  .lower-two {
+  .ProjectFooter .lower-two {
     font-size: 9px;
   }
 
-  .lower-two p {
+  .ProjectFooter .lower-two p {
     font-size: 9px;
   }
 
-  .lower-two strong {
+  .ProjectFooter .lower-two strong {
     font-size: 9px;
   }
 }
 
-.lower-one {
+.ProjectFooter .lower-one {
   text-align: center;
 }
 
-.heart {
+.ProjectFooter .heart {
   display: inline-flex;
   font-size: 20px;
   color: red;
 }
 
-.techhub {
+.ProjectFooter .techhub {
   margin-top: -10px;
 }
