@@ -1,36 +1,58 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import SeparateEvents from '../SeparateEvents';
 import Card from '../EventCard/card';
 import EventIcon from '../eventsPageLogo.png';
 
-const Activities = (props) => {
-  let eventCategory = null;
-  eventCategory = props.data.filter((event) => {
-    return event.category === 'activities';
-  });
+const Activities = () => {
+  const [upcomingEvents, setUpcomingEvents] = useState([]);
+  const [pastEvents, setPastEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   const classStyle = {
     display: 'flex',
     flexDirection: 'column',
     margin: 'auto 2%',
   };
+
+  useEffect(() => {
+    axios
+      .get(`${process.env.REACT_APP_BASE_URL}/front/events/activity`)
+      .then((res) => {
+        console.log(res);
+        const [upcomingEventsArray, pastEventsArray] = SeparateEvents(res.data);
+        console.log(upcomingEventsArray, pastEventsArray);
+        setPastEvents(pastEventsArray);
+        setUpcomingEvents(upcomingEventsArray);
+        setLoading(false);
+      });
+  }, []);
+
   return (
     <div style={classStyle}>
-      {eventCategory[0].events.map((item, index) => {
-        return (
-          <div key={index}>
-            <div className="event-card-heading">
-              <img src={EventIcon} alt="Event" />
-              {item.type}
-            </div>
-            {item.events.map((single, index_event) => (
-              <Card
-                key={index_event}
-                single={single}
-                showButton={index === 0}
-              />
-            ))}
+      {upcomingEvents.length !== 0 ? (
+        <div>
+          <div className="event-card-heading">
+            <img src={EventIcon} alt="Event" />
+            Upcoming Activities
           </div>
-        );
-      })}
+          {upcomingEvents.map((single) => (
+            <Card key={single._id} single={single} showButton />
+          ))}
+        </div>
+      ) : null}
+
+      {pastEvents.length !== 0 ? (
+        <div>
+          <div className="event-card-heading">
+            <img src={EventIcon} alt="Event" />
+            Past Activities Showcase
+          </div>
+          {pastEvents.map((single) => (
+            <Card key={single._id} single={single} showButton={false} />
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 };

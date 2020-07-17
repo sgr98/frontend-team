@@ -2,9 +2,10 @@ import React from 'react';
 import './card.css';
 import ReadMoreReact from 'read-more-react';
 import { Button } from 'react-bootstrap';
+import parse from 'html-react-parser';
 
 const Card = ({ single, showButton }) => {
-  console.log(single.poster_url.length);
+  console.log(parse(single.description));
   return (
     <div className="event-card-container">
       <div className="event-card-content">
@@ -26,13 +27,14 @@ const Card = ({ single, showButton }) => {
           </span>
 
           <div className="event-card-description">
-            <ReadMoreReact
+            {/* <ReadMoreReact
               // Slice is used here to remove <p> tags
               text={single.description.slice(3, -6)}
               max={270}
               ideal={260}
               readMoreText="Read More"
-            />
+            /> */}
+            {parse(single.description)}
           </div>
           <div className="event-card-date-location">
             <span>{single.date}</span>

@@ -17,7 +17,7 @@ const Talks = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_BASE_URL}/front/events/talk-show`)
+      .get(`${process.env.REACT_APP_BASE_URL}/front/events/talkshows`)
       .then((res) => {
         console.log(res);
         const [upcomingEventsArray, pastEventsArray] = SeparateEvents(res.data);
