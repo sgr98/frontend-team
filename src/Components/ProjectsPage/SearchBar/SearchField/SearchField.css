@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/* container for search field and search icon */
+.container-SearchField {
+  background-color: #201f1e;
+  font-weight: 300;
+  margin: auto 1.2px;
+  width: 32%;
+  border: 1px solid #e1dfdd;
+  margin-left: 8%;
+}
+
+/* search field */
+.searchInput-SearchField {
+  background-color: #201f1e;
+  font-weight: 300;
+  font-style: normal;
+  box-sizing: border-box;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  text-overflow: ellipsis;
+  color: #f0f0f0;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: 1.8em;
+}
+
+.searchInput-SearchField:focus {
+  background-color: #201f1e;
+  color: #f0f0f0;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* search icon */
+.searchBarIcon-SearchField {
+  width: 0.8em;
+  margin: 0 0.1em 0.3em 0;
+  border: none;
+  outline: none;
+}
+
+/* ==== MEDIA QUERIES ==== */
+@media only screen and (min-width: 520px) {
+  .container-SearchField {
+    margin-left: 6%;
+  }
+  .searchInput-SearchField {
+    font-size: 1.1rem;
+    height: 1.9em;
+  }
+  .searchBarIcon-SearchField {
+    width: 0.9em;
+    margin: 0 0.5em 0.25em 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container-SearchField {
+    margin-left: 5.7%;
+    width: 25%;
+  }
+  .searchInput-SearchField {
+    font-size: 1.15rem;
+    height: 2em;
+  }
+  .searchBarIcon-SearchField {
+    width: 1em;
+    margin: 0 0.5em 0.15em 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container-SearchField {
+    margin-left: 5%;
+    width: 23%;
+  }
+  .searchInput-SearchField {
+    font-size: 1.2rem;
+  }
+}
