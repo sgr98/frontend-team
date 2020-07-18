@@ -1,11 +1,11 @@
 import React from 'react';
 import './card.css';
-import ReadMoreReact from 'read-more-react';
+
 import { Button } from 'react-bootstrap';
 import parse from 'html-react-parser';
+import ReadMoreDiv from '../../ReusableComponents/ReadMoreDiv/ReadMoreDiv';
 
 const Card = ({ single, showButton }) => {
-  console.log(parse(single.description));
   return (
     <div className="event-card-container">
       <div className="event-card-content">
@@ -34,7 +34,9 @@ const Card = ({ single, showButton }) => {
               ideal={260}
               readMoreText="Read More"
             /> */}
-            {parse(single.description)}
+            <ReadMoreDiv maxHeight={75}>
+              {parse(single.description)}
+            </ReadMoreDiv>
           </div>
           <div className="event-card-date-location">
             <span>{single.date}</span>

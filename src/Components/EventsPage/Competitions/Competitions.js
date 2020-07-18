@@ -30,25 +30,29 @@ const Competitions = () => {
 
   return (
     <div style={classStyle}>
-      <div>
-        <div className="event-card-heading">
-          <img src={EventIcon} alt="Event" />
-          Upcoming Competitions
+      {upcomingEvents.length !== 0 ? (
+        <div>
+          <div className="event-card-heading">
+            <img src={EventIcon} alt="Event" />
+            Upcoming Competitions
+          </div>
+          {upcomingEvents.map((single) => (
+            <Card key={single._id} single={single} showButton />
+          ))}
         </div>
-        {upcomingEvents.map((single) => (
-          <Card key={single._id} single={single} showButton />
-        ))}
-      </div>
+      ) : null}
 
-      <div>
-        <div className="event-card-heading">
-          <img src={EventIcon} alt="Event" />
-          Past Competitions Showcase
+      {pastEvents.length !== 0 ? (
+        <div>
+          <div className="event-card-heading">
+            <img src={EventIcon} alt="Event" />
+            Past Competitions Showcase
+          </div>
+          {pastEvents.map((single) => (
+            <Card key={single._id} single={single} showButton={false} />
+          ))}
         </div>
-        {pastEvents.map((single) => (
-          <Card key={single._id} single={single} showButton={false} />
-        ))}
-      </div>
+      ) : null}
     </div>
   );
 };

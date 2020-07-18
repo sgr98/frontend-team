@@ -55,7 +55,8 @@
   align-items: center;
   letter-spacing: -0.015em;
 } */
-
+.event-card-container {
+}
 .event-card-btn-container {
   display: flex;
   justify-content: flex-end;
@@ -123,6 +124,7 @@
 .event-card-content-image {
   width: 100%;
   border-radius: 10px;
+  /* min-height: 300px; */
 }
 
 .event-card-title {
@@ -164,7 +166,7 @@
   cursor: default;
   letter-spacing: -0.015em;
   text-align: start;
-  max-height: 100px;
+
   overflow: scroll;
   color: #aaaaaa;
 }
@@ -267,7 +269,7 @@
   }
 
   .event-card-content-image {
-    height: 260px;
+    min-height: 290px;
   }
 }
 .event-card-container .read-more-button {
