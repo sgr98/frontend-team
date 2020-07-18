@@ -24,7 +24,7 @@ const AllEvents = () => {
           res.data,
           true
         );
-        console.log(upcomingEventsArray, pastEventsArray);
+        //console.log(upcomingEventsArray, pastEventsArray);
         setPastEvents(pastEventsArray);
         setUpcomingEvents(upcomingEventsArray);
 
