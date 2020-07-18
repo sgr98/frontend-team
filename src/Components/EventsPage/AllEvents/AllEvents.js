@@ -38,28 +38,31 @@ const AllEvents = () => {
         events.map((item, index) => (
         ))
       )} */}
-
-      <div>
-        <div className="event-card-heading">
-          {' '}
-          <img src={EventIcon} alt="Event" />
-          Upcoming Events
+      {upcomingEvents.length !== 0 ? (
+        <div>
+          <div className="event-card-heading">
+            {' '}
+            <img src={EventIcon} alt="Event" />
+            Upcoming Events
+          </div>
+          {upcomingEvents.map((single) => (
+            <Card key={single._id} single={single} showButton={true} />
+          ))}
         </div>
-        {upcomingEvents.map((single) => (
-          <Card key={single._id} single={single} showButton={true} />
-        ))}
-      </div>
+      ) : null}
 
-      <div>
-        <div className="event-card-heading">
-          {' '}
-          <img src={EventIcon} alt="Event" />
-          Past Events
+      {pastEvents.length !== 0 ? (
+        <div>
+          <div className="event-card-heading">
+            {' '}
+            <img src={EventIcon} alt="Event" />
+            Past Events
+          </div>
+          {pastEvents.map((single) => (
+            <Card key={single._id} single={single} showButton={false} />
+          ))}
         </div>
-        {pastEvents.map((single) => (
-          <Card key={single._id} single={single} showButton={false} />
-        ))}
-      </div>
+      ) : null}
     </div>
   );
 };
