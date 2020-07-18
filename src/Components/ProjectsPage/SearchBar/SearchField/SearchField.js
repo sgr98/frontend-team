@@ -8,7 +8,7 @@ export class SearchField extends Component {
     return (
       //   <div className="searchBar-techmaniacs-SearchBar">
       //   <div className="searchBox-border-SearchField">
-      <div>
+      <div className="main-container-SearchField">
         <InputGroup className="container-SearchField">
           <FormControl
             placeholder="Search "
