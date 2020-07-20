@@ -9,6 +9,8 @@ import EventsPage from './Components/EventsPage/EventsPage';
 import BlogsPage from './Components/BlogsPage/BlogsPage';
 import ClubsPage from './Components/ClubsPage/ClubsPage';
 import ProjectsPage from './Components/ProjectsPage/ProjectsPage';
+import AchievementsPage from './Components/AchievementsPage/AchievementsPage';
+import AboutUs from './Components/AboutUs/AboutUs';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path="/Blogs" exact component={BlogsPage} />
           <Route path="/Events" component={EventsPage} />
           <Route path="/Projects" component={ProjectsPage} />
+          <Route path="/Achievements" component={AchievementsPage} />
+          <Route path="/AboutUs" component={AboutUs} />
           <Route component={Error} />
         </Switch>
         {/* <Footer /> */}
