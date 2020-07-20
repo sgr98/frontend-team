@@ -6,55 +6,46 @@ import './TechnicalTeamCardData.css';
 export const TechnicalTeamCardData = ({ member }) => {
   // assign type of member
   let memberStyle = '';
-  switch (member.designation) {
-    case 'Coordinator':
-      memberStyle = 'data-container-TechnicalTeamCardData Coordinator-TechnicalTeamCardData';
+  switch (member.tier) {
+    case 'top':
+      memberStyle =
+        'data-container-TechnicalTeamCardData Top-TechnicalTeamCardData';
       break;
-    case 'Co-Coordinator':
-      memberStyle = 'data-container-TechnicalTeamCardData Co-Coordinator-TechnicalTeamCardData';
+    case 'middle':
+      memberStyle =
+        'data-container-TechnicalTeamCardData Middle-TechnicalTeamCardData';
       break;
-    case 'Alumini':
-      memberStyle = 'data-container-TechnicalTeamCardData Alumini-TechnicalTeamCardData';
+    case 'bottom':
+      memberStyle =
+        'data-container-TechnicalTeamCardData Bottom-TechnicalTeamCardData';
       break;
     default:
-      memberStyle = 'data-container-TechnicalTeamCardData Co-Coordinator-TechnicalTeamCardData';
-  }
-  // Alumini
-  if (memberStyle === 'data-container-TechnicalTeamCardData Alumini-TechnicalTeamCardData') {
-    return (
-      <div>
-        <Card className={memberStyle}>
-          <Card.Body className="alumini-textBody-TechnicalTeamCardData">
-            <Card.Title className="meet-our-alumini-TechnicalTeamCardData">
-              {member.name}
-            </Card.Title>
-          </Card.Body>
-        </Card>
-      </div>
-    );
+      memberStyle =
+        'data-container-TechnicalTeamCardData Bottom-TechnicalTeamCardData';
   }
 
-  //   Cooordinator , Co-Coridinator
-  else {
-    return (
-      <div>
-        <Card className={memberStyle}>
-          <p className="dPicture-border-TechnicalTeamCardData">
-            <Card.Img
-              src={DisplayPicture}
-              alt="DisplayPicture"
-              className="displayPicture-TechnicalTeamCardData"
-            />
-          </p>
-          <Card.Body className="textBody-TechnicalTeamCardData">
-            <Card.Text className="rollNo-TechnicalTeamCardData">{member.rollNo}</Card.Text>
-            <Card.Title className="name-TechnicalTeamCardData">{member.name}</Card.Title>
-            <Card.Text className="designation-TechnicalTeamCardData">
-              {member.designation}
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <Card className={memberStyle}>
+        <p className="dPicture-border-TechnicalTeamCardData">
+          <Card.Img
+            src={DisplayPicture}
+            alt="DisplayPicture"
+            className="displayPicture-TechnicalTeamCardData"
+          />
+        </p>
+        <Card.Body className="textBody-TechnicalTeamCardData">
+          <Card.Text className="rollNo-TechnicalTeamCardData">
+            {member.rollNo}
+          </Card.Text>
+          <Card.Title className="name-TechnicalTeamCardData">
+            {member.name}
+          </Card.Title>
+          <Card.Text className="designation-TechnicalTeamCardData">
+            {member.designation}
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </div>
+  );
 };
