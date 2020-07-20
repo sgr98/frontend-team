@@ -6,7 +6,6 @@
   
 .achievement-card-content {
     position: relative;
-    max-height: 375px;
     overflow-y: scroll;
     width:100%;
     display: flex;
@@ -112,7 +111,11 @@
     }
     .achievement-card-content {
         position: relative;
+        flex-direction: column-reverse;
         min-height: ""!important;}
+    .achievement-card-content-image{
+      height:300px;
+    }
     .achievement-card-title {
       font-size: 4vw;
     }
@@ -136,6 +139,7 @@
     }
     .achievement-card-content {
         position: relative;
+        max-height: 375px;
         min-height: 375px;}
     .achievement-card-title {
         font-size: 2.5vw;
@@ -156,6 +160,7 @@
     }
     .achievement-card-content {
         position: relative;
+        max-height: 375px;
         min-height: 375px;}
   }
   
