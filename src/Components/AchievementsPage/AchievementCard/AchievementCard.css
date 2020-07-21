@@ -6,26 +6,21 @@
   
 .achievement-card-content {
     position: relative;
+    overflow-y: scroll;
     width:100%;
     display: flex;
     float: right;
     margin: auto;
-    overflow: hidden;
+    overflow-x: hidden;
     background: linear-gradient(180deg, rgba(235, 178, 32, 0.6) 0%, rgba(255, 138, 0, 0.6) 100%), rgba(96, 94, 92, 0.2);
     border: 4px solid #201F1E;
     box-sizing: border-box;
     box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08), 2px 2px 3px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(208, 197, 249, 0.005), 10px 10px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
   }
-  .achievement-card-content ::-webkit-scrollbar-track {
-    background-color: inherit;
-  }
   .achievement-card-text{
-      padding-top: 1.5rem;
-      padding-right: 0px;
-      padding-bottom: 1.5rem;
-      padding-left: 2rem;
-      flex: 50%;
+      padding: 1.5rem 2rem;
+      flex: 70%;
       justify-content: left;
   }
   .achievement-card-text p{
@@ -33,15 +28,17 @@
       text-align: left;
   }
   .achievement-card-content-image-holder{
-      flex:50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      flex:30%;
       padding: 1.5rem;
   }
   .achievement-card-content-image {
     background-size: cover;
-    /* height: 100%; */ 
+    /* if square required */
+    /* width: 100%;
+    height: 0;
+    padding-bottom: 100%;  */
+    width: 100%;
+    height: 100%;
     border: 2px solid #201F1E;
     box-sizing: padding-box;
     border-radius: 5px;
@@ -103,6 +100,7 @@
     border-radius: 3px;
     color: rgba(235, 190, 32, 0.75);
 }
+
 @media screen and (max-width: 850px) {
     .achievement-card-text{
         padding: 1.2rem 1.5rem;
@@ -116,7 +114,6 @@
         flex-direction: column-reverse;
         min-height: ""!important;}
     .achievement-card-content-image{
-      width: 100%;
       height:300px;
     }
     .achievement-card-title {
@@ -140,13 +137,9 @@
     .achievement-card-container {
       width: 50%;
     }
-    .display-text-group{
-      min-height: 198px;
-      max-height: 198px;
-      overflow-y: scroll;
-    }
     .achievement-card-content {
         position: relative;
+        max-height: 375px;
         min-height: 375px;}
     .achievement-card-title {
         font-size: 2.5vw;
@@ -160,31 +153,14 @@
       .achievement-card-date {
         font-size: 1.3vw;
       }
-      .achievement-card-content-image{
-            /* if square required */
-        width: 100%;
-        height: 0;
-        padding-bottom: 100%; 
-      }
   }
   @media screen and (min-width: 851px) {
     .achievement-card-container {
       width: 50%;
     }
-    .display-text-group{
-      min-height: 198px;
-      max-height: 198px;
-      overflow-y: scroll;
-    }
     .achievement-card-content {
         position: relative;
-        min-height: 375px;
-    }
-    .achievement-card-content-image{
-      /* if square required */
-      width: 100%;
-      height: 0;
-      padding-bottom: 100%; 
-    }
+        max-height: 375px;
+        min-height: 375px;}
   }
   
