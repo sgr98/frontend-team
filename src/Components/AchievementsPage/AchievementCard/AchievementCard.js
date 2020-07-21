@@ -21,8 +21,9 @@ const Card = ({
             <p className="achievement-card-description">
             <ReadMoreReact
               text={single.description}
-              max={230}
-              ideal={225}
+              min={210}
+              max={220}
+              ideal={215}
               readMoreText="Read More ..."
             />
             </p>
