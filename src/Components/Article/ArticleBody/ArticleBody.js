@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ArticleHeader from './ArticleHeader/ArticleHeader';
 import './ArticleBody.css';
 import ReferencesButton from './ReferencesButton/ReferencesButton';
 import AttachmentIcon from './attachmentIcon.png';
 
 const ArticleBody = (props) => {
+  const [keywords, setKeywords] = useState([
+    'Robotics',
+    'Automation',
+    'Automation',
+    'Automation',
+    'Automation',
+    'Automation',
+    'Automation',
+    'Automation',
+    'Automation',
+    'Automation',
+    'Automation',
+  ]);
   return (
     <div>
       <ArticleHeader />
@@ -89,6 +102,16 @@ const ArticleBody = (props) => {
           />
           Attachment.fla
         </button>
+      </div>
+      <div className="keywordsGroup-ArticleBody">
+        {keywords.map((keyword) => {
+          return (
+            <div className="keywordDiv-ArticleBody">
+              {' '}
+              <a href="" className="keyword-ArticleBody">{`#${keyword}`}</a>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
