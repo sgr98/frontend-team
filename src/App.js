@@ -12,6 +12,7 @@ import ProjectsPage from './Components/ProjectsPage/ProjectsPage';
 import AchievementsPage from './Components/AchievementsPage/AchievementsPage';
 import AboutUs from './Components/AboutUs/AboutUs';
 import Article from './Components/Article/Article';
+import ChallengesPage from './Components/ChallengesPage/ChallengesPage';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/Achievements" component={AchievementsPage} />
           <Route path="/AboutUs" component={AboutUs} />
           <Route path="/article" component={Article} />
+          <Route path="/Challenges" component={ChallengesPage} />
           <Route component={Error} />
         </Switch>
         {/* <Footer /> */}

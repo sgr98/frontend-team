@@ -7,7 +7,24 @@ export const SearchBar = () => {
   return (
     <div className="searchbar-container-ProjectsPage">
       <SearchField />
-      <ProjectFields />
+      <ProjectFields
+        category="BRANCH"
+        filterNames={[
+          'Mechanical',
+          'Computer Science',
+          'Chemical',
+          'Civil',
+          'Electrical',
+        ]}
+      />
+      <ProjectFields
+        category="COURSE"
+        filterNames={['Machine Learning', 'Digital Processing']}
+      />
+      <ProjectFields
+        category="CLUB"
+        filterNames={['TechManiacs', 'Digital Wizards']}
+      />
     </div>
   );
 };

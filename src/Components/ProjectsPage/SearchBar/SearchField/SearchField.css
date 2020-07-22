@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 .main-container-SearchField {
-  margin-right: 0;
   display: inline-block;
   float: left;
+  margin-right: 2%;
 }
 
 /* container for search field and search icon */
