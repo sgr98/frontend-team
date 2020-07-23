@@ -4,6 +4,17 @@ import './SearchField.css';
 import SearchBarIcon from './SearchBarIcon.png';
 
 export class SearchField extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: '',
+    };
+  }
+
+  onChangeHandler = (e) => {
+    this.setState({ value: e.target.value });
+  };
+
   render() {
     return (
       //   <div className="searchBar-techmaniacs-SearchBar">
@@ -11,11 +22,18 @@ export class SearchField extends Component {
       <div className="main-container-SearchField">
         <InputGroup className="container-SearchField">
           <FormControl
+            onChange={this.onChangeHandler}
             placeholder="Search "
             className="searchInput-SearchField"
           />
           <InputGroup.Append>
-            <Button variant="outline-none" className="p-0">
+            <Button
+              variant="outline-none"
+              className="p-0"
+              onClick={() => {
+                this.props.search(this.state.value);
+              }}
+            >
               <img
                 src={SearchBarIcon}
                 alt="SearchBarIcon"

@@ -11,11 +11,12 @@ const ProjectFields = (props) => {
   // The forwardRef is important!!
   // Dropdown needs access to the DOM node in order to position the Menu
 
-  const [selectedFilters, setSelectedFilters] = useState(props.filterNames);
+  const [selectedFilters, setSelectedFilters] = useState([]);
 
   const addFilter = (filterName) => {
     const filters = [...selectedFilters];
     filters.push(filterName);
+    props.updateArray(filters);
     setSelectedFilters(filters);
   };
 
@@ -23,6 +24,7 @@ const ProjectFields = (props) => {
     const filters = selectedFilters.filter((filterString) => {
       return filterString !== filterName;
     });
+    props.updateArray(filters);
     setSelectedFilters(filters);
   };
 

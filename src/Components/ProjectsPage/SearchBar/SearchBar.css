@@ -5,3 +5,90 @@
   padding-right: 5.4%;
   margin-bottom: 0.9em;
 }
+
+.applyFilterDiv-SearchBar {
+  background-color: #f0f0f0;
+  padding: 2px 2px;
+
+  height: 40px;
+  width: auto;
+  margin-left: 6px;
+  margin-bottom: 3%;
+  display: inline-block;
+  float: left;
+}
+
+.applyFilter-SearchBar {
+  border-style: none;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  background: rgba(96, 94, 92, 1);
+  font-family: 'Roboto';
+  color: #f0f0f0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.applyFilter-container {
+  margin: 0;
+  margin-bottom: 3%;
+  display: inline-block;
+  float: left;
+}
+
+.applyFilter-container > div {
+  display: inline-block;
+  float: left;
+  align-items: center;
+  margin: 6px;
+  margin-top: 0;
+}
+
+/*==== DROPDOWN BUTTONS ====*/
+
+.applyFilter-container > div > .applyFilterDiv-SearchBar {
+  width: 160px;
+  height: 40px;
+  background-color: #f0f0f0;
+  padding: 2px 2px;
+}
+
+.applyFilterDiv-SearchBar button {
+  border-style: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(96, 94, 92, 1);
+
+  font-family: 'Roboto';
+  color: #f0f0f0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.applyFilterDiv-SearchBar button:focus {
+  outline: none;
+}
+
+.applyFilterText-SearchBar {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 3px;
+  align-items: center;
+  justify-content: center;
+}

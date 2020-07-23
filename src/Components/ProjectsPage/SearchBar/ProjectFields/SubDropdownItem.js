@@ -4,7 +4,7 @@ import checkedBox from './checkedBox.png';
 import uncheckedBox from './uncheckedBox.png';
 
 const SubDropdownMenuItemProjectsPage = (props) => {
-  const [selected, setSelected] = useState(true);
+  const [selected, setSelected] = useState(false);
 
   const handleClick = () => {
     if (selected) {
