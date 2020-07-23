@@ -62,9 +62,9 @@ class ProjectsPage extends Component {
         selectedClubs.length !== 0 ||
         selectedDegrees.length !== 0
       ) {
-        url += `?query_string=${keyword}`;
-      } else {
         url += `&query_string=${keyword}`;
+      } else {
+        url += `?query_string=${keyword}`;
       }
     }
     return url;

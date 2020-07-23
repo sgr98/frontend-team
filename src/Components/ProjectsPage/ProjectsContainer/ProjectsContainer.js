@@ -1,134 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ProjectsContainer.css';
+import axios from 'axios';
 import * as uuid from 'uuid';
 import { Container, Row, Col } from 'react-bootstrap';
 import ProjectCardData from './ProjectCardData';
 import PaginationComponent from '../../ReusableComponents/Pagination/Pagination';
 
-const ProjectsContainer = () => {
-  const [projects, setProjects] = useState([
-    {
-      heading: 'CNC IDEX 3D Printer - Router - Laser Engraver',
-      team:
-        'Mullangi Sai Vivek, Satya Shyam Kasi, Nagasai Samhitha, Natesh Aravind S, Mohammed Saleeq K, Vija',
-      guide:
-        'Prof. T S Natrajan, Asst. Prof. Balaji Subramanyan, Asst. Prof. Sriram Sundar',
-      showImage: false,
-      synopsis:
-        'Synopsis: The Robotics and Electronics club was formed in 2008, with a vision to raise the level of Robotics in the institute to an international standard by developing an integrated knowledge base in the field of Robotics. DIY 3 in 1 CNC Machine designed by a team of six, second year Mechanical engineering students. It is one of the most active clubs in CFI, comprising of 600 members from all years. iBot club is not leaving any stone unturned in the process of becoming a self-sustained student robotics hub ',
-      buttonText: 'View Project',
-    },
-    {
-      heading: 'CNC IDEX 3D Printer - Router - Laser Engraver',
-      team:
-        'Mullangi Sai Vivek, Satya Shyam Kasi, Nagasai Samhitha, Natesh Aravind S, Mohammed Saleeq K, Vija',
-      guide:
-        'Prof. T S Natrajan, Asst. Prof. Balaji Subramanyan, Asst. Prof. Sriram Sundar',
-      showImage: true,
-      synopsis:
-        'Synopsis: The Robotics and Electronics club was formed in 2008, with a vision to raise the level of Robotics in the institute to an international standard by developing an integrated knowledge base in the field of Robotics. DIY 3 in 1 CNC Machine designed by a team of six, second year Mechanical engineering students. It is one of the most active clubs in CFI, comprising of 600 members from all years. iBot club is not leaving any stone unturned in the process of becoming a self-sustained student robotics hub ',
-      buttonText: 'View Project',
-    },
-    {
-      heading: 'CNC IDEX 3D Printer - Router - Laser Engraver',
-      team:
-        'Mullangi Sai Vivek, Satya Shyam Kasi, Nagasai Samhitha, Natesh Aravind S, Mohammed Saleeq K, Vija',
-      guide:
-        'Prof. T S Natrajan, Asst. Prof. Balaji Subramanyan, Asst. Prof. Sriram Sundar',
-      showImage: false,
-      synopsis:
-        'Synopsis: The Robotics and Electronics club was formed in 2008, with a vision to raise the level of Robotics in the institute to an international standard by developing an integrated knowledge base in the field of Robotics. DIY 3 in 1 CNC Machine designed by a team of six, second year Mechanical engineering students. It is one of the most active clubs in CFI, comprising of 600 members from all years. iBot club is not leaving any stone unturned in the process of becoming a self-sustained student robotics hub ',
-      buttonText: 'View Project',
-    },
-    {
-      heading: 'CNC IDEX 3D Printer - Router - Laser Engraver',
-      team:
-        'Mullangi Sai Vivek, Satya Shyam Kasi, Nagasai Samhitha, Natesh Aravind S, Mohammed Saleeq K, Vija',
-      guide:
-        'Prof. T S Natrajan, Asst. Prof. Balaji Subramanyan, Asst. Prof. Sriram Sundar',
-      showImage: false,
-      synopsis:
-        'Synopsis: The Robotics and Electronics club was formed in 2008, with a vision to raise the level of Robotics in the institute to an international standard by developing an integrated knowledge base in the field of Robotics. DIY 3 in 1 CNC Machine designed by a team of six, second year Mechanical engineering students. It is one of the most active clubs in CFI, comprising of 600 members from all years. iBot club is not leaving any stone unturned in the process of becoming a self-sustained student robotics hub ',
-      buttonText: 'View Project',
-    },
-    {
-      heading: 'CNC IDEX 3D Printer - Router - Laser Engraver',
-      team:
-        'Mullangi Sai Vivek, Satya Shyam Kasi, Nagasai Samhitha, Natesh Aravind S, Mohammed Saleeq K, Vija',
-      guide:
-        'Prof. T S Natrajan, Asst. Prof. Balaji Subramanyan, Asst. Prof. Sriram Sundar',
-      showImage: false,
-      synopsis:
-        'Synopsis: The Robotics and Electronics club was formed in 2008, with a vision to raise the level of Robotics in the institute to an international standard by developing an integrated knowledge base in the field of Robotics. DIY 3 in 1 CNC Machine designed by a team of six, second year Mechanical engineering students. It is one of the most active clubs in CFI, comprising of 600 members from all years. iBot club is not leaving any stone unturned in the process of becoming a self-sustained student robotics hub ',
-      buttonText: 'View Project',
-    },
-    {
-      heading: 'CNC IDEX 3D Printer - Router - Laser Engraver',
-      team:
-        'Mullangi Sai Vivek, Satya Shyam Kasi, Nagasai Samhitha, Natesh Aravind S, Mohammed Saleeq K, Vija',
-      guide:
-        'Prof. T S Natrajan, Asst. Prof. Balaji Subramanyan, Asst. Prof. Sriram Sundar',
-      showImage: false,
-      synopsis:
-        'Synopsis: The Robotics and Electronics club was formed in 2008, with a vision to raise the level of Robotics in the institute to an international standard by developing an integrated knowledge base in the field of Robotics. DIY 3 in 1 CNC Machine designed by a team of six, second year Mechanical engineering students. It is one of the most active clubs in CFI, comprising of 600 members from all years. iBot club is not leaving any stone unturned in the process of becoming a self-sustained student robotics hub ',
-      buttonText: 'View Project',
-    },
-    {
-      heading: 'CNC IDEX 3D Printer - Router - Laser Engraver',
-      team:
-        'Mullangi Sai Vivek, Satya Shyam Kasi, Nagasai Samhitha, Natesh Aravind S, Mohammed Saleeq K, Vija',
-      guide:
-        'Prof. T S Natrajan, Asst. Prof. Balaji Subramanyan, Asst. Prof. Sriram Sundar',
-      showImage: false,
-      synopsis:
-        'Synopsis: The Robotics and Electronics club was formed in 2008, with a vision to raise the level of Robotics in the institute to an international standard by developing an integrated knowledge base in the field of Robotics. DIY 3 in 1 CNC Machine designed by a team of six, second year Mechanical engineering students. It is one of the most active clubs in CFI, comprising of 600 members from all years. iBot club is not leaving any stone unturned in the process of becoming a self-sustained student robotics hub ',
-      buttonText: 'View Project',
-    },
-    {
-      heading: 'CNC IDEX 3D Printer - Router - Laser Engraver',
-      team:
-        'Mullangi Sai Vivek, Satya Shyam Kasi, Nagasai Samhitha, Natesh Aravind S, Mohammed Saleeq K, Vija',
-      guide:
-        'Prof. T S Natrajan, Asst. Prof. Balaji Subramanyan, Asst. Prof. Sriram Sundar',
-      showImage: false,
-      synopsis:
-        'Synopsis: The Robotics and Electronics club was formed in 2008, with a vision to raise the level of Robotics in the institute to an international standard by developing an integrated knowledge base in the field of Robotics. DIY 3 in 1 CNC Machine designed by a team of six, second year Mechanical engineering students. It is one of the most active clubs in CFI, comprising of 600 members from all years. iBot club is not leaving any stone unturned in the process of becoming a self-sustained student robotics hub ',
-      buttonText: 'View Project',
-    },
-    {
-      heading: 'CNC IDEX 3D Printer - Router - Laser Engraver',
-      team:
-        'Mullangi Sai Vivek, Satya Shyam Kasi, Nagasai Samhitha, Natesh Aravind S, Mohammed Saleeq K, Vija',
-      guide:
-        'Prof. T S Natrajan, Asst. Prof. Balaji Subramanyan, Asst. Prof. Sriram Sundar',
-      showImage: false,
-      synopsis:
-        'Synopsis: The Robotics and Electronics club was formed in 2008, with a vision to raise the level of Robotics in the institute to an international standard by developing an integrated knowledge base in the field of Robotics. DIY 3 in 1 CNC Machine designed by a team of six, second year Mechanical engineering students. It is one of the most active clubs in CFI, comprising of 600 members from all years. iBot club is not leaving any stone unturned in the process of becoming a self-sustained student robotics hub ',
-      buttonText: 'View Project',
-    },
-    {
-      heading: 'CNC IDEX 3D Printer - Router - Laser Engraver',
-      team:
-        'Mullangi Sai Vivek, Satya Shyam Kasi, Nagasai Samhitha, Natesh Aravind S, Mohammed Saleeq K, Vija',
-      guide:
-        'Prof. T S Natrajan, Asst. Prof. Balaji Subramanyan, Asst. Prof. Sriram Sundar',
-      showImage: false,
-      synopsis:
-        'Synopsis: The Robotics and Electronics club was formed in 2008, with a vision to raise the level of Robotics in the institute to an international standard by developing an integrated knowledge base in the field of Robotics. DIY 3 in 1 CNC Machine designed by a team of six, second year Mechanical engineering students. It is one of the most active clubs in CFI, comprising of 600 members from all years. iBot club is not leaving any stone unturned in the process of becoming a self-sustained student robotics hub ',
-      buttonText: 'View Project',
-    },
-    {
-      heading: 'CNC IDEX 3D Printer - Router - Laser Engraver',
-      team:
-        'Mullangi Sai Vivek, Satya Shyam Kasi, Nagasai Samhitha, Natesh Aravind S, Mohammed Saleeq K, Vija',
-      guide:
-        'Prof. T S Natrajan, Asst. Prof. Balaji Subramanyan, Asst. Prof. Sriram Sundar',
-      showImage: false,
-      synopsis:
-        'Synopsis: The Robotics and Electronics club was formed in 2008, with a vision to raise the level of Robotics in the institute to an international standard by developing an integrated knowledge base in the field of Robotics. DIY 3 in 1 CNC Machine designed by a team of six, second year Mechanical engineering students. It is one of the most active clubs in CFI, comprising of 600 members from all years. iBot club is not leaving any stone unturned in the process of becoming a self-sustained student robotics hub ',
-      buttonText: 'View Project',
-    },
-  ]);
+const ProjectsContainer = ({ url }) => {
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    axios.get(url).then((res) => {
+      setProjects(res.data);
+      setLoading(false);
+    });
+  }, [url]);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(5);

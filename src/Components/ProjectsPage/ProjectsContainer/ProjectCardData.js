@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import ReadMoreReact from 'read-more-react';
+import parse from 'html-react-parser';
 import ProjectPicture from './ProjectPicture.png';
 import './ProjectCardData.css';
 
@@ -16,6 +16,8 @@ const ProjectCardData = ({ project }) => {
     </Col>
   ) : null;
 
+  const teamMembersString = project.team_members.join(', ');
+
   return (
     <div>
       <Card className="projectCard-container-ProjectCardData">
@@ -24,28 +26,23 @@ const ProjectCardData = ({ project }) => {
             <Col>
               <Card.Body className="textBody-ProjectCardData">
                 <Card.Title className="heading-ProjectCardData">
-                  {project.heading}
+                  {project.title}
                 </Card.Title>
                 <Card.Text className="team-ProjectCardData">
-                  TEAM: {project.team}
+                  TEAM: {teamMembersString}
                 </Card.Text>
-                <Card.Text className="guide-ProjectCardData">
+                {/* <Card.Text className="guide-ProjectCardData">
                   GUIDE: {project.guide}
-                </Card.Text>
-                <p className="synopsis-ProjectCardData">
-                  <ReadMoreReact
-                    text={project.synopsis}
-                    max={1000}
-                    ideal={400}
-                    readMoreText="...Read More"
-                  />
-                </p>
+                </Card.Text> */}
+                <div className="synopsis-ProjectCardData">
+                  {parse(project.description)}
+                </div>
 
                 <Button
                   variant="secondary"
                   className="buttonText-ProjectCardData"
                 >
-                  {project.buttonText}
+                  View Project
                 </Button>
               </Card.Body>
             </Col>
