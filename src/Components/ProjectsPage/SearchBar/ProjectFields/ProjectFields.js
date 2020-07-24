@@ -54,6 +54,7 @@ const ProjectFields = (props) => {
           {props.filterNames.map((name, index) => {
             return (
               <Dropdown.Item
+                key={name}
                 as={SubDropdownMenuItemProjectsPage}
                 eventKey={index + 1}
                 text={name}

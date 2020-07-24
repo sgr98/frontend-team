@@ -6,15 +6,16 @@ import ProjectPicture from './ProjectPicture.png';
 import './ProjectCardData.css';
 
 const ProjectCardData = ({ project }) => {
-  const showImage = project.showImage ? (
-    <Col md={4} lg={3} xl={3} className=" p-0">
-      <Card.Img
-        src={ProjectPicture}
-        alt="ProjectPicture"
-        className="projectPicture-ProjectCardData"
-      />
-    </Col>
-  ) : null;
+  const showImage =
+    project.snapshot_url.length !== 0 ? (
+      <Col md={4} lg={3} xl={3} className=" p-0">
+        <Card.Img
+          src={`${process.env.REACT_APP_BASE_URL}/images/${project.snapshot_url[0]}`}
+          alt="ProjectPicture"
+          className="projectPicture-ProjectCardData"
+        />
+      </Col>
+    ) : null;
 
   const teamMembersString = project.team_members.join(', ');
 

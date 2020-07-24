@@ -55,7 +55,7 @@
 /*==== DROPDOWN BUTTONS ====*/
 
 .applyFilter-container > div > .applyFilterDiv-SearchBar {
-  width: 160px;
+  width: 120px;
   height: 40px;
   background-color: #f0f0f0;
   padding: 2px 2px;
@@ -83,6 +83,9 @@
 .applyFilterDiv-SearchBar button:focus {
   outline: none;
 }
+.applyFilterDiv-SearchBar button:hover {
+  background: rgba(96, 94, 92, 0.75);
+}
 
 .applyFilterText-SearchBar {
   display: flex;
@@ -91,4 +94,10 @@
   padding: 3px;
   align-items: center;
   justify-content: center;
+}
+
+.filterIcon-SearchBar {
+  height: 8%;
+  width: 15%;
+  margin-left: 2%;
 }

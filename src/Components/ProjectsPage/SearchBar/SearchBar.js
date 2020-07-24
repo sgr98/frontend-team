@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchField from './SearchField/SearchField';
 import ProjectFields from './ProjectFields/ProjectFields';
+import filterIcon from './filter.png';
 import './SearchBar.css';
 
 class SearchBar extends Component {
@@ -66,7 +67,14 @@ class SearchBar extends Component {
                 }}
               >
                 <div className="applyFilterText-SearchBar">
-                  <div>Apply</div>
+                  <div>
+                    Apply{' '}
+                    <img
+                      src={filterIcon}
+                      className="filterIcon-SearchBar"
+                      alt="filter"
+                    />
+                  </div>
                 </div>
               </button>
             </div>

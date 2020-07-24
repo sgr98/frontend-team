@@ -15,6 +15,14 @@ export class SearchField extends Component {
     this.setState({ value: e.target.value });
   };
 
+  submitOnEnterKey = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      event.stopPropagation();
+      this.props.search(this.state.value);
+    }
+  };
+
   render() {
     return (
       //   <div className="searchBar-techmaniacs-SearchBar">
@@ -25,6 +33,7 @@ export class SearchField extends Component {
             onChange={this.onChangeHandler}
             placeholder="Search "
             className="searchInput-SearchField"
+            onKeyDown={this.submitOnEnterKey}
           />
           <InputGroup.Append>
             <Button
