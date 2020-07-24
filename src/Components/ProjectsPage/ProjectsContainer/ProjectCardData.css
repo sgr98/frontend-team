@@ -84,8 +84,9 @@ p.synopsis-ProjectCardData div.read-more-button {
 
 /* ==== PROJECT PICTURE ==== */
 .projectPicture-ProjectCardData {
-  width: 30vw;
-  float: left;
+  /* width: 30vw; */
+  width: 70%;
+
   margin: 4%;
   padding: 0px;
   margin-top: 0em;

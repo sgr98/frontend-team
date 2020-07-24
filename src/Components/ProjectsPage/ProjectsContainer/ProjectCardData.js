@@ -8,7 +8,17 @@ import './ProjectCardData.css';
 const ProjectCardData = ({ project }) => {
   const showImage =
     project.snapshot_url.length !== 0 ? (
-      <Col md={4} lg={3} xl={3} className=" p-0">
+      <Col
+        md={4}
+        lg={3}
+        xl={3}
+        className=" p-0"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
         <Card.Img
           src={`${process.env.REACT_APP_BASE_URL}/images/${project.snapshot_url[0]}`}
           alt="ProjectPicture"
