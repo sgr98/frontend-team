@@ -25,7 +25,7 @@ export class SearchBar extends Component {
             </InputGroup.Append>
           </InputGroup>
         </div>
-        <TechManiacsDropDown />
+        <TechManiacsDropDown url={this.props.url} />
       </div>
     );
   }
