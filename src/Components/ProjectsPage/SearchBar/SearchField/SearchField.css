@@ -73,10 +73,6 @@
     margin: 0 0.5em 0 0;
   }
 }
-.main-container-SearchField button:focus {
-  outline: none;
-  box-shadow: none;
-}
 
 @media only screen and (min-width: 992px) {
   .container-SearchField {
