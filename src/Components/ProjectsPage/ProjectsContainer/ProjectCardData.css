@@ -3,7 +3,7 @@
 /* ==== PROJECT CARD ==== */
 .projectCard-container-ProjectCardData {
   font-family: Roboto, 'Segoe UI', 'Helvetica Neue', sans-serif;
-  /* min-height: 19rem; */
+  min-height: 19rem;
   width: 100%;
   height: auto;
   margin: 1.2% 0;

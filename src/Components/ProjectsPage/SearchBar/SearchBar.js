@@ -29,71 +29,74 @@ class SearchBar extends Component {
   render() {
     return (
       <div className="searchbar-container-ProjectsPage">
-        <SearchField search={this.props.searchKeyword} />
-        <ProjectFields
-          category="BRANCH"
-          updateArray={this.updateBranches}
-          filterNames={[
-            'Mechanical',
-            'Computer Science',
-            'Chemical',
-            'Civil',
-            'Electrical',
-          ]}
-        />
-        <ProjectFields
-          category="DEGREE"
-          updateArray={this.updateDegrees}
-          filterNames={['BTech', 'MTech']}
-        />
-        <ProjectFields
-          category="CLUB"
-          updateArray={this.updateClubs}
-          filterNames={['TechManiacs', 'Digital Wizards']}
-        />
+        <div>
+          <SearchField search={this.props.searchKeyword} />
+          <ProjectFields
+            category="BRANCH"
+            updateArray={this.updateBranches}
+            filterNames={[
+              'Mechanical',
+              'Computer Science',
+              'Chemical',
+              'Civil',
+              'Electrical',
+            ]}
+          />
+          <ProjectFields
+            category="DEGREE"
+            updateArray={this.updateDegrees}
+            filterNames={['BTech', 'MTech']}
+          />
+          <ProjectFields
+            category="CLUB"
+            updateArray={this.updateClubs}
+            filterNames={['TechManiacs', 'Digital Wizards']}
+          />
+        </div>
         {/* The Styling for the below button is similar to the above buttons */}
-
-        <div className="applyFilter-container">
-          <div className="dropdown">
-            <div className="applyFilterDiv-SearchBar">
-              <button
-                type="button"
-                onClick={() => {
-                  this.props.applyFilter(
-                    this.state.selectedBranches,
-                    this.state.selectedClubs,
-                    this.state.selectedDegrees
-                  );
-                }}
-              >
-                <div className="applyFilterText-SearchBar">
-                  <div>
-                    Apply{' '}
-                    <img
-                      src={filterIcon}
-                      className="filterIcon-SearchBar"
-                      alt="filter"
-                    />
+        <div>
+          <div className="applyFilter-container">
+            <div className="dropdown">
+              <div className="applyFilterDiv-SearchBar">
+                <button
+                  type="button"
+                  onClick={() => {
+                    this.props.applyFilter(
+                      this.state.selectedBranches,
+                      this.state.selectedClubs,
+                      this.state.selectedDegrees
+                    );
+                  }}
+                >
+                  <div className="applyFilterText-SearchBar">
+                    <div>
+                      Apply{' '}
+                      <img
+                        src={filterIcon}
+                        className="filterIcon-SearchBar"
+                        alt="filter"
+                      />
+                    </div>
                   </div>
-                </div>
-              </button>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="applyFilter-container">
-          <div className="dropdown">
-            <div className="applyFilterDiv-SearchBar">
-              <button
-                type="button"
-                onClick={() => {
-                  window.location.reload();
-                }}
-              >
-                <div className="applyFilterText-SearchBar">
-                  <div>Clear </div>
-                </div>
-              </button>
+          <div className="applyFilter-container">
+            <div className="dropdown">
+              <div className="applyFilterDiv-SearchBar">
+                <button
+                  type="button"
+                  onClick={() => {
+                    window.location.reload();
+                  }}
+                >
+                  <div className="applyFilterText-SearchBar">
+                    <div>Clear </div>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
         </div>

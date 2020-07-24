@@ -1,9 +1,15 @@
 .searchbar-container-ProjectsPage {
   display: inline-block;
   float: left;
+
   padding-left: 5.4%;
   padding-right: 5.4%;
   margin-bottom: 0.9em;
+}
+
+.controlButtons-SearchBar {
+  display: flex;
+  justify-content: center;
 }
 
 .applyFilterDiv-SearchBar {
@@ -14,8 +20,7 @@
   width: auto;
   margin-left: 6px;
   margin-bottom: 3%;
-  display: inline-block;
-  float: left;
+  display: block;
 }
 
 .applyFilter-SearchBar {
