@@ -99,6 +99,17 @@ a#collasible-nav-dropdown-EventsDropDown.nav-link::after {
     background: linear-gradient(to right, #6a5f8e, #106d88);
 }
 
+#AllEvents-EventsNavDropdown > div,
+#CalendarEvents-EventsNavDropdown > div {
+    background: linear-gradient(180deg, #00bcf2, #7593da, #b4a0ff);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
 /* ==== MEDIA QUERIES ==== */
 @media only screen and (min-width: 800px) {
     .main-container-EventsDropContainer {
@@ -112,8 +123,8 @@ a#collasible-nav-dropdown-EventsDropDown.nav-link::after {
     }
 }
 
-@media only screen and (min-width: 993px) {
+/* @media only screen and (min-width: 993px) {
     .main-container-EventsDropContainer {
         display: none;
     }
-}
+} */

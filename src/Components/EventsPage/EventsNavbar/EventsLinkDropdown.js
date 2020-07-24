@@ -26,8 +26,9 @@ export class EventsLinkDropdown extends Component {
                     <NavDropdown.Item
                         href="#AllEvents"
                         className="menuitem-EventsDropDown"
+                        id="AllEvents-EventsNavDropdown"
                     >
-                        All Events
+                        <div>All Events</div>
                     </NavDropdown.Item>
 
                     <NavDropdown.Item
@@ -58,8 +59,9 @@ export class EventsLinkDropdown extends Component {
                     <NavDropdown.Item
                         href="#CalendarEvents"
                         className="menuitem-EventsDropDown"
+                        id="CalendarEvents-EventsNavDropdown"
                     >
-                        Calendar Events
+                        <div>Calendar Events</div>
                     </NavDropdown.Item>
                 </NavDropdown>
             </div>
