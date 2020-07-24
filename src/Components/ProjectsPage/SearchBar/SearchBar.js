@@ -80,6 +80,23 @@ class SearchBar extends Component {
             </div>
           </div>
         </div>
+
+        <div className="applyFilter-container">
+          <div className="dropdown">
+            <div className="applyFilterDiv-SearchBar">
+              <button
+                type="button"
+                onClick={() => {
+                  window.location.reload();
+                }}
+              >
+                <div className="applyFilterText-SearchBar">
+                  <div>Clear </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

@@ -84,11 +84,17 @@ p.synopsis-ProjectCardData div.read-more-button {
 
 /* ==== PROJECT PICTURE ==== */
 .projectPicture-ProjectCardData {
-  width: 30vw;
-  float: left;
+  width: 80%;
+
   margin: 4%;
   padding: 0px;
   margin-top: 0em;
+}
+
+.imageDiv-ProjectCardData {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ==== MEDIA QUERIES ==== */
