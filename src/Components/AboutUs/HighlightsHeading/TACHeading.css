@@ -1,0 +1,88 @@
+.heading-TACHeading {
+  display: flex;
+  flex-direction: column;
+  margin: 7% 0 0% 0;
+  padding: 0%;
+
+  background: linear-gradient(
+    90deg,
+    rgba(91, 135, 255, 0.6) 0%,
+    rgba(0, 188, 242, 0.6) 50.52%,
+    rgba(91, 135, 255, 0.6) 100%
+  );
+
+  width: 100%;
+  min-height: 4rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.heading-TACHeading h3 {
+  justify-self: center;
+  height: 98%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Roboto Slab', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #201f1e;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+}
+
+.lineAbove-TACHeading {
+  justify-self: flex-start;
+  height: 2%;
+  box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.8);
+}
+
+.lineBelow-TACHeading {
+  height: 2%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+  background: inherit;
+  justify-self: flex-end;
+}
+
+/* ==== MEDIA QUERIES ==== */
+
+@media only screen and (min-width: 576px) {
+  .heading-TACHeading {
+    height: 6.3rem;
+  }
+  .heading-TACHeading h3 {
+    font-size: 2.3rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .heading-TACHeading {
+    height: 6.5rem;
+  }
+  .heading-TACHeading h3 {
+    font-size: 2.6rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .heading-TACHeading {
+    height: 6.8rem;
+  }
+  .heading-TACHeading h3 {
+    font-size: 3.1rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .heading-TACHeading {
+    height: 7rem;
+  }
+  .heading-TACHeading h3 {
+    font-size: 3.6rem;
+  }
+}
