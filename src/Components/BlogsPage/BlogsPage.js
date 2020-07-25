@@ -5,7 +5,7 @@ import axios from 'axios';
 import './BlogsPage.css';
 import BlogsContainer from './BlogsContainer/BlogsContainer';
 import Navigation from '../Navigation/Navigation';
-import SearchBar from './SearchBar/SearchBar';
+
 // import BlogsNavbar from './BlogsNavbar/BlogsNavbar';
 import Footer from '../Footer/Footer';
 
@@ -25,16 +25,23 @@ const BlogsPage = () => {
       <div className="BlogsPage">
         <Navigation />
         {/* <BlogsNavbar /> */}
-        <SearchBar url={url} />
-        <BlogsContainer />
+
         <Switch>
+          <Route
+            exact
+            path={[`${path}/general`, `${path}/`]}
+            component={() => <BlogsContainer url={url} clubName="general" />}
+          />
           {clubNames.length !== 0
             ? clubNames.map(({ name }) => {
                 return (
                   <Route
-                    path={`${path}/Workshops`}
+                    key={`Route-${name}`}
                     exact
-                    component={() => <BlogsContainer clubName={name} />}
+                    path={`${path}/${name}`}
+                    component={() => (
+                      <BlogsContainer url={url} clubName={name} />
+                    )}
                   />
                 );
               })

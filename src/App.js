@@ -23,14 +23,14 @@ function App() {
         <Switch>
           {/* <Route path={['/', '/home']} exact component={HomePage} /> */}
           <Route path={['/', '/home']} exact component={ClubsPage} />
-          <Route path="/Blogs" exact component={BlogsPage} />
+          <Route path="/Blogs" component={BlogsPage} />
           <Route path="/Events" component={EventsPage} />
           <Route path="/Projects" component={ProjectsPage} />
           <Route path="/Achievements" component={AchievementsPage} />
           <Route path="/AboutUs" component={AboutUs} />
           <Route path="/article" component={Article} />
           <Route path="/Challenges" component={ChallengesPage} />
-          <Route component={Error} />
+          <Route component={() => <h1>ERROR</h1>} />
         </Switch>
         {/* <Footer /> */}
       </div>

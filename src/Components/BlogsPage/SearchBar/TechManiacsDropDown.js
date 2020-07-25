@@ -9,6 +9,7 @@ import DropdownIcon from './DropdownIcon.png';
 
 const TechManiacsDropDown = (props) => {
   const [clubNames, setClubNames] = useState([]);
+  const [currentSelected, setCurrentSelected] = useState('GENERAL');
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_BASE_URL}/front/clubs`).then((res) => {
@@ -16,14 +17,17 @@ const TechManiacsDropDown = (props) => {
     });
   }, []);
 
+  const onClickHandler = (name) => {
+    setCurrentSelected(name);
+  };
+
   return (
     <div className="nav-container-TechManiacsDropDown">
       <NavDropdown
         className="nav-dropdown-TechManiacsDropDown"
-        href="#techamaniacs-dropdown"
         title={
           <span>
-            General
+            {props.currentSelected}
             <img
               src={DropdownIcon}
               alt="DropdownIcon"
@@ -38,9 +42,15 @@ const TechManiacsDropDown = (props) => {
         </NavDropdown.Item>
 
         {clubNames.length !== 0
-          ? clubNames.map(({ name }) => {
+          ? clubNames.map(({ name }, index) => {
               return (
-                <NavDropdown.Item className="menuitem-TechManiacsDropDown">
+                <NavDropdown.Item
+                  className="menuitem-TechManiacsDropDown"
+                  key={name + index}
+                  onClick={() => {
+                    onClickHandler(name);
+                  }}
+                >
                   <NavLink to={`${props.url}/${name.toLowerCase()}`}>
                     {name}
                   </NavLink>

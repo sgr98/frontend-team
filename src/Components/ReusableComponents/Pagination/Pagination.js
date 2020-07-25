@@ -14,7 +14,6 @@ const PaginationComponent = ({
   const [pageNumbersToBeShown, setPageNumbersToBeShown] = useState([]);
 
   const displayNewNumbersNext = (number) => {
-    console.log('dis', pageNumbers);
     if (number % 5 === 1) {
       const pages = [];
       let i = number;
