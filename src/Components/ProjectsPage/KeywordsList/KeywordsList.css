@@ -4,6 +4,7 @@
 .container-keyword-KeywordsList {
   padding-top: 0.4em;
   line-height: 1em;
+  margin-top: 1%;
 }
 .keyword-KeywordsList {
   font-family: Roboto, 'Segoe UI', 'Helvetica Neue', sans-serif;
@@ -13,8 +14,13 @@
   text-transform: capitalize;
   display: inline-block;
   color: #c8c6c4;
-
+  cursor: pointer;
+  margin: 1%;
   font-size: 0.7rem;
+}
+
+.keyword-KeywordsList:hover {
+  text-decoration: underline;
 }
 
 /* ==== MEDIA QUERIES ==== */

@@ -15,6 +15,7 @@ class ProjectsPage extends Component {
       selectedClubs: [],
       selectedBranches: [],
       selectedDegrees: [],
+      keywordSearched: '',
     };
   }
 
@@ -62,9 +63,9 @@ class ProjectsPage extends Component {
         selectedClubs.length !== 0 ||
         selectedDegrees.length !== 0
       ) {
-        url += `&query_string=${keyword}`;
+        url += `&query_string=${keyword.toLowerCase().replace(/\s+/g, '+')}`;
       } else {
-        url += `?query_string=${keyword}`;
+        url += `?query_string=${keyword.toLowerCase().replace(/\s+/g, '+')}`;
       }
     }
     return url;
@@ -77,7 +78,7 @@ class ProjectsPage extends Component {
       this.state.selectedClubs,
       this.state.selectedDegrees
     );
-    this.setState({ currentUrl: url });
+    this.setState({ currentUrl: url, keywordSearched: keyword });
   };
 
   applyFilter = (selectedBranches, selectedClubs, selectedDegrees) => {
@@ -104,7 +105,15 @@ class ProjectsPage extends Component {
           searchKeyword={this.searchKeyword}
           applyFilter={this.applyFilter}
         />
-        <ProjectsContainer url={this.state.currentUrl} />
+        {this.state.keywordSearched !== '' ? (
+          <p className="SearchResults-ProjectsPage">
+            {`Search Results for ${this.state.keywordSearched}`}
+          </p>
+        ) : null}
+        <ProjectsContainer
+          url={this.state.currentUrl}
+          searchKeyword={this.searchKeyword}
+        />
         <ProjectFooter />
       </div>
     );

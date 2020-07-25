@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState } from 'react';
 import * as uuid from 'uuid';
 import './KeywordsList.css';
 
-export const KeywordsList = () => {
+const KeywordsList = ({ data, searchKeyword }) => {
   const [keywords, setKeywords] = useState([
     'AI',
     'Robotics',
@@ -25,15 +27,22 @@ export const KeywordsList = () => {
   ]);
   return (
     <div className="container-keyword-KeywordsList">
-      {keywords.map((keyword) => {
+      {data.map((keyword) => {
         return (
           <span key={uuid.v4()} className="p-0 m-0">
-            <a className="keyword-KeywordsList" href="#">
+            <span
+              className="keyword-KeywordsList"
+              onClick={() => {
+                searchKeyword(keyword);
+              }}
+            >
               #{keyword}
-            </a>{' '}
+            </span>
           </span>
         );
       })}
     </div>
   );
 };
+
+export default KeywordsList;
