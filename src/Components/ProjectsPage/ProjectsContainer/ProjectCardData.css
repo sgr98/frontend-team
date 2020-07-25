@@ -54,9 +54,13 @@ p.synopsis-ProjectCardData div.read-more-button,
   text-transform: initial;
   color: #e0e0e0;
   font-size: 0.9rem;
-  display: inline;
+  /* display: inline; */
   font-weight: 300;
   line-height: 1.45em;
+  box-sizing: border-box;
+  max-height: 7.2em;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 p.synopsis-ProjectCardData div.read-more-button {
