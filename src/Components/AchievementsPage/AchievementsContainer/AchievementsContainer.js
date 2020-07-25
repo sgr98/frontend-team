@@ -1,6 +1,7 @@
 import React from 'react';
 import './AchievementsContainer.css';
 import Card from '../AchievementCard/AchievementCard';
+import axios from 'axios';
 
 const AchievementsContainer = () => {
     const achievementsData=[
