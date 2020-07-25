@@ -136,7 +136,7 @@ a.nav-link-Navigation.active::after {
 }
 
 /* drop-down menu items styling */
-.dropdown-menu {
+.nav-container-Navigation .dropdown-menu {
   z-index: unset;
   z-index: 2000;
 }

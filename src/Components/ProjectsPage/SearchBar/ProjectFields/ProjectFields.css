@@ -19,6 +19,9 @@
   display: inline-block;
   float: left;
 }
+.project-fields-container .dropdown-menu {
+  z-index: 50;
+}
 
 .project-fields-container > div {
   display: inline-block;

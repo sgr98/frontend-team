@@ -1,5 +1,5 @@
 /* eslint-disable no-nested-ternary */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import './BlogsContainer.css';
 import axios from 'axios';
 import SearchBar from '../SearchBar/SearchBar';
@@ -8,8 +8,9 @@ import BlogCardRecent from '../BlogCardRecent/BlogCardRecent';
 import PaginationComponent from '../../ReusableComponents/Pagination/Pagination';
 
 const BlogsContainer = ({ clubName, url }) => {
-  const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [posts, setPosts] = useState([]);
+
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(9);
 
@@ -23,9 +24,9 @@ const BlogsContainer = ({ clubName, url }) => {
   // Search Button Handler
 
   const searchKeyword = (word) => {
-    setQueryEndPoint(
-      `?query_string=${word.toLowerCase().replace(/\s+/g, '+')}`
-    );
+    if (word !== '') {
+      setQueryEndPoint(`?filter=${word.toLowerCase().replace(/\s+/g, '+')}`);
+    } else setQueryEndPoint('');
   };
 
   // Change page
@@ -44,22 +45,26 @@ const BlogsContainer = ({ clubName, url }) => {
     window.scrollTo(0, 100);
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    // console.log('Query');
     axios
       .get(
         `${process.env.REACT_APP_BASE_URL}/front/blogs/${clubName}${queryEndPoint}`
       )
       .then((res) => {
+        // console.log(res);
         setPosts(Object.keys(res.data).length !== 0 ? res.data : []);
         setLoading(false);
       });
   }, [queryEndPoint]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    // console.log('currentPage, posts');
     setCurrentPosts(posts.slice(indexOfFirstPost, indexOfLastPost));
   }, [currentPage, posts]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    // console.log('blogsList');
     const blogsShown = [];
     let blogFeatured = null;
     if (currentPosts.length !== 0) {
@@ -83,10 +88,13 @@ const BlogsContainer = ({ clubName, url }) => {
         }
       }
     }
+
     setBlogList(blogsShown);
 
     if (blogFeatured) setFeaturedBlog(blogFeatured);
   }, [currentPosts]);
+
+  // console.log('blogs', blogsList, loading, posts);
 
   return (
     <>
