@@ -1,0 +1,50 @@
+:root {
+    --button-SubmitFormButton-width: 240px;
+    --button-SubmitFormButton-height: 40px;
+}
+
+.main-container-SubmitFormButton {
+    /* display: block; */
+}
+
+/* MAIN BUTTON */
+
+.container-SubmitFormButton {
+    display: inline-block;
+    width: var(--button-SubmitFormButton-width);
+    height: var(--button-SubmitFormButton-height);
+    padding: 2px;
+    background: #f0f0f0;
+    margin-right: none;
+}
+
+.button-SubmitFormButton {
+    width: 100%;
+    height: 100%;
+    background: rgba(96, 94, 92, 1);
+    border: none;
+}
+
+/* BUTTON TEXT */
+
+.title-SubmitFormButton {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #7BB857;
+    padding: 0 auto;
+}
+
+/* ==== MEDIA QUERIES ==== */
+
+@media only screen and (max-width: 300px) {
+    .container-SubmitFormButton {
+        width: 100%;
+    }
+}
