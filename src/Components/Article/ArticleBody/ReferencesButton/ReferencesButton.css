@@ -37,7 +37,7 @@
   margin-right: 5%;
 }
 
-.modal-content {
+.Article-Modal .modal-content {
   color: #f0f0f0;
   background: #201f1e;
   border-radius: 6px;
@@ -48,34 +48,34 @@
 /* .modal-dialog {
   max-width: 100%;
 } */
-.modal-header {
+.Article-Modal .modal-header {
   border: none;
   padding-left: 7%;
 }
 
-.modal-footer {
+.Article-Modal .modal-footer {
   border: none;
 }
-.modal-footer .btn {
+.Article-Modal .modal-footer .btn {
   display: none;
 }
-.modal-body {
+.Article-Modal .modal-body {
   border: none;
   overflow-wrap: break-word;
 }
 
-.modal-body ul {
+.Article-Modal .modal-body ul {
   padding-left: 5%;
   margin-left: 2%;
   height: 100%;
 }
-.modal-body ul li {
+.Article-Modal .modal-body ul li {
   margin-bottom: 1%;
 }
-.modal-body ul li a {
+.Article-Modal .modal-body ul li a {
   color: #00bcf2;
 }
 
-.close span {
+.Article-Modal .close span {
   color: white;
 }
