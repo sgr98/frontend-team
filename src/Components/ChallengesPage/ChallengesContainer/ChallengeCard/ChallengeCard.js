@@ -2,20 +2,23 @@ import React from 'react';
 import './ChallengeCard.css';
 
 const ChallengeCard = () => {
+  const onClickHandler = () => {
+    window.open('https://www.hackerrank.com/contests/projecteuler/', '_blank');
+  };
   return (
-    <div className="root-ChallengeCard">
+    <div className="root-ChallengeCard" onClick={onClickHandler}>
       <p className="title-ChallengeCard">ProjectEuler+</p>
       <p className="description-ChallengeCard">
         {' '}
         HackerRank brings you the fun of solving Projecteuler challenges with
         hidden test cases and time limit
       </p>
-      <a
+      {/* <a
         href="https://www.hackerrank.com/contests/projecteuler/"
         className="url-ChallengeCard"
       >
         https://www.hackerrank.com/contests/projecteuler/
-      </a>
+      </a> */}
 
       <div className="timeDiv-ChallengeCard">
         <div className="timePoint-challengeCard">START </div>
