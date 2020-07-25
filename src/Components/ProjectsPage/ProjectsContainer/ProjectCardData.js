@@ -4,6 +4,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import parse from 'html-react-parser';
 import ProjectPicture from './ProjectPicture.png';
 import './ProjectCardData.css';
+import { KeywordsList } from '../KeywordsList/KeywordsList';
 
 const ProjectCardData = ({ project }) => {
   const showImage =
@@ -45,6 +46,7 @@ const ProjectCardData = ({ project }) => {
                 >
                   View Project
                 </Button>
+                <KeywordsList/>
               </Card.Body>
             </Col>
             {showImage}
