@@ -3,6 +3,8 @@ import { Navbar, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./EventsNavbar.css";
+import "./EventsLinkDropdown";
+import EventsLinkDropdown from "./EventsLinkDropdown";
 
 export class EventsNavbar extends Component {
   constructor(props) {
@@ -122,7 +124,12 @@ export class EventsNavbar extends Component {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
+
+        <EventsLinkDropdown />
+
       </div>
+
+        
     );
   }
 }
