@@ -107,7 +107,7 @@ class ProjectsPage extends Component {
         />
         {this.state.keywordSearched !== '' ? (
           <p className="SearchResults-ProjectsPage">
-            {`Search Results for ${this.state.keywordSearched}`}
+            {`Search Results for "${this.state.keywordSearched}"`}
           </p>
         ) : null}
         <ProjectsContainer
