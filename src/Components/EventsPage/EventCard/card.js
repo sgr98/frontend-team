@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './card.css';
 import axios from 'axios';
-import { Modal, Button } from 'react-bootstrap';
+import { Modal, Button, Toast } from 'react-bootstrap';
 
 import parse from 'html-react-parser';
 import EmailIcon from './emailIcon.png';
@@ -9,6 +9,12 @@ import EmailIcon from './emailIcon.png';
 const Card = ({ single, showButton }) => {
   const [show, setShow] = useState(false);
   const [email, setEmail] = useState('');
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [showFailure, setShowFailure] = useState(false);
+  const [errorText, setErrorText] = useState('Some Error Occurred');
+
+  const toggleShowSuccess = () => setShowSuccess(!showSuccess);
+  const toggleShowFailure = () => setShowFailure(!showFailure);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -19,19 +25,24 @@ const Card = ({ single, showButton }) => {
 
   const onSubmitHandler = () => {
     axios
-      .post(
-        `${process.env.REACT_APP_BASE_URL}/front/register/${single._id}AAA`,
-        {
-          email,
-        }
-      )
+      .post(`${process.env.REACT_APP_BASE_URL}/front/register/${single._id}`, {
+        email,
+      })
       .then((res) => {
         console.log(res);
-        setShow(false);
+        if (res.data.toLowerCase() === 'subscribed') {
+          setShow(false);
+          setShowSuccess(true);
+        } else {
+          setShow(false);
+          setErrorText('You are already registered!!');
+          setShowFailure(true);
+        }
       })
       .catch((err) => {
         console.log(err);
         setShow(false);
+        setShowFailure(true);
       });
   };
 
@@ -103,7 +114,7 @@ const Card = ({ single, showButton }) => {
             </p>
 
             <div className="description-EventModal">
-              <p>{parse(single.description)}</p>
+              {parse(single.description)}
             </div>
             <p className="secondaryHeading-EventModal">{single.date} </p>
             <p className="secondaryHeading-EventModal">
@@ -137,6 +148,40 @@ const Card = ({ single, showButton }) => {
           ) : null}
         </Modal.Footer>
       </Modal>
+
+      <Toast
+        animation
+        autohide
+        show={showSuccess}
+        onClose={toggleShowSuccess}
+        className="EventToast"
+        style={{
+          position: 'fixed',
+          top: '100px',
+          right: '50px',
+        }}
+      >
+        <Toast.Header>
+          <strong className="mr-auto">Successful Registration</strong>
+        </Toast.Header>
+      </Toast>
+
+      <Toast
+        animation
+        autohide
+        show={showFailure}
+        onClose={toggleShowFailure}
+        className="EventToast failureEvent"
+        style={{
+          position: 'fixed',
+          top: '100px',
+          right: '50px',
+        }}
+      >
+        <Toast.Header>
+          <strong className="mr-auto">{errorText}</strong>
+        </Toast.Header>
+      </Toast>
     </>
   );
 };
