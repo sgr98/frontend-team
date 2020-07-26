@@ -23,7 +23,7 @@
   border-radius: 4px;
   height: 1.9em;
   width: 10rem;
-  margin: 1% 5%;
+  margin: 2% 5%;
 }
 
 /* gradient background */
@@ -86,6 +86,17 @@ a#collasible-nav-dropdown-TechManiacsDropDown.nav-link::after {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0;
+}
+.menuitem-TechManiacsDropDown a {
+  color: #f0f0f0;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3% auto;
 }
 
 /* ==== MEDIA QUERIES ==== */

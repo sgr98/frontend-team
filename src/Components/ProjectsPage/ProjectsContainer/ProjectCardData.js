@@ -4,8 +4,9 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import parse from 'html-react-parser';
 import ProjectPicture from './ProjectPicture.png';
 import './ProjectCardData.css';
+import KeywordsList from '../KeywordsList/KeywordsList';
 
-const ProjectCardData = ({ project }) => {
+const ProjectCardData = ({ project, searchKeyword }) => {
   const showImage =
     project.snapshot_url.length !== 0 ? (
       <Col md={4} lg={3} xl={3} className="p-0 imageDiv-ProjectCardData">
@@ -45,6 +46,10 @@ const ProjectCardData = ({ project }) => {
                 >
                   View Project
                 </Button>
+                <KeywordsList
+                  data={project.keywords}
+                  searchKeyword={searchKeyword}
+                />
               </Card.Body>
             </Col>
             {showImage}

@@ -24,7 +24,7 @@ const ReferencesButton = () => {
         />
         REFERENCES
       </button>
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} className="Article-Modal">
         <Modal.Header closeButton>
           <Modal.Title>REFERENCES</Modal.Title>
         </Modal.Header>

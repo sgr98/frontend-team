@@ -6,13 +6,19 @@ import { Container, Row, Col } from 'react-bootstrap';
 import ProjectCardData from './ProjectCardData';
 import PaginationComponent from '../../ReusableComponents/Pagination/Pagination';
 
-const ProjectsContainer = ({ url }) => {
+const ProjectsContainer = ({ url, searchKeyword }) => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios.get(url).then((res) => {
-      setProjects(res.data);
+      console.log(res);
+
+      let data = [];
+
+      data = res.data.filter((project) => project !== null);
+      setProjects(data);
+
       setLoading(false);
     });
   }, [url]);
@@ -52,7 +58,10 @@ const ProjectsContainer = ({ url }) => {
         <Row>
           {currentPosts.map((project) => (
             <Col xs={12} key={uuid.v4()}>
-              <ProjectCardData project={project} />
+              <ProjectCardData
+                project={project}
+                searchKeyword={searchKeyword}
+              />
             </Col>
           ))}
         </Row>

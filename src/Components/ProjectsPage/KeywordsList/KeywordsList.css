@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/* ==== KEYWORDS ==== */
+.container-keyword-KeywordsList {
+  padding-top: 0.4em;
+  line-height: 1em;
+  margin-top: 1%;
+}
+.keyword-KeywordsList {
+  font-family: Roboto, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+  display: inline-block;
+  color: #c8c6c4;
+  cursor: pointer;
+  margin: 1%;
+  font-size: 0.7rem;
+}
+
+.keyword-KeywordsList:hover {
+  text-decoration: underline;
+}
+
+/* ==== MEDIA QUERIES ==== */
+@media only screen and (min-width: 576px) {
+  .keyword-KeywordsList {
+    font-size: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .keyword-KeywordsList {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .keyword-KeywordsList {
+    font-size: 0.85rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .keyword-KeywordsList {
+    font-size: 0.9rem;
+  }
+}

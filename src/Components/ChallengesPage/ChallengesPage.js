@@ -10,9 +10,6 @@ const ChallengesPage = () => {
       <Navigation />
       <div className="ChallengesPage">
         <ChallengesContainer />
-        <ChallengesContainer />
-        <ChallengesContainer />
-        <ChallengesContainer />
       </div>
 
       <ProjectFooter />
