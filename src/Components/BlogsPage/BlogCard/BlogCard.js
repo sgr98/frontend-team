@@ -3,6 +3,8 @@ import './BlogCard.css';
 
 import { Button } from 'react-bootstrap';
 
+// Here styling is same as the event card
+
 const Card = ({ single }) => {
   let imageSrc =
     'https://images.unsplash.com/photo-1503560683205-acf61ac68a3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80';
@@ -25,9 +27,27 @@ const Card = ({ single }) => {
           alt="Event-Poster"
           src={imageSrc}
         />
-        <div className="event-card-content-details event-card-fadeIn-bottom">
-          <p className="card-title-BlogCard">{single.title}</p>
-          <span className="card-topic-BlogCard">Mir Sameed Ali</span>
+        <div
+          className="event-card-content-details event-card-fadeIn-bottom"
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-evenly',
+            height: '80%',
+          }}
+        >
+          <p
+            className="event-card-title"
+            style={{ display: 'flex', justifyContent: 'center' }}
+          >
+            {single.title}
+          </p>
+          <p
+            className="event-card-topic"
+            style={{ display: 'flex', justifyContent: 'center' }}
+          >
+            Author: Mir Sameed Ali
+          </p>
 
           <div className="card-btn-container-BlogCard">
             <Button variant="outline" className="card-btn-BlogCard">
