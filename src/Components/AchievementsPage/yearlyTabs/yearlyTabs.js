@@ -4,15 +4,16 @@ import AchievementsContainer from '../AchievementsContainer/AchievementsContaine
 import './yearlyTabs.css';
 
 const YearlyTabs = ({
-  allData={}
+  allData
 }) => {
+    var currYear;
+    currYear=new Date().getFullYear();
+    const [key, setKey] = useState(`${currYear}`);
     var array=Object.keys(allData)
-    const [key, setKey] = useState(array[array.length-1]);
     array.sort()
     const min = parseInt(array[0])
     const max = parseInt(array[array.length-1])
     var years=[]
-    // for rolling 5 years
     for (var i = max; i >= min; i--) {
       years.push(i);
     }
