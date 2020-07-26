@@ -4,7 +4,7 @@ import Card from '../AchievementCard/AchievementCard';
 import { Modal,Carousel } from 'react-bootstrap';
 
 const AchievementsContainer = ({
-  achievementsData=[]
+  achievementsData=[],year=""
 }) => {
 
     const [show, setShow] = useState(false);
@@ -48,7 +48,7 @@ const AchievementsContainer = ({
                 </Modal.Body>
               </Modal>
             <div className="achievements-limelight">
-                <h1>HALL OF FAME 2020</h1>
+                <h1 dangerouslySetInnerHTML={{__html:"HALL OF FAME "+year}}></h1>
             </div>
               {achievementsData.map((single,index) => (
                 <Card key={"card"+index} single={single} handleClick={(e)=>{handleShow(e,single.pics_url)}}/>

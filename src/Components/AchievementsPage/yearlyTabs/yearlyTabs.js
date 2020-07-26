@@ -26,7 +26,7 @@ const YearlyTabs = ({
         {years.map((value, index) => {
             return (
               <Tab eventKey={value} key={"year-tab-"+value} title={value} disabled={array.indexOf(`${value}`)==-1}>
-              <AchievementsContainer achievementsData={yearlyData}  />
+              <AchievementsContainer achievementsData={yearlyData} year={value} />
               </Tab>
             )
         })}

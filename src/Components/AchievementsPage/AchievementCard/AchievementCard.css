@@ -6,8 +6,11 @@
 .achievement-card-content {
     position: relative;
     width:100%;
+    height: 20vw;
     margin: auto;
     overflow: hidden;
+    background-size: cover;
+    background-position: center;
     border: 4px solid #201F1E;
     box-sizing: border-box;
     box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08), 2px 2px 3px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(208, 197, 249, 0.005), 10px 10px 10px rgba(0, 0, 0, 0.1);
@@ -34,7 +37,8 @@
     text-align: left;
 }
 .achievement-card-image{
-  height: auto;
+  height: 20vw !important;
+  width: 100%;
   max-width:100%;
 }
 .achievement-card-title{
@@ -80,6 +84,9 @@
   .achievement-card-container {
     width: 50%;
   }
+  .achievement-card-content{
+    height: 25vw;
+  }
   .achievement-card-text{
     height: calc(1.6rem + 3.5vw);
   }
@@ -103,6 +110,9 @@
       display: block;
       width: 100%;
     }
+    .achievement-card-content{
+      height: 40vw;
+    }
     .achievement-card-text{
       height: calc(1.6rem + 5vw);
     }
@@ -120,6 +130,9 @@
   }
   
 @media screen and (min-width: 851px) {
+  .achievement-card-content{
+    height: 20vw;
+  }
   .achievement-card-container {
     width: 33%;
   }
