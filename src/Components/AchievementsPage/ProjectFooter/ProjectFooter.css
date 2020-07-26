@@ -1,3 +1,8 @@
+.ProjectFooter{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 .ProjectFooter .wrapper {
   background: linear-gradient(
     90deg,

@@ -10,6 +10,10 @@ const YearlyTabs = ({
     const [key, setKey] = useState(`${currYear}`);
     let years=[]
     var yearlyData=allData
+    // for rolling 5 years
+    // for (var i = 0; i <= 4; i++) {
+    //   years.push(toString(currYear-i));
+    // }
     return (
       <Tabs
         activeKey={key}
