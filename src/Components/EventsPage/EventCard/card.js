@@ -61,7 +61,7 @@ const Card = ({ single, showButton }) => {
             }
             // src={`${single.poster_url}`}
           />
-          <div className="event-card-content-details event-card-fadeIn-bottom">
+          <div className="event-card-content-details">
             <p className="event-card-title">{single.name}</p>
             <span className="event-card-topic">
               Category: {single.categories}
