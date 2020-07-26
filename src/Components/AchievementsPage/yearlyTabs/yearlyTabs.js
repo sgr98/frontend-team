@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Tabs } from 'react-bootstrap';
+import { Tabs,Tab } from 'react-bootstrap';
+import AchievementsContainer from '../AchievementsContainer/AchievementsContainer';
 import './yearlyTabs.css';
 
-function yearlyTabs() {
+const YearlyTabs = ({
+  allData=[]
+}) => {
     const currYear=new Date().getFullYear()
     const [key, setKey] = useState(`${currYear}`);
     let years=[]
-    for (var i = 2016; i <= currYear; i++) {
-        years.push(str(i));
-    }
+    var yearlyData=allData
     return (
       <Tabs
         activeKey={key}
@@ -18,16 +19,16 @@ function yearlyTabs() {
             return <li key={index}>{value}</li>
         })}
         <Tab eventKey="home" title="Home">
-          <Sonnet />
+          <AchievementsContainer achievementsData={yearlyData}  />
         </Tab>
-        <Tab eventKey="profile" title="Profile">
+        {/* <Tab eventKey="profile" title="Profile">
           <Sonnet />
         </Tab>
         <Tab eventKey="contact" title="Contact" disabled>
           <Sonnet />
-        </Tab>
+        </Tab> */}
       </Tabs>
     );
   }
   
-  render(<yearlyTabs />);
+  export default YearlyTabs;

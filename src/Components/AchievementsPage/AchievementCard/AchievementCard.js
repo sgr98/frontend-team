@@ -3,16 +3,16 @@ import './AchievementCard.css';
 import ReadMoreReact from 'read-more-react';
 
 const Card_template = ({ 
-    single
+    single, handleClick
 }) => {
     return (
       <div className="achievement-card-container">
-        <div className="achievement-card-content">
+        <div className="achievement-card-content"  onClick={handleClick}>
 
           <div className="achievement-card-text">
             <p className="achievement-card-title">{single.title}</p>
             <p className="achievement-card-caption">{single.caption}</p>
-            <p className="achievement-card-description">
+            <div className="achievement-card-description">
             <ReadMoreReact
               text={single.description}
               min={210}
@@ -20,7 +20,7 @@ const Card_template = ({
               ideal={215}
               readMoreText=".. Read More ..."
             />
-            </p>
+            </div>
           </div>
           <img className="achievement-card-image"
             src={

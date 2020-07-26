@@ -1,13 +1,13 @@
 import React from 'react';
 import ProjectFooter from './ProjectFooter/ProjectFooter';
-import AchievementsContainer from './AchievementsContainer/AchievementsContainer';
+import YearlyTabs from './yearlyTabs/yearlyTabs';
 import Navigation from '../Navigation/Navigation';
-
+import axios from 'axios';
 const AchievementsPage = () => {
   return (
     <div>
       <Navigation />
-      <AchievementsContainer />
+      <yearlyTabs />
       <ProjectFooter />
     </div>
   );

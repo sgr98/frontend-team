@@ -1,36 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './AchievementsContainer.css';
 import Card from '../AchievementCard/AchievementCard';
-import axios from 'axios';
+import { Modal,Carousel } from 'react-bootstrap';
 
-const AchievementsContainer = () => {
-    const achievementsData=[
-        {
-            title:"Achievement Title",
-            date:"2020-07-22T01:04:00.000+00:00",
-            caption:"CATCHY CAPTION LOL",
-            description:"Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it ROS (Robot Operating System)!Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it ROS (Robot Operating System)!"
-        },
-        {
-            title:"Achievement Title",
-            date:"2020-07-22T01:04:00.000+00:00",
-            caption:"CATCHY CAPTION LOL",
-            description:"Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it ROS (Robot Operating System)!"
-        },
-        {
-            title:"Achievement Title",
-            date:"2020-07-22T01:04:00.000+00:00",
-            caption:"CATCHY CAPTION LOL",
-            description:"Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it ROS (Robot Operating System)!"
-        },
-        {
-            title:"Achievement Title",
-            date:"2020-07-22T01:04:00.000+00:00",
-            caption:"CATCHY CAPTION LOL",
-            description:"Have you ever wondered “How to coordinate between multiple drones? How to simulate a manipulator or a robot? ate a manipulator or a How does a robot map the environment and navigate in it ROS (Robot Operating System)!"
-        }
-    ]
+const AchievementsContainer = ({
+  achievementsData=[]
+}) => {
+
+    const [show, setShow] = useState(false);
+    const [gallery, setGallery] = useState([]);
+    const handleClose = () => setShow(false);
+    const handleShow = (e,gallery_a) => {if(e.target.className!="read-more-button"){setGallery(gallery_a);setShow(true);}}
+
     return (
+      
         <div style=
           {{
             display: 'flex',
@@ -39,11 +22,33 @@ const AchievementsContainer = () => {
           }}>
           {achievementsData.length !== 0 ? (
             <div>
+              {/* <Button variant="primary" onClick={handleShow}>
+                  Achie
+              </Button> */}
+        
+              <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                  <Modal.Title>Achievement Highlights</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                <Carousel>
+                  {gallery.map((single,index) => (
+                  <Carousel.Item key={"Car"+index}>
+                      <img
+                      className="d-block w-100"
+                      src={single} // need to add the backend url prefix [TODO]
+                      alt={"Highlights Pic#" + index}
+                      />
+                  </Carousel.Item>
+                  ))}
+                  </Carousel>
+                </Modal.Body>
+              </Modal>
             <div className="achievements-limelight">
                 <h1>HALL OF FAME 2020</h1>
             </div>
-              {achievementsData.map((single) => (
-                <Card key={single._id} single={single}/>
+              {achievementsData.map((single,index) => (
+                <Card key={"card"+index} single={single} handleClick={(e)=>{handleShow(e,single.pics_url)}}/>
               ))}
             </div>
           ) : null}
