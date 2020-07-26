@@ -32,7 +32,7 @@ const AchievementsContainer = ({
                   <Carousel.Item key={"Car"+index}>
                       <img
                       className="d-block w-100"
-                      src={`${process.env.REACT_APP_BASE_URL}/images/${single}`} // need to add the backend url prefix [TODO]
+                      src={`${process.env.REACT_APP_BASE_URL}/images/${single}`}
                       style={{
                         display: "block",
                         maxWidth:"85vw",

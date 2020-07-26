@@ -25,8 +25,8 @@ const Card_template = ({
           </div>
           <img className="achievement-card-image"
             src={
-              single.image
-                ? single.image
+              single.pics_url
+                ? `${process.env.REACT_APP_BASE_URL}/images/${single.pics_url[0]}`
                 : 'https://images.unsplash.com/photo-1543722615-dbf5edf1a00d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80'
             }
           /> 
