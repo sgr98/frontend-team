@@ -76,13 +76,16 @@
   font-weight: 300;
   font-size: 1.1vw;
   margin-top: 5%;
+  margin: 5% 2%;
   line-height: 1.6vw;
 
   cursor: default;
   letter-spacing: -0.015em;
 
   max-height: 500px;
+
   overflow: scroll;
+  overflow-wrap: break-word;
   color: #e1dfdd;
 }
 .card-content-details-BlogCardRecent {
