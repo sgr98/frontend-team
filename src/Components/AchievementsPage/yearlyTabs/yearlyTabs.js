@@ -4,12 +4,12 @@ import AchievementsContainer from '../AchievementsContainer/AchievementsContaine
 import './yearlyTabs.css';
 
 const YearlyTabs = ({
-  allData=[]
+  allData={}
 }) => {
     const currYear=new Date().getFullYear()
     const [key, setKey] = useState(`${currYear}`);
     let years=[]
-    var yearlyData=allData
+    var yearlyData=allData[key]
     // for rolling 5 years
     // for (var i = 0; i <= 4; i++) {
     //   years.push(toString(currYear-i));
@@ -22,15 +22,12 @@ const YearlyTabs = ({
         {years.map((value, index) => {
             return <li key={index}>{value}</li>
         })}
-        <Tab eventKey="home" title="Home">
+        <Tab eventKey="2020" title="2020">
           <AchievementsContainer achievementsData={yearlyData}  />
         </Tab>
-        {/* <Tab eventKey="profile" title="Profile">
-          <Sonnet />
+        <Tab eventKey="2019" title="2019" disabled>
+          <AchievementsContainer achievementsData={yearlyData}/>
         </Tab>
-        <Tab eventKey="contact" title="Contact" disabled>
-          <Sonnet />
-        </Tab> */}
       </Tabs>
     );
   }

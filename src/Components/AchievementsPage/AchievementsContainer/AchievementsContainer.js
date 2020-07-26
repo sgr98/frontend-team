@@ -21,11 +21,7 @@ const AchievementsContainer = ({
             margin: 'auto 2%',
           }}>
           {achievementsData.length !== 0 ? (
-            <div>
-              {/* <Button variant="primary" onClick={handleShow}>
-                  Achie
-              </Button> */}
-        
+            <div>        
               <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                   <Modal.Title>Achievement Highlights</Modal.Title>
@@ -36,7 +32,14 @@ const AchievementsContainer = ({
                   <Carousel.Item key={"Car"+index}>
                       <img
                       className="d-block w-100"
-                      src={single} // need to add the backend url prefix [TODO]
+                      src={`${process.env.REACT_APP_BASE_URL}/images/${single}`} // need to add the backend url prefix [TODO]
+                      style={{
+                        display: "block",
+                        maxWidth:"85vw",
+                        maxHeight:"70vh",
+                        width: "auto",
+                        height: "auto"
+                      }}
                       alt={"Highlights Pic#" + index}
                       />
                   </Carousel.Item>

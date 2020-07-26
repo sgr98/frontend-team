@@ -80,18 +80,19 @@
     width: 50%;
   }
   .achievement-card-text{
-    height: calc(1.6rem + 7vw);
+    height: calc(1.6rem + 3.5vw);
   }
   .achievement-card-title {
-    font-size: 4vw;
-    line-height: 4vw;
+    font-size: 2.0vw;
+    line-height: 2vw;
   }
   .achievement-card-caption {
-    font-size: 3vw;
-    line-height: 3vw;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
   }
   .achievement-card-description {
-    font-size: 2.5vw;
+    font-size: 1.0vw;
+
   }
 }
 
@@ -102,18 +103,18 @@
       width: 100%;
     }
     .achievement-card-text{
-      height: calc(1.6rem + 7vw);
+      height: calc(1.6rem + 5vw);
     }
     .achievement-card-title {
-      font-size: 4vw;
-      line-height: 4vw;
+      font-size: 3vw;
+      line-height:3vw;
     }
     .achievement-card-caption {
-      font-size: 3vw;
-      line-height: 3vw;
+      font-size: 2vw;
+      line-height: 2vw;
     }
     .achievement-card-description {
-      font-size: 2.5vw;
+      font-size: 1.5vw;
     }
   }
   

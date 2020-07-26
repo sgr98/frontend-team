@@ -1,21 +1,19 @@
-* {
-box-sizing: border-box;
-}
-*:before,
-*:after {
-box-sizing: border-box;
-}
-
-html,
-body {
- height: 100%;
- position: relative;
-}
-
-.main-container {
-    min-height: 100vh; /* will cover the 100% of viewport */
-    overflow: hidden;
-    display: block;
+html {
     position: relative;
-    padding-bottom: 141.6px; /* height of your footer */
-   }
+    min-height: 100%;
+    }
+body {
+/* Margin bottom by footer height */
+margin-bottom: 150px;
+}
+.ProjectFooter {
+position: absolute;
+bottom: 0;
+width: 100%;
+/* Set the fixed height of the footer here */
+height: 150px;
+}
+
+.nav-container-Navigation{
+    margin-bottom: 0px !important;
+}

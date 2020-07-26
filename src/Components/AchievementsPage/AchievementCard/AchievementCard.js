@@ -12,14 +12,15 @@ const Card_template = ({
           <div className="achievement-card-text">
             <p className="achievement-card-title">{single.title}</p>
             <p className="achievement-card-caption">{single.caption}</p>
-            <div className="achievement-card-description">
-            <ReadMoreReact
+            <div className="achievement-card-description" dangerouslySetInnerHTML={{__html:`${single.description}`}}>
+            {/* removed to accomodate backend design */}
+            {/* <ReadMoreReact
               text={single.description}
               min={210}
               max={220}
               ideal={215}
               readMoreText=".. Read More ..."
-            />
+            /> */}
             </div>
           </div>
           <img className="achievement-card-image"
