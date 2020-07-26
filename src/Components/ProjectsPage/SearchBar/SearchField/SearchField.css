@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 .main-container-SearchField {
-  margin-right: 0;
   display: inline-block;
   float: left;
+  margin-right: 2%;
 }
 
 /* container for search field and search icon */
@@ -48,6 +48,10 @@
   outline: none;
 }
 
+.main-container-SearchField button:focus {
+  box-shadow: none;
+}
+
 /* ==== MEDIA QUERIES ==== */
 @media only screen and (min-width: 520px) {
   .searchInput-SearchField {
@@ -74,17 +78,16 @@
   }
 }
 
-@media only screen and (min-width: 992px) {
+/* @media only screen and (min-width: 992px) {
   .container-SearchField {
-    /* margin-left: 5%; */
     width: 100%;
   }
   .searchInput-SearchField {
     font-size: 1.2rem;
   }
-}
+} */
 
-@media only screen and (max-width: 888px) {
+@media only screen and (max-width: 1120px) {
   .main-container-SearchField {
     margin-right: 0;
     display: block;

@@ -1,0 +1,9 @@
+.toggle-ReadMoreDiv {
+  color: #00bcf2;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.container-ReadMoreDiv {
+  width: 100%;
+}

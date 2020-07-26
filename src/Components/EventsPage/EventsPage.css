@@ -1,9 +1,3 @@
-@media (max-width: 992px) {
-  .EventsPage .nav-container-Navigation {
-    display: none;
-  }
-}
-
 .event-card-heading {
   font-family: 'Roboto Slab';
   font-style: normal;

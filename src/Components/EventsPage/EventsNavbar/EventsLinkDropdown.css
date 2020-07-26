@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;600&display=swap');
+
+/* ==== EVENTS NAV DROPDOWN (MOBILE VER) ==== */
+/* MAIN CONTAINER */
+.main-container-EventsDropContainer {
+  z-index: 1;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-style: normal;
+  font-family: 'Signika', Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: -0.015em;
+  background: #201f1e;
+  box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08),
+    2px 2px 3px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(208, 197, 249, 0.005),
+    10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  height: 2.4em;
+  width: 60%;
+  margin: 4% auto;
+}
+
+.main-container-EventsDropContainer .dropdown-menu {
+  z-index: 50;
+}
+
+/* MAIN CONTAINER TITLE */
+#collasible-nav-dropdown-EventsDropDown {
+  /* background: linear-gradient(90deg, rgba(0, 188, 242, 0.45) 0%, rgba(180, 160, 255, 0.45) 100%); */
+  border-radius: 3px;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 2.4em;
+  padding: 2.5px;
+}
+
+#collasible-nav-dropdown-EventsDropDown > div {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 188, 242, 0.45) 0%,
+    rgba(180, 160, 255, 0.45) 100%
+  );
+  width: 100%;
+  height: 100%;
+  padding-top: 5px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+/* gradient title */
+#collasible-nav-dropdown-EventsDropDown > div > span {
+  font-weight: 400;
+  background: linear-gradient(180deg, #00bcf2, #7593da, #b4a0ff);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+a#collasible-nav-dropdown-EventsDropDown.nav-link::after {
+  content: none;
+}
+
+/* ====DROPDOWN TITLE ==== */
+.main-container-EventsDropContainer > div > div {
+  margin: 0;
+  padding: 0;
+  background-color: #30302f;
+  opacity: 0.99;
+  width: 100%;
+}
+
+.menuitem-EventsDropDown {
+  color: #f0f0f0;
+  background: #201f1e;
+  border-left: rgba(12, 12, 12, 0.7) 3px solid;
+  border-top: rgba(12, 12, 12, 0.7) 1px solid;
+  border-right: rgba(12, 12, 12, 0.7) 3px solid;
+  border-bottom: rgba(12, 12, 12, 0.7) 3px solid;
+  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  white-space: nowrap;
+  font-weight: 300;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuitem-EventsDropDown:hover {
+  color: #f0f0f0;
+  background: linear-gradient(to right, #6a5f8e, #106d88);
+}
+
+#AllEvents-EventsNavDropdown > div,
+#CalendarEvents-EventsNavDropdown > div {
+  background: linear-gradient(180deg, #00bcf2, #7593da, #b4a0ff);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+/* ==== MEDIA QUERIES ==== */
+@media only screen and (min-width: 800px) {
+  .main-container-EventsDropContainer {
+    font-size: 120%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main-container-EventsDropContainer {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .main-container-EventsDropContainer {
+    display: none;
+  }
+}

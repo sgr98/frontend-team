@@ -1,6 +1,7 @@
 import React from 'react';
 import './BlogCardRecent.css';
-import ReadMoreReact from 'read-more-react';
+import parse from 'html-react-parser';
+
 import Remark from '../../ReusableComponents/Remark/Remark';
 
 const BlogCardRecent = ({ data }) => {
@@ -16,19 +17,18 @@ const BlogCardRecent = ({ data }) => {
         <div className="card-content-details-BlogCardRecent">
           <div className="card-topRow-BlogCardRecent">
             <p className="card-title-BlogCardRecent">{data.title}</p>
-            <Remark text="RECENT" />
+            <Remark text="FEATURED" />
           </div>
-          <span className="card-SubHeading-BlogCardRecent">
-            {data.subHeading}
-          </span>
+          <span className="card-SubHeading-BlogCardRecent">{data.author}</span>
 
           <div className="card-description-BlogCardRecent">
-            <ReadMoreReact
+            {/* <ReadMoreReact
               text={data.body}
               max={3000}
               ideal={2500}
               readMoreText="Read More"
-            />
+            /> */}
+            {parse(data.summary)}
           </div>
         </div>
       </div>

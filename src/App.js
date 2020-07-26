@@ -9,6 +9,10 @@ import EventsPage from './Components/EventsPage/EventsPage';
 import BlogsPage from './Components/BlogsPage/BlogsPage';
 import ClubsPage from './Components/ClubsPage/ClubsPage';
 import ProjectsPage from './Components/ProjectsPage/ProjectsPage';
+import AchievementsPage from './Components/AchievementsPage/AchievementsPage';
+import AboutUs from './Components/AboutUs/AboutUs';
+import Article from './Components/Article/Article';
+import ChallengesPage from './Components/ChallengesPage/ChallengesPage';
 
 function App() {
   return (
@@ -17,12 +21,16 @@ function App() {
         {/* <Navigation /> */}
 
         <Switch>
-          {/* <Route path={['/', '/home']} exact component={HomePage} /> */}
-          <Route path={['/', '/home']} exact component={ClubsPage} />
-          <Route path="/Blogs" exact component={BlogsPage} />
+          <Route path={['/', '/home']} exact component={HomePage} />
+          <Route path="/clubs" component={ClubsPage} />
+          <Route path="/Blogs" component={BlogsPage} />
           <Route path="/Events" component={EventsPage} />
           <Route path="/Projects" component={ProjectsPage} />
-          <Route component={Error} />
+          <Route path="/Achievements" component={AchievementsPage} />
+          <Route path="/AboutUs" component={AboutUs} />
+          <Route path="/article" component={Article} />
+          <Route path="/Challenges" component={ChallengesPage} />
+          <Route component={() => <h1>ERROR</h1>} />
         </Switch>
         {/* <Footer /> */}
       </div>

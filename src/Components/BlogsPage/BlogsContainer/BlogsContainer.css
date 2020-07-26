@@ -28,6 +28,12 @@
   width: 33.33333%;
   justify-content: space-between;
 }
+.notFound-BlogsPage {
+  background: linear-gradient(to bottom, #00bcf2, #b4a0ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 @media (max-width: 1100px) {
   .column1-Top-Row-BlogsContainer {

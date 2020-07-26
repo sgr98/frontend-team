@@ -1,0 +1,65 @@
+.achievements-limelight {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 178, 151, 0.5) 0%,
+    rgba(235, 190, 32, 0.5) 50.52%,
+    rgba(0, 178, 151, 0.5) 100%
+  );
+  margin: 0 -2%;
+  margin-bottom: 50px;
+  width: 100vw;
+}
+.achievements-limelight h1 {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 3vw;
+  letter-spacing: -0.015em;
+}
+.achievements-Modal .modal-content {
+  color: #f0f0f0;
+  background: #201f1e;
+  border-radius: 6px;
+  font-family: Roboto Slab, sans-serif;
+  border: 2px solid #323130;
+}
+.achievements-Modal .close span {
+  color: white;
+}
+
+.achievements-Modal .modal-header {
+  border-bottom: 1px solid #323130;
+}
+
+.modal-title.h4 {
+  font-size: 1.8vw;
+  background: linear-gradient(to bottom, #00bcf2, #b4a0ff);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (min-width: 481px) and (max-width: 850px) {
+  .achievements-limelight h1 {
+    font-size: 5vw;
+  }
+  .modal-title.h4 {
+    font-size: 3.5vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .achievements-limelight h1 {
+    font-size: 5vw;
+  }
+  .modal-title.h4 {
+    font-size: 4vw;
+  }
+}
+@media screen and (min-width: 851px) and (max-width: 1200px) {
+  .achievements-limelight h1 {
+    font-size: 3.5vw;
+  }
+  .modal-title.h4 {
+    font-size: 2.5vw;
+  }
+}

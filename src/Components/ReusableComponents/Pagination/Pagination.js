@@ -9,7 +9,7 @@ const PaginationComponent = ({
   nextPageHandler,
   prevPageHandler,
 }) => {
-  const pageNumbers = [];
+  const [pageNumbers, setPageNumbers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [pageNumbersToBeShown, setPageNumbersToBeShown] = useState([]);
 
@@ -38,12 +38,18 @@ const PaginationComponent = ({
   };
 
   useEffect(() => {
-    for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i += 1) {
-      pageNumbers.push(i);
-    }
-    console.log(pageNumbers.length);
     if (pageNumbersToBeShown.length === 0) displayNewNumbersNext(1);
-  });
+  }, [pageNumbers]);
+
+  useEffect(() => {
+    const pageNumbersArray = [];
+    for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i += 1) {
+      pageNumbersArray.push(i);
+    }
+
+    setPageNumbers(pageNumbersArray);
+    setPageNumbersToBeShown([]);
+  }, [totalPosts]);
 
   return (
     <Pagination>

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500&display=swap');
+.root-ChallengeCard {
+  background: rgba(96, 94, 92, 0.25);
+  border: 3px solid #201f1e;
+  box-sizing: border-box;
+  box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08),
+    2px 2px 3px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(208, 197, 249, 0.005),
+    10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  margin: 0.5%;
+  padding: 2%;
+  width: 30%;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.root-ChallengeCard:hover {
+  border: 3px solid #00b7c3;
+}
+
+.title-ChallengeCard {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  box-sizing: border-box;
+  /* line-height: 28px; */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+
+  margin-bottom: 0;
+  padding-bottom: 1%;
+  color: rgba(224, 224, 224, 0.8);
+  overflow-wrap: break-word;
+}
+
+.description-ChallengeCard {
+  font-family: Tajawal, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+
+  padding-bottom: 1%;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  letter-spacing: -0.015em;
+  color: #f0f0f0;
+  margin-bottom: 0;
+  overflow-wrap: break-word;
+}
+
+.url-ChallengeCard {
+  font-family: Tajawal, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+
+  letter-spacing: -0.015em;
+  color: #00bcf2;
+  overflow-wrap: break-word;
+}
+
+.timeDiv-ChallengeCard {
+  background: rgba(224, 224, 224, 0.2);
+  border: 1px solid rgba(224, 224, 224, 0.1);
+  border-radius: 3px;
+  margin: 2% 0%;
+  display: flex;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+
+  color: rgba(224, 224, 224, 0.8);
+}
+
+.timePoint-challengeCard {
+  width: 20%;
+  padding: 1.5%;
+  border-right: 1px solid rgba(224, 224, 224, 0.1);
+}
+
+.time-ChallengeCard {
+  width: 80%;
+  padding: 1.5%;
+}

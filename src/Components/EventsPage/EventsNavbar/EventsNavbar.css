@@ -1,11 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;600&display=swap');
 
 /* ==== MAIN CONTAINER ==== */
 
 .nav-container-EventsNavbar {
-
   background-color: #20201f;
-  font-family: "Signika", Arial, Helvetica, sans-serif;
+  font-family: 'Signika', Arial, Helvetica, sans-serif;
   position: sticky;
   top: -7px;
   z-index: 0;
@@ -27,7 +26,7 @@
 /* ==== Events BRAND NAME ==== */
 
 .main-web-name-EventsNavbar {
-  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
   font-size: 150%;
   background: linear-gradient(
     90deg,
@@ -295,7 +294,7 @@
     font-size: 1.1rem;
   }
 }
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   /* .nav-container-EventsNavbar > nav::before {
     content: '';
 
@@ -324,5 +323,10 @@
     padding-left: 0.3em;
     padding-right: 0.3em;
   }
+}
 
+@media only screen and (max-width: 992px) {
+  .nav-container-EventsNavbar {
+    display: none;
+  }
 }

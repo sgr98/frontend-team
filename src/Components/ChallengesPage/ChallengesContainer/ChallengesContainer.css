@@ -1,0 +1,26 @@
+.root-ChallengesContainer {
+  width: 100%;
+}
+
+.root-ChallengesContainer::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+.root-ChallengesContainer::-webkit-scrollbar:hover {
+  width: 2px;
+  height: 3px;
+}
+
+.root-ChallengesContainer::-webkit-scrollbar-track {
+  background: inherit;
+}
+.root-ChallengesContainer::-webkit-scrollbar-corner {
+  /* 6 */
+  display: none;
+}
+
+.root-ChallengesContainer::-webkit-scrollbar-thumb {
+  background: rgba(224, 224, 224, 0.2);
+  border-radius: 10px;
+}

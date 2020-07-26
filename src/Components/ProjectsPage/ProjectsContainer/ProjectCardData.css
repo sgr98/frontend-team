@@ -4,7 +4,8 @@
 .projectCard-container-ProjectCardData {
   font-family: Roboto, 'Segoe UI', 'Helvetica Neue', sans-serif;
   min-height: 19rem;
-
+  width: 100%;
+  height: auto;
   margin: 1.2% 0;
   border: 1px solid #f0f0f0;
   border-radius: 0;
@@ -53,9 +54,13 @@ p.synopsis-ProjectCardData div.read-more-button,
   text-transform: initial;
   color: #e0e0e0;
   font-size: 0.9rem;
-  display: inline;
+  /* display: inline; */
   font-weight: 300;
   line-height: 1.45em;
+  box-sizing: border-box;
+  max-height: 7.2em;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 p.synopsis-ProjectCardData div.read-more-button {
@@ -83,11 +88,17 @@ p.synopsis-ProjectCardData div.read-more-button {
 
 /* ==== PROJECT PICTURE ==== */
 .projectPicture-ProjectCardData {
-  width: 30vw;
-  float: left;
+  width: 80%;
+
   margin: 4%;
   padding: 0px;
   margin-top: 0em;
+}
+
+.imageDiv-ProjectCardData {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ==== MEDIA QUERIES ==== */
@@ -147,7 +158,8 @@ p.synopsis-ProjectCardData div.read-more-button {
 @media only screen and (min-width: 1200px) {
   /* text sizing */
   .projectCard-container-ProjectCardData {
-    height: 19rem;
+    /* height: 19rem; */
+    height: auto;
   }
   .textBody-ProjectCardData {
     padding-bottom: 1em;

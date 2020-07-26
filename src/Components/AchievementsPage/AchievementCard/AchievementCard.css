@@ -1,0 +1,158 @@
+.achievement-card-container {
+  width: 33%;
+  padding: 20px;
+  display: inline-flex;
+  cursor: pointer;
+}
+.achievement-card-content {
+  position: relative;
+  width: 100%;
+  height: 20vw;
+  margin: auto;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border: 4px solid #201f1e;
+  box-sizing: border-box;
+  box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08),
+    2px 2px 3px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(208, 197, 249, 0.005),
+    10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.achievement-card-content:hover .achievement-card-text {
+  height: 100%;
+  transition: all ease 0.3s;
+  overflow-y: scroll;
+}
+.achievement-card-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: calc(1rem + 7vw);
+  transition: all ease 0.3s;
+  padding-top: 0.8rem;
+  padding-left: 10%;
+  background: linear-gradient(
+      180deg,
+      rgba(235, 178, 32, 0.6) 0%,
+      rgba(255, 138, 0, 0.5) 100%
+    ),
+    rgba(96, 94, 92, 0.2);
+  backdrop-filter: blur(10px);
+}
+.achievement-card-text p {
+  margin-bottom: 0.4rem;
+  text-align: left;
+}
+.achievement-card-image {
+  height: 20vw !important;
+  width: 100%;
+  max-width: 100%;
+}
+.achievement-card-title {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  display: flex;
+  letter-spacing: -0.015em;
+  color: #201f1e;
+}
+.achievement-card-caption {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  text-transform: lowercase;
+  display: flex;
+  letter-spacing: -0.015em;
+  font-variant: small-caps;
+  padding-bottom: 0.5rem;
+  color: #201f1e;
+}
+.achievement-card-description {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  text-align: justify;
+  letter-spacing: -0.015em;
+  padding-bottom: 1rem;
+  color: #201f1e;
+  position: absolute;
+  padding-right: 8%;
+}
+.achievement-card-description .read-more-button {
+  font-weight: bolder;
+  display: inline-block;
+}
+
+@media screen and (min-width: 481px) and (max-width: 850px) {
+  .achievement-card-container {
+    width: 50%;
+  }
+  .achievement-card-content {
+    height: 25vw;
+  }
+  .achievement-card-text {
+    height: calc(1.6rem + 3.5vw);
+  }
+  .achievement-card-title {
+    font-size: 2vw;
+    line-height: 2vw;
+  }
+  .achievement-card-caption {
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+  }
+  .achievement-card-description {
+    font-size: 1vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .achievement-card-container {
+    display: block;
+    width: 100%;
+  }
+  .achievement-card-content {
+    height: 40vw;
+  }
+  .achievement-card-text {
+    height: calc(1.6rem + 5vw);
+  }
+  .achievement-card-title {
+    font-size: 3vw;
+    line-height: 3vw;
+  }
+  .achievement-card-caption {
+    font-size: 2vw;
+    line-height: 2vw;
+  }
+  .achievement-card-description {
+    font-size: 1.5vw;
+  }
+}
+
+@media screen and (min-width: 851px) {
+  .achievement-card-content {
+    height: 20vw;
+  }
+  .achievement-card-container {
+    width: 33%;
+  }
+  .achievement-card-text {
+    height: calc(1.6rem + 3.5vw);
+  }
+  .achievement-card-title {
+    font-size: 2vw;
+    line-height: 2vw;
+  }
+  .achievement-card-caption {
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+  }
+  .achievement-card-description {
+    font-size: 1vw;
+  }
+}
