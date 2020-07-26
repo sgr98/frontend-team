@@ -8,26 +8,28 @@ const YearlyTabs = ({
 }) => {
     const currYear=new Date().getFullYear()
     const [key, setKey] = useState(`${currYear}`);
-    let years=[]
+    let array=Object.keys(allData)
+    array.sort()
+    const min = parseInt(array[0])
+    const max = parseInt(array[array.length-1])
     var yearlyData=allData[key]
+    var years=[]
     // for rolling 5 years
-    // for (var i = 0; i <= 4; i++) {
-    //   years.push(toString(currYear-i));
-    // }
+    for (var i = min; i <= max; i++) {
+      years.push(i);
+    }
     return (
       <Tabs
         activeKey={key}
         onSelect={(k) => setKey(k)}
       >
         {years.map((value, index) => {
-            return <li key={index}>{value}</li>
+            return (
+              <Tab eventKey={value} key={"year-tab-"+value} title={value} disabled={array.indexOf(value)!=-1}>
+              <AchievementsContainer achievementsData={yearlyData}  />
+              </Tab>
+            )
         })}
-        <Tab eventKey="2020" title="2020">
-          <AchievementsContainer achievementsData={yearlyData}  />
-        </Tab>
-        <Tab eventKey="2019" title="2019" disabled>
-          <AchievementsContainer achievementsData={yearlyData}/>
-        </Tab>
       </Tabs>
     );
   }
