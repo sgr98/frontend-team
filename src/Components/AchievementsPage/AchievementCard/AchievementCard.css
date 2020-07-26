@@ -51,6 +51,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 22px;
+    text-transform: lowercase;
     display: flex;
     letter-spacing: -0.015em;
     font-variant: small-caps;

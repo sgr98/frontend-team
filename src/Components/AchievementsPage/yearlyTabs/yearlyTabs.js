@@ -6,18 +6,17 @@ import './yearlyTabs.css';
 const YearlyTabs = ({
   allData={}
 }) => {
-    const currYear=new Date().getFullYear()
-    const [key, setKey] = useState(`${currYear}`);
-    let array=Object.keys(allData)
+    var array=Object.keys(allData)
+    const [key, setKey] = useState(array[array.length-1]);
     array.sort()
     const min = parseInt(array[0])
     const max = parseInt(array[array.length-1])
-    var yearlyData=allData[key]
     var years=[]
     // for rolling 5 years
-    for (var i = min; i <= max; i++) {
+    for (var i = max; i >= min; i--) {
       years.push(i);
     }
+    var yearlyData=allData[key]
     return (
       <Tabs
         activeKey={key}
@@ -25,7 +24,7 @@ const YearlyTabs = ({
       >
         {years.map((value, index) => {
             return (
-              <Tab eventKey={value} key={"year-tab-"+value} title={value} disabled={array.indexOf(value)!=-1}>
+              <Tab eventKey={value} key={"year-tab-"+value} title={value} disabled={array.indexOf(`${value}`)==-1}>
               <AchievementsContainer achievementsData={yearlyData}  />
               </Tab>
             )
