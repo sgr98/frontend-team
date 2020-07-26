@@ -1,6 +1,6 @@
 .achievements-limelight{
     background: linear-gradient(90deg, rgba(0, 178, 151, 0.5) 0%, rgba(235, 190, 32, 0.5) 50.52%, rgba(0, 178, 151, 0.5) 100%);
-    margin: -2%;
+    margin: 0 -2%;
     margin-bottom: 50px;
     width: 100vw;
 }
@@ -8,6 +8,33 @@
     font-family: Roboto Slab;
 font-style: normal;
 font-weight: 300;
-font-size: 6vw;
+font-size: 3vw;
 letter-spacing: -0.015em;
+}
+.modal-title.h4{
+    font-size: 1.8vw;
+}
+@media screen and (min-width:481px) and (max-width: 850px) {
+    .achievements-limelight h1{
+        font-size: 5vw;
+    }
+    .modal-title.h4{
+        font-size: 3.5vw;
+    }
+}
+@media screen and (max-width: 480px) {
+    .achievements-limelight h1{
+        font-size: 5vw;
+    }
+    .modal-title.h4{
+        font-size: 4vw;
+    }
+}
+@media screen and (min-width: 851px) and (max-width: 1200px){
+    .achievements-limelight h1{
+        font-size: 3.5vw;
+    }
+    .modal-title.h4{
+        font-size: 2.5vw;
+    }
 }
