@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './AchievementsContainer.css';
 import Card from '../AchievementCard/AchievementCard';
+import CustomHR from '../../ReusableComponents/CustomHR/CustomHR';
 import { Modal, Carousel } from 'react-bootstrap';
 
 const AchievementsContainer = ({ achievementsData = [], year = '' }) => {
@@ -32,6 +33,7 @@ const AchievementsContainer = ({ achievementsData = [], year = '' }) => {
             <Modal.Header closeButton>
               <Modal.Title>Achievement Highlights</Modal.Title>
             </Modal.Header>
+            <CustomHR />
             <Modal.Body>
               <Carousel>
                 {gallery.map((single, index) => (

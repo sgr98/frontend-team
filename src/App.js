@@ -21,8 +21,8 @@ function App() {
         {/* <Navigation /> */}
 
         <Switch>
-          {/* <Route path={['/', '/home']} exact component={HomePage} /> */}
-          <Route path={['/', '/home']} exact component={ClubsPage} />
+          <Route path={['/', '/home']} exact component={HomePage} />
+          <Route path="clubs" component={ClubsPage} />
           <Route path="/Blogs" component={BlogsPage} />
           <Route path="/Events" component={EventsPage} />
           <Route path="/Projects" component={ProjectsPage} />

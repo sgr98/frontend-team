@@ -59,8 +59,9 @@
 }
 .event-card-btn-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin-right: 10px;
+  margin-top: 2%;
 }
 .event-card-btn {
   border: 1px solid;
@@ -190,7 +191,11 @@
   /* text-align: center; */
   padding-left: 1em;
   padding-right: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   width: 100%;
+  height: 100%;
   top: 50%;
   left: 50%;
   opacity: 0;
@@ -255,6 +260,7 @@
 
 .Event-Modal .modal-header {
   border: none;
+
   padding-left: 7%;
   /* display: flex;
   justify-content: center; */
@@ -267,6 +273,10 @@
 /* .Event-Modal .modal-footer .btn {
   display: none;
 } */
+
+.EventDetails-EventModal {
+  margin-bottom: 2%;
+}
 .Event-Modal .modal-body {
   border: none;
   overflow-wrap: break-word;
@@ -278,8 +288,13 @@
 .EventModalBody {
   margin: auto 6%;
 }
+.EventDetails-EventModal {
+  border-bottom: 2px solid #323130;
+}
+
 .description-EventModal {
   font-family: Roboto;
+  /* margin-top: 2%; */
 }
 
 .secondaryHeading-EventModal {
@@ -408,6 +423,13 @@
   }
   .Event-Modal .modal-title {
     width: 70%;
+  }
+}
+@media (min-width: 700px) {
+  .EventDetails-EventModal {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #323130;
   }
 }
 

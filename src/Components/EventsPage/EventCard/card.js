@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './card.css';
 import axios from 'axios';
 import { Modal, Button, Toast } from 'react-bootstrap';
-
+import CustomHR from '../../ReusableComponents/CustomHR/CustomHR';
 import parse from 'html-react-parser';
 import EmailIcon from './emailIcon.png';
 
@@ -103,23 +103,31 @@ const Card = ({ single, showButton }) => {
         <Modal.Header closeButton>
           <Modal.Title>{single.name}</Modal.Title>
         </Modal.Header>
+        <CustomHR />
         <Modal.Body>
           <div className="EventModalBody">
-            <p className="secondaryHeading-EventModal">
-              CATEGORY: {single.categories.toUpperCase()}
-            </p>
+            <div className="EventDetails-EventModal">
+              <div>
+                <p className="secondaryHeading-EventModal">
+                  CATEGORY: {single.categories.toUpperCase()}
+                </p>
 
-            <p className="secondaryHeading-EventModal">
-              PRIZE: Certificate and exciting goodies
-            </p>
+                <p className="secondaryHeading-EventModal">
+                  PRIZE: Certificate and exciting goodies
+                </p>
+              </div>
+              <div>
+                <p className="secondaryHeading-EventModal">{single.date} </p>
+                <p className="secondaryHeading-EventModal">
+                  {single.venue} - {single.time}
+                </p>
+              </div>
+            </div>
 
             <div className="description-EventModal">
               {parse(single.description)}
             </div>
-            <p className="secondaryHeading-EventModal">{single.date} </p>
-            <p className="secondaryHeading-EventModal">
-              {single.venue} - {single.time}
-            </p>
+
             {showButton ? (
               <div className="emailInput-EventModal">
                 <label htmlFor="email">EMAIL-ID</label>
