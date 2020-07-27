@@ -25,7 +25,14 @@ function App() {
           <Route path="/clubs" component={ClubsPage} />
           <Route path="/Blogs" component={BlogsPage} />
           <Route path="/Events" component={EventsPage} />
-          <Route path="/Projects" component={ProjectsPage} />
+
+          <Route
+            path="/Projects/:id"
+            exact
+            component={() => <Article category="project" />}
+          />
+          <Route path="/Projects" exact component={ProjectsPage} />
+
           <Route path="/Achievements" component={AchievementsPage} />
           <Route path="/AboutUs" component={AboutUs} />
           <Route path="/article" component={Article} />

@@ -1,6 +1,6 @@
 import React from 'react';
 import './BlogCard.css';
-import { Link } from 'react-router-dom';
+
 import { withRouter } from 'react-router';
 import { Button } from 'react-bootstrap';
 

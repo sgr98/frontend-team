@@ -9,7 +9,7 @@ const AchievementsContainer = ({ achievementsData = [], year = '' }) => {
   const [gallery, setGallery] = useState([]);
   const handleClose = () => setShow(false);
   const handleShow = (e, gallery_a) => {
-    if (e.target.className != 'read-more-button') {
+    if (e.target.className !== 'read-more-button') {
       setGallery(gallery_a);
       setShow(true);
     }
