@@ -65,7 +65,7 @@ function ClubsFeatured() {
             className="ClubsFeatured-button"
             onClick={() => setReadMore(!readMore)}
           >
-            Read More About Us
+            {!readMore ? "Read More About Us" : "Show Less"}
           </span>
           <span className="ClubsFeatured-button">Projects</span>
           <span className="ClubsFeatured-button">Resources</span>
