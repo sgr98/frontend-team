@@ -1,17 +1,28 @@
 import React from 'react';
 import './BlogCard.css';
-
+import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router';
 import { Button } from 'react-bootstrap';
 
 // Here styling is same as the event card
 
-const Card = ({ single }) => {
+const Card = (props) => {
+  const { single } = props;
   let imageSrc =
     'https://images.unsplash.com/photo-1503560683205-acf61ac68a3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80';
 
   if (single.gallery.length !== 0) {
     imageSrc = `${process.env.REACT_APP_BASE_URL}/images/${single.gallery[0]}`;
   }
+
+  const navigationHandler = () => {
+    // console.log(single._id);
+
+    props.history.push({
+      pathname: `${single._id}`,
+    });
+  };
+  // console.log(single);
 
   return (
     <div className="event-card-container">
@@ -50,7 +61,11 @@ const Card = ({ single }) => {
           </p>
 
           <div className="card-btn-container-BlogCard">
-            <Button variant="outline" className="card-btn-BlogCard">
+            <Button
+              variant="outline"
+              className="card-btn-BlogCard"
+              onClick={navigationHandler}
+            >
               Read Blog
             </Button>
           </div>
@@ -60,4 +75,4 @@ const Card = ({ single }) => {
   );
 };
 
-export default Card;
+export default withRouter(Card);

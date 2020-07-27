@@ -1,5 +1,6 @@
 /* eslint-disable no-nested-ternary */
 import React, { useState, useEffect, useLayoutEffect } from 'react';
+import { withRouter } from 'react-router';
 import './BlogsContainer.css';
 import axios from 'axios';
 import SearchBar from '../SearchBar/SearchBar';
@@ -7,7 +8,8 @@ import BlogCard from '../BlogCard/BlogCard';
 import BlogCardRecent from '../BlogCardRecent/BlogCardRecent';
 import PaginationComponent from '../../ReusableComponents/Pagination/Pagination';
 
-const BlogsContainer = ({ clubName, url }) => {
+const BlogsContainer = (props) => {
+  const { clubName, url } = props;
   const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState([]);
 
@@ -52,7 +54,7 @@ const BlogsContainer = ({ clubName, url }) => {
         `${process.env.REACT_APP_BASE_URL}/front/blogs/${clubName}${queryEndPoint}`
       )
       .then((res) => {
-        // console.log(res);
+        //console.log(res);
         setPosts(Object.keys(res.data).length !== 0 ? res.data : []);
         setLoading(false);
       });
@@ -95,7 +97,7 @@ const BlogsContainer = ({ clubName, url }) => {
   }, [currentPosts]);
 
   // console.log('blogs', blogsList, loading, posts);
-
+  // console.log(props);
   return (
     <>
       <SearchBar
@@ -146,4 +148,4 @@ const BlogsContainer = ({ clubName, url }) => {
   );
 };
 
-export default BlogsContainer;
+export default withRouter(BlogsContainer);

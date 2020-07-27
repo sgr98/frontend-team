@@ -2,7 +2,6 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import parse from 'html-react-parser';
-import ProjectPicture from './ProjectPicture.png';
 import './ProjectCardData.css';
 import KeywordsList from '../KeywordsList/KeywordsList';
 

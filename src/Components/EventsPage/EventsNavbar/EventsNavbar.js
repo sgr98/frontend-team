@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './EventsNavbar.css';
 import './EventsLinkDropdown';
-import EventsLinkDropdown from './EventsLinkDropdown';
+// import EventsLinkDropdown from './EventsLinkDropdown';
 
 export class EventsNavbar extends Component {
   constructor(props) {

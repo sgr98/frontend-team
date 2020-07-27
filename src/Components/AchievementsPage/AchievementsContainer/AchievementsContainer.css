@@ -31,7 +31,7 @@
   border-bottom: 1px solid #323130;
 }
 
-.modal-title.h4 {
+.achievements-Modal .modal-title.h4 {
   font-size: 1.8vw;
   background: linear-gradient(to bottom, #00bcf2, #b4a0ff);
 
@@ -43,7 +43,7 @@
   .achievements-limelight h1 {
     font-size: 5vw;
   }
-  .modal-title.h4 {
+  .achievements-Modal .modal-title.h4 {
     font-size: 3.5vw;
   }
 }
@@ -51,7 +51,7 @@
   .achievements-limelight h1 {
     font-size: 5vw;
   }
-  .modal-title.h4 {
+  .achievements-Modal .modal-title.h4 {
     font-size: 4vw;
   }
 }
@@ -59,7 +59,7 @@
   .achievements-limelight h1 {
     font-size: 3.5vw;
   }
-  .modal-title.h4 {
+  .achievements-Modal .modal-title.h4 {
     font-size: 2.5vw;
   }
 }

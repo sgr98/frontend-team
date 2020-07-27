@@ -4,7 +4,7 @@ import { Modal, Button } from 'react-bootstrap';
 
 import ReferenceIcon from './ReferenceIcon.png';
 
-const ReferencesButton = () => {
+const ReferencesButton = ({ links }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -30,51 +30,15 @@ const ReferencesButton = () => {
         </Modal.Header>
         <Modal.Body>
           <ul>
-            <li>
-              <a
-                href="https://en.wikipedia.org/wiki/Copyright_infringement"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                https://en.wikipedia.org/wiki/Copyright_infringement
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://en.wikipedia.org/wiki/Copyright_infringement"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                https://en.wikipedia.org/wiki/Copyright_infringement
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://en.wikipedia.org/wiki/Copyright_infringement"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                https://en.wikipedia.org/wiki/Copyright_infringement
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://en.wikipedia.org/wiki/Copyright_infringement"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                https://en.wikipedia.org/wiki/Copyright_infringement
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://en.wikipedia.org/wiki/Copyright_infringement"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                https://en.wikipedia.org/wiki/Copyright_infringement
-              </a>
-            </li>
+            {links.map((link) => {
+              return (
+                <li key={link}>
+                  <a href={link} rel="noopener noreferrer" target="_blank">
+                    {link}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </Modal.Body>
         <Modal.Footer>

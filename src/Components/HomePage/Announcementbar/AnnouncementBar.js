@@ -38,6 +38,11 @@ class AnnouncementBar extends Component {
     return this.state.fading !== state;
   }
 
+  componentWillUnmount() {
+    clearTimeout(this.timeOut);
+    clearInterval(this.interval);
+  }
+
   increment = () => {
     let current = this.state.currentIndex;
 
@@ -47,7 +52,7 @@ class AnnouncementBar extends Component {
     }
     this.setState({ fading: false });
 
-    setTimeout(() => {
+    this.timeOut = setTimeout(() => {
       this.setState({ fading: true });
       this.setState({ currentIndex: current });
     }, 500);
