@@ -4,6 +4,7 @@ import { InputGroup, FormControl, Button } from 'react-bootstrap';
 import './SearchBar.css';
 import SearchBarIcon from './SearchBarIcon.png';
 import TechManiacsDropDown from './TechManiacsDropDown';
+import WriteNewBlogButton from './WriteNewBlog/WriteNewBlog';
 
 const SearchBar = ({ url, searchKeyword, currentSelected }) => {
   const [value, setValue] = useState('');
@@ -48,6 +49,7 @@ const SearchBar = ({ url, searchKeyword, currentSelected }) => {
         </InputGroup>
       </div>
       <TechManiacsDropDown url={url} currentSelected={currentSelected} />
+      <WriteNewBlogButton />     
     </div>
   );
 };
