@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
+import SubmitFormButton from '../../ReusableComponents/SubmitFormButton/SubmitFormButton';
 import { InputGroup, FormControl, Button } from 'react-bootstrap';
 import './SearchBar.css';
 import SearchBarIcon from './SearchBarIcon.png';
@@ -48,6 +49,10 @@ const SearchBar = ({ url, searchKeyword, currentSelected }) => {
         </InputGroup>
       </div>
       <TechManiacsDropDown url={url} currentSelected={currentSelected} />
+      <SubmitFormButton
+        title="Submit Your Blog"
+        redirectionLink="blog/auth/google"
+      />
     </div>
   );
 };
