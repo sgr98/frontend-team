@@ -13,6 +13,7 @@ import AchievementsPage from './Components/AchievementsPage/AchievementsPage';
 import AboutUs from './Components/AboutUs/AboutUs';
 import Article from './Components/Article/Article';
 import ChallengesPage from './Components/ChallengesPage/ChallengesPage';
+import WebTeamPage from './Components/WebTeamPage/WebTeamPage';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/AboutUs" component={AboutUs} />
           <Route path="/article" component={Article} />
           <Route path="/Challenges" component={ChallengesPage} />
+          <Route path="/WebTeam" component={WebTeamPage} />
           <Route component={() => <h1>ERROR</h1>} />
         </Switch>
         {/* <Footer /> */}

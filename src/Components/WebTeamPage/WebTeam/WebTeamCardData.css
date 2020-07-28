@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/* ==== CARD VIEW ==== */
+.data-container-WebTeamCardData {
+  position: relative;
+  height: 6rem;
+  margin: 1.5% 0;
+  border: 4px solid #201f1e;
+  box-sizing: border-box;
+  box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08),
+    2px 2px 3px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(208, 197, 249, 0.005),
+    10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+  color: #f9f9f9;
+}
+
+/* ==== TEXT ALLIGNMENT AND STYLING ==== */
+.textBody-WebTeamCardData {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+
+  padding-top: 2.5%;
+  padding-right: 1%;
+  padding-bottom: 1px;
+  padding-left: 1%;
+}
+
+/* roll-no,name and designation */
+.rollNo-WebTeamCardData {
+  align-self: flex-start;
+  text-align: left;
+  margin: 1px;
+  text-transform: uppercase;
+  color: #e1dfdd;
+  font-size: 0.8rem;
+}
+.name-WebTeamCardData {
+  align-self: flex-start;
+  text-align: left;
+  margin: 1px;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.designation-WebTeamCardData {
+  align-self: flex-start;
+  text-align: left;
+  margin: 1px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-family: Roboto, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+}
+
+/* background based on Designation */
+.Top-WebTeamCardData {
+  background: linear-gradient(
+      90deg,
+      rgba(238, 9, 121, 0.75) 0%,
+      rgba(255, 106, 0, 0.75) 100%
+    ),
+    rgba(96, 94, 92, 0.2);
+}
+
+.Middle-WebTeamCardData {
+  background: linear-gradient(
+    89.55deg,
+    rgba(0, 178, 148, 0.6) 0.09%,
+    rgba(91, 135, 255, 0.6) 99.9%
+  );
+}
+
+.Bottom-WebTeamCardData {
+  background: linear-gradient(
+    89.55deg,
+    rgba(0, 178, 148, 0.6) 0.09%,
+    rgba(91, 135, 255, 0.6) 99.9%
+  );
+}
+.Middle-WebTeamCardData,
+.Bottom-WebTeamCardData {
+  height: 4rem;
+}
+
+/* ==== DISPLAY PICTURE STYLING ==== */
+.dPicture-border-WebTeamCardData {
+  box-sizing: border-box;
+  position: relative;
+  margin: auto 2% auto 5%;
+  width: 4rem;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #e3008c, #724dff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.displayPicture-WebTeamCardData {
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+
+/* ==== MEDIA QUERIES ==== */
+
+@media only screen and (min-width: 576px) {
+  .data-container-WebTeamCardData {
+    height: 6.7rem;
+    margin: 2% 0;
+  }
+  .dPicture-border-WebTeamCardData {
+    width: 5.2rem;
+  }
+  /* text sizing */
+  .textBody-WebTeamCardData {
+    padding-top: 10px;
+    padding-left: 6%;
+  }
+  .rollNo-WebTeamCardData {
+    font-size: 0.9rem;
+  }
+  .name-WebTeamCardData {
+    font-size: 1.3rem;
+  }
+  .designation-WebTeamCardData {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .data-container-WebTeamCardData {
+    height: 6.9rem;
+  }
+  .textBody-WebTeamCardData {
+    padding-top: 4%;
+    padding-left: 3%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .data-container-WebTeamCardData {
+    height: 8.7rem;
+  }
+  .dPicture-border-WebTeamCardData {
+    width: 5.9rem;
+    margin: auto 3% auto 7%;
+  }
+  /* text sizing */
+  .textBody-WebTeamCardData {
+    padding-top: 4%;
+    padding-left: 6%;
+  }
+  .rollNo-WebTeamCardData {
+    font-size: 1.1rem;
+  }
+  .name-WebTeamCardData {
+    font-size: 1.6rem;
+  }
+  .designation-WebTeamCardData {
+    font-size: 1.13rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .data-container-WebTeamCardData {
+    height: 9.7rem;
+  }
+  .dPicture-border-WebTeamCardData {
+    width: 7.8rem;
+  }
+
+  /* text sizing */
+  .textBody-WebTeamCardData {
+    padding-top: 3.5%;
+    padding-left: 3.5%;
+  }
+  .rollNo-WebTeamCardData {
+    font-size: 1.2rem;
+  }
+  .name-WebTeamCardData {
+    font-size: 1.8rem;
+  }
+  .designation-WebTeamCardData {
+    font-size: 1.3rem;
+  }
+}
