@@ -81,7 +81,10 @@ export function Navigation() {
             </NavLink>
 
             {/* PROJECTS */}
-            <NavDropdown
+            <NavLink className="nav-link-Navigation " to="/projects">
+              Projects
+            </NavLink>
+            {/* <NavDropdown
               className="nav-dropdown-Navigation"
               title="Projects"
               id="collasible-nav-dropdown"
@@ -104,7 +107,7 @@ export function Navigation() {
               >
                 Infrastructure
               </NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
 
             {/* TECH TEAMS */}
             <NavDropdown

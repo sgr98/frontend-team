@@ -48,7 +48,8 @@ const ArticleBody = ({ data, category }) => {
       <ArticleHeader
         title={data.title}
         teamMembers={data.team_members}
-        author={data.author}
+        author={data.creator}
+        chiefGuest={data.chief_guest || 'NULL'}
       />
       <div className="articleContent-ArticleBody">
         {data.summary ? parse(data.summary) : parse(data.description)}

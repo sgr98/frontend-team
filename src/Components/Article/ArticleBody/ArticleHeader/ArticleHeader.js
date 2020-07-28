@@ -14,6 +14,11 @@ const ArticleHeader = (props) => {
       {props.author ? (
         <p className="teamMembers-ArticleHeader">Author: {props.author}</p>
       ) : null}
+      {props.chiefGuest !== 'NULL' ? (
+        <p className="teamMembers-ArticleHeader">
+          Chief Guest: {props.chiefGuest}
+        </p>
+      ) : null}
     </div>
   );
 };
