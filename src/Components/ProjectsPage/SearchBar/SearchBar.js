@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SubmitFormButton from '../../ReusableComponents/SubmitFormButton/SubmitFormButton';
 import SearchField from './SearchField/SearchField';
 import ProjectFields from './ProjectFields/ProjectFields';
 import filterIcon from './filter.png';
@@ -99,6 +100,10 @@ class SearchBar extends Component {
               </div>
             </div>
           </div>
+          <SubmitFormButton
+            title="Submit Your Project"
+            redirectionLink="projects/auth/google"
+          />
         </div>
       </div>
     );
