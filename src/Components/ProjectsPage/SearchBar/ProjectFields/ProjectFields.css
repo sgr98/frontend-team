@@ -167,6 +167,11 @@
     display: block;
     float: none;
   }
+  .project-fields-container .dropdown-menu {
+    padding: 0;
+    width: 100%;
+    background: #201f1e;
+  }
 
   .project-fields-container > div > .main-dropdown-button-ProjectsPage {
     width: 100%;

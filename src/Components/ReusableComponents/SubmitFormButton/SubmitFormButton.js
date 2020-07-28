@@ -11,9 +11,13 @@ const SubmitFormButton = (props) => {
   };
 
   return (
-    <div className="main-container-SubmitFormButton" onClick={onClickHandler}>
+    <div className="main-container-SubmitFormButton">
       <div className="container-SubmitFormButton">
-        <button type="button" className="button-SubmitFormButton">
+        <button
+          type="button"
+          className="button-SubmitFormButton"
+          onClick={onClickHandler}
+        >
           <div className="title-SubmitFormButton">
             <div>{props.title}</div>
           </div>
