@@ -47,7 +47,7 @@ const Article = (props) => {
       ) : (
         <div>
           {props.category === 'project' ? <Navigation /> : null}
-          <ArticleBody data={article} />
+          <ArticleBody data={article} category={props.category} />
 
           {/* The below ternary condition has been added because projects and blogs has slightly different data */}
           {props.category === 'blog' ? (

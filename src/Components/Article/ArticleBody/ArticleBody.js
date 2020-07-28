@@ -15,7 +15,7 @@ const ArticleBody = ({ data, category }) => {
   };
 
   let buttonGroup = null;
-
+  console.log(category);
   if (category === 'blog') {
     buttonGroup = (
       <div className="ButtonGroup-ArticleBody">
