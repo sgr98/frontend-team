@@ -4,7 +4,7 @@
 /* ==== CARD VIEW ==== */
 .data-container-WebTeamCardData {
   position: relative;
-  height: 6rem;
+  height: 6.7rem;
   margin: 1.5% 0;
   border: 4px solid #201f1e;
   box-sizing: border-box;
@@ -34,6 +34,7 @@
 }
 
 /* roll-no,name and designation */
+.top-rollNo-WebTeamCardData,
 .rollNo-WebTeamCardData {
   align-self: flex-start;
   text-align: left;
@@ -42,15 +43,17 @@
   color: #e1dfdd;
   font-size: 0.8rem;
 }
+.top-name-WebTeamCardData,
 .name-WebTeamCardData {
   align-self: flex-start;
   text-align: left;
   margin: 1px;
   text-transform: capitalize;
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
+.top-designation-WebTeamCardData,
 .designation-WebTeamCardData {
   align-self: flex-start;
   text-align: left;
@@ -60,8 +63,18 @@
   font-family: Roboto, 'Segoe UI', 'Helvetica Neue', sans-serif;
   font-weight: 500;
 }
+/* font sizing base on Tier */
+.rollNo-WebTeamCardData {
+  font-size: 0.7rem;
+}
+.name-WebTeamCardData {
+  font-size: 1.15rem;
+}
+.designation-WebTeamCardData {
+  font-size: 0.8rem;
+}
 
-/* background based on Designation */
+/* background based on Tier */
 .Top-WebTeamCardData {
   background: linear-gradient(
       90deg,
@@ -86,108 +99,212 @@
     rgba(91, 135, 255, 0.6) 99.9%
   );
 }
+
 .Middle-WebTeamCardData,
 .Bottom-WebTeamCardData {
-  height: 4rem;
+  height: 5.8rem;
 }
 
 /* ==== DISPLAY PICTURE STYLING ==== */
+.displayPicture-WebTeamCardData {
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+/* dp styling for top tier heads */
+.top-dPicture-border-WebTeamCardData,
 .dPicture-border-WebTeamCardData {
   box-sizing: border-box;
   position: relative;
   margin: auto 2% auto 5%;
-  width: 4rem;
+  width: 17.5vw;
   border-radius: 50%;
   background: linear-gradient(to bottom, #e3008c, #724dff);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.displayPicture-WebTeamCardData {
-  border-radius: 50%;
-  border: 2px solid transparent;
+/* dp styling for midlle/bottom tier heads */
+.dPicture-border-WebTeamCardData {
+  margin: auto 2% auto 5%;
+  width: 16vw;
 }
 
 /* ==== MEDIA QUERIES ==== */
 
 @media only screen and (min-width: 576px) {
   .data-container-WebTeamCardData {
-    height: 6.7rem;
+    height: 7.5rem;
     margin: 2% 0;
+    padding-left: 0px;
+  }
+
+  /* card/text/dp sizing for midlle/bottom tier*/
+  .Middle-WebTeamCardData,
+  .Bottom-WebTeamCardData {
+    height: 6.3rem;
   }
   .dPicture-border-WebTeamCardData {
-    width: 5.2rem;
+    width: 5rem;
+    margin: auto 2% auto 4%;
   }
-  /* text sizing */
+  .rollNo-WebTeamCardData {
+    font-size: 0.8rem;
+  }
+  .name-WebTeamCardData {
+    font-size: 1.2rem;
+    line-height: 0.9em;
+  }
+  .designation-WebTeamCardData {
+    font-size: 0.8rem;
+  }
+
+  /* text sizing for top tier*/
   .textBody-WebTeamCardData {
-    padding-top: 10px;
-    padding-left: 6%;
+    padding-top: 6%;
+    padding-left: 5%;
+  }
+  .top-rollNo-WebTeamCardData {
+    font-size: 0.8rem;
+  }
+  .top-name-WebTeamCardData {
+    font-size: 1.23rem;
+    line-height: 1em;
+  }
+  .top-designation-WebTeamCardData {
+    font-size: 0.9rem;
+  }
+  .top-dPicture-border-WebTeamCardData {
+    width: 5.4rem;
+    margin: auto 2% auto 4%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .data-container-WebTeamCardData {
+    height: 8rem;
+  }
+  /* card/text/dp sizing for midlle/bottom tier*/
+  .Middle-WebTeamCardData,
+  .Bottom-WebTeamCardData {
+    height: 6.7rem;
+  }
+  .dPicture-border-WebTeamCardData {
+    width: 5.4rem;
+    margin: auto 2% auto 4%;
   }
   .rollNo-WebTeamCardData {
     font-size: 0.9rem;
   }
   .name-WebTeamCardData {
     font-size: 1.3rem;
+    line-height: 0.9em;
   }
   .designation-WebTeamCardData {
+    font-size: 0.9rem;
+  }
+  /* text sizing for top tier*/
+  .textBody-WebTeamCardData {
+    padding-top: 4.5%;
+    padding-left: 2%;
+  }
+  .top-rollNo-WebTeamCardData {
     font-size: 1rem;
   }
-}
-
-@media only screen and (min-width: 768px) {
-  .data-container-WebTeamCardData {
-    height: 6.9rem;
+  .top-name-WebTeamCardData {
+    font-size: 1.5rem;
+    line-height: 0.9em;
   }
-  .textBody-WebTeamCardData {
-    padding-top: 4%;
-    padding-left: 3%;
+  .top-designation-WebTeamCardData {
+    font-size: 1rem;
+  }
+  .top-dPicture-border-WebTeamCardData {
+    width: 5.8rem;
+    margin: auto 2% auto 4%;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .data-container-WebTeamCardData {
-    height: 8.7rem;
+    height: 10.2rem;
+  }
+  /* card/text/dp sizing for midlle/bottom tier*/
+  .Middle-WebTeamCardData,
+  .Bottom-WebTeamCardData {
+    height: 7.2rem;
   }
   .dPicture-border-WebTeamCardData {
-    width: 5.9rem;
-    margin: auto 3% auto 7%;
-  }
-  /* text sizing */
-  .textBody-WebTeamCardData {
-    padding-top: 4%;
-    padding-left: 6%;
+    width: 5.7rem;
+    margin: auto 2% auto 4%;
   }
   .rollNo-WebTeamCardData {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .name-WebTeamCardData {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    line-height: 1em;
   }
   .designation-WebTeamCardData {
-    font-size: 1.13rem;
+    font-size: 1rem;
+  }
+  /* text sizing for toptier*/
+  .textBody-WebTeamCardData {
+    padding-top: 4.2%;
+    padding-left: 3%;
+  }
+  .top-rollNo-WebTeamCardData {
+    font-size: 1.3rem;
+  }
+  .top-name-WebTeamCardData {
+    font-size: 1.8rem;
+    line-height: 1.1em;
+  }
+  .top-designation-WebTeamCardData {
+    font-size: 1.25rem;
+  }
+  .top-dPicture-border-WebTeamCardData {
+    width: 7.7rem;
+    margin: auto 3% auto 4%;
   }
 }
 @media only screen and (min-width: 1200px) {
   .data-container-WebTeamCardData {
-    height: 9.7rem;
+    height: 11rem;
+  }
+  /* card/text/dp sizing for midlle/bottom tier*/
+  .Middle-WebTeamCardData,
+  .Bottom-WebTeamCardData {
+    height: 7.6rem;
   }
   .dPicture-border-WebTeamCardData {
-    width: 7.8rem;
-  }
-
-  /* text sizing */
-  .textBody-WebTeamCardData {
-    padding-top: 3.5%;
-    padding-left: 3.5%;
+    width: 6rem;
+    margin: auto 2% auto 4%;
   }
   .rollNo-WebTeamCardData {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .name-WebTeamCardData {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    line-height: 1.2em;
   }
   .designation-WebTeamCardData {
-    font-size: 1.3rem;
+    font-size: 1rem;
+  }
+  /* text sizing for toptier*/
+  .textBody-WebTeamCardData {
+    padding-top: 3.5%;
+    padding-left: 3%;
+  }
+  .top-rollNo-WebTeamCardData {
+    font-size: 1.5rem;
+  }
+  .top-name-WebTeamCardData {
+    font-size: 2rem;
+  }
+  .top-designation-WebTeamCardData {
+    font-size: 1.4rem;
+  }
+  .top-dPicture-border-WebTeamCardData {
+    width: 8.7rem;
+    margin: auto 3% auto 5%;
   }
 }

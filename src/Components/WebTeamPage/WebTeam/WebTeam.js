@@ -90,12 +90,7 @@ export const WebTeam = () => {
       {members.map((member) => {
         if (member.tier === 'top') {
           return (
-            <Col
-              xs={{ span: 10, offset: 1 }}
-              sm={{ span: 6, offset: 0 }}
-              key={Math.random()}
-              className="pt-1 px-2"
-            >
+            <Col xs={12} sm={6} key={Math.random()} className="pt-1 px-2">
               <WebTeamCardData member={member} />
             </Col>
           );
@@ -109,8 +104,8 @@ export const WebTeam = () => {
         if (member.tier === 'middle') {
           return (
             <Col
-              xs={{ span: 10, offset: 1 }}
-              sm={{ span: 6, offset: 0 }}
+              xs={12}
+              sm={6}
               lg={4}
               key={Math.random()}
               className="py-0 px-2"
@@ -128,7 +123,7 @@ export const WebTeam = () => {
         if (member.tier === 'bottom') {
           return (
             <Col
-              sm={{ span: 10, offset: 1 }}
+              sm={{ span: 10, offset: 0 }}
               sm={{ span: 6, offset: 0 }}
               lg={4}
               key={Math.random()}
@@ -143,7 +138,7 @@ export const WebTeam = () => {
   );
   return (
     <div className="container-WebTeam">
-      <Container fluid className="px-5">
+      <Container fluid className="px-4">
         {topheads}
         {middleheads}
         {bottomheads}
