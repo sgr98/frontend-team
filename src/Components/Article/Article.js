@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import React, { useEffect, useState, useRef } from 'react';
 import { withRouter } from 'react-router';
 import axios from 'axios';
@@ -14,11 +15,15 @@ const Article = (props) => {
 
   useEffect(() => {
     isRendered = true;
+    console.log(
+      `${process.env.REACT_APP_BASE_URL}/front/${props.category}/${props.match.params.id}`
+    );
     axios
       .get(
         `${process.env.REACT_APP_BASE_URL}/front/${props.category}/${props.match.params.id}`
       )
       .then((res) => {
+        console.log(res);
         if (isRendered) {
           setArticle(res.data);
         }
@@ -41,13 +46,19 @@ const Article = (props) => {
         <h1>Loading</h1>
       ) : (
         <div>
-          {/* <Navigation /> */}
+          {props.category === 'project' ? <Navigation /> : null}
           <ArticleBody data={article} />
-          {article.video_links.length !== 0 || article.gallery.length !== 0 ? (
-            <ArticleGallery data={article} />
+
+          {/* The below ternary condition has been added because projects and blogs has slightly different data */}
+          {props.category === 'blog' ? (
+            article.video_links.length !== 0 || article.gallery.length !== 0 ? (
+              <ArticleGallery data={article} category={props.category} />
+            ) : null
+          ) : article.snapshot_url.length !== 0 ? (
+            <ArticleGallery data={article} category={props.category} />
           ) : null}
 
-          {/* <ProjectFooter /> */}
+          {props.category === 'project' ? <ProjectFooter /> : null}
         </div>
       )}
     </>
