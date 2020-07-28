@@ -2,8 +2,9 @@ import React from 'react';
 import ProjectFooter from '../ProjectsPage/ProjectFooter/ProjectFooter';
 import Navigation from '../Navigation/Navigation';
 import WebTeamHeading from './WebTeamHeading/WebTeamHeading';
-import Contributers from './Contributers/Contributers';
+import ContributersHeading from './ContributersHeading/ContributersHeading';
 import { WebTeam } from './WebTeam/WebTeam';
+import { Contributers } from './Contributers/Contributers';
 
 export const WebTeamPage = () => {
   return (
@@ -11,6 +12,7 @@ export const WebTeamPage = () => {
       <Navigation />
       <WebTeamHeading />
       <WebTeam />
+      <ContributersHeading />
       <Contributers />
       <ProjectFooter />
     </div>
