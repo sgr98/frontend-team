@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;600&display=swap');
+
+/*==== MAIN CONTAINER ====*/
+
+.writeNewBlog-container-BLogsPage {
+    width: 240px;
+    height: 2.4em;
+    background: #201F1E;
+    box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08), 2px 2px 3px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(208, 197, 249, 0.005), 10px 10px 10px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: 4%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+/*==== BUTTON CONTAINER ====*/
+
+.writeNewBlog-button-BlogsPage {
+    border: none;
+    width: 100%;
+    height: 100%;
+    background: #201F1E;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
+/*==== TITLE CONTAINER ====*/
+
+.writeNewBlog-button-title-BlogsPage {
+    display: inline-flex;
+    font-family: 'Signika', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 30px;
+    /* identical to box height */
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.015em;
+    text-transform: uppercase;
+    padding: 6px auto;
+}
+
+.writeNewBlog-button-title-BlogsPage > div {
+    background: linear-gradient(180deg, #00BCF2, #64adf9, #B4A0FF);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    padding-top: 2px;
+}
+
+.writeNewBlog-button-title-BlogsPage > img {
+    height: 22px;
+    width: auto;
+    margin-right: 0.5em;
+}
+
+
+/*==== MEDIA QUERIES ====*/
+
+@media only screen and (min-width: 1300px) {
+    .writeNewBlog-container-BLogsPage {
+        width: 240px;
+    } 
+
+    .writeNewBlog-button-title-BlogsPage {
+        font-size: 24px;
+    }
+
+    .writeNewBlog-button-title-BlogsPage > img {
+        height: 24px;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 799px) {
+    .writeNewBlog-container-BLogsPage {
+        margin-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 451px) {
+    .writeNewBlog-container-BLogsPage {
+        width: 89.6%;
+        /* margin-right: 4%; */
+    }
+}
