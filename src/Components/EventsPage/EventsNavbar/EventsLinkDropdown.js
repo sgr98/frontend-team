@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { NavDropdown } from 'react-bootstrap';
 import './EventsLinkDropdown.css';
 import DropdownIcon from '../../BlogsPage/SearchBar/DropdownIcon.png';
 
-const EventsLinkDropdown = () => {
+const EventsLinkDropdown = ({ url, currentSelected }) => {
   return (
     <div className="main-container-EventsDropContainer">
       <NavDropdown
@@ -12,7 +13,7 @@ const EventsLinkDropdown = () => {
         title={
           <div>
             <span>
-              All Events
+              {currentSelected}
               <img
                 src={DropdownIcon}
                 alt="DropdownIcon"
@@ -24,28 +25,39 @@ const EventsLinkDropdown = () => {
         id="collasible-nav-dropdown-EventsDropDown"
       >
         <NavDropdown.Item
-          href="#AllEvents"
+          as={Link}
+          to={`${url}/AllEvents`}
           className="menuitem-EventsDropDown"
           id="AllEvents-EventsNavDropdown"
         >
           <div>All Events</div>
         </NavDropdown.Item>
 
-        <NavDropdown.Item href="#Workshops" className="menuitem-EventsDropDown">
+        <NavDropdown.Item
+          as={Link}
+          to={`${url}/Workshops`}
+          className="menuitem-EventsDropDown"
+        >
           Workshops
         </NavDropdown.Item>
 
-        <NavDropdown.Item href="#Talks" className="menuitem-EventsDropDown">
+        <NavDropdown.Item
+          as={Link}
+          to={`${url}/Talks`}
+          className="menuitem-EventsDropDown"
+        >
           talks
         </NavDropdown.Item>
         <NavDropdown.Item
-          href="#Activities"
+          as={Link}
+          to={`${url}/Activities`}
           className="menuitem-EventsDropDown"
         >
           Activities
         </NavDropdown.Item>
         <NavDropdown.Item
-          href="#Competitions"
+          as={Link}
+          to={`${url}/Competitions`}
           className="menuitem-EventsDropDown"
         >
           Competitions

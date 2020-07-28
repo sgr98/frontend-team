@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import EventsNavbar from './EventsNavbar/EventsNavbar';
 import EventsLinkDropdown from './EventsNavbar/EventsLinkDropdown';
@@ -21,28 +21,57 @@ const EventsPage = () => {
 
         <EventsNavbar url={url} />
         {/* <CalendarCarousel /> */}
-        <EventsLinkDropdown />
+
         <Switch>
           <Route
             path={[`${path}/`, `${path}/AllEvents`]}
             exact
-            component={() => <AllEvents />}
+            component={() => (
+              <>
+                <EventsLinkDropdown url={url} currentSelected="All Events" />
+                <AllEvents />
+              </>
+            )}
           />
           <Route
             path={`${path}/Workshops`}
             exact
-            component={() => <Workshops />}
+            component={() => (
+              <>
+                <EventsLinkDropdown url={url} currentSelected="Workshops" />
+                <Workshops />
+              </>
+            )}
           />
-          <Route path={`${path}/Talks`} exact component={() => <Talks />} />
+          <Route
+            path={`${path}/Talks`}
+            exact
+            component={() => (
+              <>
+                <EventsLinkDropdown url={url} currentSelected="Talks" />
+                <Talks />
+              </>
+            )}
+          />
           <Route
             path={`${path}/Activities`}
             exact
-            component={() => <Activities />}
+            component={() => (
+              <>
+                <EventsLinkDropdown url={url} currentSelected="Activities" />
+                <Activities />
+              </>
+            )}
           />
           <Route
             path={`${path}/Competitions`}
             exact
-            component={() => <Competitions />}
+            component={() => (
+              <>
+                <EventsLinkDropdown url={url} currentSelected="Competitions" />
+                <Competitions />
+              </>
+            )}
           />
           <Route
             path={`${path}/CalendarEvents`}
