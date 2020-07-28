@@ -69,9 +69,10 @@ const BlogsContainer = (props) => {
     // console.log('blogsList');
     const blogsShown = [];
     let blogFeatured = null;
-    if (currentPosts.length !== 0) {
-      if (currentPage === 1) {
-        for (let i = 0; i < currentPosts.length; i += 1) {
+
+    if (currentPage === 1) {
+      for (let i = 0; i < currentPosts.length; i += 1) {
+        if (currentPosts[i]) {
           const single = { ...currentPosts[i] };
           if (currentPosts[i].featured) {
             blogsShown.unshift(<BlogCard key={i} single={single} />);
@@ -83,8 +84,10 @@ const BlogsContainer = (props) => {
             blogsShown.push(<BlogCard key={i} single={single} />);
           }
         }
-      } else {
-        for (let i = 0; i < currentPosts.length; i += 1) {
+      }
+    } else {
+      for (let i = 0; i < currentPosts.length; i += 1) {
+        if (currentPosts[i]) {
           const single = { ...currentPosts[i] };
           blogsShown.push(<BlogCard key={i} single={single} />);
         }
