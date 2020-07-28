@@ -3,23 +3,18 @@
 import React, { useEffect, useState } from 'react';
 import { NavDropdown } from 'react-bootstrap';
 import axios from 'axios';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './TechManiacsDropDown.css';
 import DropdownIcon from './DropdownIcon.png';
 
 const TechManiacsDropDown = (props) => {
   const [clubNames, setClubNames] = useState([]);
-  const [currentSelected, setCurrentSelected] = useState('GENERAL');
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_BASE_URL}/front/clubs`).then((res) => {
       setClubNames(res.data);
     });
   }, []);
-
-  const onClickHandler = (name) => {
-    setCurrentSelected(name);
-  };
 
   return (
     <div className="nav-container-TechManiacsDropDown">
@@ -37,8 +32,12 @@ const TechManiacsDropDown = (props) => {
         }
         id="collasible-nav-dropdown-TechManiacsDropDown"
       >
-        <NavDropdown.Item className="menuitem-TechManiacsDropDown">
-          <NavLink to={`${props.url}/general`}>GENERAL</NavLink>
+        <NavDropdown.Item
+          as={Link}
+          to={`${props.url}/general`}
+          className="menuitem-TechManiacsDropDown"
+        >
+          GENERAL
         </NavDropdown.Item>
 
         {clubNames.length !== 0
@@ -47,13 +46,10 @@ const TechManiacsDropDown = (props) => {
                 <NavDropdown.Item
                   className="menuitem-TechManiacsDropDown"
                   key={name + index}
-                  onClick={() => {
-                    onClickHandler(name);
-                  }}
+                  as={Link}
+                  to={`${props.url}/${name.toLowerCase()}`}
                 >
-                  <NavLink to={`${props.url}/${name.toLowerCase()}`}>
-                    {name}
-                  </NavLink>
+                  {name}
                 </NavDropdown.Item>
               );
             })
