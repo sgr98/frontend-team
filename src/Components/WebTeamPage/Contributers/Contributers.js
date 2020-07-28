@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import WebTeamCardData from './WebTeamCardData';
+import ContributersCardData from './ContributersCardData';
 
 export const Contributers = () => {
   const [members, setMembers] = useState([
@@ -60,6 +60,19 @@ export const Contributers = () => {
     },
   ]);
 
+  const topheads = (
+    <Row>
+      {members.map((member) => {
+        if (member.tier === 'top') {
+          return (
+            <Col xs={12} sm={6} key={Math.random()} className="pt-1 px-2">
+              <ContributersCardData member={member} />
+            </Col>
+          );
+        }
+      })}
+    </Row>
+  );
   const middleheads = (
     <Row>
       {members.map((member) => {
@@ -72,7 +85,7 @@ export const Contributers = () => {
               key={Math.random()}
               className="py-0 px-2"
             >
-              <WebTeamCardData member={member} />
+              <ContributersCardData member={member} />
             </Col>
           );
         }
@@ -91,7 +104,7 @@ export const Contributers = () => {
               key={Math.random()}
               className="py-0 px-2"
             >
-              <WebTeamCardData member={member} />
+              <ContributersCardData member={member} />
             </Col>
           );
         }
@@ -101,6 +114,7 @@ export const Contributers = () => {
   return (
     <div className="container-Contributers">
       <Container fluid className="px-4">
+        {topheads}
         {middleheads}
         {bottomheads}
       </Container>

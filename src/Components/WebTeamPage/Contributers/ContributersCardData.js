@@ -1,39 +1,45 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import DisplayPicture from './display picture.png';
-import './WebTeamCardData.css';
+import './ContributersCardData.css';
 
-const WebTeamCardData = ({ member }) => {
+const ContributersCardData = ({ member }) => {
   // assign type of member
   let memberStyle = '';
   switch (member.tier) {
     case 'top':
-      memberStyle = 'data-container-WebTeamCardData Top-WebTeamCardData';
+      memberStyle =
+        'data-container-ContributersCardData Top-ContributersCardData';
       break;
     case 'middle':
-      memberStyle = 'data-container-WebTeamCardData Middle-WebTeamCardData';
+      memberStyle =
+        'data-container-ContributersCardData Middle-ContributersCardData';
       break;
     case 'bottom':
-      memberStyle = 'data-container-WebTeamCardData Bottom-WebTeamCardData';
+      memberStyle =
+        'data-container-ContributersCardData Bottom-ContributersCardData';
       break;
     default:
-      memberStyle = 'data-container-WebTeamCardData Bottom-WebTeamCardData';
+      memberStyle =
+        'data-container-ContributersCardData Bottom-ContributersCardData';
   }
   //assign classes for roll/name/designation according to tier
   const dpClassName =
     member.tier === 'top'
-      ? 'top-dPicture-border-WebTeamCardData'
-      : 'dPicture-border-WebTeamCardData';
+      ? 'top-dPicture-border-ContributersCardData'
+      : 'dPicture-border-ContributersCardData';
   const rollNoClassName =
     member.tier === 'top'
-      ? 'top-rollNo-WebTeamCardData'
-      : 'rollNo-WebTeamCardData';
+      ? 'top-rollNo-ContributersCardData'
+      : 'rollNo-ContributersCardData';
   const nameClassName =
-    member.tier === 'top' ? 'top-name-WebTeamCardData' : 'name-WebTeamCardData';
+    member.tier === 'top'
+      ? 'top-name-ContributersCardData'
+      : 'name-ContributersCardData';
   const designationClassName =
     member.tier === 'top'
-      ? 'top-designation-WebTeamCardData'
-      : 'designation-WebTeamCardData';
+      ? 'top-designation-ContributersCardData'
+      : 'designation-ContributersCardData';
 
   return (
     <div>
@@ -42,10 +48,10 @@ const WebTeamCardData = ({ member }) => {
           <Card.Img
             src={DisplayPicture}
             alt="DisplayPicture"
-            className="displayPicture-WebTeamCardData"
+            className="displayPicture-ContributersCardData"
           />
         </p>
-        <Card.Body className="textBody-WebTeamCardData">
+        <Card.Body className="textBody-ContributersCardData">
           <Card.Text className={rollNoClassName}>{member.rollNo}</Card.Text>
           <Card.Title className={nameClassName}>{member.name}</Card.Title>
           <Card.Text className={designationClassName}>
@@ -57,4 +63,4 @@ const WebTeamCardData = ({ member }) => {
   );
 };
 
-export default WebTeamCardData;
+export default ContributersCardData;

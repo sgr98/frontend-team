@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 /* ==== CARD VIEW ==== */
-.data-container-WebTeamCardData {
+.data-container-ContributersCardData {
   position: relative;
   height: 6.7rem;
   margin: 1.5% 0;
@@ -17,7 +17,7 @@
 }
 
 /* ==== TEXT ALLIGNMENT AND STYLING ==== */
-.textBody-WebTeamCardData {
+.textBody-ContributersCardData {
   position: absolute;
   width: 70%;
   height: 100%;
@@ -34,8 +34,8 @@
 }
 
 /* roll-no,name and designation */
-.top-rollNo-WebTeamCardData,
-.rollNo-WebTeamCardData {
+.top-rollNo-ContributersCardData,
+.rollNo-ContributersCardData {
   align-self: flex-start;
   text-align: left;
   margin: 1px;
@@ -43,8 +43,8 @@
   color: #e1dfdd;
   font-size: 0.8rem;
 }
-.top-name-WebTeamCardData,
-.name-WebTeamCardData {
+.top-name-ContributersCardData,
+.name-ContributersCardData {
   align-self: flex-start;
   text-align: left;
   margin: 1px;
@@ -53,8 +53,8 @@
   font-size: 1.2rem;
 }
 
-.top-designation-WebTeamCardData,
-.designation-WebTeamCardData {
+.top-designation-ContributersCardData,
+.designation-ContributersCardData {
   align-self: flex-start;
   text-align: left;
   margin: 1px;
@@ -64,18 +64,18 @@
   font-weight: 500;
 }
 /* font sizing base on Tier */
-.rollNo-WebTeamCardData {
+.rollNo-ContributersCardData {
   font-size: 0.7rem;
 }
-.name-WebTeamCardData {
+.name-ContributersCardData {
   font-size: 1.15rem;
 }
-.designation-WebTeamCardData {
+.designation-ContributersCardData {
   font-size: 0.8rem;
 }
 
 /* background based on Tier */
-.Top-WebTeamCardData {
+.Top-ContributersCardData {
   background: linear-gradient(
       90deg,
       rgba(238, 9, 121, 0.75) 0%,
@@ -84,7 +84,7 @@
     rgba(96, 94, 92, 0.2);
 }
 
-.Middle-WebTeamCardData {
+.Middle-ContributersCardData {
   background: linear-gradient(
     89.55deg,
     rgba(0, 178, 148, 0.6) 0.09%,
@@ -92,7 +92,7 @@
   );
 }
 
-.Bottom-WebTeamCardData {
+.Bottom-ContributersCardData {
   background: linear-gradient(
     89.55deg,
     rgba(0, 178, 148, 0.6) 0.09%,
@@ -100,19 +100,19 @@
   );
 }
 
-.Middle-WebTeamCardData,
-.Bottom-WebTeamCardData {
+.Middle-ContributersCardData,
+.Bottom-ContributersCardData {
   height: 5.8rem;
 }
 
 /* ==== DISPLAY PICTURE STYLING ==== */
-.displayPicture-WebTeamCardData {
+.displayPicture-ContributersCardData {
   border-radius: 50%;
   border: 2px solid transparent;
 }
 /* dp styling for top tier heads */
-.top-dPicture-border-WebTeamCardData,
-.dPicture-border-WebTeamCardData {
+.top-dPicture-border-ContributersCardData,
+.dPicture-border-ContributersCardData {
   box-sizing: border-box;
   position: relative;
   margin: auto 2% auto 5%;
@@ -124,7 +124,7 @@
   justify-content: center;
 }
 /* dp styling for midlle/bottom tier heads */
-.dPicture-border-WebTeamCardData {
+.dPicture-border-ContributersCardData {
   margin: auto 2% auto 5%;
   width: 16vw;
 }
@@ -132,178 +132,178 @@
 /* ==== MEDIA QUERIES ==== */
 
 @media only screen and (min-width: 576px) {
-  .data-container-WebTeamCardData {
+  .data-container-ContributersCardData {
     height: 7.5rem;
     margin: 2% 0;
     padding-left: 0px;
   }
 
   /* card/text/dp sizing for midlle/bottom tier*/
-  .Middle-WebTeamCardData,
-  .Bottom-WebTeamCardData {
+  .Middle-ContributersCardData,
+  .Bottom-ContributersCardData {
     height: 6.3rem;
   }
-  .dPicture-border-WebTeamCardData {
+  .dPicture-border-ContributersCardData {
     width: 5rem;
     margin: auto 2% auto 4%;
   }
-  .rollNo-WebTeamCardData {
+  .rollNo-ContributersCardData {
     font-size: 0.8rem;
   }
-  .name-WebTeamCardData {
+  .name-ContributersCardData {
     font-size: 1.2rem;
     line-height: 0.9em;
   }
-  .designation-WebTeamCardData {
+  .designation-ContributersCardData {
     font-size: 0.8rem;
   }
 
   /* text sizing for top tier*/
-  .textBody-WebTeamCardData {
+  .textBody-ContributersCardData {
     padding-top: 6%;
     padding-left: 5%;
   }
-  .top-rollNo-WebTeamCardData {
+  .top-rollNo-ContributersCardData {
     font-size: 0.8rem;
   }
-  .top-name-WebTeamCardData {
+  .top-name-ContributersCardData {
     font-size: 1.23rem;
     line-height: 1em;
   }
-  .top-designation-WebTeamCardData {
+  .top-designation-ContributersCardData {
     font-size: 0.9rem;
   }
-  .top-dPicture-border-WebTeamCardData {
+  .top-dPicture-border-ContributersCardData {
     width: 5.4rem;
     margin: auto 2% auto 4%;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .data-container-WebTeamCardData {
+  .data-container-ContributersCardData {
     height: 8rem;
   }
   /* card/text/dp sizing for midlle/bottom tier*/
-  .Middle-WebTeamCardData,
-  .Bottom-WebTeamCardData {
+  .Middle-ContributersCardData,
+  .Bottom-ContributersCardData {
     height: 6.7rem;
   }
-  .dPicture-border-WebTeamCardData {
+  .dPicture-border-ContributersCardData {
     width: 5.4rem;
     margin: auto 2% auto 4%;
   }
-  .rollNo-WebTeamCardData {
+  .rollNo-ContributersCardData {
     font-size: 0.9rem;
   }
-  .name-WebTeamCardData {
+  .name-ContributersCardData {
     font-size: 1.3rem;
     line-height: 0.9em;
   }
-  .designation-WebTeamCardData {
+  .designation-ContributersCardData {
     font-size: 0.9rem;
   }
   /* text sizing for top tier*/
-  .textBody-WebTeamCardData {
+  .textBody-ContributersCardData {
     padding-top: 4.5%;
     padding-left: 2%;
   }
-  .top-rollNo-WebTeamCardData {
+  .top-rollNo-ContributersCardData {
     font-size: 1rem;
   }
-  .top-name-WebTeamCardData {
+  .top-name-ContributersCardData {
     font-size: 1.5rem;
     line-height: 0.9em;
   }
-  .top-designation-WebTeamCardData {
+  .top-designation-ContributersCardData {
     font-size: 1rem;
   }
-  .top-dPicture-border-WebTeamCardData {
+  .top-dPicture-border-ContributersCardData {
     width: 5.8rem;
     margin: auto 2% auto 4%;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .data-container-WebTeamCardData {
+  .data-container-ContributersCardData {
     height: 10.2rem;
   }
   /* card/text/dp sizing for midlle/bottom tier*/
-  .Middle-WebTeamCardData,
-  .Bottom-WebTeamCardData {
+  .Middle-ContributersCardData,
+  .Bottom-ContributersCardData {
     height: 7.2rem;
   }
-  .dPicture-border-WebTeamCardData {
+  .dPicture-border-ContributersCardData {
     width: 5.7rem;
     margin: auto 2% auto 4%;
   }
-  .rollNo-WebTeamCardData {
+  .rollNo-ContributersCardData {
     font-size: 1rem;
   }
-  .name-WebTeamCardData {
+  .name-ContributersCardData {
     font-size: 1.5rem;
     line-height: 1em;
   }
-  .designation-WebTeamCardData {
+  .designation-ContributersCardData {
     font-size: 1rem;
   }
   /* text sizing for toptier*/
-  .textBody-WebTeamCardData {
+  .textBody-ContributersCardData {
     padding-top: 4.2%;
     padding-left: 3%;
   }
-  .top-rollNo-WebTeamCardData {
+  .top-rollNo-ContributersCardData {
     font-size: 1.3rem;
   }
-  .top-name-WebTeamCardData {
+  .top-name-ContributersCardData {
     font-size: 1.8rem;
     line-height: 1.1em;
   }
-  .top-designation-WebTeamCardData {
+  .top-designation-ContributersCardData {
     font-size: 1.25rem;
   }
-  .top-dPicture-border-WebTeamCardData {
+  .top-dPicture-border-ContributersCardData {
     width: 7.7rem;
     margin: auto 3% auto 4%;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .data-container-WebTeamCardData {
+  .data-container-ContributersCardData {
     height: 11rem;
   }
   /* card/text/dp sizing for midlle/bottom tier*/
-  .Middle-WebTeamCardData,
-  .Bottom-WebTeamCardData {
+  .Middle-ContributersCardData,
+  .Bottom-ContributersCardData {
     height: 7.6rem;
   }
-  .dPicture-border-WebTeamCardData {
+  .dPicture-border-ContributersCardData {
     width: 6rem;
     margin: auto 2% auto 4%;
   }
-  .rollNo-WebTeamCardData {
+  .rollNo-ContributersCardData {
     font-size: 1rem;
   }
-  .name-WebTeamCardData {
+  .name-ContributersCardData {
     font-size: 1.4rem;
     line-height: 1.2em;
   }
-  .designation-WebTeamCardData {
+  .designation-ContributersCardData {
     font-size: 1rem;
   }
-  /* text sizing for toptier*/
-  .textBody-WebTeamCardData {
+  /* text sizing for top tier*/
+  .textBody-ContributersCardData {
     padding-top: 3.5%;
     padding-left: 3%;
   }
-  .top-rollNo-WebTeamCardData {
+  .top-rollNo-ContributersCardData {
     font-size: 1.5rem;
   }
-  .top-name-WebTeamCardData {
+  .top-name-ContributersCardData {
     font-size: 2rem;
   }
-  .top-designation-WebTeamCardData {
+  .top-designation-ContributersCardData {
     font-size: 1.4rem;
   }
-  .top-dPicture-border-WebTeamCardData {
+  .top-dPicture-border-ContributersCardData {
     width: 8.7rem;
     margin: auto 3% auto 5%;
   }
