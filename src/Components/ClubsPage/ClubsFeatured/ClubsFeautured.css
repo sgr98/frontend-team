@@ -241,13 +241,46 @@
   .ClubsFeatured-image {
     width: 80%;
   }
+  .ClubsFeatured-title {
+    font-size: 4vw;
+  }
+  .ClubsFeatured-subtitle {
+    font-size: 2vw;
+    text-align: center;
+  }
 
   .ClubsFeatured-description {
-    line-height: 20px;
+    font-size: 1.5vw;
+    line-height: 3vh;
   }
 }
 @media (max-width: 600px) {
+  .ClubsFeatured-title {
+    font-size: 18px;
+    text-align: center;
+  }
+  .ClubsFeatured-subtitle {
+    font-size: 12px;
+    text-align: center;
+  }
   .ClubsFeatured-description {
-    line-height: 10px;
+    font-size: 9px;
+    line-height: 2vh;
+  }
+  .ClubsFeatured-button {
+    font-size: 9px;
+    width: 30%;
+    margin: 3px;
+    justify-content: center;
+  }
+  .ClubsFeatured-links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .ClubsFeatured-parent {
+    visibility: hidden;
+    width: 0;
   }
 }
