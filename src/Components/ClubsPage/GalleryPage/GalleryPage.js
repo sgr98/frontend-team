@@ -5,7 +5,7 @@ import ClubsNavbar from '../ClubsNavbar/ClubsNavbar';
 import ClubsFooter from '../ClubsFooter/ClubsFooter';
 import './GalleryPage.css';
 
-const GalleryPage = ({ClubName=""}) => {
+const GalleryPage = ({ClubName="Quantum"}) => {
   const [clubGallery, setGallery] = useState({});
   useEffect(() => {
     axios
