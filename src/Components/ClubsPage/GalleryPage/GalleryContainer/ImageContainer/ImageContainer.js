@@ -41,8 +41,8 @@ const ImageContainer = ({galleryStr}) => {
   </Modal>
     {galleryStr.map((id, index) => (
       <div className="ClubGallery-Img-border">
-        <div key={"clubImg"+index} className="ClubGallery-Img" onClick={()=>handleShow("http://localhost:5000/images/"+id)} style={{
-            backgroundImage: `url(${"http://localhost:5000/images/"+id})`
+        <div key={"clubImg"+index} className="ClubGallery-Img" onClick={()=>handleShow(`${process.env.REACT_APP_BASE_URL}/images/${id}`)} style={{
+            backgroundImage: `url(${process.env.REACT_APP_BASE_URL}/images/${id})`
         }}>
     </div>
     </div>
