@@ -1,15 +1,35 @@
 /* eslint-disable react/prefer-stateless-function */
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import { useRouteMatch, NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Navigation.css';
 import GetInspiredBulbIcon from './GetInspiredBulbIcon.png';
 
 export function Navigation() {
-  const { path } = useRouteMatch();
+  const [clubs, setClubs] = useState([]);
+  const [techTeams, setTechTeams] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`${process.env.REACT_APP_BASE_URL}/front/clubs`)
+      .then((res) => {
+        console.log(res);
+        setClubs(res.data);
+      })
+      .catch((err) => console.log(err));
+
+    axios
+      .get(`${process.env.REACT_APP_BASE_URL}/front/tech_teams`)
+      .then((res) => {
+        console.log(res);
+        setTechTeams(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <div className="nav-container-Navigation BorderBottom-Navigation">
       <Navbar collapseOnSelect expand="lg" variant="dark" sticky="bottom">
@@ -27,28 +47,29 @@ export function Navigation() {
             {/* ABOUT */}
             <NavDropdown
               className="nav-dropdown-Navigation"
-              href="#about"
               title="About"
               id="collasible-nav-dropdown"
             >
               <NavDropdown.Item
-                href="#team2020-21"
+                as={Link}
+                to="/TechnicalCommittee"
                 className="about-menuitem-Navigation"
               >
-                Team 2020-21
+                Technical Committee
               </NavDropdown.Item>
               <NavDropdown.Item
-                href="#alumini"
+                as={Link}
+                to="/WebTeam"
                 className="about-menuitem-Navigation"
               >
-                Alumini
+                Web Team
               </NavDropdown.Item>
-              <NavDropdown.Item
+              {/* <NavDropdown.Item
                 href="#faqs"
                 className="about-menuitem-Navigation"
               >
                 FAQs
-              </NavDropdown.Item>
+              </NavDropdown.Item> */}
             </NavDropdown>
 
             {/* EVENTS */}
@@ -115,24 +136,18 @@ export function Navigation() {
               title="Tech Teams"
               id="collasible-nav-dropdown"
             >
-              <NavDropdown.Item
-                href="#formula-bharath"
-                className="techteams-menuitem-Navigation"
-              >
-                Formula Bharath
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                href="#truss-fab"
-                className="techteams-menuitem-Navigation"
-              >
-                Truss Fab
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                href="#mars-rover"
-                className="techteams-menuitem-Navigation"
-              >
-                Mars Rover
-              </NavDropdown.Item>
+              {techTeams.map(({ _id, team_name }) => {
+                return (
+                  <NavDropdown.Item
+                    key={_id}
+                    as={Link}
+                    to={`/TechTeam/${_id}`}
+                    className="techteams-menuitem-Navigation"
+                  >
+                    {team_name}
+                  </NavDropdown.Item>
+                );
+              })}
             </NavDropdown>
 
             {/* CLUBS */}
@@ -141,24 +156,18 @@ export function Navigation() {
               title="Clubs"
               id="collasible-nav-dropdown"
             >
-              <NavDropdown.Item
-                href="#techmaniacs"
-                className="clubs-menuitem-Navigation"
-              >
-                Techmaniacs
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                href="#digital-wizards"
-                className="clubs-menuitem-Navigation"
-              >
-                Digital Wizards
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                href="#gagan-vedhi"
-                className="clubs-menuitem-Navigation"
-              >
-                Gagan Vedhi
-              </NavDropdown.Item>
+              {clubs.map(({ name }, index) => {
+                return (
+                  <NavDropdown.Item
+                    key={name + index}
+                    as={Link}
+                    to={`/clubs/${name}`}
+                    className="clubs-menuitem-Navigation"
+                  >
+                    {name}
+                  </NavDropdown.Item>
+                );
+              })}
             </NavDropdown>
 
             {/* GET INSPIRED */}
@@ -176,7 +185,7 @@ export function Navigation() {
               }
               id="collasible-nav-dropdown"
             >
-              <NavDropdown.Item
+              {/* <NavDropdown.Item
                 href="#ideas-square"
                 className="getinspired-menuitem-Navigation"
               >
@@ -187,9 +196,10 @@ export function Navigation() {
                 className="getinspired-menuitem-Navigation"
               >
                 E-cell
-              </NavDropdown.Item>
+              </NavDropdown.Item> */}
               <NavDropdown.Item
-                href="#challenges"
+                as={Link}
+                to="/challenges"
                 className="getinspired-menuitem-Navigation"
               >
                 Challenges

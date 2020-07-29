@@ -38,11 +38,12 @@ function App() {
           <Route path="/Projects" exact component={ProjectsPage} />
 
           <Route path="/Achievements" component={AchievementsPage} />
-          <Route path="/AboutUs" component={AboutUs} />
+          <Route path="/TechnicalCommittee" component={AboutUs} />
+
           <Route path="/article" component={Article} />
           <Route path="/Challenges" component={ChallengesPage} />
           <Route path="/WebTeam" component={WebTeamPage} />
-          <Route path="/TechTeams" component={TechTeamsPage} />
+          <Route path="/TechTeam" component={TechTeamsPage} />
           <Route component={() => <h1>ERROR</h1>} />
         </Switch>
         {/* <Footer /> */}
