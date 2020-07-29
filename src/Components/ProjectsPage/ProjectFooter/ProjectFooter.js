@@ -65,11 +65,11 @@ const ProjectFooter = () => {
             </div>
           </div>
           <div className="col-sm-6 lower-two bt">
-            MADE WITH
+            MADE WITH {' '}
             <p className="heart">
-              <AiFillHeart />
+              <AiFillHeart style={{ position: 'relative', top: '0.35vw' }} />
             </p>
-            BY <strong> WEB TEAM </strong> TAC 2020-21
+            {' '}BY <strong> WEB TEAM </strong> TAC 2020-21
             <p className="techhub">
               <strong>TECH HUB IIT TIRUPATI</strong>
             </p>
