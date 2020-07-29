@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap');
+.heading-WebTeamHeading {
+  /* display: flex;
+  flex-direction: column; */
+  position: relative;
+  margin: 3% 0 1% 0;
+  padding: 0%;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+  background: linear-gradient(
+    90deg,
+    rgba(91, 135, 255, 0.6) 0%,
+    rgba(0, 188, 242, 0.6) 50.52%,
+    rgba(91, 135, 255, 0.6) 100%
+  );
+
+  width: 100%;
+  height: 4.5em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.heading-WebTeamHeading h3 {
+  justify-self: center;
+  height: 98%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Roboto Slab', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2.2rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #201f1e;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+}
+
+.lineAbove-WebTeamHeading {
+  justify-self: flex-start;
+  height: 2%;
+  box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.8);
+}
+
+.lineBelow-WebTeamHeading {
+  height: 2%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+  background: inherit;
+  justify-self: flex-end;
+}
+
+/* ==== MEDIA QUERIES ==== */
+
+@media only screen and (min-width: 576px) {
+  .heading-WebTeamHeading {
+    height: 5.2rem;
+  }
+  .heading-WebTeamHeading h3 {
+    font-size: 2.8rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .heading-WebTeamHeading {
+    height: 5.6rem;
+  }
+  .heading-WebTeamHeading h3 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .heading-WebTeamHeading {
+    height: 5.8rem;
+  }
+  .heading-WebTeamHeading h3 {
+    font-size: 3.3rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .heading-WebTeamHeading {
+    height: 6.2rem;
+  }
+  .heading-WebTeamHeading h3 {
+    font-size: 3.6rem;
+  }
+}
