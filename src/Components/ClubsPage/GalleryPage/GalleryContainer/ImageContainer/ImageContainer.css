@@ -1,0 +1,41 @@
+.Gallery-ImageContainer{
+    display: grid;
+    justify-content: space-between;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.ClubGallery-Img{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width:  100%;
+    height: 300px;
+    border: 2px solid #605E5C;
+    transition: all ease 1s;
+}
+.ClubGallery-Img:hover {
+    transition: all ease 0.5s;
+    border-color: #00bcf2;
+    transform: scale(1.05);
+}
+.ClubGallery-Img:active {
+    transition: all ease 0.01s;
+    border-color: #b4a0ff;
+}
+@media (max-width: 980px) {
+    .Gallery-ImageContainer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (max-width: 680px) {
+    .Gallery-ImageContainer {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+@media (max-width: 400px) {
+    .Gallery-ImageContainer {
+        grid-template-columns: 1fr; 
+    }
+}

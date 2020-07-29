@@ -1,0 +1,13 @@
+.Content-GalleryPage{
+    padding: 2vmax 5vmax;
+    border-top: 2px;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-color: #605E5C;
+}
+
+.GalleryContainer{
+    padding: 1vmax;
+}

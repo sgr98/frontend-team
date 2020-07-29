@@ -13,6 +13,7 @@ import AchievementsPage from './Components/AchievementsPage/AchievementsPage';
 import AboutUs from './Components/AboutUs/AboutUs';
 import Article from './Components/Article/Article';
 import ChallengesPage from './Components/ChallengesPage/ChallengesPage';
+import GalleryPage from './Components/ClubsPage/GalleryPage/GalleryPage'
 import WebTeamPage from './Components/WebTeamPage/WebTeamPage';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Switch>
           <Route path={['/', '/home']} exact component={HomePage} />
           <Route path="/clubs" component={ClubsPage} />
+          <Route path="/gallery" component={GalleryPage} />
           <Route path="/Blogs" component={BlogsPage} />
           <Route path="/Events" component={EventsPage} />
 
