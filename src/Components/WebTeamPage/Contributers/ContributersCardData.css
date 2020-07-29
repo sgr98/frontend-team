@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/* ==== CARD VIEW ==== */
+.data-container-ContributersCardData {
+  position: relative;
+  height: 6.7rem;
+  margin: 1.5% 0;
+  border: 4px solid #201f1e;
+  box-sizing: border-box;
+  box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08),
+    2px 2px 3px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(208, 197, 249, 0.005),
+    10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+  color: #f9f9f9;
+}
+
+/* ==== TEXT ALLIGNMENT AND STYLING ==== */
+.textBody-ContributersCardData {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+
+  padding-top: 2.5%;
+  padding-right: 1%;
+  padding-bottom: 1px;
+  padding-left: 1%;
+}
+
+/* roll-no,name and designation */
+.top-rollNo-ContributersCardData,
+.rollNo-ContributersCardData {
+  align-self: flex-start;
+  text-align: left;
+  margin: 1px;
+  text-transform: uppercase;
+  color: #e1dfdd;
+  font-size: 0.8rem;
+}
+.top-name-ContributersCardData,
+.name-ContributersCardData {
+  align-self: flex-start;
+  text-align: left;
+  margin: 1px;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.top-designation-ContributersCardData,
+.designation-ContributersCardData {
+  align-self: flex-start;
+  text-align: left;
+  margin: 1px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-family: Roboto, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+}
+/* font sizing base on Tier */
+.rollNo-ContributersCardData {
+  font-size: 0.7rem;
+}
+.name-ContributersCardData {
+  font-size: 1.15rem;
+}
+.designation-ContributersCardData {
+  font-size: 0.8rem;
+}
+
+/* background based on Tier */
+.Top-ContributersCardData {
+  background: linear-gradient(
+      90deg,
+      rgba(238, 9, 121, 0.75) 0%,
+      rgba(255, 106, 0, 0.75) 100%
+    ),
+    rgba(96, 94, 92, 0.2);
+}
+
+.Middle-ContributersCardData {
+  background: linear-gradient(
+    89.55deg,
+    rgba(0, 178, 148, 0.6) 0.09%,
+    rgba(91, 135, 255, 0.6) 99.9%
+  );
+}
+
+.Bottom-ContributersCardData {
+  background: linear-gradient(
+    89.55deg,
+    rgba(0, 178, 148, 0.6) 0.09%,
+    rgba(91, 135, 255, 0.6) 99.9%
+  );
+}
+
+.Middle-ContributersCardData,
+.Bottom-ContributersCardData {
+  height: 5.8rem;
+}
+
+/* ==== DISPLAY PICTURE STYLING ==== */
+.displayPicture-ContributersCardData {
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+/* dp styling for top tier heads */
+.top-dPicture-border-ContributersCardData,
+.dPicture-border-ContributersCardData {
+  box-sizing: border-box;
+  position: relative;
+  margin: auto 2% auto 5%;
+  width: 17.5vw;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #e3008c, #724dff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* dp styling for midlle/bottom tier heads */
+.dPicture-border-ContributersCardData {
+  margin: auto 2% auto 5%;
+  width: 16vw;
+}
+
+/* ==== MEDIA QUERIES ==== */
+
+@media only screen and (min-width: 576px) {
+  .data-container-ContributersCardData {
+    height: 7.5rem;
+    margin: 2% 0;
+    padding-left: 0px;
+  }
+
+  /* card/text/dp sizing for midlle/bottom tier*/
+  .Middle-ContributersCardData,
+  .Bottom-ContributersCardData {
+    height: 6.3rem;
+  }
+  .dPicture-border-ContributersCardData {
+    width: 5rem;
+    margin: auto 2% auto 4%;
+  }
+  .rollNo-ContributersCardData {
+    font-size: 0.8rem;
+  }
+  .name-ContributersCardData {
+    font-size: 1.2rem;
+    line-height: 0.9em;
+  }
+  .designation-ContributersCardData {
+    font-size: 0.8rem;
+  }
+
+  /* text sizing for top tier*/
+  .textBody-ContributersCardData {
+    padding-top: 6%;
+    padding-left: 5%;
+  }
+  .top-rollNo-ContributersCardData {
+    font-size: 0.8rem;
+  }
+  .top-name-ContributersCardData {
+    font-size: 1.23rem;
+    line-height: 1em;
+  }
+  .top-designation-ContributersCardData {
+    font-size: 0.9rem;
+  }
+  .top-dPicture-border-ContributersCardData {
+    width: 5.4rem;
+    margin: auto 2% auto 4%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .data-container-ContributersCardData {
+    height: 8rem;
+  }
+  /* card/text/dp sizing for midlle/bottom tier*/
+  .Middle-ContributersCardData,
+  .Bottom-ContributersCardData {
+    height: 6.7rem;
+  }
+  .dPicture-border-ContributersCardData {
+    width: 5.4rem;
+    margin: auto 2% auto 4%;
+  }
+  .rollNo-ContributersCardData {
+    font-size: 0.9rem;
+  }
+  .name-ContributersCardData {
+    font-size: 1.3rem;
+    line-height: 0.9em;
+  }
+  .designation-ContributersCardData {
+    font-size: 0.9rem;
+  }
+  /* text sizing for top tier*/
+  .textBody-ContributersCardData {
+    padding-top: 4.5%;
+    padding-left: 2%;
+  }
+  .top-rollNo-ContributersCardData {
+    font-size: 1rem;
+  }
+  .top-name-ContributersCardData {
+    font-size: 1.5rem;
+    line-height: 0.9em;
+  }
+  .top-designation-ContributersCardData {
+    font-size: 1rem;
+  }
+  .top-dPicture-border-ContributersCardData {
+    width: 5.8rem;
+    margin: auto 2% auto 4%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .data-container-ContributersCardData {
+    height: 10.2rem;
+  }
+  /* card/text/dp sizing for midlle/bottom tier*/
+  .Middle-ContributersCardData,
+  .Bottom-ContributersCardData {
+    height: 7.2rem;
+  }
+  .dPicture-border-ContributersCardData {
+    width: 5.7rem;
+    margin: auto 2% auto 4%;
+  }
+  .rollNo-ContributersCardData {
+    font-size: 1rem;
+  }
+  .name-ContributersCardData {
+    font-size: 1.5rem;
+    line-height: 1em;
+  }
+  .designation-ContributersCardData {
+    font-size: 1rem;
+  }
+  /* text sizing for toptier*/
+  .textBody-ContributersCardData {
+    padding-top: 4.2%;
+    padding-left: 3%;
+  }
+  .top-rollNo-ContributersCardData {
+    font-size: 1.3rem;
+  }
+  .top-name-ContributersCardData {
+    font-size: 1.8rem;
+    line-height: 1.1em;
+  }
+  .top-designation-ContributersCardData {
+    font-size: 1.25rem;
+  }
+  .top-dPicture-border-ContributersCardData {
+    width: 7.7rem;
+    margin: auto 3% auto 4%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .data-container-ContributersCardData {
+    height: 11rem;
+  }
+  /* card/text/dp sizing for midlle/bottom tier*/
+  .Middle-ContributersCardData,
+  .Bottom-ContributersCardData {
+    height: 7.6rem;
+  }
+  .dPicture-border-ContributersCardData {
+    width: 6rem;
+    margin: auto 2% auto 4%;
+  }
+  .rollNo-ContributersCardData {
+    font-size: 1rem;
+  }
+  .name-ContributersCardData {
+    font-size: 1.4rem;
+    line-height: 1.2em;
+  }
+  .designation-ContributersCardData {
+    font-size: 1rem;
+  }
+  /* text sizing for top tier*/
+  .textBody-ContributersCardData {
+    padding-top: 3.5%;
+    padding-left: 3%;
+  }
+  .top-rollNo-ContributersCardData {
+    font-size: 1.5rem;
+  }
+  .top-name-ContributersCardData {
+    font-size: 2rem;
+  }
+  .top-designation-ContributersCardData {
+    font-size: 1.4rem;
+  }
+  .top-dPicture-border-ContributersCardData {
+    width: 8.7rem;
+    margin: auto 3% auto 5%;
+  }
+}
