@@ -16,7 +16,6 @@ export function Navigation() {
     axios
       .get(`${process.env.REACT_APP_BASE_URL}/front/clubs`)
       .then((res) => {
-        console.log(res);
         setClubs(res.data);
       })
       .catch((err) => console.log(err));
@@ -24,7 +23,6 @@ export function Navigation() {
     axios
       .get(`${process.env.REACT_APP_BASE_URL}/front/tech_teams`)
       .then((res) => {
-        console.log(res);
         setTechTeams(res.data);
       })
       .catch((err) => console.log(err));

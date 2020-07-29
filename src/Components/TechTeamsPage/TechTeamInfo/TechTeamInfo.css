@@ -3,12 +3,14 @@
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
-  -webkit-background-size: cover;
+  padding-bottom: 2%;
+
+  /* -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background: url('https://wallpapercave.com/wp/wp2478972.jpg');
+  -o-background-size: cover; */
+  background-size: 100% 100%;
+  /* background-repeat: no-repeat; */
+  /* background: url('https://wallpapercave.com/wp/wp2478972.jpg'); */
 }
 .TechTeamInfo-content {
   width: 55%;
@@ -57,7 +59,7 @@
   font-style: normal;
   font-weight: normal;
   font-size: 1vw;
-  text-align: justify;
+  /* text-align: justify; */
   letter-spacing: 0.01em;
   line-height: 25px;
   color: #ffffff;

@@ -1,27 +1,29 @@
 import React, { useState } from 'react';
+import parse from 'html-react-parser';
 import './TechTeamInfo.css';
 import { FaGithub, FaYoutube, FaInstagram } from 'react-icons/fa';
 
-function TechTeamInfo() {
+function TechTeamInfo({ data }) {
   const [readMore, setReadMore] = useState(false);
+
+  let image_url =
+    'https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362';
+
+  if (data.team_poster_url !== '') {
+    image_url = `${process.env.REACT_APP_BASE_URL}/images/${data.team_poster_url}`;
+  }
   return (
-    <div className="TechTeamInfo-container">
+    <div
+      className="TechTeamInfo-container"
+      style={{ backgroundImage: `url(${image_url})` }}
+    >
       <div className="TechTeamInfo-content">
-        <div className="TechTeamInfo-title">TECHMANIACS</div>
-        <div className="TechTeamInfo-subtitle">
+        <div className="TechTeamInfo-title">{data.team_name}</div>
+        {/* <div className="TechTeamInfo-subtitle">
           The Electronics and Robotics Club of IIT Tirupati
-        </div>
+        </div> */}
         <div className="TechTeamInfo-description">
-          The Robotics and Electronics club was formed in 1.5008, with a vision
-          to raise the level of Robotics in the institute to an international
-          standard by developing an integrated knowledge base in the field of
-          Robotics. It is one of the most active clubs in CFI, comprising of 600
-          members from all years. The Robotics and Electronics club is striving
-          to inspire and enable the students to explore their creativity and
-          engineering skills through robotics by engaging them in exciting
-          mentor based program which teaches them both technical skills,
-          teamwork and leadership. iBot club is not leaving any stone unturned
-          in the process of becoming a self-sustained student robotics hub.
+          {parse(data.description)}
         </div>
         {readMore ? (
           <>
@@ -61,7 +63,7 @@ function TechTeamInfo() {
             </div>
           </>
         ) : null}
-        <div className="TechTeamInfo-links">
+        {/* <div className="TechTeamInfo-links">
           <span
             className="TechTeamInfo-button"
             onClick={() => setReadMore(!readMore)}
@@ -71,7 +73,7 @@ function TechTeamInfo() {
           <span className="TechTeamInfo-button">Projects</span>
           <span className="TechTeamInfo-button">Resources</span>
           <span className="TechTeamInfo-button">Blogs</span>
-        </div>
+        </div> */}
       </div>
 
       <div className="TechTeamInfo-parent">
@@ -82,7 +84,8 @@ function TechTeamInfo() {
                 <div className="TechTeamInfo-image-content-overlay"></div>
                 <img
                   className="TechTeamInfo-image-content-image"
-                  src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362"
+                  src={image_url}
+                  alt="Poster"
                 />
                 <div className="TechTeamInfo-image-content-details fadeIn-bottom">
                   <div className="center">

@@ -43,7 +43,7 @@ function App() {
           <Route path="/article" component={Article} />
           <Route path="/Challenges" component={ChallengesPage} />
           <Route path="/WebTeam" component={WebTeamPage} />
-          <Route path="/TechTeam" component={TechTeamsPage} />
+          <Route path="/TechTeam/:id" component={TechTeamsPage} />
           <Route component={() => <h1>ERROR</h1>} />
         </Switch>
         {/* <Footer /> */}
