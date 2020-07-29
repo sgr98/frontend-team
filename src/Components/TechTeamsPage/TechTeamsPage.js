@@ -18,7 +18,7 @@ const TechTeamsPage = (props) => {
         `${process.env.REACT_APP_BASE_URL}/front/tech_team/${props.match.params.id}`
       )
       .then((res) => {
-        // console.log(res.data);
+        console.log(res.data);
         setData(res.data);
         setLoading(false);
       })

@@ -1,10 +1,11 @@
 .TechTeamInfo-container {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
-  padding-bottom: 2%;
-
+  padding-bottom: 4%;
+  padding-top: 4%;
   /* -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover; */
@@ -15,9 +16,11 @@
 .TechTeamInfo-content {
   width: 55%;
   padding: 2%;
+  z-index: 3;
 }
 .TechTeamInfo-parent {
   width: 40%;
+  z-index: 3;
 }
 .TechTeamInfo-image {
   width: 100%;
@@ -110,15 +113,72 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
-  font-size: 1.5vw;
+  font-size: 2vw;
   display: flex;
   align-items: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 
-  color: #ffffff;
+  background: rgb(120, 155, 251);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(120, 155, 251, 1) 0%,
+    rgba(0, 178, 151, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(120, 155, 251, 1) 0%,
+    rgba(0, 178, 151, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(120, 155, 251, 1) 0%,
+    rgba(0, 178, 151, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#789bfb",endColorstr="#00b297",GradientType=1);
 
-  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.TechTeamInfo-overlay-headDetails {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.2vw;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  background: rgb(120, 155, 251);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(120, 155, 251, 1) 0%,
+    rgba(0, 178, 151, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(120, 155, 251, 1) 0%,
+    rgba(0, 178, 151, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(120, 155, 251, 1) 0%,
+    rgba(0, 178, 151, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#789bfb",endColorstr="#00b297",GradientType=1);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .TechTeamInfo-overlay-social {
   margin: 5px;
@@ -138,7 +198,19 @@
   color: #000;
   background: #fff;
 }
-
+.TechTeamInfo-overlay {
+  position: absolute;
+  display: block; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
 .center {
   display: flex;
   justify-content: center;
