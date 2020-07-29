@@ -13,8 +13,9 @@ import AchievementsPage from './Components/AchievementsPage/AchievementsPage';
 import AboutUs from './Components/AboutUs/AboutUs';
 import Article from './Components/Article/Article';
 import ChallengesPage from './Components/ChallengesPage/ChallengesPage';
-import GalleryPage from './Components/ClubsPage/GalleryPage/GalleryPage'
+import GalleryPage from './Components/ClubsPage/GalleryPage/GalleryPage';
 import WebTeamPage from './Components/WebTeamPage/WebTeamPage';
+import TechTeamsPage from './Components/TechTeamsPage/TechTeamsPage';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
           <Route path="/article" component={Article} />
           <Route path="/Challenges" component={ChallengesPage} />
           <Route path="/WebTeam" component={WebTeamPage} />
+          <Route path="/TechTeams" component={TechTeamsPage} />
           <Route component={() => <h1>ERROR</h1>} />
         </Switch>
         {/* <Footer /> */}

@@ -7,7 +7,7 @@ import './GalleryPage.css';
 
 // [TODO]
 // currently the pages arent linked to be subroutes with a :clubName hence the following default data being loaded
-const GalleryPage = ({ClubName="Quantum"}) => {
+const GalleryPage = ({ ClubName = 'Quantum' }) => {
   const [clubGallery, setGallery] = useState({});
   useEffect(() => {
     axios
@@ -18,11 +18,11 @@ const GalleryPage = ({ClubName="Quantum"}) => {
   }, []);
   return (
     <div>
-        <ClubsNavbar />
-        <div class="Content-GalleryPage">
-        <GalleryContainer data={clubGallery}/>
-        </div>
-        <ClubsFooter />
+      <ClubsNavbar />
+      <div class="Content-GalleryPage">
+        <GalleryContainer data={clubGallery} />
+      </div>
+      <ClubsFooter />
     </div>
   );
 };
