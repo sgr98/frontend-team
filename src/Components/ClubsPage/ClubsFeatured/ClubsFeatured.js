@@ -62,7 +62,7 @@ function ClubsFeatured() {
               by engaging them in exciting mentor based program which teaches
               them both technical skills, teamwork and leadership. iBot club is
               not leaving any stone unturned in the process of becoming a
-              self-sustained student robotics hub.
+              self-sustained student robotis hub.
             </div>
           </>
         ) : null}
