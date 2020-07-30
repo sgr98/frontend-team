@@ -16,11 +16,11 @@ const Article = (props) => {
   useEffect(() => {
     isRendered = true;
     console.log(
-      `${process.env.REACT_APP_BASE_URL}/front/${props.category}/${props.match.params.id}`
+      `${process.env.REACT_APP_BASE_URL}/front/${props.category}/${props.match.params.id}`,
     );
     axios
       .get(
-        `${process.env.REACT_APP_BASE_URL}/front/${props.category}/${props.match.params.id}`
+        `${process.env.REACT_APP_BASE_URL}/front/${props.category}/${props.match.params.id}`,
       )
       .then((res) => {
         console.log(res);

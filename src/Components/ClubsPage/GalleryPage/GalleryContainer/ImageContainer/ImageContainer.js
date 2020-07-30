@@ -37,7 +37,9 @@ const ImageContainer = ({ galleryStr }) => {
       {galleryStr.map((id, index) => (
         <div className="ClubGallery-Img-border" key={id}>
           <div
+
             key={`clubImg${index}`}
+
             className="ClubGallery-Img"
             onClick={() =>
               handleShow(`${process.env.REACT_APP_BASE_URL}/images/${id}`)
@@ -45,7 +47,9 @@ const ImageContainer = ({ galleryStr }) => {
             style={{
               backgroundImage: `url(${process.env.REACT_APP_BASE_URL}/images/${id})`,
             }}
+
           />
+
         </div>
       ))}
     </div>
