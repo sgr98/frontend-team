@@ -200,7 +200,7 @@ export function Navigation() {
                 to="/achievements"
                 className="getinspired-menuitem-Navigation"
               >
-                Achievements
+                Hall of Fame
               </NavDropdown.Item>
               <NavDropdown.Item
                 as={Link}
