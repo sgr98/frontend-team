@@ -21,7 +21,7 @@ const GalleryPage = () => {
   return (
     <div>
       <ClubsNavbar />
-      <div class="Content-GalleryPage">
+      <div className="Content-GalleryPage">
         <GalleryContainer data={clubGallery} />
       </div>
       <ClubsFooter />
