@@ -197,6 +197,13 @@ export function Navigation() {
               </NavDropdown.Item> */}
               <NavDropdown.Item
                 as={Link}
+                to="/achievements"
+                className="getinspired-menuitem-Navigation"
+              >
+                Achievements
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                as={Link}
                 to="/challenges"
                 className="getinspired-menuitem-Navigation"
               >

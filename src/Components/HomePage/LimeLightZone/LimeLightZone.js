@@ -22,7 +22,7 @@ class LimeLightZone extends Component {
         <CustomHR />
         <RightTeamCard remarkText="UPCOMING" buttonText="EXPLORE MORE" />
         <CustomHR />
-        <CollegeTeams />
+        {/* <CollegeTeams /> */}
       </div>
     );
   }
