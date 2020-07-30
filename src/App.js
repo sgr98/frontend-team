@@ -15,6 +15,7 @@ import Article from './Components/Article/Article';
 import ChallengesPage from './Components/ChallengesPage/ChallengesPage';
 import GalleryPage from './Components/ClubsPage/GalleryPage/GalleryPage';
 import WebTeamPage from './Components/WebTeamPage/WebTeamPage';
+import TechTeamsPage from './Components/TechTeamsPage/TechTeamsPage';
 
 function App() {
   return (
@@ -37,10 +38,12 @@ function App() {
           <Route path="/Projects" exact component={ProjectsPage} />
 
           <Route path="/Achievements" component={AchievementsPage} />
-          <Route path="/AboutUs" component={AboutUs} />
+          <Route path="/TechnicalCommittee" component={AboutUs} />
+
           <Route path="/article" component={Article} />
           <Route path="/Challenges" component={ChallengesPage} />
           <Route path="/WebTeam" component={WebTeamPage} />
+          <Route path="/TechTeam/:id" component={TechTeamsPage} />
           <Route component={() => <h1>ERROR</h1>} />
         </Switch>
         {/* <Footer /> */}

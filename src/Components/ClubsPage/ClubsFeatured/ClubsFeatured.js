@@ -3,6 +3,12 @@ import "./ClubsFeautured.css";
 import { FaGithub, FaYoutube, FaInstagram } from "react-icons/fa";
 function ClubsFeatured() {
   const [readMore, setReadMore] = useState(false);
+
+  const width =
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+
   return (
     <div className="ClubsFeatured-container">
       <div className="ClubsFeatured-content">
@@ -56,7 +62,7 @@ function ClubsFeatured() {
               by engaging them in exciting mentor based program which teaches
               them both technical skills, teamwork and leadership. iBot club is
               not leaving any stone unturned in the process of becoming a
-              self-sustained student robotics hub.
+              self-sustained student robotis hub.
             </div>
           </>
         ) : null}
@@ -73,48 +79,53 @@ function ClubsFeatured() {
         </div>
       </div>
 
-      <div className="ClubsFeatured-parent">
-        <div className="ClubsFeatured-image">
-          <div className="ClubsFeatured-image-container">
-            <div className="ClubsFeatured-image-content">
-              <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
-                <div className="ClubsFeatured-image-content-overlay"></div>
-                <img
-                  className="ClubsFeatured-image-content-image"
-                  src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362"
-                />
-                <div className="ClubsFeatured-image-content-details fadeIn-bottom">
-                  <div className="center">
-                    <span className="ClubsFeatured-overlay-title">
-                      connect with us on social media ❤
-                    </span>
-                    <span className="ClubsFeatured-overlay-social">
-                      <FaInstagram color="orange" /> Instagram
-                    </span>
-                    <span className="ClubsFeatured-overlay-social">
-                      <FaGithub /> Github
-                    </span>
-                    <span className="ClubsFeatured-overlay-social">
-                      <FaYoutube color="red" /> Youtube
-                    </span>
-                    <span className="ClubsFeatured-overlay-social">
-                      View Gallery
-                    </span>
+      {width > 600 ? (
+        <div className="ClubsFeatured-parent">
+          <div className="ClubsFeatured-image">
+            <div className="ClubsFeatured-image-container">
+              <div className="ClubsFeatured-image-content">
+                <a
+                  href="https://unsplash.com/photos/HkTMcmlMOUQ"
+                  target="_blank"
+                >
+                  <div className="ClubsFeatured-image-content-overlay"></div>
+                  <img
+                    className="ClubsFeatured-image-content-image"
+                    src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362"
+                  />
+                  <div className="ClubsFeatured-image-content-details fadeIn-bottom">
+                    <div className="center">
+                      <span className="ClubsFeatured-overlay-title">
+                        connect with us on social media ❤
+                      </span>
+                      <span className="ClubsFeatured-overlay-social">
+                        <FaInstagram color="orange" /> Instagram
+                      </span>
+                      <span className="ClubsFeatured-overlay-social">
+                        <FaGithub /> Github
+                      </span>
+                      <span className="ClubsFeatured-overlay-social">
+                        <FaYoutube color="red" /> Youtube
+                      </span>
+                      <span className="ClubsFeatured-overlay-social">
+                        View Gallery
+                      </span>
+                    </div>
                   </div>
+                </a>
+              </div>
+              <div className="ClubsFeatured-frame-logo">
+                <FaGithub color="white" />
+                <div>
+                  <FaInstagram color="orange" />
+                  <span style={{ marginRight: "4px" }}></span>
+                  <FaYoutube color="red" />
                 </div>
-              </a>
-            </div>
-            <div className="ClubsFeatured-frame-logo">
-              <FaGithub color="white" />
-              <div>
-                <FaInstagram color="orange" />
-                <span style={{ marginRight: "4px" }}></span>
-                <FaYoutube color="red" />
               </div>
             </div>
           </div>
         </div>
-      </div>
+      ) : null}
     </div>
   );
 }

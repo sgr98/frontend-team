@@ -19,7 +19,9 @@ const GalleryPage = ({ ClubName = 'Quantum' }) => {
   return (
     <div>
       <ClubsNavbar />
-      <div className="Content-GalleryPage">
+
+      <div class="Content-GalleryPage">
+
         <GalleryContainer data={clubGallery} />
       </div>
       <ClubsFooter />
