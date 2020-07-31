@@ -18,67 +18,54 @@ export default class Appgrid extends Component {
           <div className="container2">
             <div className="row">
               <div className="col-lg-2 col-md-4 col-sm-6 box">
-                <Link to="/Events/Talks">
+                <Link to="/Blogs">
                   <div className="custom module-border-wrap">
                     <img src={TrophyIcon} alt="Trophy Icon" />
                     <div className="text">
-                      <p>
-                        TALKS &
-                        <br />
-                        WORKSHOPS
-                      </p>
+                      <p style={{ marginTop: '7%' }}>BLOGS</p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+              <div className="col-lg-2 col-md-4 col-sm-6 box">
+                <div className="custom module-border-wrap">
+                  <img src={TrophyIcon} alt="Trophy Icon" />
+                  <div className="text">
+                    <p>PROJECTS</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-4 col-sm-6 box">
+                <Link to="/Events/Challenges">
+                  <div className="custom module-border-wrap">
+                    <img src={TrophyIcon} alt="Trophy Icon" />
+                    <div className="text">
+                      <p>CHALLENGES</p>
                     </div>
                   </div>
                 </Link>
               </div>
 
               <div className="col-lg-2 col-md-4 col-sm-6 box">
-                <Link to="/Events/Competitions">
+                <Link to="/">
                   <div className="custom module-border-wrap">
                     <img src={TrophyIcon} alt="Trophy Icon" />
                     <div className="text">
-                      <p>
-                        UPCOMING
-                        <br />
-                        COMPETITIONS
-                      </p>
+                      <p>SEARCH</p>
                     </div>
                   </div>
                 </Link>
               </div>
+
               <div className="col-lg-2 col-md-4 col-sm-6 box">
-                <Link to="/Blogs">
+                <Link to="/Achievements">
                   <div className="custom module-border-wrap">
                     <img src={TrophyIcon} alt="Trophy Icon" />
                     <div className="text">
-                      <p style={{ marginTop: '7%' }}>Blogs</p>
+                      <p>HALL OF FAME</p>
                     </div>
                   </div>
                 </Link>
-              </div>
-              <div className="col-lg-2 col-md-4 col-sm-6 box">
-                <div className="custom module-border-wrap">
-                  <img src={TrophyIcon} alt="Trophy Icon" />
-                  <div className="text">
-                    <p>
-                      STUDENT
-                      <br />
-                      PROJECTS
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-2 col-md-4 col-sm-6 box">
-                <div className="custom module-border-wrap">
-                  <img src={TrophyIcon} alt="Trophy Icon" />
-                  <div className="text">
-                    <p>
-                      FACILITIES
-                      <br />
-                      AVAILABLE
-                    </p>
-                  </div>
-                </div>
               </div>
               <div className="col-lg-2 col-md-4 col-sm-6 box">
                 <Link to="/Events/CalendarEvents">
