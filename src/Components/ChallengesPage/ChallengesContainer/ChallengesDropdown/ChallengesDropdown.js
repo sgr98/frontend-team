@@ -41,11 +41,17 @@ const ChallengesDropdown = ({ categoryNames, match }) => {
         <Dropdown.Toggle as={CustomToggle} />
 
         <Dropdown.Menu className="dropdown-item-main-container-ChallengesPage">
+          <Dropdown.Item
+            as={ChallengesDropdownItem}
+            name="all"
+            eventKey={1}
+            key="all"
+          />
           {categoryNames.map((name, index) => (
             <Dropdown.Item
               as={ChallengesDropdownItem}
               name={name}
-              eventKey={index + 1}
+              eventKey={index + 2}
               key={name}
             />
           ))}

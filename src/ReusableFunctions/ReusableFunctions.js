@@ -1,4 +1,4 @@
-export function getDateToBeDisplayed(date) {
+export function getDateToBeDisplayed(date, isDayNameRequired = true) {
   const days = [
     'Sunday',
     'Monday',
@@ -21,8 +21,13 @@ export function getDateToBeDisplayed(date) {
     'November',
     'December',
   ];
+  let dateString = '';
 
-  let dateString = `${days[date.getDay()]}, ${date.getDate()}`;
+  if (isDayNameRequired) {
+    dateString = `${days[date.getDay()]}, ${date.getDate()}`;
+  } else {
+    dateString = `${date.getDate()}`;
+  }
 
   const dateNumber = date.getDate();
 

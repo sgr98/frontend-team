@@ -81,7 +81,7 @@
   border: none;
   width: var(--dropdown-button-ChallengesPage-width);
   border-radius: 4px;
-  z-index: 0;
+  z-index: 1;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;

@@ -11,13 +11,11 @@ const ChallengesPage = () => {
   const [categoryNames, setCategoryNames] = useState(['all', 'electrical']);
 
   const [loading, setLoading] = useState(true);
-  const [challenges, setChallenges] = useState([]);
 
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_BASE_URL}/front/categories/challenge?all=1`)
       .then((res) => {
-        console.log(res.data);
         setCategoryNames(res.data);
         setLoading(false);
       })
