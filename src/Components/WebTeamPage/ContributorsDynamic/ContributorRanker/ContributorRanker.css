@@ -91,7 +91,7 @@
 
 .Contributors-Top-Weekly .list {
   padding-left: 2rem;
-  margin: 0 auto;
+  margin: 0 20px !important;
 }
 .Contributors-Top-Weekly .list .item {
   position: relative;
