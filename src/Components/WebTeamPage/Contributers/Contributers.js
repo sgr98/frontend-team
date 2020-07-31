@@ -112,7 +112,7 @@ export const Contributers = () => {
     </Row>
   );
   return (
-    <div className="container-Contributers">
+    <div className="container-Contributers mb-5">
       {/* <Container fluid className="px-4">
         {topheads}
         {middleheads}

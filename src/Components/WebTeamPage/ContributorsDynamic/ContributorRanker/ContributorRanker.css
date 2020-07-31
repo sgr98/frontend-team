@@ -59,7 +59,7 @@
   margin-bottom: 0.5rem;
 }
 .Contributors-Top-Weekly .top3 .item .name {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
   color: white;
   text-shadow: 2px 2px black;
@@ -85,8 +85,8 @@
   left: 2.5rem;
 }
 .Contributors-Top-Weekly .top3 .item:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .Contributors-Top-Weekly .list {
@@ -138,7 +138,7 @@
   -webkit-box-flex: 2;
           flex-grow: 2;
   flex-basis: 10rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 .Contributors-Top-Weekly .list .item > *{
@@ -152,13 +152,36 @@
 }
 .Contributors-Top-Weekly .list .item .score:after {
   margin-right: 1rem;
-  content: 'commits';
+  content: ' commits';
   opacity: 0.5;
 }
 .Contributors-Top-Weekly .list .item:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scaleY(1.1);
+          transform: scaleY(1.1);
 }
 .Contributors-Top-Weekly .list .item:hover .pos {
   opacity: 0.8;
 }
+.heading-Contributors {
+    padding: 0%;
+    padding-top: 1%;
+    font-family: 'Roboto Slab', sans-serif;
+    line-height: 100%;
+    margin: 0;
+    font-size: 3.7vw;
+    font-weight: 300;
+    background: linear-gradient(to right, #00bcf2, #b4a0ff);
+    letter-spacing: -0.015em;
+  
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
+  
+    align-items: center;
+    text-align: center;
+  }
+
+  .heading-Contributors h4{
+    display: inline-block;
+  }
