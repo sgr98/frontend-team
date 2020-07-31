@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap');
-.heading-ContributersHeading {
+.heading-ContributorsHeading {
   display: flex;
   flex-direction: column;
   margin: 2.5% 0 2% 0;
@@ -16,7 +16,7 @@
   height: 4.5em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.heading-ContributersHeading h3 {
+.heading-ContributorsHeading h3 {
   justify-self: center;
   height: 98%;
   display: flex;
@@ -38,13 +38,13 @@
   text-overflow: ellipsis;
 }
 
-.lineAbove-ContributersHeading {
+.lineAbove-ContributorsHeading {
   justify-self: flex-start;
   height: 2%;
   box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.8);
 }
 
-.lineBelow-ContributersHeading {
+.lineBelow-ContributorsHeading {
   height: 2%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
   background: inherit;
@@ -54,36 +54,36 @@
 /* ==== MEDIA QUERIES ==== */
 
 @media only screen and (min-width: 576px) {
-  .heading-ContributersHeading {
+  .heading-ContributorsHeading {
     height: 5.3rem;
   }
-  .heading-ContributersHeading h3 {
+  .heading-ContributorsHeading h3 {
     font-size: 2.5rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .heading-ContributersHeading {
+  .heading-ContributorsHeading {
     height: 5.6rem;
   }
-  .heading-ContributersHeading h3 {
+  .heading-ContributorsHeading h3 {
     font-size: 3rem;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .heading-ContributersHeading {
+  .heading-ContributorsHeading {
     height: 5.8rem;
   }
-  .heading-ContributersHeading h3 {
+  .heading-ContributorsHeading h3 {
     font-size: 3.3rem;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .heading-ContributersHeading {
+  .heading-ContributorsHeading {
     height: 6.2rem;
   }
-  .heading-ContributersHeading h3 {
+  .heading-ContributorsHeading h3 {
     font-size: 3.6rem;
   }
 }
