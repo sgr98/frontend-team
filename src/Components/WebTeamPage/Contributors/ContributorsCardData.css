@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 /* ==== CARD VIEW ==== */
-.data-container-ContributersCardData {
+.data-container-ContributorsCardData {
   position: relative;
   height: 6.7rem;
   margin: 1.5% 0;
@@ -17,7 +17,7 @@
 }
 
 /* ==== TEXT ALLIGNMENT AND STYLING ==== */
-.textBody-ContributersCardData {
+.textBody-ContributorsCardData {
   position: absolute;
   width: 70%;
   height: 100%;
@@ -34,8 +34,8 @@
 }
 
 /* roll-no,name and designation */
-.top-rollNo-ContributersCardData,
-.rollNo-ContributersCardData {
+.top-rollNo-ContributorsCardData,
+.rollNo-ContributorsCardData {
   align-self: flex-start;
   text-align: left;
   margin: 1px;
@@ -43,8 +43,8 @@
   color: #e1dfdd;
   font-size: 0.8rem;
 }
-.top-name-ContributersCardData,
-.name-ContributersCardData {
+.top-name-ContributorsCardData,
+.name-ContributorsCardData {
   align-self: flex-start;
   text-align: left;
   margin: 1px;
@@ -53,8 +53,8 @@
   font-size: 1.2rem;
 }
 
-.top-designation-ContributersCardData,
-.designation-ContributersCardData {
+.top-designation-ContributorsCardData,
+.designation-ContributorsCardData {
   align-self: flex-start;
   text-align: left;
   margin: 1px;
@@ -64,18 +64,18 @@
   font-weight: 500;
 }
 /* font sizing base on Tier */
-.rollNo-ContributersCardData {
+.rollNo-ContributorsCardData {
   font-size: 0.7rem;
 }
-.name-ContributersCardData {
+.name-ContributorsCardData {
   font-size: 1.15rem;
 }
-.designation-ContributersCardData {
+.designation-ContributorsCardData {
   font-size: 0.8rem;
 }
 
 /* background based on Tier */
-.Top-ContributersCardData {
+.Top-ContributorsCardData {
   background: linear-gradient(
       90deg,
       rgba(238, 9, 121, 0.75) 0%,
@@ -84,7 +84,7 @@
     rgba(96, 94, 92, 0.2);
 }
 
-.Middle-ContributersCardData {
+.Middle-ContributorsCardData {
   background: linear-gradient(
     89.55deg,
     rgba(0, 178, 148, 0.6) 0.09%,
@@ -92,7 +92,7 @@
   );
 }
 
-.Bottom-ContributersCardData {
+.Bottom-ContributorsCardData {
   background: linear-gradient(
     89.55deg,
     rgba(0, 178, 148, 0.6) 0.09%,
@@ -100,19 +100,19 @@
   );
 }
 
-.Middle-ContributersCardData,
-.Bottom-ContributersCardData {
+.Middle-ContributorsCardData,
+.Bottom-ContributorsCardData {
   height: 5.8rem;
 }
 
 /* ==== DISPLAY PICTURE STYLING ==== */
-.displayPicture-ContributersCardData {
+.displayPicture-ContributorsCardData {
   border-radius: 50%;
   border: 2px solid transparent;
 }
 /* dp styling for top tier heads */
-.top-dPicture-border-ContributersCardData,
-.dPicture-border-ContributersCardData {
+.top-dPicture-border-ContributorsCardData,
+.dPicture-border-ContributorsCardData {
   box-sizing: border-box;
   position: relative;
   margin: auto 2% auto 5%;
@@ -124,7 +124,7 @@
   justify-content: center;
 }
 /* dp styling for midlle/bottom tier heads */
-.dPicture-border-ContributersCardData {
+.dPicture-border-ContributorsCardData {
   margin: auto 2% auto 5%;
   width: 16vw;
 }
@@ -132,178 +132,178 @@
 /* ==== MEDIA QUERIES ==== */
 
 @media only screen and (min-width: 576px) {
-  .data-container-ContributersCardData {
+  .data-container-ContributorsCardData {
     height: 7.5rem;
     margin: 2% 0;
     padding-left: 0px;
   }
 
   /* card/text/dp sizing for midlle/bottom tier*/
-  .Middle-ContributersCardData,
-  .Bottom-ContributersCardData {
+  .Middle-ContributorsCardData,
+  .Bottom-ContributorsCardData {
     height: 6.3rem;
   }
-  .dPicture-border-ContributersCardData {
+  .dPicture-border-ContributorsCardData {
     width: 5rem;
     margin: auto 2% auto 4%;
   }
-  .rollNo-ContributersCardData {
+  .rollNo-ContributorsCardData {
     font-size: 0.8rem;
   }
-  .name-ContributersCardData {
+  .name-ContributorsCardData {
     font-size: 1.2rem;
     line-height: 0.9em;
   }
-  .designation-ContributersCardData {
+  .designation-ContributorsCardData {
     font-size: 0.8rem;
   }
 
   /* text sizing for top tier*/
-  .textBody-ContributersCardData {
+  .textBody-ContributorsCardData {
     padding-top: 6%;
     padding-left: 5%;
   }
-  .top-rollNo-ContributersCardData {
+  .top-rollNo-ContributorsCardData {
     font-size: 0.8rem;
   }
-  .top-name-ContributersCardData {
+  .top-name-ContributorsCardData {
     font-size: 1.23rem;
     line-height: 1em;
   }
-  .top-designation-ContributersCardData {
+  .top-designation-ContributorsCardData {
     font-size: 0.9rem;
   }
-  .top-dPicture-border-ContributersCardData {
+  .top-dPicture-border-ContributorsCardData {
     width: 5.4rem;
     margin: auto 2% auto 4%;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .data-container-ContributersCardData {
+  .data-container-ContributorsCardData {
     height: 8rem;
   }
   /* card/text/dp sizing for midlle/bottom tier*/
-  .Middle-ContributersCardData,
-  .Bottom-ContributersCardData {
+  .Middle-ContributorsCardData,
+  .Bottom-ContributorsCardData {
     height: 6.7rem;
   }
-  .dPicture-border-ContributersCardData {
+  .dPicture-border-ContributorsCardData {
     width: 5.4rem;
     margin: auto 2% auto 4%;
   }
-  .rollNo-ContributersCardData {
+  .rollNo-ContributorsCardData {
     font-size: 0.9rem;
   }
-  .name-ContributersCardData {
+  .name-ContributorsCardData {
     font-size: 1.3rem;
     line-height: 0.9em;
   }
-  .designation-ContributersCardData {
+  .designation-ContributorsCardData {
     font-size: 0.9rem;
   }
   /* text sizing for top tier*/
-  .textBody-ContributersCardData {
+  .textBody-ContributorsCardData {
     padding-top: 4.5%;
     padding-left: 2%;
   }
-  .top-rollNo-ContributersCardData {
+  .top-rollNo-ContributorsCardData {
     font-size: 1rem;
   }
-  .top-name-ContributersCardData {
+  .top-name-ContributorsCardData {
     font-size: 1.5rem;
     line-height: 0.9em;
   }
-  .top-designation-ContributersCardData {
+  .top-designation-ContributorsCardData {
     font-size: 1rem;
   }
-  .top-dPicture-border-ContributersCardData {
+  .top-dPicture-border-ContributorsCardData {
     width: 5.8rem;
     margin: auto 2% auto 4%;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .data-container-ContributersCardData {
+  .data-container-ContributorsCardData {
     height: 10.2rem;
   }
   /* card/text/dp sizing for midlle/bottom tier*/
-  .Middle-ContributersCardData,
-  .Bottom-ContributersCardData {
+  .Middle-ContributorsCardData,
+  .Bottom-ContributorsCardData {
     height: 7.2rem;
   }
-  .dPicture-border-ContributersCardData {
+  .dPicture-border-ContributorsCardData {
     width: 5.7rem;
     margin: auto 2% auto 4%;
   }
-  .rollNo-ContributersCardData {
+  .rollNo-ContributorsCardData {
     font-size: 1rem;
   }
-  .name-ContributersCardData {
+  .name-ContributorsCardData {
     font-size: 1.5rem;
     line-height: 1em;
   }
-  .designation-ContributersCardData {
+  .designation-ContributorsCardData {
     font-size: 1rem;
   }
   /* text sizing for toptier*/
-  .textBody-ContributersCardData {
+  .textBody-ContributorsCardData {
     padding-top: 4.2%;
     padding-left: 3%;
   }
-  .top-rollNo-ContributersCardData {
+  .top-rollNo-ContributorsCardData {
     font-size: 1.3rem;
   }
-  .top-name-ContributersCardData {
+  .top-name-ContributorsCardData {
     font-size: 1.8rem;
     line-height: 1.1em;
   }
-  .top-designation-ContributersCardData {
+  .top-designation-ContributorsCardData {
     font-size: 1.25rem;
   }
-  .top-dPicture-border-ContributersCardData {
+  .top-dPicture-border-ContributorsCardData {
     width: 7.7rem;
     margin: auto 3% auto 4%;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .data-container-ContributersCardData {
+  .data-container-ContributorsCardData {
     height: 11rem;
   }
   /* card/text/dp sizing for midlle/bottom tier*/
-  .Middle-ContributersCardData,
-  .Bottom-ContributersCardData {
+  .Middle-ContributorsCardData,
+  .Bottom-ContributorsCardData {
     height: 7.6rem;
   }
-  .dPicture-border-ContributersCardData {
+  .dPicture-border-ContributorsCardData {
     width: 6rem;
     margin: auto 2% auto 4%;
   }
-  .rollNo-ContributersCardData {
+  .rollNo-ContributorsCardData {
     font-size: 1rem;
   }
-  .name-ContributersCardData {
+  .name-ContributorsCardData {
     font-size: 1.4rem;
     line-height: 1.2em;
   }
-  .designation-ContributersCardData {
+  .designation-ContributorsCardData {
     font-size: 1rem;
   }
   /* text sizing for top tier*/
-  .textBody-ContributersCardData {
+  .textBody-ContributorsCardData {
     padding-top: 3.5%;
     padding-left: 3%;
   }
-  .top-rollNo-ContributersCardData {
+  .top-rollNo-ContributorsCardData {
     font-size: 1.5rem;
   }
-  .top-name-ContributersCardData {
+  .top-name-ContributorsCardData {
     font-size: 2rem;
   }
-  .top-designation-ContributersCardData {
+  .top-designation-ContributorsCardData {
     font-size: 1.4rem;
   }
-  .top-dPicture-border-ContributersCardData {
+  .top-dPicture-border-ContributorsCardData {
     width: 8.7rem;
     margin: auto 3% auto 5%;
   }

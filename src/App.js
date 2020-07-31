@@ -25,8 +25,8 @@ function App() {
 
         <Switch>
           <Route path={['/', '/home']} exact component={HomePage} />
-          <Route path="/clubs" component={ClubsPage} />
-          <Route path="/gallery" component={GalleryPage} />
+          <Route exact path="/clubs" component={ClubsPage} />
+          <Route exact path="/clubs/:ClubName/gallery" component={GalleryPage} />
           <Route path="/Blogs" component={BlogsPage} />
           <Route path="/Events" component={EventsPage} />
 

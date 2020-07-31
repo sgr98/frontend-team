@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import ContributersCardData from './ContributersCardData';
+import ContributorsCardData from './ContributorsCardData';
 
-export const Contributers = () => {
+export const Contributors = () => {
   const [members, setMembers] = useState([
     {
       rollNo: 'CE18B033',
@@ -66,7 +66,7 @@ export const Contributers = () => {
         if (member.tier === 'top') {
           return (
             <Col xs={12} sm={6} key={Math.random()} className="pt-1 px-2">
-              <ContributersCardData member={member} />
+              <ContributorsCardData member={member} />
             </Col>
           );
         }
@@ -85,7 +85,7 @@ export const Contributers = () => {
               key={Math.random()}
               className="py-0 px-2"
             >
-              <ContributersCardData member={member} />
+              <ContributorsCardData member={member} />
             </Col>
           );
         }
@@ -104,7 +104,7 @@ export const Contributers = () => {
               key={Math.random()}
               className="py-0 px-2"
             >
-              <ContributersCardData member={member} />
+              <ContributorsCardData member={member} />
             </Col>
           );
         }
@@ -112,12 +112,14 @@ export const Contributers = () => {
     </Row>
   );
   return (
-    <div className="container-Contributers">
-      <Container fluid className="px-4">
+    <div className="container-Contributors mb-5">
+      {/* <Container fluid className="px-4">
         {topheads}
         {middleheads}
         {bottomheads}
-      </Container>
+      </Container> */}
     </div>
   );
 };
+
+export default Contributors;

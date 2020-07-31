@@ -2,9 +2,10 @@ import React from 'react';
 import ProjectFooter from '../ProjectsPage/ProjectFooter/ProjectFooter';
 import Navigation from '../Navigation/Navigation';
 import WebTeamHeading from './WebTeamHeading/WebTeamHeading';
-import ContributersHeading from './ContributersHeading/ContributersHeading';
+import ContributorsHeading from './ContributorsHeading/ContributorsHeading';
 import { WebTeam } from './WebTeam/WebTeam';
-import { Contributers } from './Contributers/Contributers';
+import { Contributors } from './Contributors/Contributors';
+import ContributorsDynamic from './ContributorsDynamic/ContributorsDynamic'
 
 export const WebTeamPage = () => {
   return (
@@ -12,8 +13,9 @@ export const WebTeamPage = () => {
       <Navigation />
       <WebTeamHeading />
       <WebTeam />
-      <ContributersHeading />
-      <Contributers />
+      <ContributorsHeading />
+      <Contributors />
+      <ContributorsDynamic />
       <ProjectFooter />
     </div>
   );
