@@ -5,6 +5,7 @@ import WebTeamHeading from './WebTeamHeading/WebTeamHeading';
 import ContributersHeading from './ContributersHeading/ContributersHeading';
 import { WebTeam } from './WebTeam/WebTeam';
 import { Contributers } from './Contributers/Contributers';
+import ContributorsDynamic from './ContributorsDynamic/ContributorsDynamic'
 
 export const WebTeamPage = () => {
   return (
@@ -14,6 +15,7 @@ export const WebTeamPage = () => {
       <WebTeam />
       <ContributersHeading />
       <Contributers />
+      <ContributorsDynamic />
       <ProjectFooter />
     </div>
   );

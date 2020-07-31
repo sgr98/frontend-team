@@ -1,3 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ContributorRanker from './ContributorRanker/ContributorRanker';
-import './GalleryPage.css';
+import './ContributorsDynamic.css';
+
+export const ContributorsDynamic = () => {
+    return (
+      <div>
+        <ContributorRanker target={"backend"} />
+      </div>
+    );
+  };
+  
+  export default ContributorsDynamic;

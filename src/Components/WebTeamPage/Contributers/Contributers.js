@@ -113,11 +113,11 @@ export const Contributers = () => {
   );
   return (
     <div className="container-Contributers">
-      <Container fluid className="px-4">
+      {/* <Container fluid className="px-4">
         {topheads}
         {middleheads}
         {bottomheads}
-      </Container>
+      </Container> */}
     </div>
   );
 };
