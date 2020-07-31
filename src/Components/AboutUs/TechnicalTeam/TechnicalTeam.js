@@ -33,7 +33,7 @@ export const TechnicalTeam = () => {
     setLoading(false);
   }, [members]);
 
-  //Assgining Card according to Tier
+  // Assigning Card according to Tier
   const topheads = (
     <Row>
       {members.map((member) => {

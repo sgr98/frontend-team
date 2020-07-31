@@ -1,12 +1,20 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { withRouter } from 'react-router-dom';
+import { Dropdown } from 'react-bootstrap';
 import ChallengesDropdownItem from './ChallengesDropdownItem/ChallengesDropdownItem';
 import './ChallengesDropdown.css';
-import { Dropdown } from 'react-bootstrap';
 import dropdownIconChallenges from './dropdownIconChallenges.png';
 
-const ChallengesDropdown = () => {
+const ChallengesDropdown = ({ categoryNames, match }) => {
+  const [currentCategory, setCurrentCategory] = useState('ALL');
+
+  useEffect(() => {
+    console.log(match);
+    setCurrentCategory(match.params.category.toUpperCase());
+  }, [match.params.category]);
+
   const CustomToggle = React.forwardRef(({ onClick }, ref) => (
     <div
       ref={ref}
@@ -18,7 +26,11 @@ const ChallengesDropdown = () => {
     >
       <button type="button">
         <div className="dropdown-title-box-ChallengesDropdown">
-          <div>MECHATRONICS <img src={dropdownIconChallenges} alt="Drop Icon" /></div>
+          <div>
+            {currentCategory}
+
+            <img src={dropdownIconChallenges} alt="Drop Icon" />
+          </div>
         </div>
       </button>
     </div>
@@ -29,15 +41,18 @@ const ChallengesDropdown = () => {
         <Dropdown.Toggle as={CustomToggle} />
 
         <Dropdown.Menu className="dropdown-item-main-container-ChallengesPage">
-
-          <Dropdown.Item as={ChallengesDropdownItem} eventKey={1}>
-            MECHANICAL
-          </Dropdown.Item>
-
+          {categoryNames.map((name, index) => (
+            <Dropdown.Item
+              as={ChallengesDropdownItem}
+              name={name}
+              eventKey={index + 1}
+              key={name}
+            />
+          ))}
         </Dropdown.Menu>
       </Dropdown>
     </div>
   );
 };
 
-export default ChallengesDropdown;
+export default withRouter(ChallengesDropdown);

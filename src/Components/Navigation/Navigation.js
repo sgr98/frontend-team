@@ -204,7 +204,7 @@ export function Navigation() {
               </NavDropdown.Item>
               <NavDropdown.Item
                 as={Link}
-                to="/challenges"
+                to="/challenges/all"
                 className="getinspired-menuitem-Navigation"
               >
                 Challenges

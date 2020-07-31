@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import './ChallengesContainer.css';
 import ChallengeCard from './ChallengeCard/ChallengeCard';
 import ChallengesDropdown from './ChallengesDropdown/ChallengesDropdown';
@@ -6,7 +7,6 @@ import ChallengesDropdown from './ChallengesDropdown/ChallengesDropdown';
 const ChallengesContainer = () => {
   return (
     <div className="root-ChallengesContainer">
-      <ChallengesDropdown />
       <ChallengeCard />
       <ChallengeCard />
       <ChallengeCard />
@@ -19,9 +19,6 @@ const ChallengesContainer = () => {
       <ChallengeCard />
       <ChallengeCard />
       <ChallengeCard />
-      {/* <ChallengeCard />
-      <ChallengeCard />
-      <ChallengeCard /> */}
     </div>
   );
 };
