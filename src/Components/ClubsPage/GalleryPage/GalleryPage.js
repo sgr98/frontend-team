@@ -6,8 +6,6 @@ import ClubsNavbar from '../ClubsNavbar/ClubsNavbar';
 import ClubsFooter from '../ClubsFooter/ClubsFooter';
 import './GalleryPage.css';
 
-// [TODO]
-// currently the pages arent linked to be subroutes with a :clubName hence the following default data being loaded
 const GalleryPage = () => {
   const {ClubName} = useParams();
   const [clubGallery, setGallery] = useState({});
