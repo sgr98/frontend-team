@@ -11,7 +11,6 @@ const ChallengesDropdown = ({ categoryNames, match }) => {
   const [currentCategory, setCurrentCategory] = useState('ALL');
 
   useEffect(() => {
-    console.log(match);
     setCurrentCategory(match.params.category.toUpperCase());
   }, [match.params.category]);
 
