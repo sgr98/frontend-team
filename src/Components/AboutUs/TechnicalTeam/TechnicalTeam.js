@@ -37,7 +37,7 @@ export const TechnicalTeam = () => {
   const topheads = (
     <Row>
       {members.map((member) => {
-        if (member.tier === 'top') {
+        if (member.position === 'technical secretary') {
           return (
             <Col
               sm={{ span: 10, offset: 1 }}
@@ -51,27 +51,11 @@ export const TechnicalTeam = () => {
       })}
     </Row>
   );
-  const middleheads = (
-    <Row>
-      {members.map((member) => {
-        if (member.tier === 'middle') {
-          return (
-            <Col
-              sm={{ span: 10, offset: 1 }}
-              md={{ span: 6, offset: 3 }}
-              key={Math.random()}
-            >
-              <TechnicalTeamCardData member={member} />
-            </Col>
-          );
-        }
-      })}
-    </Row>
-  );
+
   const bottomheads = (
     <Row>
       {members.map((member) => {
-        if (member.tier === 'bottom') {
+        if (member.position !== 'technical secretary') {
           return (
             <Col
               sm={{ span: 10, offset: 1 }}
@@ -93,7 +77,6 @@ export const TechnicalTeam = () => {
         <div className="container-TechnicalTeam" style={{ padding: '3% 5%' }}>
           <Container fluid>
             {topheads}
-            {middleheads}
             {bottomheads}
           </Container>
         </div>
@@ -104,21 +87,13 @@ export const TechnicalTeam = () => {
 export default withRouter(TechnicalTeam);
 
 //Static Data
+
 // {
-//   rollNo: 'CS19B003',
-//   name: 'Amit Kesari',
-//   designation: 'Technical Affairs Secretary',
-//   tier: 'top', //For defining Styles
-// },
-// {
-//   rollNo: 'CS19B003',
-//   name: 'Amit Subhash Kesari',
-//   designation: 'Ideas-Square President',
-//   tier: 'middle',
-// },
-// {
-//   rollNo: 'CS19B003',
-//   name: 'Amit Kesari',
-//   designation: 'Aermodelling Club Head',
-//   tier: 'bottom',
-// },
+//   "_id": "5f1561ce20208b4ac85bb595",
+//   "name": "arpit",
+//   "position": "nothing he can do!",
+//   "roll_num": "cs18b0xx",
+//   "email_id": "arpibadejiya@gmail.com",
+//   "contact": 9411890675,
+//   "dp_url": "d2f5997ca0fcdfc9abfc9be92146309b.png"
+// }
