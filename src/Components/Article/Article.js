@@ -9,18 +9,17 @@ import ArticleGallery from './ArticleGallery/ArticleGallery';
 
 const Article = (props) => {
   const [article, setArticle] = useState(null);
+  const [clubs, setClubs] = useState([]);
   const [loading, setLoading] = useState(true);
 
   let isRendered = useRef(false);
 
   useEffect(() => {
     isRendered = true;
-    console.log(
-      `${process.env.REACT_APP_BASE_URL}/front/${props.category}/${props.match.params.id}`,
-    );
+
     axios
       .get(
-        `${process.env.REACT_APP_BASE_URL}/front/${props.category}/${props.match.params.id}`,
+        `${process.env.REACT_APP_BASE_URL}/front/${props.category}/${props.match.params.id}`
       )
       .then((res) => {
         console.log(res);
@@ -31,10 +30,21 @@ const Article = (props) => {
       })
       .catch((err) => console.log(err));
 
+    axios
+      .get(`${process.env.REACT_APP_BASE_URL}/front/clubs`)
+      .then((res) => {
+        console.log(res);
+        if (isRendered) {
+          setClubs(res.data);
+        }
+        return null;
+      })
+      .catch((err) => console.log(err));
+
     return () => {
       isRendered = false;
     };
-  }, []);
+  }, [props.match.params.id]);
 
   useEffect(() => {
     setLoading(false);
@@ -47,7 +57,7 @@ const Article = (props) => {
       ) : (
         <div>
           {props.category === 'project' ? <Navigation /> : null}
-          <ArticleBody data={article} category={props.category} />
+          <ArticleBody data={article} category={props.category} clubs={clubs} />
 
           {/* The below ternary condition has been added because projects and blogs has slightly different data */}
           {props.category === 'blog' ? (

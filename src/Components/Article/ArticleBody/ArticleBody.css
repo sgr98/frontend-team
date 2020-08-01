@@ -65,24 +65,6 @@
   margin: 0.3% 1%;
 }
 
-.keyword-ArticleBody {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 14px;
-  line-height: 21px;
-  /* identical to box height */
-  letter-spacing: -0.015em;
-  margin-right: 2%;
-  text-transform: uppercase;
-
-  color: #a19f9d;
-}
-.keyword-ArticleBody:hover {
-  text-decoration: none;
-  color: #00bcf2;
-}
-
 @media (max-width: 500px) {
   .articleContent-ArticleBody {
     font-size: 14px;

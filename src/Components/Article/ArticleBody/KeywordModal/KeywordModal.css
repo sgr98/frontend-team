@@ -1,0 +1,17 @@
+.keyword-KeywordModal {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height */
+  letter-spacing: -0.015em;
+  margin-right: 2%;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #a19f9d;
+}
+.keyword-KeywordModal:hover {
+  text-decoration: none;
+  color: #00bcf2;
+}

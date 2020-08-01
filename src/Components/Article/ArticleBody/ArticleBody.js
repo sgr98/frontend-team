@@ -1,4 +1,5 @@
 import React from 'react';
+import KeywordModal from './KeywordModal/KeywordModal';
 import parse from 'html-react-parser';
 import ArticleHeader from './ArticleHeader/ArticleHeader';
 
@@ -6,7 +7,7 @@ import './ArticleBody.css';
 import ReferencesButton from './ReferencesButton/ReferencesButton';
 import AttachmentIcon from './attachmentIcon.png';
 
-const ArticleBody = ({ data, category }) => {
+const ArticleBody = ({ data, category, clubs }) => {
   const attachmentClickHandler = (fileName) => {
     window.open(
       `${process.env.REACT_APP_BASE_URL}/files/${fileName}`,
@@ -61,7 +62,11 @@ const ArticleBody = ({ data, category }) => {
           return (
             <div className="keywordDiv-ArticleBody" key={keyword}>
               {' '}
-              <a href="" className="keyword-ArticleBody">{`#${keyword}`}</a>
+              <KeywordModal
+                keyword={keyword}
+                category={category}
+                clubs={clubs}
+              />
             </div>
           );
         })}
