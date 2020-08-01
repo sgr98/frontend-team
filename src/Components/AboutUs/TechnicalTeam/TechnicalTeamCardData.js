@@ -6,18 +6,11 @@ import './TechnicalTeamCardData.css';
 export const TechnicalTeamCardData = ({ member }) => {
   // assign type of member
   let memberStyle = '';
-  switch (member.tier) {
-    case 'top':
+  let tierStyle = 'technical secretary';
+  switch (member.position) {
+    case tierStyle:
       memberStyle =
         'data-container-TechnicalTeamCardData Top-TechnicalTeamCardData';
-      break;
-    case 'middle':
-      memberStyle =
-        'data-container-TechnicalTeamCardData Middle-TechnicalTeamCardData';
-      break;
-    case 'bottom':
-      memberStyle =
-        'data-container-TechnicalTeamCardData Bottom-TechnicalTeamCardData';
       break;
     default:
       memberStyle =
@@ -36,13 +29,13 @@ export const TechnicalTeamCardData = ({ member }) => {
         </p>
         <Card.Body className="textBody-TechnicalTeamCardData">
           <Card.Text className="rollNo-TechnicalTeamCardData">
-            {member.rollNo}
+            {member.roll_num}
           </Card.Text>
           <Card.Title className="name-TechnicalTeamCardData">
             {member.name}
           </Card.Title>
           <Card.Text className="designation-TechnicalTeamCardData">
-            {member.designation}
+            {member.position}
           </Card.Text>
         </Card.Body>
       </Card>
