@@ -51,7 +51,11 @@ const BlogsContainer = (props) => {
     // console.log('Query');
     axios
       .get(
-        `${process.env.REACT_APP_BASE_URL}/front/blogs/${clubName}${queryEndPoint}`
+        `${
+          process.env.REACT_APP_BASE_URL
+        }/front/blogs/${clubName
+          .toLowerCase()
+          .replace(/\s+/g, '%20')}}${queryEndPoint}`
       )
       .then((res) => {
         //console.log(res);
