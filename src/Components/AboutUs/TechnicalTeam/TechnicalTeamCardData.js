@@ -3,10 +3,10 @@ import Card from 'react-bootstrap/Card';
 import DisplayPicture from './display picture.png';
 import './TechnicalTeamCardData.css';
 
-export const TechnicalTeamCardData = ({ member }) => {
+const TechnicalTeamCardData = ({ member }) => {
   // assign type of member
   let memberStyle = '';
-  let tierStyle = 'technical secretary';
+  const tierStyle = 'technical secretary';
   switch (member.position) {
     case tierStyle:
       memberStyle =
@@ -22,7 +22,7 @@ export const TechnicalTeamCardData = ({ member }) => {
       <Card className={memberStyle}>
         <p className="dPicture-border-TechnicalTeamCardData">
           <Card.Img
-            src={DisplayPicture}
+            src={`${process.env.REACT_APP_BASE_URL}/images/${member.dp_url}`}
             alt="DisplayPicture"
             className="displayPicture-TechnicalTeamCardData"
           />
@@ -42,3 +42,5 @@ export const TechnicalTeamCardData = ({ member }) => {
     </div>
   );
 };
+
+export default TechnicalTeamCardData;
