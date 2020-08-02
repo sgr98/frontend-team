@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import parse from 'html-react-parser';
 import { Button } from 'react-bootstrap';
 import './TechTeamInfo.css';
-import {Button} from 'react-bootstrap';
 import { FaGithub, FaYoutube, FaInstagram } from 'react-icons/fa';
 
 function TechTeamInfo({ data }) {
