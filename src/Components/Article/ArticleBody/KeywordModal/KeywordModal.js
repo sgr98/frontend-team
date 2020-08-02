@@ -16,32 +16,6 @@ const KeywordModal = (props) => {
   };
   const handleShow = () => setShow(true);
 
-  function getAllBlogs() {
-    let allBlogs = [];
-
-    let allClubs = [{ name: 'general' }];
-    allClubs = allClubs.concat(props.clubs);
-    allClubs.forEach(async ({ name }) => {
-      const queryRoute = `${
-        process.env.REACT_APP_BASE_URL
-      }/front/blogs/${name
-        .toLowerCase()
-        .replace(/\s+/g, '%20')}?filter=${props.keyword
-        .toLowerCase()
-        .replace(/\s+/g, '+')}`;
-
-      await axios
-        .get(queryRoute)
-        .then((res) => {
-          console.log(name, res.data);
-          allBlogs = allBlogs.concat(res.data);
-          console.log(allBlogs);
-        })
-        .catch((err) => console.log(err));
-    });
-    return allBlogs;
-  }
-
   useEffect(() => {
     if (show) {
       let queryRoute = `${process.env.REACT_APP_BASE_URL}/front/`;
@@ -59,20 +33,21 @@ const KeywordModal = (props) => {
           })
           .catch((err) => console.log(err));
       } else {
-        // queryRoute += `/blogs/literary?filter=${props.keyword
-        //   .toLowerCase()
-        //   .replace(/\s+/g, '+')}`;
-        // axios
-        //   .get(queryRoute)
-        //   .then((res) => {
-        //     console.log(res.data);
-        //     setData(res.data);
-        //   })
-        //   .catch((err) => console.log(err));
-        let blogs = getAllBlogs();
-        console.log(blogs);
-        setData(blogs);
-        setLoading(false);
+        queryRoute = `${
+          process.env.REACT_APP_BASE_URL
+        }/front/blogs/tags/${props.keyword
+          .toLowerCase()
+          .replace(/\s+/g, '%20')}`;
+
+        axios
+          .get(queryRoute)
+          .then((res) => {
+            console.log(res.data);
+            setData(res.data);
+            setLoading(false);
+          })
+          .catch((err) => console.log(err));
+        // setData(blogs);
       }
     }
   }, [show]);
