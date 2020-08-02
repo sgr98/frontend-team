@@ -12,22 +12,9 @@ class AnnouncementBar extends Component {
   }
 
   componentDidMount() {
+    console.log(this.props);
     this.setState({
-      Announcements: [
-        {
-          announcement: 'MindSprint 2020 Exam Results Published.',
-          link: 'https://www.facebook.com/',
-        },
-        {
-          announcement:
-            'IIT Tirupati Hostels closed from today due to the ongoing Covid-19 pandemic.',
-          link: 'https://www.youtube.com/',
-        },
-        {
-          announcement: 'IIT Tirupati to be opened on 12th July?',
-          link: 'https://www.google.com/',
-        },
-      ],
+      Announcements: this.props.announcements,
     });
     this.interval = setInterval(() => {
       this.increment();
@@ -77,9 +64,7 @@ class AnnouncementBar extends Component {
       <div className="root-AnnouncementBar">
         <div className="current-AnnouncementBar">
           <p className={this.state.fading ? 'fade-in' : ''}>
-            {currentAnnouncement
-              ? currentAnnouncement.announcement
-              : 'Loading..'}
+            {currentAnnouncement ? currentAnnouncement.snippet : 'Loading..'}
           </p>
           <a
             href={currentAnnouncement ? currentAnnouncement.link : ''}
