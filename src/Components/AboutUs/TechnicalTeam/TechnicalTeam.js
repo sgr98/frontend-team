@@ -13,10 +13,11 @@ export const TechnicalTeam = () => {
   let isRendered = useRef(false);
 
   useEffect(() => {
+    // Assigning Card according to Tier
     const topHeadsArray = (
       <Row>
         {members.map((member) => {
-          if (member.position === 'technical secretary') {
+          if (member.position.toLowerCase() === 'technical secretary') {
             return (
               <Col
                 sm={{ span: 10, offset: 1 }}
@@ -34,7 +35,7 @@ export const TechnicalTeam = () => {
     const bottomHeadsArray = (
       <Row>
         {members.map((member) => {
-          if (member.position !== 'technical secretary') {
+          if (member.position.toLowerCase() !== 'technical secretary') {
             return (
               <Col
                 sm={{ span: 10, offset: 1 }}
@@ -72,8 +73,6 @@ export const TechnicalTeam = () => {
       isRendered = false;
     };
   }, []);
-
-  // Assigning Card according to Tier
 
   return (
     <>

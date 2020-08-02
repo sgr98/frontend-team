@@ -7,7 +7,7 @@ const TechnicalTeamCardData = ({ member }) => {
   // assign type of member
   let memberStyle = '';
   const tierStyle = 'technical secretary';
-  switch (member.position) {
+  switch (member.position.toLowerCase()) {
     case tierStyle:
       memberStyle =
         'data-container-TechnicalTeamCardData Top-TechnicalTeamCardData';
