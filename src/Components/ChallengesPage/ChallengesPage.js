@@ -7,6 +7,7 @@ import ProjectFooter from '../ProjectsPage/ProjectFooter/ProjectFooter';
 import Navigation from '../Navigation/Navigation';
 import ChallengesContainer from './ChallengesContainer/ChallengesContainer';
 import ChallengesDropdown from './ChallengesContainer/ChallengesDropdown/ChallengesDropdown';
+import Spinner from './ChallengesContainer/Spinner';
 
 const ChallengesPage = () => {
   const [categoryNames, setCategoryNames] = useState(['all', 'electrical']);
@@ -28,7 +29,8 @@ const ChallengesPage = () => {
       <Navigation />
       <div className="ChallengesPage">
         {loading ? (
-          <h1>Loading..</h1>
+          // <h1>Loading..</h1>
+          <Spinner />
         ) : (
           <Route
             path="/Challenges/:category"
@@ -36,7 +38,6 @@ const ChallengesPage = () => {
             component={() => (
               <>
                 <ChallengesDropdown categoryNames={categoryNames} />
-
                 <ChallengesContainer />
               </>
             )}
