@@ -25,9 +25,9 @@ const ClubsPage = (props) => {
   return (
     <div>
       <ClubsNavbar />
-      <ClubsFeautured />
-      <ClubsHighlights />
-      <ClubsTeamInfo />
+      <ClubsFeautured data={data}/>
+      <ClubsHighlights data={data}/>
+      <ClubsTeamInfo data={data}/>
       <CustomHR />
       <ContactForm />
       <ClubsFooter />

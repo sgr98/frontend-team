@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ClubsFeautured.css";
 import { FaGithub, FaYoutube, FaInstagram } from "react-icons/fa";
-function ClubsFeatured() {
+const ClubsFeatured = ({data}) => {
   const [readMore, setReadMore] = useState(false);
 
   const width =
@@ -12,21 +12,9 @@ function ClubsFeatured() {
   return (
     <div className="ClubsFeatured-container">
       <div className="ClubsFeatured-content">
-        <div className="ClubsFeatured-title">TECHMANIACS</div>
-        <div className="ClubsFeatured-subtitle">
-          The Electronics and Robotics Club of IIT Tirupati
-        </div>
+      <div className="ClubsFeatured-title">{data?data["Club name"]:""}</div>
         <div className="ClubsFeatured-description">
-          The Robotics and Electronics club was formed in 1.5008, with a vision
-          to raise the level of Robotics in the institute to an international
-          standard by developing an integrated knowledge base in the field of
-          Robotics. It is one of the most active clubs in CFI, comprising of 600
-          members from all years. The Robotics and Electronics club is striving
-          to inspire and enable the students to explore their creativity and
-          engineering skills through robotics by engaging them in exciting
-          mentor based program which teaches them both technical skills,
-          teamwork and leadership. iBot club is not leaving any stone unturned
-          in the process of becoming a self-sustained student robotics hub.
+        {data?data["Club Description"]:""}
         </div>
         {readMore ? (
           <>
@@ -84,35 +72,38 @@ function ClubsFeatured() {
           <div className="ClubsFeatured-image">
             <div className="ClubsFeatured-image-container">
               <div className="ClubsFeatured-image-content">
-                <a
-                  href="https://unsplash.com/photos/HkTMcmlMOUQ"
-                  target="_blank"
-                >
                   <div className="ClubsFeatured-image-content-overlay"></div>
                   <img
                     className="ClubsFeatured-image-content-image"
-                    src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362"
+                    src={data?`${process.env.REACT_APP_BASE_URL}/images/${data["Club logo_url"]}`:"https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362"}
                   />
                   <div className="ClubsFeatured-image-content-details fadeIn-bottom">
                     <div className="center">
                       <span className="ClubsFeatured-overlay-title">
                         connect with us on social media ❤
                       </span>
-                      <span className="ClubsFeatured-overlay-social">
+                      <a className="ClubsFeatured-overlay-social" href={data?`${data["Club Instagram page"]}`:""} target="_blank">
+                      <span >
                         <FaInstagram color="orange" /> Instagram
                       </span>
-                      <span className="ClubsFeatured-overlay-social">
+                      </a>
+                      <a className="ClubsFeatured-overlay-social" href={data?`${data["Club Github page"]}`:""} target="_blank">
+                      <span >
                         <FaGithub /> Github
                       </span>
-                      <span className="ClubsFeatured-overlay-social">
+                      </a>
+                      <a className="ClubsFeatured-overlay-social" href={data?`${data["Club Youtube channel"]}`:""} target="_blank">
+                      <span >
                         <FaYoutube color="red" /> Youtube
                       </span>
-                      <span className="ClubsFeatured-overlay-social">
+                      </a>
+                      <a className="ClubsFeatured-overlay-social" href={data?`/frontend-team#/clubs/${data["Club name"]}/gallery`:""}>
+                      <span >
                         View Gallery
                       </span>
+                      </a>
                     </div>
                   </div>
-                </a>
               </div>
               <div className="ClubsFeatured-frame-logo">
                 <FaGithub color="white" />
