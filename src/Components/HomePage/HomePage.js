@@ -29,7 +29,7 @@ const HomePage = () => {
     <div className="HomePage">
       <Navigation />
       {loading ? (
-        <h1>Loading...</h1>
+        <h1>Loading...ssssss</h1>
       ) : (
         <>
           <Featured projects={data['f_projects']} />
