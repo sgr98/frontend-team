@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { withRouter } from 'react-router';
 import './BlogsContainer.css';
+import {Spinner} from 'react-bootstrap'
 import axios from 'axios';
 import SearchBar from '../SearchBar/SearchBar';
 import BlogCard from '../BlogCard/BlogCard';
@@ -114,7 +115,9 @@ const BlogsContainer = (props) => {
       />
       <div className="BlogsContainer">
         {loading ? (
-          <h1>Loading</h1>
+          <Spinner className="loadingSpinner" animation="border" variant="primary" role="status">
+            <span className="sr-only">Loading...</span>
+          </Spinner>
         ) : blogsList.length !== 0 ? (
           <>
             {currentPage === 1 ? (

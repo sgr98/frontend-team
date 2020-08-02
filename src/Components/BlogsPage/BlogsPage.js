@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import Article from '../Article/Article';
 import axios from 'axios';
+import {Spinner} from 'react-bootstrap'
 import './BlogsPage.css';
 import BlogsContainer from './BlogsContainer/BlogsContainer';
 import Navigation from '../Navigation/Navigation';
@@ -26,7 +27,9 @@ const BlogsPage = () => {
     <>
       <Navigation />
       {loading ? (
-        <h1>Loading...</h1>
+          <Spinner className="loadingSpinner" animation="border" variant="primary" role="status">
+            <span className="sr-only">Loading...</span>
+          </Spinner>
       ) : (
         <div className="BlogsPage">
           {/* <BlogsNavbar /> */}
