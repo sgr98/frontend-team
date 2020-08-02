@@ -12,6 +12,8 @@
   width: 30%;
   cursor: pointer;
   display: inline-block;
+  height: 25rem;
+  overflow: scroll;
 }
 
 .root-ChallengeCard:hover {
@@ -102,12 +104,14 @@
 @media only screen and (max-width: 992px) {
   .root-ChallengeCard {
     width: 48%;
+    height: 22rem;
   }
 }
 
 @media only screen and (max-width: 642px) {
   .root-ChallengeCard {
     width: 90%;
+    height: 20rem;
   }
 }
 
