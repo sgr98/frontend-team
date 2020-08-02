@@ -17,7 +17,7 @@ export const TechnicalTeam = () => {
     const topHeadsArray = (
       <Row>
         {members.map((member) => {
-          if (member.position.toLowerCase() === 'technical secretary') {
+          if (member.position.toLowerCase() === 'technical affairs secretary') {
             return (
               <Col
                 sm={{ span: 10, offset: 1 }}
@@ -35,7 +35,7 @@ export const TechnicalTeam = () => {
     const bottomHeadsArray = (
       <Row>
         {members.map((member) => {
-          if (member.position.toLowerCase() !== 'technical secretary') {
+          if (member.position.toLowerCase() !== 'technical affairs secretary') {
             return (
               <Col
                 sm={{ span: 10, offset: 1 }}
@@ -93,12 +93,10 @@ export default withRouter(TechnicalTeam);
 
 // Static Data
 
-// {
-//   "_id": "5f1561ce20208b4ac85bb595",
-//   "name": "arpit",
-//   "position": "nothing he can do!",
-//   "roll_num": "cs18b0xx",
-//   "email_id": "arpibadejiya@gmail.com",
-//   "contact": 9411890675,
-//   "dp_url": "d2f5997ca0fcdfc9abfc9be92146309b.png"
-// }
+// contact: 9411890675
+// dp_url: "d2f5997ca0fcdfc9abfc9be92146309b.png"
+// email_id: "arpibadejiya@gmail.com"
+// name: "arpit"
+// position: "TECHNICAL AFFAIRS SECRETARY"
+// roll_num: "cs18b0xx"
+// _id: "5f26bab7121517001786a932"
