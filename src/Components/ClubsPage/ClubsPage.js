@@ -13,7 +13,7 @@ const ClubsPage = (props) => {
   useEffect(() => {
     axios
       .get(
-        `${process.env.REACT_APP_BASE_URL}/front/clubs/${props.match.params.id}`
+        `${process.env.REACT_APP_BASE_URL}/front/club/${props.match.params.id}`
       )
       .then((res) => {
         console.log(res.data);
