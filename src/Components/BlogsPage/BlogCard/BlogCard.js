@@ -57,7 +57,7 @@ const Card = (props) => {
             className="event-card-topic"
             style={{ display: 'flex', justifyContent: 'center' }}
           >
-            Author: Mir Sameed Ali
+            Author: {single.creator}
           </p>
 
           <div className="card-btn-container-BlogCard">

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Route } from 'react-router-dom';
 import axios from 'axios';
+
 import './ChallengesPage.css';
 import ProjectFooter from '../ProjectsPage/ProjectFooter/ProjectFooter';
 import Navigation from '../Navigation/Navigation';
