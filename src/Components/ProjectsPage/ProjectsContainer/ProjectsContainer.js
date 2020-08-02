@@ -12,8 +12,6 @@ const ProjectsContainer = ({ url, searchKeyword }) => {
 
   useEffect(() => {
     axios.get(url).then((res) => {
-      console.log(res);
-
       let data = [];
 
       data = res.data.filter((project) => project !== null);

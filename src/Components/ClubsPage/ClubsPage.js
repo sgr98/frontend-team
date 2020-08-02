@@ -25,11 +25,11 @@ const ClubsPage = (props) => {
   return (
     <div>
       <ClubsNavbar />
-      <ClubsFeautured data={data}/>
-      <ClubsHighlights data={data}/>
-      <ClubsTeamInfo data={data}/>
-      <CustomHR />
-      <ContactForm />
+      <ClubsFeautured data={data} />
+      {/* <ClubsHighlights data={data}/> */}
+      <ClubsTeamInfo data={data} />
+      {/* <CustomHR /> */}
+      {/* <ContactForm /> */}
       <ClubsFooter />
     </div>
   );

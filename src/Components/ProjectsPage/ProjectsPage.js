@@ -97,7 +97,6 @@ class ProjectsPage extends Component {
   };
 
   render() {
-    console.log(this.state.currentUrl);
     return (
       <div className="root-ProjectsPage">
         <Navigation />
