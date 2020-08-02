@@ -1,10 +1,16 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import './BlogCardRecent.css';
-import parse from 'html-react-parser';
+// import parse from 'html-react-parser';
 
 import Remark from '../../ReusableComponents/Remark/Remark';
 
-const BlogCardRecent = ({ data }) => {
+const BlogCardRecent = ({ data, history }) => {
+  const redirectionHandler = () => {
+    history.push({
+      pathname: `${data._id}`,
+    });
+  };
   return (
     <div className="container-BlogCardRecent">
       <div className="card-content-BlogCardRecent">
@@ -17,7 +23,7 @@ const BlogCardRecent = ({ data }) => {
         <div className="card-content-details-BlogCardRecent">
           <div className="card-topRow-BlogCardRecent">
             <p className="card-title-BlogCardRecent">{data.title}</p>
-            <Remark text="FEATURED" />
+            <Remark text="View Blog" onClickHandler={redirectionHandler} />
           </div>
           <span className="card-SubHeading-BlogCardRecent">{data.author}</span>
 
@@ -28,12 +34,14 @@ const BlogCardRecent = ({ data }) => {
               ideal={2500}
               readMoreText="Read More"
             /> */}
-            {parse(data.summary)}
+            {/* {parse(data.summary)} */}
+            {data.extract}
           </div>
+          {/* <Button>View Blog</Button> */}
         </div>
       </div>
     </div>
   );
 };
 
-export default BlogCardRecent;
+export default withRouter(BlogCardRecent);

@@ -9,8 +9,13 @@
     rgba(180, 160, 255, 0.45) 100%
   );
   height: auto;
+  cursor: pointer;
   width: fit-content;
   border-radius: 2px;
+}
+
+.remark:hover {
+  border: 1px solid #f5f5f5;
 }
 
 .remark span {

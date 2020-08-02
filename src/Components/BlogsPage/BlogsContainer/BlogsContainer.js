@@ -55,10 +55,10 @@ const BlogsContainer = (props) => {
           process.env.REACT_APP_BASE_URL
         }/front/blogs/${clubName
           .toLowerCase()
-          .replace(/\s+/g, '%20')}}${queryEndPoint}`
+          .replace(/\s+/g, '%20')}${queryEndPoint}`
       )
       .then((res) => {
-        //console.log(res);
+        console.log(res);
         setPosts(Object.keys(res.data).length !== 0 ? res.data : []);
         setLoading(false);
       });
