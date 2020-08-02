@@ -166,11 +166,11 @@ const InnerSlide = (props) => {
       </div>
       <div
         style={{
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-          width: "100%",
-          marginBottom: "10px",
+          display: 'flex',
+          justifyContent: 'space-around',
+          alignItems: 'center',
+          width: '100%',
+          marginBottom: '10px',
         }}
       >
         {width < 768 ? (
@@ -182,21 +182,16 @@ const InnerSlide = (props) => {
             {props.data.buttonUrl[0].name}
           </Button>
         ) : (
-          props.data.buttonUrl.map(({ name, url }, index) => (
-            <Button
-              href={url}
-              key={index}
-              id="ClubeSlide-btn"
-              variant="outline"
-            >
-              {name}
+          <>
+            <Button id="ClubeSlide-btn" variant="outline">
+              Visit Our Page
             </Button>
-          ))
+            <Button id="ClubeSlide-btn" variant="outline">
+              Resources
+            </Button>
+          </>
         )}
       </div>
-      <div
-        className={`swiper-pagination swiper-pagination-inner swiper-pagination-inner${props.index}`}
-      ></div>
     </div>
   );
 };

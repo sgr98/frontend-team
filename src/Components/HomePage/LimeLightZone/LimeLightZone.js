@@ -1,3 +1,4 @@
+/* eslint-disable no-else-return */
 import React, { Component } from 'react';
 import './LimeLightZone.css';
 import RightTeamCard from './RightTeamCard/RightTeamCard';
@@ -26,13 +27,92 @@ class LimeLightZone extends Component {
     return (
       <div className="LimeLightZone">
         <LimeLightHeading />
+        {this.state.blogs.map((blog, index) => {
+          if (index % 2 === 0) {
+            return (
+              <React.Fragment key={blog._id}>
+                <RightTeamCard
+                  remarkText="FEATURED"
+                  buttonText="Read Blog"
+                  category="blog"
+                  data={blog}
+                />
+                <CustomHR />
+              </React.Fragment>
+            );
+          }
+          return (
+            <React.Fragment key={blog._id}>
+              <LeftTeamCard
+                remarkText="FEATURED"
+                buttonText="Read Blog"
+                category="blog"
+                data={blog}
+              />
+              <CustomHR />
+            </React.Fragment>
+          );
+        })}
+        {this.props.achievements.map((single, index) => {
+          if (this.state.blogs.length % 2 === 0) {
+            if (index % 2 === 0) {
+              return (
+                <React.Fragment key={single._id}>
+                  <RightTeamCard
+                    remarkText="FEATURED ACHIEVEMENT"
+                    buttonText="View Images"
+                    category="achievement"
+                    data={single}
+                  />
+                  <CustomHR />
+                </React.Fragment>
+              );
+            }
+            return (
+              <React.Fragment key={single._id}>
+                <LeftTeamCard
+                  remarkText="FEATURED ACHIEVEMENT"
+                  buttonText="View Images"
+                  category="achievement"
+                  data={single}
+                />
+                <CustomHR />
+              </React.Fragment>
+            );
+          } else {
+            if (index % 2 !== 0) {
+              return (
+                <React.Fragment key={single._id}>
+                  <RightTeamCard
+                    remarkText="FEATURED ACHIEVEMENT"
+                    buttonText="View Images"
+                    category="achievement"
+                    data={single}
+                  />
+                  <CustomHR />
+                </React.Fragment>
+              );
+            }
+            return (
+              <React.Fragment key={single._id}>
+                <LeftTeamCard
+                  remarkText="FEATURED ACHIEVEMENT"
+                  buttonText="View Images"
+                  category="achievement"
+                  data={single}
+                />
+                <CustomHR />
+              </React.Fragment>
+            );
+          }
+        })}
 
-        <RightTeamCard remarkText="UPCOMING" buttonText="EXPLORE MORE" />
+        {/* <RightTeamCard remarkText="UPCOMING" buttonText="EXPLORE MORE" />
         <CustomHR />
         <LeftTeamCard />
         <CustomHR />
         <RightTeamCard remarkText="UPCOMING" buttonText="EXPLORE MORE" />
-        <CustomHR />
+        <CustomHR /> */}
         {/* <CollegeTeams /> */}
       </div>
     );
