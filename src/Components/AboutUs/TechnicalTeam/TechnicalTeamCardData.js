@@ -6,7 +6,7 @@ import './TechnicalTeamCardData.css';
 const TechnicalTeamCardData = ({ member }) => {
   // assign type of member
   let memberStyle = '';
-  const tierStyle = 'technical secretary';
+  const tierStyle = 'technical affairs secretary';
   switch (member.position.toLowerCase()) {
     case tierStyle:
       memberStyle =
@@ -34,8 +34,14 @@ const TechnicalTeamCardData = ({ member }) => {
           <Card.Title className="name-TechnicalTeamCardData">
             {member.name}
           </Card.Title>
-          <Card.Text className="designation-TechnicalTeamCardData">
+          <Card.Text className="position-TechnicalTeamCardData">
             {member.position}
+          </Card.Text>
+          <Card.Text className="email_id-TechnicalTeamCardData">
+            {member.email_id}
+          </Card.Text>
+          <Card.Text className="contact-TechnicalTeamCardData">
+            {member.contact}
           </Card.Text>
         </Card.Body>
       </Card>
