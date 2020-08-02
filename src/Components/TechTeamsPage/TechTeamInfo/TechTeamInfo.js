@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import parse from 'html-react-parser';
 import './TechTeamInfo.css';
+import {Button} from 'react-bootstrap';
 import { FaGithub, FaYoutube, FaInstagram } from 'react-icons/fa';
 
 function TechTeamInfo({ data }) {
@@ -32,6 +33,9 @@ function TechTeamInfo({ data }) {
         <div className="TechTeamInfo-description">
           {parse(data.description)}
         </div>
+        {data.ref_link &&
+        <Button className="TechTeamInfo-redirect" href={"//"+data.ref_link} target="_blank">Click to check us out</Button>
+        }
         {readMore ? (
           <>
             <div className="TechTeamInfo-title">TECHMANIACS</div>
