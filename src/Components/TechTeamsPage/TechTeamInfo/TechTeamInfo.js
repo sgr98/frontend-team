@@ -34,7 +34,7 @@ function TechTeamInfo({ data }) {
           {parse(data.description)}
         </div>
         {data.ref_link &&
-        <Button className="TechTeamInfo-redirect" href={"//"+data.ref_link} target="_blank">Click to check us out</Button>
+        <Button className="TechTeamInfo-redirect" href={"//"+data.ref_link} target="_blank">Check our website</Button>
         }
         {readMore ? (
           <>

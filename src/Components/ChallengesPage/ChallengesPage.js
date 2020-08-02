@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Route } from 'react-router-dom';
 import axios from 'axios';
 import './ChallengesPage.css';
+import {Spinner} from 'react-bootstrap'
 import ProjectFooter from '../ProjectsPage/ProjectFooter/ProjectFooter';
 import Navigation from '../Navigation/Navigation';
 import ChallengesContainer from './ChallengesContainer/ChallengesContainer';
@@ -27,8 +28,10 @@ const ChallengesPage = () => {
       <Navigation />
       <div className="ChallengesPage">
         {loading ? (
-          <h1>Loading..</h1>
-        ) : (
+          <Spinner className="loadingSpinner" animation="border" variant="primary" role="status">
+            <span className="sr-only">Loading...</span>
+          </Spinner>
+          ) : (
           <Route
             path="/Challenges/:category"
             exact

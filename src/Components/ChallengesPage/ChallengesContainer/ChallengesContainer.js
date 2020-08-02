@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
+import {Spinner} from 'react-bootstrap'
 import './ChallengesContainer.css';
 import ChallengeCard from './ChallengeCard/ChallengeCard';
 
@@ -25,7 +26,9 @@ const ChallengesContainer = (props) => {
   return (
     <div className="root-ChallengesContainer">
       {loading ? (
-        <h1>Loading</h1>
+        <Spinner className="loadingSpinner" animation="border" variant="primary" role="status">
+          <span className="sr-only">Loading...</span>
+        </Spinner>
       ) : challenges.length !== 0 ? (
         challenges.map((data) => <ChallengeCard key={data.name} data={data} />)
       ) : (
