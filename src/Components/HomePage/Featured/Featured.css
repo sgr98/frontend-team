@@ -4,6 +4,7 @@
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   color: white;
 }
 
@@ -98,13 +99,17 @@
   padding: 0%;
   margin: 2% 0 0 8%;
   font-size: 1.3vw;
+  height: 40%;
   font-weight: 300;
-  background: linear-gradient(to right, #00bcf2, #b4a0ff);
+  padding-right: 6px;
+  /* background: linear-gradient(to right, #00bcf2, #b4a0ff);
   letter-spacing: 0.015em;
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+  color: #00bcf2;
   width: auto;
+  overflow: scroll;
 
   align-items: center;
   text-align: justify;

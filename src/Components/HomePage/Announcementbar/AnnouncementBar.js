@@ -12,7 +12,6 @@ class AnnouncementBar extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props);
     this.setState({
       Announcements: this.props.announcements,
     });
@@ -66,15 +65,15 @@ class AnnouncementBar extends Component {
           <p className={this.state.fading ? 'fade-in' : ''}>
             {currentAnnouncement ? currentAnnouncement.snippet : 'Loading..'}
           </p>
-          <a
+          {/* <a
             href={currentAnnouncement ? currentAnnouncement.link : ''}
             rel="noopener noreferrer"
             target="_blank"
-          >
-            {/* <button type="button" className="Button-AnnouncementBar">
+          > */}
+          {/* <button type="button" className="Button-AnnouncementBar">
               Check it out
             </button> */}
-          </a>
+          {/* </a> */}
         </div>
         {/* <div className="secondary-AnnouncementBar">
           <p className={this.state.fading ? 'fade-in' : ''}>

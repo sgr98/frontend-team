@@ -32,7 +32,7 @@ const HomePage = () => {
         <h1>Loading...</h1>
       ) : (
         <>
-          <Featured />
+          <Featured projects={data['f_projects']} />
           <Appgrid />
           <AnnouncementBar announcements={data['news']} />
           <LimeLightZone />
