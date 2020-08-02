@@ -1,6 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState, useRef } from 'react';
 import { withRouter } from 'react-router';
+import {Spinner} from 'react-bootstrap'
 import axios from 'axios';
 import ProjectFooter from '../ProjectsPage/ProjectFooter/ProjectFooter';
 import Navigation from '../Navigation/Navigation';
@@ -53,7 +54,9 @@ const Article = (props) => {
   return (
     <>
       {article === null ? (
-        <h1>Loading</h1>
+        <Spinner className="loadingSpinner" animation="border" variant="primary" role="status">
+          <span className="sr-only">Loading...</span>
+        </Spinner>
       ) : (
         <div>
           {props.category === 'project' ? <Navigation /> : null}
