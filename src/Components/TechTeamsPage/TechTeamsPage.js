@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import ProjectFooter from '../ProjectsPage/ProjectFooter/ProjectFooter';
 import './TechTeamsPage.css';
+import {Spinner} from 'react-bootstrap'
 import TechTeamMembers from './TechTeamMembers/TechTeamMembers';
 import TechTeamInfo from './TechTeamInfo/TechTeamInfo';
 import CustomHR from '../ReusableComponents/CustomHR/CustomHR';
@@ -28,7 +29,9 @@ const TechTeamsPage = (props) => {
     <div className="TechTeamsPage">
       <Navigation />
       {loading ? (
-        <h1>Loading..</h1>
+          <Spinner className="loadingSpinner" animation="border" variant="primary" role="status">
+            <span className="sr-only">Loading...</span>
+          </Spinner>
       ) : (
         <>
           <TechTeamInfo data={data} />
