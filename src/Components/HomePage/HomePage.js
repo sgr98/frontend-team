@@ -29,14 +29,17 @@ const HomePage = () => {
     <div className="HomePage">
       <Navigation />
       {loading ? (
-        <h1>Loading...ssssss</h1>
+        <h1>Loading..</h1>
       ) : (
         <>
           <Featured projects={data['f_projects']} />
           <Appgrid />
           <AnnouncementBar announcements={data['news']} />
-          <LimeLightZone />
-          <ClubsInfo />
+          <LimeLightZone
+            blogs={data['f_blogs']}
+            achievements={data['achievements']}
+          />
+          <ClubsInfo clubs={data['clubs']} />
         </>
       )}
       <Footer />

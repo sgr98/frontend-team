@@ -9,13 +9,24 @@ import LimeLightHeading from './LimeLightHeading/LimeLightHeading';
 class LimeLightZone extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      blogs: [],
+      achievements: [],
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
+      blogs: this.props.blogs,
+      achievements: this.props.achievements,
+    });
   }
 
   render() {
     return (
       <div className="LimeLightZone">
         <LimeLightHeading />
+
         <RightTeamCard remarkText="UPCOMING" buttonText="EXPLORE MORE" />
         <CustomHR />
         <LeftTeamCard />
