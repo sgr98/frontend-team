@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { ClubsTeamInfo } from './ClubsTeamInfo/ClubsTeamInfo';
-import ContactForm from './ContactForm/ContactForm';
-import CustomHR from '../ReusableComponents/CustomHR/CustomHR';
-import ClubsHighlights from './ClubsHighlights/ClubsHighlights';
-import ClubsNavbar from './ClubsNavbar/ClubsNavbar';
-import ClubsFooter from './ClubsFooter/ClubsFooter';
-import ClubsFeautured from './ClubsFeatured/ClubsFeatured';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { ClubsTeamInfo } from "./ClubsTeamInfo/ClubsTeamInfo";
+import ContactForm from "./ContactForm/ContactForm";
+import CustomHR from "../ReusableComponents/CustomHR/CustomHR";
+import ClubsHighlights from "./ClubsHighlights/ClubsHighlights";
+import ClubsNavbar from "./ClubsNavbar/ClubsNavbar";
+import ClubsFooter from "./ClubsFooter/ClubsFooter";
+import ClubsFeautured from "./ClubsFeatured/ClubsFeatured";
+
 const ClubsPage = (props) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -16,7 +17,6 @@ const ClubsPage = (props) => {
         `${process.env.REACT_APP_BASE_URL}/front/club/${props.match.params.id}`
       )
       .then((res) => {
-        console.log(res.data);
         setData(res.data);
         setLoading(false);
       })
@@ -25,7 +25,7 @@ const ClubsPage = (props) => {
   return (
     <div>
       <ClubsNavbar />
-      <ClubsFeautured data={data} />
+      <ClubsFeautured data={data} clubName={props.match.params.id} />
       {/* <ClubsHighlights data={data}/> */}
       <ClubsTeamInfo data={data} />
       {/* <CustomHR /> */}
