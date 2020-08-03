@@ -47,11 +47,11 @@ export default class Appgrid extends Component {
               </div>
 
               <div className="col-lg-2 col-md-4 col-sm-6 box">
-                <Link to="/">
+                <Link to="/TechnicalCommittee">
                   <div className="custom module-border-wrap">
                     <img src={TrophyIcon} alt="Trophy Icon" />
                     <div className="text">
-                      <p>SEARCH</p>
+                      <p>TECHNICAL COMMITTEE</p>
                     </div>
                   </div>
                 </Link>

@@ -110,7 +110,7 @@ const LeftTeamCard = (props) => {
           <div className="button-RightTeamCard-Mobile">
             <CustomButton
               onClickHandler={cardData.onClickHandler}
-              text={props.data.buttonText}
+              text={props.buttonText}
             />
           </div>
         </div>
