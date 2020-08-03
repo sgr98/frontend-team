@@ -144,7 +144,7 @@ const InnerSlide = (props) => {
         ) : null}
       </div>
       <p id="ClubeSlide-description">{props.data.clubDescription}</p>
-      <div
+      {/* <div
         className={`swiper-container ClubeSlideInner-container${props.index}`}
         id="ClubeSlideInner-container"
       >
@@ -163,7 +163,7 @@ const InnerSlide = (props) => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
       <div
         style={{
           display: 'flex',

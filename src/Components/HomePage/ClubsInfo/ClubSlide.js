@@ -146,7 +146,7 @@ const data = [
   },
 ];
 
-const ClubSlide = () => {
+const ClubSlide = (props) => {
   const width =
     window.innerWidth ||
     document.documentElement.clientWidth ||
@@ -165,7 +165,7 @@ const ClubSlide = () => {
         >
           <div className="swiper-container" id="ClubeSlideOuter-container">
             <div className="swiper-wrapper">
-              {data.map((single, index) => (
+              {props.clubs.map((single, index) => (
                 <InnerSlide key={index} index={index} data={single} />
               ))}
             </div>

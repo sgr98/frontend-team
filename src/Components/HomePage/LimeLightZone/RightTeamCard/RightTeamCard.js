@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import { withRouter } from 'react-router-dom';
@@ -9,7 +10,7 @@ import './RightTeamCard.css';
 import CustomButton from '../CustomButton/CustomButton';
 
 const RightTeamCard = (props) => {
-  let cardData = {
+  const cardData = {
     title: '',
     image_url: '',
     subHeading: '',
@@ -50,8 +51,10 @@ const RightTeamCard = (props) => {
       break;
     }
     case 'event': {
+      break;
     }
     default: {
+      break;
     }
   }
 
