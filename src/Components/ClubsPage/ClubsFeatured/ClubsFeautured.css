@@ -21,7 +21,9 @@
   width: 40%;
 }
 .ClubsFeatured-image-content-image {
-  min-width: 40vw;
+  width: 450px !important;
+  height: 320px !important;
+  /* min-width: 400px; */
 }
 .ClubsFeatured-image {
   width: 100%;
@@ -114,7 +116,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
-  font-size: 1.5vw;
+  font-size: 1.4vw;
   display: flex;
   align-items: center;
   letter-spacing: 0.05em;
@@ -261,6 +263,27 @@
     font-size: 1.5vw;
     line-height: 3vh;
   }
+  .ClubsFeatured-image-content-image {
+    width: 380px !important;
+    height: 290px !important;
+  }
+}
+@media (max-width: 660px) {
+  .ClubsFeatured-container {
+    flex-direction: column;
+  }
+  .ClubsFeatured-button {
+    font-size: 9px;
+    width: 30%;
+    margin: 3px;
+    justify-content: center;
+  }
+  .ClubsFeatured-links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 @media (max-width: 600px) {
   .ClubsFeatured-title {
@@ -275,20 +298,13 @@
     font-size: 9px;
     line-height: 2vh;
   }
-  .ClubsFeatured-button {
-    font-size: 9px;
-    width: 30%;
-    margin: 3px;
-    justify-content: center;
-  }
-  .ClubsFeatured-links {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .ClubsFeatured-parent {
+
+  /* .ClubsFeatured-parent {
     visibility: hidden;
     width: 0;
+  } */
+  .ClubsFeatured-image-content-image {
+    width: 280px !important;
+    height: 190px !important;
   }
 }
