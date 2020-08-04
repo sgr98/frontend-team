@@ -8,14 +8,15 @@ import './RightTeamCard.css';
 import CustomHR from '../../../ReusableComponents/CustomHR/CustomHR';
 import { Modal, Carousel } from 'react-bootstrap';
 import CustomButton from '../CustomButton/CustomButton';
+import EventCustomButton from '../CustomButton/EventCustomButton';
 
 const RightTeamCard = (props) => {
   const [show, setShow] = useState(false);
   const [gallery, setGallery] = useState([]);
   const handleClose = () => setShow(false);
   const handleShow = (gallery_a) => {
-      setGallery(gallery_a);
-      setShow(true);
+    setGallery(gallery_a);
+    setShow(true);
   };
   const cardData = {
     title: '',
@@ -61,9 +62,9 @@ const RightTeamCard = (props) => {
       cardData.subHeading = '';
       cardData.descriptionComponent = parse(props.data.description);
       cardData.mobileDescriptionComponent = parse(props.data.description);
-      cardData.onClickHandler=()=>{
-        handleShow(props.data.pics_url)
-      }
+      cardData.onClickHandler = () => {
+        handleShow(props.data.pics_url);
+      };
       break;
     }
     case 'event': {
@@ -85,11 +86,7 @@ const RightTeamCard = (props) => {
 
   return (
     <>
-      <Modal
-        show={show}
-        onHide={handleClose}
-        className="achievements-Modal"
-      >
+      <Modal show={show} onHide={handleClose} className="achievements-Modal">
         <Modal.Header closeButton>
           <Modal.Title>Achievement Highlights</Modal.Title>
         </Modal.Header>
@@ -136,10 +133,14 @@ const RightTeamCard = (props) => {
           </div>
 
           <div className="button-RightTeamCard">
-            <CustomButton
-              text={props.buttonText}
-              onClickHandler={cardData.onClickHandler}
-            />
+            {props.category !== 'event' ? (
+              <CustomButton
+                text={props.buttonText}
+                onClickHandler={cardData.onClickHandler}
+              />
+            ) : (
+              <EventCustomButton text={props.buttonText} single={props.data} />
+            )}
           </div>
         </div>
       </div>
@@ -164,10 +165,14 @@ const RightTeamCard = (props) => {
             {cardData.mobileDescriptionComponent}
           </div>
           <div className="button-RightTeamCard-Mobile">
-            <CustomButton
-              text={props.buttonText}
-              onClickHandler={cardData.onClickHandler}
-            />
+            {props.category !== 'event' ? (
+              <CustomButton
+                text={props.buttonText}
+                onClickHandler={cardData.onClickHandler}
+              />
+            ) : (
+              <EventCustomButton text={props.buttonText} single={props.data} />
+            )}
           </div>
         </div>
       </div>

@@ -29,7 +29,7 @@ const ClubsHighlights = ({ blogs, events }) => {
           <React.Fragment key={event._id}>
             <RightTeamCard
               remarkText="EVENT"
-              buttonText="Visit Event Page"
+              buttonText="Register"
               category="event"
               data={event}
             />
