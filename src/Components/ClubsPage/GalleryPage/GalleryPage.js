@@ -3,11 +3,11 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import GalleryContainer from './GalleryContainer/GalleryContainer';
 import ClubsNavbar from '../ClubsNavbar/ClubsNavbar';
-import ClubsFooter from '../ClubsFooter/ClubsFooter';
+import ProjectFooter from '../../ProjectsPage/ProjectFooter/ProjectFooter';
 import './GalleryPage.css';
 
 const GalleryPage = () => {
-  const {ClubName} = useParams();
+  const { ClubName } = useParams();
   const [clubGallery, setGallery] = useState({});
   useEffect(() => {
     axios
@@ -22,7 +22,7 @@ const GalleryPage = () => {
       <div className="Content-GalleryPage">
         <GalleryContainer data={clubGallery} />
       </div>
-      <ClubsFooter />
+      <ProjectFooter />
     </div>
   );
 };

@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: center;
 
-  font-family: "Roboto Slab", sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 80px;
@@ -36,8 +36,10 @@
 }
 .ClubDescrition-description {
   color: rgba(0, 188, 242);
-  margin: 10px;
+  margin: 5% 10%;
   text-align: start;
+  font-family: 'Roboto Slab', sans-serif;
+  font-style: normal;
 }
 .ClubDescrition-lineAbove-HighlightsHeading {
   justify-self: flex-start;

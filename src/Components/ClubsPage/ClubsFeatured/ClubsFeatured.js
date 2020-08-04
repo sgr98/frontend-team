@@ -1,8 +1,8 @@
-import React, { Fragment } from "react";
-import "./ClubsFeautured.css";
-import {Spinner} from 'react-bootstrap'
-import { FaGithub, FaYoutube, FaInstagram } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import React, { Fragment } from 'react';
+import './ClubsFeautured.css';
+import { Spinner } from 'react-bootstrap';
+import { FaGithub, FaYoutube, FaInstagram } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const ClubsFeatured = ({ data, clubName }) => {
   const width =
@@ -11,12 +11,12 @@ const ClubsFeatured = ({ data, clubName }) => {
     document.body.clientWidth;
 
   return (
-    <Fragment>
+    <>
       {data ? (
         <div className="ClubsFeatured-container">
           <div className="ClubsFeatured-content">
             <div className="ClubsFeatured-title">
-              {data["Club name"] ? data["Club name"] : "Club Name"}
+              {data['Club name'] ? data['Club name'] : 'Club Name'}
             </div>
             {/* <div className="ClubsFeatured-subtitle">
               {data["Club Description"]
@@ -27,8 +27,11 @@ const ClubsFeatured = ({ data, clubName }) => {
               <Link className="ClubsFeatured-button" to={`${clubName}/about`}>
                 About Us
               </Link>
-              <span className="ClubsFeatured-button">Projects</span>
-              <span className="ClubsFeatured-button">Blogs</span>
+              <span className="ClubsFeatured-button">Resources</span>
+
+              <Link className="ClubsFeatured-button" to={`/blogs/${clubName}`}>
+                Blogs
+              </Link>
             </div>
           </div>
 
@@ -40,9 +43,9 @@ const ClubsFeatured = ({ data, clubName }) => {
                   <img
                     className="ClubsFeatured-image-content-image"
                     src={
-                      data["Club logo_url"]
-                        ? `${process.env.REACT_APP_BASE_URL}/images/${data["Club logo_url"]}`
-                        : "https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362"
+                      data['Club logo_url']
+                        ? `${process.env.REACT_APP_BASE_URL}/images/${data['Club logo_url']}`
+                        : 'https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362'
                     }
                   />
                   <div className="ClubsFeatured-image-content-details fadeIn-bottom">
@@ -50,10 +53,10 @@ const ClubsFeatured = ({ data, clubName }) => {
                       <span className="ClubsFeatured-overlay-title">
                         Connect with us on social media ❤
                       </span>
-                      {data && data["Club Instagram page"] ? (
+                      {data && data['Club Instagram page'] ? (
                         <a
                           className="ClubsFeatured-overlay-social"
-                          href={data["Club Instagram page"]}
+                          href={data['Club Instagram page']}
                           target="_blank"
                         >
                           <span>
@@ -61,10 +64,10 @@ const ClubsFeatured = ({ data, clubName }) => {
                           </span>
                         </a>
                       ) : null}
-                      {data && data["Club Github page"] ? (
+                      {data && data['Club Github page'] ? (
                         <a
                           className="ClubsFeatured-overlay-social"
-                          href={data["Club Github page"]}
+                          href={data['Club Github page']}
                           target="_blank"
                         >
                           <span>
@@ -72,10 +75,10 @@ const ClubsFeatured = ({ data, clubName }) => {
                           </span>
                         </a>
                       ) : null}
-                      {data && data["Club Youtube channel"] ? (
+                      {data && data['Club Youtube channel'] ? (
                         <a
                           className="ClubsFeatured-overlay-social"
-                          href={data["Club Youtube channel"]}
+                          href={data['Club Youtube channel']}
                           target="_blank"
                         >
                           <span>
@@ -83,16 +86,12 @@ const ClubsFeatured = ({ data, clubName }) => {
                           </span>
                         </a>
                       ) : null}
-                      <a
+                      <Link
                         className="ClubsFeatured-overlay-social"
-                        href={
-                          data
-                            ? `/frontend-team#/clubs/${data["Club name"]}/gallery`
-                            : ""
-                        }
+                        to={`${data['Club name']}/gallery`}
                       >
                         <span>View Gallery</span>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -100,7 +99,7 @@ const ClubsFeatured = ({ data, clubName }) => {
                   <FaGithub color="white" />
                   <div>
                     <FaInstagram color="orange" />
-                    <span style={{ marginRight: "4px" }}></span>
+                    <span style={{ marginRight: '4px' }}></span>
                     <FaYoutube color="red" />
                   </div>
                 </div>
@@ -110,19 +109,27 @@ const ClubsFeatured = ({ data, clubName }) => {
         </div>
       ) : (
         <div className="spinner-c-overlay">
-        <div className="row h-100">
+          <div className="row h-100">
             <div className="col-sm-12 my-auto">
-                <div className="p-5 mx-auto">
-                <Spinner style={{width:"5vmax",height:"5vmax"}} className="loadingSpinner my-auto" animation="border" variant="primary" role="status">
+              <div className="p-5 mx-auto">
+                <Spinner
+                  style={{ width: '5vmax', height: '5vmax' }}
+                  className="loadingSpinner my-auto"
+                  animation="border"
+                  variant="primary"
+                  role="status"
+                >
                   <span className="sr-only">Loading...</span>
                 </Spinner>
-                <h1 style={{fontWeight:"bolder"}}>Pumping awesomeness.. Please wait :)</h1>
-                </div>
+                <h1 style={{ fontWeight: 'bolder' }}>
+                  Pumping awesomeness.. Please wait :)
+                </h1>
+              </div>
             </div>
-        </div>
+          </div>
         </div>
       )}
-    </Fragment>
+    </>
   );
 };
 

@@ -6,7 +6,7 @@ import './ClubsTeamInfo.css';
 const ClubsTeamInfo = ({ members, headDetails }) => {
   return (
     <div className="container-ClubsTeamInfo">
-      <div>
+      <div id="OurTeam">
         <h1 className="meetOurTeam-text-ClubsTeamInfo">MEET OUR TEAM</h1>
       </div>
       <Container fluid>
