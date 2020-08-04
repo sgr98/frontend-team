@@ -43,55 +43,6 @@ function TechTeamInfo({ data }) {
             Click to check us out
           </Button>
         )}
-        {readMore ? (
-          <>
-            <div className="TechTeamInfo-title">TECHMANIACS</div>
-            <div className="TechTeamInfo-subtitle">
-              The Electronics and Robotics Club of IIT Tirupati
-            </div>
-            <div className="TechTeamInfo-description">
-              The Robotics and Electronics club was formed in 1.5008, with a
-              vision to raise the level of Robotics in the institute to an
-              international standard by developing an integrated knowledge base
-              in the field of Robotics. It is one of the most active clubs in
-              CFI, comprising of 600 members from all years. The Robotics and
-              Electronics club is striving to inspire and enable the students to
-              explore their creativity and engineering skills through robotics
-              by engaging them in exciting mentor based program which teaches
-              them both technical skills, teamwork and leadership. iBot club is
-              not leaving any stone unturned in the process of becoming a
-              self-sustained student robotics hub.
-            </div>
-            <div className="TechTeamInfo-title">TECHMANIACS</div>
-            <div className="TechTeamInfo-subtitle">
-              The Electronics and Robotics Club of IIT Tirupati
-            </div>
-            <div className="TechTeamInfo-description">
-              The Robotics and Electronics club was formed in 1.5008, with a
-              vision to raise the level of Robotics in the institute to an
-              international standard by developing an integrated knowledge base
-              in the field of Robotics. It is one of the most active clubs in
-              CFI, comprising of 600 members from all years. The Robotics and
-              Electronics club is striving to inspire and enable the students to
-              explore their creativity and engineering skills through robotics
-              by engaging them in exciting mentor based program which teaches
-              them both technical skills, teamwork and leadership. iBot club is
-              not leaving any stone unturned in the process of becoming a
-              self-sustained student robotics hub.
-            </div>
-          </>
-        ) : null}
-        {/* <div className="TechTeamInfo-links">
-          <span
-            className="TechTeamInfo-button"
-            onClick={() => setReadMore(!readMore)}
-          >
-            {!readMore ? 'Read More About Us' : 'Show Less'}
-          </span>
-          <span className="TechTeamInfo-button">Projects</span>
-          <span className="TechTeamInfo-button">Resources</span>
-          <span className="TechTeamInfo-button">Blogs</span>
-        </div> */}
       </div>
 
       <div className="TechTeamInfo-parent">

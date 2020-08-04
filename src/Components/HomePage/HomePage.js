@@ -9,7 +9,7 @@ import AnnouncementBar from './Announcementbar/AnnouncementBar';
 import Appgrid from './Appgrid/Appgrid';
 import ClubsInfo from './ClubsInfo/ClubSlide';
 import Navigation from '../Navigation/Navigation';
-import Footer from '../Footer/Footer';
+import ProjectFooter from '../ProjectsPage/ProjectFooter/ProjectFooter';
 
 const HomePage = () => {
   const [loading, setLoading] = useState(true);
@@ -61,7 +61,7 @@ const HomePage = () => {
           <ClubsInfo clubs={data['clubs']} />
         </>
       )}
-      <Footer />
+      <ProjectFooter />
     </div>
   );
 };

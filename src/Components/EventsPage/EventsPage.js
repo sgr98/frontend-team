@@ -11,6 +11,7 @@ import Talks from './Talks/Talks';
 import Activities from './Activities/Activities';
 import Competitions from './Competitions/Competitions';
 import Footer from '../Footer/Footer';
+import ProjectFooter from '../ProjectsPage/ProjectFooter/ProjectFooter';
 
 const EventsPage = () => {
   const { path, url } = useRouteMatch();
@@ -80,7 +81,7 @@ const EventsPage = () => {
           />
         </Switch>
       </div>
-      <Footer />
+      <ProjectFooter />
     </>
   );
 };
