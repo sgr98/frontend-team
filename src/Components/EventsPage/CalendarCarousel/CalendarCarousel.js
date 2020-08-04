@@ -28,6 +28,17 @@ class CalendarCarousel extends Component {
   };
 
   render() {
+    const currentDate = new Date();
+    let month = currentDate.getMonth();
+
+    // let year = currentDate.getFullYear();
+    // if (month === 13) {
+    //   month = 1;
+    //   year += 1;
+    // } else if (month === 0) {
+    //   month = 12;
+    //   year -= 1;
+    // }
     return (
       <div className="root-CalendarCarousel">
         <Carousel
@@ -37,64 +48,23 @@ class CalendarCarousel extends Component {
           direction={this.state.direction}
           onSelect={this.handleSelect}
         >
+          {month !== 1 ? (
+            <Carousel.Item>
+              <Calendar monthOffset={-1} />
+            </Carousel.Item>
+          ) : null}
           <Carousel.Item>
-            <Calendar
-              monthOffset={-1}
-              events={[
-                {
-                  date: 5,
-                  image:
-                    'https://images.unsplash.com/photo-1468276311594-df7cb65d8df6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
-                  title: 'Robo Wars',
-                },
-                {
-                  date: 20,
-                  image:
-                    'https://images.unsplash.com/photo-1546767858-b102785c0794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80',
-                  title: 'Tirutsava',
-                },
-              ]}
-            />
+            <Calendar monthOffset={0} />
           </Carousel.Item>
-          <Carousel.Item>
-            <Calendar
-              monthOffset={0}
-              events={[
-                {
-                  date: 5,
-                  image:
-                    'https://images.unsplash.com/photo-1468276311594-df7cb65d8df6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
-                  title: 'Robo Wars',
-                },
-                {
-                  date: 20,
-                  image:
-                    'https://images.unsplash.com/photo-1546767858-b102785c0794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80',
-                  title: 'Tirutsava',
-                },
-              ]}
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <Calendar
-              monthOffset={1}
-              events={[
-                {
-                  date: 5,
-                  image:
-                    'https://images.unsplash.com/photo-1468276311594-df7cb65d8df6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
-                  title: 'Robo Wars',
-                },
-                {
-                  date: 20,
-                  image:
-                    'https://images.unsplash.com/photo-1546767858-b102785c0794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80',
-                  title: 'Tirutsava',
-                },
-              ]}
-            />
-          </Carousel.Item>
+          {month !== 12 ? (
+            <Carousel.Item>
+              <Calendar monthOffset={1} />
+            </Carousel.Item>
+          ) : null}
         </Carousel>
+        {/* <p style={{ color: 'white' }}>
+          *Hover over calendar cell to view more events on that day.
+        </p> */}
       </div>
     );
   }

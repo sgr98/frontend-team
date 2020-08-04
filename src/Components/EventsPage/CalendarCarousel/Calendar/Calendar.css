@@ -21,11 +21,11 @@
 
 .image-cell-table {
   border-radius: 3px;
-  filter: brightness(80%);
+  filter: brightness(70%);
 }
 
 .image-cell-table:hover {
-  filter: brightness(95%);
+  filter: brightness(75%);
 }
 .cell-calendar {
   width: 100%;
@@ -68,10 +68,11 @@
   position: absolute;
   top: 0;
   left: 0;
+  padding: 0.5px;
   font-family: 'Signika', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
   width: 100%;
   color: white;
@@ -141,6 +142,36 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.popover {
+  z-index: 99;
+  background-color: #323130;
+  color: #ffffff;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+/* .popover .arrow {
+  color: #;
+} */
+.popover .popover-header {
+  background-color: #323130;
+  background: linear-gradient(to right, #00bcf2, #b2a0ff);
+  letter-spacing: 0.015em;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: none;
+}
+.popover .popover-body {
+  background-color: #323130;
+  color: #ffffff;
+}
+.bs-popover-top > .arrow::after {
+  border-top-color: #323130;
+}
+
+.allEventsCalendar-Popover {
+  padding-left: 10%;
 }
 
 @media (min-width: 1750px) {

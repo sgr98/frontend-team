@@ -3,7 +3,7 @@
 /* ==== CARD VIEW ==== */
 .data-container-CardData {
   position: relative;
-  height: 5rem;
+  height: 5.1rem;
   margin: 1.5% 0;
   border: 4px solid #201f1e;
   box-sizing: border-box;
@@ -31,6 +31,10 @@
   padding-bottom: 1px;
   padding-left: 1%;
 }
+.textBody-CardData.card-body,
+.textBody-CardData {
+  padding-top: 13px;
+}
 
 .rollNo-CardData {
   align-self: flex-start;
@@ -49,7 +53,7 @@
   font-size: 1rem;
 }
 
-.designation-CardData {
+.position-CardData {
   align-self: flex-start;
   text-align: left;
   margin: 1px;
@@ -58,11 +62,7 @@
 }
 
 /* background based on Designation */
-.Co-Coordinator-CardData {
-  background: rgba(96, 94, 92, 0.6);
-}
-
-.Coordinator-CardData {
+.ClubHead-CardData {
   background: linear-gradient(
       90deg,
       rgba(227, 0, 140, 0.4) 0%,
@@ -70,28 +70,8 @@
     ),
     rgba(96, 94, 92, 0.2);
 }
-
-.Alumini-CardData {
-  background: rgba(48, 46, 44, 0.6);
-}
-
-/* Alumini card styles */
-.alumini-textBody-CardData {
-  font-family: Roboto, 'Segoe UI', 'Helvetica Neue', sans-serif;
-  color: #a19f9d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  margin: 0;
-}
-
-.meet-our-alumini-CardData {
-  font-weight: 700;
-  font-size: 115%;
-  margin-bottom: 0;
-  position: relative;
+.Co-Coordinator-CardData {
+  background: rgba(96, 94, 92, 0.6);
 }
 
 /* ==== DISPLAY PICTURE STYLING ==== */
@@ -100,7 +80,7 @@
   box-sizing: border-box;
   position: relative;
   margin: auto 2% auto 7%;
-  /* height: 6.5em; */
+  top: 3px;
   width: 4rem;
   border-radius: 50%;
   background: linear-gradient(to bottom, #e3008c, #724dff);
@@ -110,6 +90,8 @@
 }
 
 .displayPicture-CardData {
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   border: 2px solid transparent;
 }
@@ -118,15 +100,21 @@
 
 @media only screen and (min-width: 576px) {
   .data-container-CardData {
-    height: 6rem;
+    height: 6.1rem;
     margin: 2% 0;
   }
   .dPicture-border-CardData {
     width: 5rem;
+    top: 5%;
+  }
+  .displayPicture-CardData {
+    width: 5rem;
+    height: 5rem;
   }
   /* text sizing */
+  .textBody-CardData.card-body,
   .textBody-CardData {
-    padding-top: 10px;
+    padding-top: 5%;
     padding-left: 6%;
   }
   .rollNo-CardData {
@@ -135,17 +123,21 @@
   .name-CardData {
     font-size: 1.2rem;
   }
-  .designation-CardData {
+  .position-CardData {
     font-size: 0.9rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .data-container-CardData {
-    height: 6.7rem;
+    height: 6.8rem;
   }
+  .dPicture-border-CardData {
+    top: 9%;
+  }
+  .textBody-CardData.card-body,
   .textBody-CardData {
-    padding-top: 4%;
+    padding-top: 5%;
     padding-left: 3%;
   }
 }
@@ -156,14 +148,16 @@
   }
   .dPicture-border-CardData {
     width: 5.6rem;
-    margin: auto 3% auto 7%;
+    top: 7%;
   }
-  .meet-our-alumini-CardData {
-    font-size: 135%;
+  .displayPicture-CardData {
+    width: 5.6rem;
+    height: 5.6rem;
   }
   /* text sizing */
+  .textBody-CardData.card-body,
   .textBody-CardData {
-    padding-top: 4%;
+    padding-top: 7%;
     padding-left: 8%;
   }
   .rollNo-CardData {
@@ -172,7 +166,7 @@
   .name-CardData {
     font-size: 1.25rem;
   }
-  .designation-CardData {
+  .position-CardData {
     font-size: 1rem;
   }
 }
@@ -182,20 +176,22 @@
   }
   .dPicture-border-CardData {
     width: 6.2rem;
+    top: 10%;
   }
-  .meet-our-alumini-CardData {
-    font-size: 155%;
+  .displayPicture-CardData {
+    width: 6.2rem;
+    height: 6.2rem;
   }
-
   /* text sizing */
+  .textBody-CardData.card-body,
   .textBody-CardData {
-    padding-top: 4%;
+    padding-top: 6%;
     padding-left: 4%;
   }
   .name-CardData {
     font-size: 1.4rem;
   }
-  .designation-CardData {
+  .position-CardData {
     font-size: 1.2rem;
   }
 }

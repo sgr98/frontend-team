@@ -3,12 +3,12 @@ import { Route } from 'react-router-dom';
 import axios from 'axios';
 
 import './ChallengesPage.css';
-import {Spinner} from 'react-bootstrap'
+// import {Spinner} from 'react-bootstrap'
 import ProjectFooter from '../ProjectsPage/ProjectFooter/ProjectFooter';
 import Navigation from '../Navigation/Navigation';
 import ChallengesContainer from './ChallengesContainer/ChallengesContainer';
 import ChallengesDropdown from './ChallengesContainer/ChallengesDropdown/ChallengesDropdown';
-// import Spinner from './ChallengesContainer/Spinner';
+import Spinner from './ChallengesContainer/Spinner';
 
 const ChallengesPage = () => {
   const [categoryNames, setCategoryNames] = useState(['all', 'electrical']);
@@ -30,6 +30,7 @@ const ChallengesPage = () => {
       <Navigation />
       <div className="ChallengesPage">
         {loading ? (
+
         <div className="spinner-c-overlay">
         <div className="row h-100">
             <div className="col-sm-12 my-auto">
@@ -43,6 +44,7 @@ const ChallengesPage = () => {
         </div>
         </div>
           ) : (
+
           <Route
             path="/Challenges/:category"
             exact
