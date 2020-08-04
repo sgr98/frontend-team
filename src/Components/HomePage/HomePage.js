@@ -18,7 +18,6 @@ const HomePage = () => {
     axios
       .get(`${process.env.REACT_APP_BASE_URL}/front/home`)
       .then((res) => {
-        //console.log(res.data);
         setData(res.data);
         setLoading(false);
       })

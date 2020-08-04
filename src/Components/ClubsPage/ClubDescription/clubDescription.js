@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
-import "./clubDescription.css";
-import axios from "axios";
-import parser from "html-react-parser";
+import React, { useState, useEffect } from 'react';
+import './clubDescription.css';
+import axios from 'axios';
+import parser from 'html-react-parser';
+import Navigation from '../../Navigation/Navigation';
+import ProjectFooter from '../../ProjectsPage/ProjectFooter/ProjectFooter';
 
 const ClubDescription = (props) => {
   const [data, setData] = useState(null);
@@ -19,15 +21,17 @@ const ClubDescription = (props) => {
   }, [props.match.params.id]);
   return (
     <div>
+      <Navigation />
       <div className="ClubDescrition-heading-HighlightsHeading">
         <div className="ClubDescrition-lineAbove-HighlightsHeading" />
-        <h3>{data ? data["Club name"] : "Club Name"}</h3>
+        <h3>{data ? data['Club name'] : 'Club Name'}</h3>
       </div>
       <div className="ClubDescrition-description">
-        {data && data["Club Description"]
-          ? parser(data["Club Description"])
-          : "Club Description"}
+        {data && data['Club Description']
+          ? parser(data['Club Description'])
+          : 'Club Description'}
       </div>
+      <ProjectFooter />
     </div>
   );
 };

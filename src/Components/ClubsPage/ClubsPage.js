@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { ClubsTeamInfo } from "./ClubsTeamInfo/ClubsTeamInfo";
-import ContactForm from "./ContactForm/ContactForm";
-import CustomHR from "../ReusableComponents/CustomHR/CustomHR";
-import ClubsHighlights from "./ClubsHighlights/ClubsHighlights";
-import ClubsNavbar from "./ClubsNavbar/ClubsNavbar";
-import ClubsFooter from "./ClubsFooter/ClubsFooter";
-import ClubsFeautured from "./ClubsFeatured/ClubsFeatured";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import ClubsTeamInfo from './ClubsTeamInfo/ClubsTeamInfo';
+import ClubsHighlights from './ClubsHighlights/ClubsHighlights';
+import ClubsNavbar from './ClubsNavbar/ClubsNavbar';
+
+import ClubsFeatured from './ClubsFeatured/ClubsFeatured';
+import ProjectFooter from '../ProjectsPage/ProjectFooter/ProjectFooter';
 
 const ClubsPage = (props) => {
   const [data, setData] = useState(null);
@@ -25,12 +24,31 @@ const ClubsPage = (props) => {
   return (
     <div>
       <ClubsNavbar />
-      <ClubsFeautured data={data} clubName={props.match.params.id} />
-      {/* <ClubsHighlights data={data}/> */}
-      <ClubsTeamInfo data={data} />
-      {/* <CustomHR /> */}
-      {/* <ContactForm /> */}
-      <ClubsFooter />
+      {loading ? (
+        <h1>Loading..</h1>
+      ) : (
+        <>
+          <ClubsFeatured data={data} clubName={props.match.params.id} />
+          <ClubsHighlights blogs={data['Blogs']} events={data['Events']} />
+          <ClubsTeamInfo
+            members={
+              data['Member details'].length !== 0
+                ? data['Member details'][0]['members']
+                : []
+            }
+            headDetails={{
+              name: data['Club Head name'],
+              position: 'Club Head',
+              dp_url: data['Club Head dp_url'],
+              roll_num: data['Club Head roll_num'],
+              contact: data['Club Head contact'],
+              email_id: data['Club Head email_id'],
+            }}
+          />
+        </>
+      )}
+
+      <ProjectFooter />
     </div>
   );
 };

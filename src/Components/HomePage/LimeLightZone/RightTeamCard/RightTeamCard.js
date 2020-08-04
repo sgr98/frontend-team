@@ -22,7 +22,10 @@ const RightTeamCard = (props) => {
   switch (props.category) {
     case 'blog': {
       cardData.title = props.data.title;
-      cardData.image_url = `${process.env.REACT_APP_BASE_URL}/images/${props.data.gallery[0]}`;
+      cardData.image_url =
+        props.data.gallery.length !== 0
+          ? `${process.env.REACT_APP_BASE_URL}/images/${props.data.gallery[0]}`
+          : 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80';
       cardData.subHeading = props.data.creator
         ? `By ${props.data.creator}`
         : '';
@@ -34,7 +37,7 @@ const RightTeamCard = (props) => {
           readMoreText="Read More"
         />
       ) : null;
-      cardData.descriptionComponent = props.data.extract
+      cardData.mobileDescriptionComponent = props.data.extract
         ? props.data.extract
         : null;
       cardData.onClickHandler = () => {
@@ -44,13 +47,25 @@ const RightTeamCard = (props) => {
     }
     case 'achievement': {
       cardData.title = props.data.title;
-      cardData.image_url = `${process.env.REACT_APP_BASE_URL}/images/${props.data.pics_url[0]}`;
+      cardData.image_url =
+        props.data.pics_url.length !== 0
+          ? `${process.env.REACT_APP_BASE_URL}/images/${props.data.pics_url[0]}`
+          : 'https://images.unsplash.com/photo-1484100356142-db6ab6244067?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1562&q=80';
       cardData.subHeading = '';
       cardData.descriptionComponent = parse(props.data.description);
-      cardData.descriptionComponent = parse(props.data.description);
+      cardData.mobileDescriptionComponent = parse(props.data.description);
       break;
     }
     case 'event': {
+      cardData.title = props.data.name;
+      cardData.image_url =
+        props.data.poster_url.trim().length !== 0
+          ? `${process.env.REACT_APP_BASE_URL}/images/${props.data.poster_url}`
+          : 'https://images.unsplash.com/photo-1468259275383-c4f1b88d5772?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80';
+      cardData.subHeading = '';
+      cardData.descriptionComponent = parse(props.data.description);
+      cardData.mobileDescriptionComponent = parse(props.data.description);
+
       break;
     }
     default: {
