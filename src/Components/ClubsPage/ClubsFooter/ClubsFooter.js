@@ -1,5 +1,5 @@
 import React from 'react';
-import './clubsfooter.css';
+import './ClubsFooter.css';
 import { FaInstagram } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa';
 import { FaFacebook } from 'react-icons/fa';

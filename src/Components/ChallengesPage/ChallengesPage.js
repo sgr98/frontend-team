@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import axios from 'axios';
 
 import './ChallengesPage.css';
-import {Spinner} from 'react-bootstrap'
+// import {Spinner} from 'react-bootstrap'
 import ProjectFooter from '../ProjectsPage/ProjectFooter/ProjectFooter';
 import Navigation from '../Navigation/Navigation';
 import ChallengesContainer from './ChallengesContainer/ChallengesContainer';
