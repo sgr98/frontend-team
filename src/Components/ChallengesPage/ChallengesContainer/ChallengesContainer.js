@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
+import {Spinner} from 'react-bootstrap'
 import './ChallengesContainer.css';
 import ChallengeCard from './ChallengeCard/ChallengeCard';
 import Spinner from './Spinner';

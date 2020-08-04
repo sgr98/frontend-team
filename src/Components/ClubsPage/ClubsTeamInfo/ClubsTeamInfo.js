@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { CardData } from './CardData';
 import './ClubsTeamInfo.css';
 
-export const ClubsTeamInfo = () => {
+const ClubsTeamInfo = () => {
   const [members, setMembers] = useState([
     { rollNo: 'CS19B003', name: 'Amit Kesari', designation: 'Coordinator' },
     {
@@ -42,3 +42,5 @@ export const ClubsTeamInfo = () => {
     </div>
   );
 };
+
+export default ClubsTeamInfo;

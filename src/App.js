@@ -1,21 +1,22 @@
-import React from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
-import './App.css';
-import { Navigation } from './Components/Navigation/Navigation';
-import HomePage from './Components/HomePage/HomePage';
-import Footer from './Components/Footer/Footer';
-import 'swiper/css/swiper.css';
-import EventsPage from './Components/EventsPage/EventsPage';
-import BlogsPage from './Components/BlogsPage/BlogsPage';
-import ClubsPage from './Components/ClubsPage/ClubsPage';
-import ProjectsPage from './Components/ProjectsPage/ProjectsPage';
-import AchievementsPage from './Components/AchievementsPage/AchievementsPage';
-import AboutUs from './Components/AboutUs/AboutUs';
-import Article from './Components/Article/Article';
-import ChallengesPage from './Components/ChallengesPage/ChallengesPage';
-import GalleryPage from './Components/ClubsPage/GalleryPage/GalleryPage';
-import WebTeamPage from './Components/WebTeamPage/WebTeamPage';
-import TechTeamsPage from './Components/TechTeamsPage/TechTeamsPage';
+import React from "react";
+import { HashRouter, Route, Switch } from "react-router-dom";
+import "./App.css";
+import { Navigation } from "./Components/Navigation/Navigation";
+import HomePage from "./Components/HomePage/HomePage";
+import Footer from "./Components/Footer/Footer";
+import "swiper/css/swiper.css";
+import EventsPage from "./Components/EventsPage/EventsPage";
+import BlogsPage from "./Components/BlogsPage/BlogsPage";
+import ClubsPage from "./Components/ClubsPage/ClubsPage";
+import ProjectsPage from "./Components/ProjectsPage/ProjectsPage";
+import AchievementsPage from "./Components/AchievementsPage/AchievementsPage";
+import AboutUs from "./Components/AboutUs/AboutUs";
+import Article from "./Components/Article/Article";
+import ChallengesPage from "./Components/ChallengesPage/ChallengesPage";
+import GalleryPage from "./Components/ClubsPage/GalleryPage/GalleryPage";
+import WebTeamPage from "./Components/WebTeamPage/WebTeamPage";
+import TechTeamsPage from "./Components/TechTeamsPage/TechTeamsPage";
+import ClubDescription from "./Components/ClubsPage/ClubDescription/clubDescription";
 
 function App() {
   return (
@@ -24,8 +25,9 @@ function App() {
         {/* <Navigation /> */}
 
         <Switch>
-          <Route path={['/', '/home']} exact component={HomePage} />
-          <Route exact path="/clubs" component={ClubsPage} />
+          <Route path={["/", "/home"]} exact component={HomePage} />
+          <Route exact path="/clubs/:id" component={ClubsPage} />
+          <Route exact path="/clubs/:id/about" component={ClubDescription} />
           <Route
             exact
             path="/clubs/:ClubName/gallery"

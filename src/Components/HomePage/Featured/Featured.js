@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
 import parse from 'html-react-parser';
 import './Featured.css';
@@ -19,8 +20,11 @@ class Featured extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props);
     this.setState({ data: this.props.projects });
+  }
+
+  NavigationHandler(id) {
+    this.props.history.push(`projects/${id}`);
   }
 
   render() {
@@ -40,7 +44,12 @@ class Featured extends Component {
                       {parse(project.description)}
                     </div>
                     <div className="button-div-featured-desktop">
-                      <CustomButton2 text="Read full article" />
+                      <CustomButton2
+                        text="Read full article"
+                        onClick={() => {
+                          this.NavigationHandler(project._id);
+                        }}
+                      />
                     </div>
                   </div>
                   <div className="image-div-featured">
@@ -54,7 +63,12 @@ class Featured extends Component {
                       </div>
                     ) : null}
                     <div className="button-div-featured-mobile">
-                      <CustomButton2 text="Read full article" />
+                      <CustomButton2
+                        text="Read full article"
+                        onClick={() => {
+                          this.NavigationHandler(project._id);
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
@@ -62,8 +76,7 @@ class Featured extends Component {
             );
           })}
 
-          {/* 
-          <Carousel.Item>
+          {/* <Carousel.Item>
             <div className="carousel-root-featured">
               <div className="content-div-featured">
                 <p className="featured-heading">Featured.</p>
@@ -142,4 +155,4 @@ class Featured extends Component {
   }
 }
 
-export default Featured;
+export default withRouter(Featured);

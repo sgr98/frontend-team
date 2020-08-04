@@ -2,6 +2,7 @@
   /* background: linear-gradient(to right, #00bcf2, #b4a0ff); */
   background: #00bcf2;
   padding: 2px;
+  cursor: pointer;
   width: 30%;
   border-radius: 6px;
   box-sizing: border-box;

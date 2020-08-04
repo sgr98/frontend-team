@@ -3,7 +3,7 @@ import './CustomButton2.css';
 
 const CustomButton2 = (props) => {
   return (
-    <div className="border-div-button-featured">
+    <div className="border-div-button-featured" onClick={props.onClick}>
       <div className="Button-featured">
         <span className="Button-text-featured">{props.text}</span>
       </div>

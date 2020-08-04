@@ -18,7 +18,6 @@ const HomePage = () => {
     axios
       .get(`${process.env.REACT_APP_BASE_URL}/front/home`)
       .then((res) => {
-        console.log(res.data);
         setData(res.data);
         setLoading(false);
       })
@@ -29,14 +28,17 @@ const HomePage = () => {
     <div className="HomePage">
       <Navigation />
       {loading ? (
-        <h1>Loading...</h1>
+        <h1>Loading..</h1>
       ) : (
         <>
           <Featured projects={data['f_projects']} />
           <Appgrid />
           <AnnouncementBar announcements={data['news']} />
-          <LimeLightZone />
-          <ClubsInfo />
+          <LimeLightZone
+            blogs={data['f_blogs']}
+            achievements={data['achievements']}
+          />
+          <ClubsInfo clubs={data['clubs']} />
         </>
       )}
       <Footer />
