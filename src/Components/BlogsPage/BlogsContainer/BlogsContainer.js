@@ -1,5 +1,5 @@
 /* eslint-disable no-nested-ternary */
-import React, { useState, useEffect, useLayoutEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { withRouter } from 'react-router';
 import './BlogsContainer.css';
 import {Spinner} from 'react-bootstrap'
@@ -63,12 +63,12 @@ const BlogsContainer = (props) => {
         setPosts(Object.keys(res.data).length !== 0 ? res.data : []);
         setLoading(false);
       });
-  }, [queryEndPoint]);
+  }, [clubName,queryEndPoint]);
 
   useLayoutEffect(() => {
     // console.log('currentPage, posts');
     setCurrentPosts(posts.slice(indexOfFirstPost, indexOfLastPost));
-  }, [currentPage, posts]);
+  }, [indexOfFirstPost, indexOfLastPost,currentPage, posts]);
 
   useLayoutEffect(() => {
     // console.log('blogsList');
@@ -102,7 +102,7 @@ const BlogsContainer = (props) => {
     setBlogList(blogsShown);
 
     if (blogFeatured) setFeaturedBlog(blogFeatured);
-  }, [currentPosts]);
+  }, [currentPage,currentPosts]);
 
   // console.log('blogs', blogsList, loading, posts);
   // console.log(props);

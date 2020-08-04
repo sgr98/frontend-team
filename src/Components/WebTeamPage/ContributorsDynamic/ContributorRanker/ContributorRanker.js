@@ -11,7 +11,7 @@ const ContributorRanker = ({ target }) => {
       .then((res) => {
         setData(res.data);
       });
-  }, []);
+  }, [target]);
 
   function scaleValue(
     value,
@@ -34,7 +34,7 @@ const ContributorRanker = ({ target }) => {
             <h4>{String(target).toUpperCase()} - Top Weekly</h4>
           </div>
           <div className="top3">
-            <a className="two item" href={data.winners[1].url} target="_blank">
+            <a className="two item" href={data.winners[1].url} target="_blank" rel="noopener noreferrer">
               <div className="pos"></div>
               <div
                 className="pic"
@@ -48,7 +48,7 @@ const ContributorRanker = ({ target }) => {
                 )}
               </div>
             </a>
-            <a className="one item" href={data.winners[0].url} target="_blank">
+            <a className="one item" href={data.winners[0].url} target="_blank" rel="noopener noreferrer">
               <div className="pos"></div>
               <div
                 className="pic"
@@ -65,7 +65,7 @@ const ContributorRanker = ({ target }) => {
             <a
               className="three item"
               href={data.winners[2].url}
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
             >
               <div className="pos"></div>
               <div
@@ -86,7 +86,7 @@ const ContributorRanker = ({ target }) => {
           </div>
           <div className="list">
             {data.authors.map((author, index) => (
-              <a href={author.url} key={index} target="_blank">
+              <a href={author.url} key={index} target="_blank" rel="noopener noreferrer">
                 <div className="item">
                   <div className="pos">{index + 1}</div>
                   <div
