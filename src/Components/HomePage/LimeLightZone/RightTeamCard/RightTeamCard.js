@@ -1,15 +1,22 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable no-nested-ternary */
-import React from 'react';
+import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import parse from 'html-react-parser';
 import ReadMoreReact from 'read-more-react';
 import Remark from '../../../ReusableComponents/Remark/Remark';
 import './RightTeamCard.css';
-
+import CustomHR from '../../../ReusableComponents/CustomHR/CustomHR';
+import { Modal, Carousel } from 'react-bootstrap';
 import CustomButton from '../CustomButton/CustomButton';
 
 const RightTeamCard = (props) => {
+  const [show, setShow] = useState(false);
+  const [gallery, setGallery] = useState([]);
+  const handleClose = () => setShow(false);
+  const handleShow = (gallery_a) => {
+      setGallery(gallery_a);
+      setShow(true);
+  };
   const cardData = {
     title: '',
     image_url: '',
@@ -54,6 +61,9 @@ const RightTeamCard = (props) => {
       cardData.subHeading = '';
       cardData.descriptionComponent = parse(props.data.description);
       cardData.mobileDescriptionComponent = parse(props.data.description);
+      cardData.onClickHandler=()=>{
+        handleShow(props.data.pics_url)
+      }
       break;
     }
     case 'event': {
@@ -75,6 +85,36 @@ const RightTeamCard = (props) => {
 
   return (
     <>
+      <Modal
+        show={show}
+        onHide={handleClose}
+        className="achievements-Modal"
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Achievement Highlights</Modal.Title>
+        </Modal.Header>
+        <CustomHR />
+        <Modal.Body>
+          <Carousel>
+            {gallery.map((single, index) => (
+              <Carousel.Item key={'Car' + index}>
+                <img
+                  className="d-block w-100"
+                  src={`${process.env.REACT_APP_BASE_URL}/images/${single}`}
+                  style={{
+                    display: 'block',
+                    maxWidth: '85vw',
+                    maxHeight: '70vh',
+                    width: 'auto',
+                    height: 'auto',
+                  }}
+                  alt={'Highlights Pic#' + index}
+                />
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </Modal.Body>
+      </Modal>
       <div className="root-RightTeamCard">
         <div className="imageDiv-RightTeamCard">
           <img

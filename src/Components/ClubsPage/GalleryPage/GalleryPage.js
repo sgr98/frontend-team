@@ -15,7 +15,7 @@ const GalleryPage = () => {
       .then((res) => {
         setGallery(res.data);
       });
-  }, []);
+  }, [ClubName]);
   return (
     <div>
       <ClubsNavbar />

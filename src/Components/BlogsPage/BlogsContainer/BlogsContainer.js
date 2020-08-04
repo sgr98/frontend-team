@@ -1,5 +1,5 @@
 /* eslint-disable no-nested-ternary */
-import React, { useState, useEffect, useLayoutEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { withRouter } from 'react-router';
 import './BlogsContainer.css';
 import {Spinner} from 'react-bootstrap'
@@ -63,12 +63,12 @@ const BlogsContainer = (props) => {
         setPosts(Object.keys(res.data).length !== 0 ? res.data : []);
         setLoading(false);
       });
-  }, [queryEndPoint]);
+  }, [clubName,queryEndPoint]);
 
   useLayoutEffect(() => {
     // console.log('currentPage, posts');
     setCurrentPosts(posts.slice(indexOfFirstPost, indexOfLastPost));
-  }, [currentPage, posts]);
+  }, [indexOfFirstPost, indexOfLastPost,currentPage, posts]);
 
   useLayoutEffect(() => {
     // console.log('blogsList');
@@ -102,7 +102,7 @@ const BlogsContainer = (props) => {
     setBlogList(blogsShown);
 
     if (blogFeatured) setFeaturedBlog(blogFeatured);
-  }, [currentPosts]);
+  }, [currentPage,currentPosts]);
 
   // console.log('blogs', blogsList, loading, posts);
   // console.log(props);
@@ -115,9 +115,18 @@ const BlogsContainer = (props) => {
       />
       <div className="BlogsContainer">
         {loading ? (
-          <Spinner className="loadingSpinner" animation="border" variant="primary" role="status">
-            <span className="sr-only">Loading...</span>
-          </Spinner>
+        <div className="spinner-c-overlay">
+        <div className="row h-100">
+            <div className="col-sm-12 my-auto">
+                <div className="p-5 mx-auto">
+                <Spinner style={{width:"5vmax",height:"5vmax"}} className="loadingSpinner my-auto" animation="border" variant="primary" role="status">
+                  <span className="sr-only">Loading...</span>
+                </Spinner>
+                <h1 style={{fontWeight:"bolder"}}>Pumping awesomeness.. Please wait :)</h1>
+                </div>
+            </div>
+        </div>
+        </div>
         ) : blogsList.length !== 0 ? (
           <>
             {currentPage === 1 ? (

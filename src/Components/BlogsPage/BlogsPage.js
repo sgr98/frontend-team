@@ -27,9 +27,18 @@ const BlogsPage = () => {
     <>
       <Navigation />
       {loading ? (
-          <Spinner className="loadingSpinner" animation="border" variant="primary" role="status">
-            <span className="sr-only">Loading...</span>
-          </Spinner>
+        <div className="spinner-c-overlay">
+        <div className="row h-100">
+            <div className="col-sm-12 my-auto">
+                <div className="p-5 mx-auto">
+                <Spinner style={{width:"5vmax",height:"5vmax"}} className="loadingSpinner my-auto" animation="border" variant="primary" role="status">
+                  <span className="sr-only">Loading...</span>
+                </Spinner>
+                <h1 style={{fontWeight:"bolder"}}>Pumping awesomeness.. Please wait :)</h1>
+                </div>
+            </div>
+        </div>
+        </div>
       ) : (
         <div className="BlogsPage">
           {/* <BlogsNavbar /> */}
