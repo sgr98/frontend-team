@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import SubmitFormButton from '../../ReusableComponents/SubmitFormButton/SubmitFormButton';
 import SearchField from './SearchField/SearchField';
 import ProjectFields from './ProjectFields/ProjectFields';
@@ -12,7 +13,23 @@ class SearchBar extends Component {
       selectedClubs: [],
       selectedBranches: [],
       selectedDegrees: [],
+      loading: true,
+      clubNames: [],
     };
+  }
+
+  componentDidMount() {
+    axios
+      .get(`${process.env.REACT_APP_BASE_URL}/front/clubs`)
+      .then((res) => {
+        this.setState({
+          clubNames: res.data,
+          loading: false,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   updateClubs = (clubs) => {
@@ -28,7 +45,9 @@ class SearchBar extends Component {
   };
 
   render() {
-    return (
+    return this.state.loading ? (
+      <h1>Loading</h1>
+    ) : (
       <div className="searchbar-container-ProjectsPage">
         <div>
           <SearchField search={this.props.searchKeyword} />
@@ -51,7 +70,7 @@ class SearchBar extends Component {
           <ProjectFields
             category="CLUB"
             updateArray={this.updateClubs}
-            filterNames={['TechManiacs', 'Digital Wizards']}
+            filterNames={this.state.clubNames.map(({ name }) => name)}
           />
         </div>
         {/* The Styling for the below button is similar to the above buttons */}

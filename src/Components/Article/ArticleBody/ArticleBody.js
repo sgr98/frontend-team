@@ -18,7 +18,7 @@ const ArticleBody = ({ data, category, clubs }) => {
 
   const awardString = data.award_winners;
   let awardWinners = [];
-  if (awardString.length !== 0) {
+  if (awardString && awardString.length !== 0) {
     awardWinners = awardString.split('|').map((str) => str.split(','));
   }
   console.log(awardWinners);
