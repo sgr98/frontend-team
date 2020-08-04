@@ -27,7 +27,7 @@ export const CardData = ({ member }) => {
           />
         </p>
         <Card.Body className="textBody-CardData">
-          <Card.Text className="rollNo-CardData">{member.roll_num}</Card.Text>
+          {/* <Card.Text className="rollNo-CardData">{member.roll_num}</Card.Text> */}
           <Card.Title className="name-CardData">{member.name}</Card.Title>
           <Card.Text className="position-CardData">{member.position}</Card.Text>
         </Card.Body>

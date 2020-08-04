@@ -31,6 +31,10 @@
   padding-bottom: 1px;
   padding-left: 1%;
 }
+.textBody-CardData.card-body,
+.textBody-CardData {
+  padding-top: 13px;
+}
 
 .rollNo-CardData {
   align-self: flex-start;
@@ -108,8 +112,9 @@
     height: 5rem;
   }
   /* text sizing */
+  .textBody-CardData.card-body,
   .textBody-CardData {
-    padding-top: 10px;
+    padding-top: 5%;
     padding-left: 6%;
   }
   .rollNo-CardData {
@@ -130,8 +135,9 @@
   .dPicture-border-CardData {
     top: 9%;
   }
+  .textBody-CardData.card-body,
   .textBody-CardData {
-    padding-top: 4%;
+    padding-top: 5%;
     padding-left: 3%;
   }
 }
@@ -149,8 +155,9 @@
     height: 5.6rem;
   }
   /* text sizing */
+  .textBody-CardData.card-body,
   .textBody-CardData {
-    padding-top: 4%;
+    padding-top: 7%;
     padding-left: 8%;
   }
   .rollNo-CardData {
@@ -176,8 +183,9 @@
     height: 6.2rem;
   }
   /* text sizing */
+  .textBody-CardData.card-body,
   .textBody-CardData {
-    padding-top: 4%;
+    padding-top: 6%;
     padding-left: 4%;
   }
   .name-CardData {
