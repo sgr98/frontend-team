@@ -4,7 +4,7 @@ import DisplayPicture from './display picture.png';
 import './CardData.css';
 
 export const CardData = ({ member }) => {
-  // assign type of member
+  // Assign club head/co-cordinator
   let memberStyle = '';
   switch (member.position.toLowerCase()) {
     case 'club head':
