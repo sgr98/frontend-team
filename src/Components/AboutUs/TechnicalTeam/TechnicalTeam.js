@@ -40,7 +40,7 @@ export const TechnicalTeam = () => {
               <Col
                 sm={{ span: 10, offset: 1 }}
                 md={{ span: 6, offset: 0 }}
-                key={Math.random()}
+                key={member._id}
               >
                 <TechnicalTeamCardData member={member} />
               </Col>
