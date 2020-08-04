@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import DisplayPicture from './display picture.png';
 import './CardData.css';
 
 export const CardData = ({ member }) => {
