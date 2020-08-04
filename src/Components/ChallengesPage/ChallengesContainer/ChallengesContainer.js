@@ -26,9 +26,18 @@ const ChallengesContainer = (props) => {
   return (
     <div className="root-ChallengesContainer">
       {loading ? (
-        <Spinner className="loadingSpinner" animation="border" variant="primary" role="status">
-          <span className="sr-only">Loading...</span>
-        </Spinner>
+        <div className="spinner-c-overlay">
+        <div class="row h-100">
+            <div class="col-sm-12 my-auto">
+                <div class="p-5 mx-auto">
+                <Spinner style={{width:"5vmax",height:"5vmax"}} className="loadingSpinner my-auto" animation="border" variant="primary" role="status">
+                  <span className="sr-only">Loading...</span>
+                </Spinner>
+                <h1 style={{fontWeight:"bolder"}}>Pumping awesomeness.. Please wait :)</h1>
+                </div>
+            </div>
+        </div>
+        </div>
       ) : challenges.length !== 0 ? (
         challenges.map((data) => <ChallengeCard key={data.name} data={data} />)
       ) : (

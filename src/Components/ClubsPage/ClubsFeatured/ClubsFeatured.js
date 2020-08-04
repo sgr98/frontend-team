@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import "./ClubsFeautured.css";
+import {Spinner} from 'react-bootstrap'
 import { FaGithub, FaYoutube, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -116,7 +117,18 @@ const ClubsFeatured = ({ data, clubName }) => {
           ) : null}
         </div>
       ) : (
-        <h1>Loading...</h1>
+        <div className="spinner-c-overlay">
+        <div class="row h-100">
+            <div class="col-sm-12 my-auto">
+                <div class="p-5 mx-auto">
+                <Spinner style={{width:"5vmax",height:"5vmax"}} className="loadingSpinner my-auto" animation="border" variant="primary" role="status">
+                  <span className="sr-only">Loading...</span>
+                </Spinner>
+                <h1 style={{fontWeight:"bolder"}}>Pumping awesomeness.. Please wait :)</h1>
+                </div>
+            </div>
+        </div>
+        </div>
       )}
     </Fragment>
   );

@@ -1,13 +1,22 @@
 /* eslint-disable no-nested-ternary */
-import React from 'react';
+import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import parse from 'html-react-parser';
 import ReadMoreReact from 'read-more-react';
 import Remark from '../../../ReusableComponents/Remark/Remark';
 import './LeftTeamCard.css';
+import CustomHR from '../../../ReusableComponents/CustomHR/CustomHR';
+import { Modal, Carousel } from 'react-bootstrap';
 import CustomButton from '../CustomButton/CustomButton';
 
 const LeftTeamCard = (props) => {
+  const [show, setShow] = useState(false);
+  const [gallery, setGallery] = useState([]);
+  const handleClose = () => setShow(false);
+  const handleShow = (gallery_a) => {
+      setGallery(gallery_a);
+      setShow(true);
+  };
   const cardData = {
     title: '',
     image_url: '',
@@ -38,7 +47,6 @@ const LeftTeamCard = (props) => {
       cardData.mobileDescriptionComponent = props.data.extract
         ? props.data.extract
         : null;
-
       cardData.onClickHandler = () => {
         props.history.push(`/blogs/${props.data._id}`);
       };
@@ -53,6 +61,9 @@ const LeftTeamCard = (props) => {
       cardData.subHeading = '';
       cardData.descriptionComponent = parse(props.data.description);
       cardData.mobileDescriptionComponent = parse(props.data.description);
+      cardData.onClickHandler=()=>{
+        handleShow(props.data.pics_url)
+      }
       break;
     }
 
@@ -61,6 +72,36 @@ const LeftTeamCard = (props) => {
   }
   return (
     <>
+      <Modal
+        show={show}
+        onHide={handleClose}
+        className="achievements-Modal"
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Achievement Highlights</Modal.Title>
+        </Modal.Header>
+        <CustomHR />
+        <Modal.Body>
+          <Carousel>
+            {gallery.map((single, index) => (
+              <Carousel.Item key={'Car' + index}>
+                <img
+                  className="d-block w-100"
+                  src={`${process.env.REACT_APP_BASE_URL}/images/${single}`}
+                  style={{
+                    display: 'block',
+                    maxWidth: '85vw',
+                    maxHeight: '70vh',
+                    width: 'auto',
+                    height: 'auto',
+                  }}
+                  alt={'Highlights Pic#' + index}
+                />
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </Modal.Body>
+      </Modal>
       <div className="root-LeftTeamCard">
         <div className="content_div-LeftTeamCard">
           <Remark text={props.remarkText} />

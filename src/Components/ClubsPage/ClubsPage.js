@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import {Spinner} from 'react-bootstrap';
 import ClubsTeamInfo from './ClubsTeamInfo/ClubsTeamInfo';
 import ClubsHighlights from './ClubsHighlights/ClubsHighlights';
 import ClubsNavbar from './ClubsNavbar/ClubsNavbar';
@@ -25,7 +26,18 @@ const ClubsPage = (props) => {
     <div>
       <ClubsNavbar />
       {loading ? (
-        <h1>Loading..</h1>
+        <div className="spinner-c-overlay">
+        <div class="row h-100">
+            <div class="col-sm-12 my-auto">
+                <div class="p-5 mx-auto">
+                <Spinner style={{width:"5vmax",height:"5vmax"}} className="loadingSpinner my-auto" animation="border" variant="primary" role="status">
+                  <span className="sr-only">Loading...</span>
+                </Spinner>
+                <h1 style={{fontWeight:"bolder"}}>Pumping awesomeness.. Please wait :)</h1>
+                </div>
+            </div>
+        </div>
+        </div>
       ) : (
         <>
           <ClubsFeatured data={data} clubName={props.match.params.id} />
