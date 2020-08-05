@@ -18,7 +18,7 @@ const GalleryPage = () => {
   }, [ClubName]);
   return (
     <div>
-      <ClubsNavbar />
+      <ClubsNavbar clubName={ClubName} />
       <div className="Content-GalleryPage">
         <GalleryContainer data={clubGallery} />
       </div>

@@ -6,7 +6,7 @@ import { Link, useParams } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ClubsNavbar.css';
 
-const ClubsNavbar = () => {
+const ClubsNavbar = (props) => {
   const { id } = useParams();
 
   return (
@@ -43,7 +43,7 @@ const ClubsNavbar = () => {
             <Nav.Link
               as={Link}
               className="nav-link-ClubsNavbar"
-              to={`${id}/Gallery`}
+              to={`/clubs/${props.clubName}/Gallery`}
               id="gallery-ClubsNavbar"
             >
               GALLERY
@@ -53,7 +53,7 @@ const ClubsNavbar = () => {
             <Nav.Link
               as={Link}
               className="nav-link-ClubsNavbar"
-              to={`${id}/About`}
+              to={`/clubs/${props.clubName}/About`}
               id="contactUs-ClubsNavbar"
             >
               ABOUT US

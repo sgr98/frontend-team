@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Card from 'react-bootstrap/Card';
 import './CardData.css';
 
@@ -27,9 +27,10 @@ export const CardData = ({ member }) => {
           />
         </p>
         <Card.Body className="textBody-CardData">
-          {/* <Card.Text className="rollNo-CardData">{member.roll_num}</Card.Text> */}
           <Card.Title className="name-CardData">{member.name}</Card.Title>
           <Card.Text className="position-CardData">{member.position}</Card.Text>
+          <Card.Text className="email_id-CardData">{member.email_id}</Card.Text>
+          <Card.Text className="contact-CardData">{member.contact}</Card.Text>
         </Card.Body>
       </Card>
     </div>
