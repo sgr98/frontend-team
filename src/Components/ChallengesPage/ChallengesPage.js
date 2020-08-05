@@ -3,12 +3,11 @@ import { Route } from 'react-router-dom';
 import axios from 'axios';
 
 import './ChallengesPage.css';
-import { Spinner } from 'react-bootstrap';
+import Loading from '../ReusableComponents/Loading/Loading';
 import ProjectFooter from '../ProjectsPage/ProjectFooter/ProjectFooter';
 import Navigation from '../Navigation/Navigation';
 import ChallengesContainer from './ChallengesContainer/ChallengesContainer';
 import ChallengesDropdown from './ChallengesContainer/ChallengesDropdown/ChallengesDropdown';
-// import Spinner from './ChallengesContainer/Spinner';
 
 const ChallengesPage = () => {
   const [categoryNames, setCategoryNames] = useState(['all', 'electrical']);
@@ -29,28 +28,8 @@ const ChallengesPage = () => {
     <div>
       <Navigation />
       <div className="ChallengesPage">
-        {loading ? (
-          <div className="spinner-c-overlay">
-            <div className="row h-100">
-              <div className="col-sm-12 my-auto">
-                <div className="p-5 mx-auto">
-                  <Spinner
-                    style={{ width: '5vmax', height: '5vmax' }}
-                    className="loadingSpinner my-auto"
-                    animation="border"
-                    variant="primary"
-                    role="status"
-                  >
-                    <span className="sr-only">Loading...</span>
-                  </Spinner>
-                  <h1 style={{ fontWeight: 'bolder' }}>
-                    Pumping awesomeness.. Please wait :)
-                  </h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        ) : (
+      <Loading show={loading}/>
+      {loading ? (<></>) : (
           <Route
             path="/Challenges/:category"
             exact

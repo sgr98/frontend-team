@@ -195,9 +195,8 @@ const Calendar = (props) => {
 
   return (
     <>
-      {loading ? (
-        <Loading />
-      ) : (
+      <Loading show={loading}/>
+      {loading ? (<></>) : (
         <div className="calendar-container">
           {/* <p className="heading-calendar">Calendar Activities</p> */}
           <p className="month-name-calendar">

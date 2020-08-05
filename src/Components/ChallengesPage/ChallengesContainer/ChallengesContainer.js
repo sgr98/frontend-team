@@ -2,10 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
-import {Spinner} from 'react-bootstrap'
+
 import './ChallengesContainer.css';
 import ChallengeCard from './ChallengeCard/ChallengeCard';
-// import Spinner from './Spinner';
+import Loading from '../../ReusableComponents/Loading/Loading';
+
 
 const ChallengesContainer = (props) => {
   const [loading, setLoading] = useState(true);
@@ -26,21 +27,8 @@ const ChallengesContainer = (props) => {
 
   return (
     <div className="root-ChallengesContainer">
-      {loading ? (
-
-        <div className="spinner-c-overlay">
-        <div className="row h-100">
-            <div className="col-sm-12 my-auto">
-                <div className="p-5 mx-auto">
-                <Spinner style={{width:"5vmax",height:"5vmax"}} className="loadingSpinner my-auto" animation="border" variant="primary" role="status">
-                  <span className="sr-only">Loading...</span>
-                </Spinner>
-                <h1 style={{fontWeight:"bolder"}}>Pumping awesomeness.. Please wait :)</h1>
-                </div>
-            </div>
-        </div>
-        </div>
-
+      <Loading show={loading}/>
+      {loading ? (<></>
       ) : challenges.length !== 0 ? (
         challenges.map((data) => <ChallengeCard key={data.name} data={data} />)
       ) : (

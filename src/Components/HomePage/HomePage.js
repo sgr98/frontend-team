@@ -1,7 +1,7 @@
 /* eslint-disable arrow-body-style */
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Spinner } from 'react-bootstrap';
+import Loading from '../ReusableComponents/Loading/Loading';
 import './HomePage.css';
 import Featured from './Featured/Featured';
 import LimeLightZone from './LimeLightZone/LimeLightZone';
@@ -28,28 +28,8 @@ const HomePage = () => {
   return (
     <div className="HomePage">
       <Navigation />
-      {loading ? (
-        <div className="spinner-c-overlay">
-          <div className="row h-100">
-            <div className="col-sm-12 my-auto">
-              <div className="p-5 mx-auto">
-                <Spinner
-                  style={{ width: '5vmax', height: '5vmax' }}
-                  className="loadingSpinner my-auto"
-                  animation="border"
-                  variant="primary"
-                  role="status"
-                >
-                  <span className="sr-only">Loading...</span>
-                </Spinner>
-                <h1 style={{ fontWeight: 'bolder' }}>
-                  Pumping awesomeness.. Please wait :)
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      ) : (
+      <Loading show={loading}/>
+      {loading ? (<></>) : (
         <>
           <Featured projects={data['f_projects']} />
           <Appgrid />
