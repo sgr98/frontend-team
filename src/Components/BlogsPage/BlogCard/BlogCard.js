@@ -30,7 +30,7 @@ const Card = (props) => {
         <div className="event-card-absolute">
           {' '}
           <p className="blog-card-title">{single.title}</p>
-          <span className="card-topic-BlogCard">Mir Sameed Ali</span>
+          <span className="card-topic-BlogCard">{single.creator}</span>
         </div>
         <div className="event-card-content-overlay" />
         <img
