@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import Article from '../Article/Article';
 import axios from 'axios';
-import Loading from '../ReusableComponents/Loading';
+import Loading from '../ReusableComponents/Loading/Loading';
 import './BlogsPage.css';
 import BlogsContainer from './BlogsContainer/BlogsContainer';
 import Navigation from '../Navigation/Navigation';

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import './ClubsFeautured.css';
-import Loading from '../ReusableComponents/Loading';
+import Loading from '../../ReusableComponents/Loading/Loading';
 import { FaGithub, FaYoutube, FaInstagram } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 

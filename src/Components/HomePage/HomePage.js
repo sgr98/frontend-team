@@ -1,7 +1,7 @@
 /* eslint-disable arrow-body-style */
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Loading from '../ReusableComponents/Loading';
+import Loading from '../ReusableComponents/Loading/Loading';
 import './HomePage.css';
 import Featured from './Featured/Featured';
 import LimeLightZone from './LimeLightZone/LimeLightZone';

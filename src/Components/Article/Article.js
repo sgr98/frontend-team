@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState, useRef } from 'react';
 import { withRouter } from 'react-router';
-import Loading from '../ReusableComponents/Loading';
+import Loading from '../ReusableComponents/Loading/Loading';
 import axios from 'axios';
 import ProjectFooter from '../ProjectsPage/ProjectFooter/ProjectFooter';
 import Navigation from '../Navigation/Navigation';

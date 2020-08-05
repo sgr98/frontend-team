@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Loading from '../ReusableComponents/Loading';
+import Loading from '../ReusableComponents/Loading/Loading';
 import ClubsTeamInfo from './ClubsTeamInfo/ClubsTeamInfo';
 import ClubsHighlights from './ClubsHighlights/ClubsHighlights';
 import ClubsNavbar from './ClubsNavbar/ClubsNavbar';

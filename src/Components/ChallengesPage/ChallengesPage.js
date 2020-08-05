@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import axios from 'axios';
 
 import './ChallengesPage.css';
-import Loading from '../ReusableComponents/Loading';
+import Loading from '../ReusableComponents/Loading/Loading';
 import ProjectFooter from '../ProjectsPage/ProjectFooter/ProjectFooter';
 import Navigation from '../Navigation/Navigation';
 import ChallengesContainer from './ChallengesContainer/ChallengesContainer';
