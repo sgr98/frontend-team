@@ -31,13 +31,32 @@
   left: 11%;
 }
 
-.ProjectFooter .all p {
+.ProjectFooter .all a {
   position: relative;
   top: 10%;
   text-transform: uppercase;
   font-size: 14px;
   cursor: pointer;
   margin: 3px;
+}
+
+.ProjectFooter .all a:hover {
+  font-weight: 900;
+}
+.ProjectFooter .all a {
+  position: relative;
+  display: block;
+  top: 10%;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 3px;
+  color: #f0f0f0;
+  font-family: Roboto, sans-serif;
+}
+.ProjectFooter .all a:hover {
+  font-weight: 900;
+  text-decoration: none;
 }
 
 .ProjectFooter .fac p {
@@ -88,7 +107,7 @@
 }
 
 @media (max-width: 890px) and (min-width: 768px) {
-  .ProjectFooter .all p {
+  .ProjectFooter .all a {
     font-size: 11px;
   }
 
@@ -119,7 +138,7 @@
     top: -2px;
   }
 
-  .ProjectFooter .all p {
+  .ProjectFooter .all a {
     font-size: 12px;
   }
 
@@ -149,7 +168,7 @@
     display: none;
   }
 
-  .ProjectFooter .all p {
+  .ProjectFooter .all a {
     font-size: 9px;
   }
 
@@ -208,7 +227,7 @@
     margin: 5px;
   }
 
-  .ProjectFooter .all p {
+  .ProjectFooter .all a {
     font-size: 9px;
   }
 
@@ -272,7 +291,7 @@
     margin: 5px;
   }
 
-  .ProjectFooter .all p {
+  .ProjectFooter .all a {
     font-size: 9px;
   }
 
@@ -316,6 +335,9 @@
   .ProjectFooter .bt {
     margin: 2px;
   }
+  .desktopProjectFooter {
+    display: none;
+  }
 
   .ProjectFooter .lower-three {
     display: flex;
@@ -346,8 +368,9 @@
     display: none;
   }
 
-  .ProjectFooter .all p {
-    font-size: 6.5px;
+  .ProjectFooter .all a {
+    font-size: 12px;
+    margin-top: 2%;
   }
 
   .ProjectFooter .icn {
@@ -373,6 +396,9 @@
   .ProjectFooter .lower-two strong {
     font-size: 9px;
   }
+  .ProjectFooter .cont {
+    flex-direction: column;
+  }
 }
 
 .ProjectFooter .lower-one {
@@ -387,4 +413,10 @@
 
 .ProjectFooter .techhub {
   margin-top: -10px;
+}
+
+@media (min-width: 400px) {
+  .ProjectFooter .cont {
+    display: none;
+  }
 }
