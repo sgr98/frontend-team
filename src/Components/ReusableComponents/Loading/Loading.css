@@ -22,3 +22,21 @@
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
   }
+
+  @keyframes simpfadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes simpfadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }

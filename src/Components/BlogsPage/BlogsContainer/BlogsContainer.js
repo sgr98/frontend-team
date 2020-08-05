@@ -2,7 +2,7 @@
 import React, { useState, useLayoutEffect } from 'react';
 import { withRouter } from 'react-router';
 import './BlogsContainer.css';
-import {Spinner} from 'react-bootstrap'
+import Loading from '../../ReusableComponents/Loading/Loading';
 import axios from 'axios';
 import SearchBar from '../SearchBar/SearchBar';
 import BlogCard from '../BlogCard/BlogCard';
@@ -114,20 +114,8 @@ const BlogsContainer = (props) => {
         searchKeyword={searchKeyword}
       />
       <div className="BlogsContainer">
-        {loading ? (
-        <div className="spinner-c-overlay">
-        <div className="row h-100">
-            <div className="col-sm-12 my-auto">
-                <div className="p-5 mx-auto">
-                <Spinner style={{width:"5vmax",height:"5vmax"}} className="loadingSpinner my-auto" animation="border" variant="primary" role="status">
-                  <span className="sr-only">Loading...</span>
-                </Spinner>
-                <h1 style={{fontWeight:"bolder"}}>Pumping awesomeness.. Please wait :)</h1>
-                </div>
-            </div>
-        </div>
-        </div>
-        ) : blogsList.length !== 0 ? (
+      <Loading show={loading}/>
+      {loading ? (<></>): blogsList.length !== 0 ? (
           <>
             {currentPage === 1 ? (
               <div className="Top-Row-BlogsContainer-desktop">

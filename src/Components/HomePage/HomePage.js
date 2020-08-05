@@ -28,9 +28,8 @@ const HomePage = () => {
   return (
     <div className="HomePage">
       <Navigation />
-      {loading ? (
-        <Loading />
-      ) : (
+      <Loading show={loading}/>
+      {loading ? (<></>) : (
         <>
           <Featured projects={data['f_projects']} />
           <Appgrid />

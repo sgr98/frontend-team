@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import './Loading.css'
 import { Spinner } from 'react-bootstrap';
 
-const Loading = () => {
+const Loading = ({show}) => {
+  const [triggerHappy, setRender] = useState(show);
+  useEffect(() => {
+    if (show) setRender(true);
+  }, [show]);
+  const onAnimationEnd = () => {
+    if (!show) setRender(false);
+  };
   return (
-    <div className="spinner-c-overlay">
+    triggerHappy && (
+    <div className="spinner-c-overlay" style={{ animation: `${show ? "simpfadeIn 2s" : "simpfadeOut 1s"}`,animationDelay: "4s" }} onAnimationEnd={onAnimationEnd}>
     <div className="row h-100">
       <div className="col-sm-12 my-auto">
         <div className="p-5 mx-auto">
@@ -24,6 +32,7 @@ const Loading = () => {
       </div>
     </div>
   </div>
+    )
   );
 };
 

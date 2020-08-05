@@ -27,9 +27,8 @@ const BlogsPage = () => {
   return (
     <>
       <Navigation />
-      {loading ? (
-        <Loading />
-      ) : (
+      <Loading show={loading}/>
+      {loading ? (<></>) : (
         <div className="BlogsPage">
           {/* <BlogsNavbar /> */}
 

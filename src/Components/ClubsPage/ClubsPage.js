@@ -37,9 +37,8 @@ const ClubsPage = (props) => {
   return (
     <div>
       <ClubsNavbar clubName={clubName} />
-      {loading ? (
-        <Loading />
-      ) : (
+      <Loading show={loading}/>
+      {loading ? (<></>) : (
         <>
           <ClubsFeatured data={data} clubName={props.match.params.id} />
           <ClubsHighlights blogs={data['Blogs']} events={data['Events']} />
