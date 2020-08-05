@@ -32,15 +32,17 @@ export default class Appgrid extends Component {
                 </Link>
               </div>
               <div className="col-lg-2 col-md-4 col-sm-6 box">
-                <div className="custom module-border-wrap">
-                  <img src={ProjectIcon} alt="Trophy Icon" />
-                  <div className="text">
-                    <p>PROJECTS</p>
+                <Link to={'/Projects'}>
+                  <div className="custom module-border-wrap">
+                    <img src={ProjectIcon} alt="Trophy Icon" />
+                    <div className="text">
+                      <p>PROJECTS</p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
               <div className="col-lg-2 col-md-4 col-sm-6 box">
-                <Link to="/Events/Challenges">
+                <Link to="/Challenges">
                   <div className="custom module-border-wrap">
                     <img src={ChallengeIcon} alt="Trophy Icon" />
                     <div className="text">

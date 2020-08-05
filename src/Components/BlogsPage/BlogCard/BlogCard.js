@@ -19,7 +19,7 @@ const Card = (props) => {
     // console.log(single._id);
 
     props.history.push({
-      pathname: `${single._id}`,
+      pathname: `/blogs/${single._id}`,
     });
   };
   // console.log(single);

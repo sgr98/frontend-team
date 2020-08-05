@@ -2,13 +2,11 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 
-import { Link, useParams } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ClubsNavbar.css';
 
 const ClubsNavbar = (props) => {
-  const { id } = useParams();
-
   return (
     <div className="nav-container-ClubsNavbar">
       <Navbar collapseOnSelect expand="lg" variant="dark" sticky="top">
@@ -29,11 +27,14 @@ const ClubsNavbar = (props) => {
 
             {/* OUR TEAM */}
             <Nav.Link
+              as={Link}
               className="nav-link-ClubsNavbar"
               id="ourTeam-ClubsNavbar"
-              to={`${id}`}
+              to={{ pathname: `/clubs/${props.clubName}`, hash: '#OurTeam' }}
               onClick={() => {
-                document.getElementById('OurTeam').scrollIntoView();
+                if (document.getElementById('OurTeam')) {
+                  document.getElementById('OurTeam').scrollIntoView();
+                }
               }}
             >
               OUR TEAM
@@ -65,4 +66,4 @@ const ClubsNavbar = (props) => {
   );
 };
 
-export default ClubsNavbar;
+export default withRouter(ClubsNavbar);

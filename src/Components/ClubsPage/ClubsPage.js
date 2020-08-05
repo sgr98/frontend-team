@@ -25,6 +25,15 @@ const ClubsPage = (props) => {
       })
       .catch((err) => console.log(err));
   }, [props.match.params.id]);
+
+  useEffect(() => {
+    if (!loading) {
+      if (props.location.hash !== '') {
+        document.getElementById('OurTeam').scrollIntoView();
+      }
+    }
+  }, [loading, props.location.hash]);
+
   return (
     <div>
       <ClubsNavbar clubName={clubName} />
