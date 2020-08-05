@@ -30,7 +30,7 @@ const ProjectFooter = () => {
 
             <div className="all ">
               <Link to="/Projects">Projects</Link>
-              <Link to="/Events/CalendarEvents">Calendar</Link>
+              <Link to="/Blogs">Blogs</Link>
             </div>
             <div className="all ">
               <Link to="/Challenges/all">Challenges</Link>
@@ -38,8 +38,13 @@ const ProjectFooter = () => {
             </div>
 
             <div className="all">
-              <Link to="/Blogs">Blogs</Link>
               <Link to="WebTeam">Web Team</Link>
+              <Link
+                to="/Events/CalendarEvents"
+                className="CalendarLink-ProjectFooter"
+              >
+                Calendar
+              </Link>
             </div>
             <div className="all">
               <Link to="/">Support</Link>

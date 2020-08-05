@@ -254,7 +254,7 @@
     width: 80%;
   }
   .ClubsFeatured-title {
-    font-size: 4vw;
+    font-size: 7vw;
   }
   .ClubsFeatured-subtitle {
     font-size: 2vw;
@@ -289,7 +289,7 @@
 }
 @media (max-width: 600px) {
   .ClubsFeatured-title {
-    font-size: 18px;
+    font-size: 13vw;
     text-align: center;
   }
   .ClubsFeatured-subtitle {

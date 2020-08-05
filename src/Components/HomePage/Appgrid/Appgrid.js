@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import TrophyIcon from './trophy.png';
+import BlogIcon from './Blog.png';
+import ProjectIcon from './Project.png';
+import CalendarIcon from './Calendar.png';
+import ChallengeIcon from './Challenge.png';
 import './Appgrid.css';
 
 export default class Appgrid extends Component {
@@ -20,16 +24,16 @@ export default class Appgrid extends Component {
               <div className="col-lg-2 col-md-4 col-sm-6 box">
                 <Link to="/Blogs">
                   <div className="custom module-border-wrap">
-                    <img src={TrophyIcon} alt="Trophy Icon" />
+                    <img src={BlogIcon} alt="Trophy Icon" />
                     <div className="text">
-                      <p style={{ marginTop: '7%' }}>BLOGS</p>
+                      <p>BLOGS</p>
                     </div>
                   </div>
                 </Link>
               </div>
               <div className="col-lg-2 col-md-4 col-sm-6 box">
                 <div className="custom module-border-wrap">
-                  <img src={TrophyIcon} alt="Trophy Icon" />
+                  <img src={ProjectIcon} alt="Trophy Icon" />
                   <div className="text">
                     <p>PROJECTS</p>
                   </div>
@@ -38,7 +42,7 @@ export default class Appgrid extends Component {
               <div className="col-lg-2 col-md-4 col-sm-6 box">
                 <Link to="/Events/Challenges">
                   <div className="custom module-border-wrap">
-                    <img src={TrophyIcon} alt="Trophy Icon" />
+                    <img src={ChallengeIcon} alt="Trophy Icon" />
                     <div className="text">
                       <p>CHALLENGES</p>
                     </div>
@@ -67,16 +71,12 @@ export default class Appgrid extends Component {
                   </div>
                 </Link>
               </div>
-              <div className="col-lg-2 col-md-4 col-sm-6 box">
+              <div className="col-lg-2 col-md-4 col-sm-6 box calendarEvents-Appgrid">
                 <Link to="/Events/CalendarEvents">
                   <div className="custom module-border-wrap">
-                    <img src={TrophyIcon} alt="Trophy Icon" />
+                    <img src={CalendarIcon} alt="Trophy Icon" />
                     <div className="text">
-                      <p>
-                        CALENDER
-                        <br />
-                        EVENTS
-                      </p>
+                      <p>CALENDER EVENTS</p>
                     </div>
                   </div>
                 </Link>

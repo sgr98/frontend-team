@@ -415,8 +415,8 @@
   margin-top: -10px;
 }
 
-@media (min-width: 400px) {
-  .ProjectFooter .cont {
+@media (max-width: 992px) {
+  .ProjectFooter .all .CalendarLink-ProjectFooter {
     display: none;
   }
 }
