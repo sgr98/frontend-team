@@ -5,6 +5,7 @@ import SearchField from './SearchField/SearchField';
 import ProjectFields from './ProjectFields/ProjectFields';
 import filterIcon from './filter.png';
 import './SearchBar.css';
+import Loading from '../../ReusableComponents/Loading/Loading';
 
 class SearchBar extends Component {
   constructor(props) {
@@ -15,17 +16,34 @@ class SearchBar extends Component {
       selectedDegrees: [],
       loading: true,
       clubNames: [],
+      branchNames: [],
     };
   }
 
   componentDidMount() {
+    let clubs = [];
+    let branches = [];
     axios
       .get(`${process.env.REACT_APP_BASE_URL}/front/clubs`)
       .then((res) => {
-        this.setState({
-          clubNames: res.data,
-          loading: false,
-        });
+        clubs = res.data;
+        axios
+          .get(
+            `${process.env.REACT_APP_BASE_URL}/front/categories/challenge?all=1`
+          )
+          .then((res2) => {
+            branches = res2.data.filter((name) => {
+              return (
+                name.toLowerCase() !== 'coding' && name.toLowerCase() !== 'open'
+              );
+            });
+            this.setState({
+              clubNames: clubs,
+              branchNames: branches,
+              loading: false,
+            });
+          })
+          .catch((err2) => console.log(err2));
       })
       .catch((err) => {
         console.log(err);
@@ -46,7 +64,7 @@ class SearchBar extends Component {
 
   render() {
     return this.state.loading ? (
-      <h1>Loading</h1>
+      <></>
     ) : (
       <div className="searchbar-container-ProjectsPage">
         <div>
@@ -54,13 +72,7 @@ class SearchBar extends Component {
           <ProjectFields
             category="BRANCH"
             updateArray={this.updateBranches}
-            filterNames={[
-              'Mechanical',
-              'Computer Science',
-              'Chemical',
-              'Civil',
-              'Electrical',
-            ]}
+            filterNames={this.state.branchNames}
           />
           <ProjectFields
             category="DEGREE"

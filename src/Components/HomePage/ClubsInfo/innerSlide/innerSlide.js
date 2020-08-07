@@ -195,7 +195,13 @@ const InnerSlide = (props) => {
             >
               Visit Our Page
             </Button>
-            <Button id="ClubeSlide-btn" variant="outline">
+            <Button
+              id="ClubeSlide-btn"
+              variant="outline"
+              onClick={() => {
+                window.open(props.data.resources, '_blank');
+              }}
+            >
               Resources
             </Button>
           </>
@@ -208,7 +214,13 @@ const InnerSlide = (props) => {
             >
               Visit Our Page
             </Button>
-            <Button id="ClubeSlide-btn" variant="outline">
+            <Button
+              id="ClubeSlide-btn"
+              variant="outline"
+              onClick={() => {
+                window.open(props.data.resources, '_blank');
+              }}
+            >
               Resources
             </Button>
           </>

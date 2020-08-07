@@ -42,7 +42,7 @@ export default class Appgrid extends Component {
                 </Link>
               </div>
               <div className="col-lg-2 col-md-4 col-sm-6 box">
-                <Link to="/Challenges">
+                <Link to="/Challenges/all">
                   <div className="custom module-border-wrap">
                     <img src={ChallengeIcon} alt="Trophy Icon" />
                     <div className="text">

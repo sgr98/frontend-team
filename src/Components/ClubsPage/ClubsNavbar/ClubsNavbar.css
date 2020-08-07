@@ -1,112 +1,105 @@
 /* ==== MAIN CONTAINER ==== */
 
 .nav-container-ClubsNavbar {
-    background-color: rgba(32, 31, 30, 0.75);
-    font-family: Roboto, Arial, Helvetica, sans-serif;
-    position: sticky;
-    top: -7px;
-    z-index: 10;
-    padding-left: 3%;
-    padding-right: 4%;
+  background-color: rgba(32, 31, 30, 0.75);
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  position: sticky;
+  top: -7px;
+  z-index: 10;
+  padding-left: 3%;
+  padding-right: 4%;
 }
 
 /* ==== TECH-HUB IIT TIRUPATI BRAND NAME ==== */
 
 .main-web-name-ClubsNavbar {
-    font-size: 150%;
-    background: linear-gradient(
-      90deg,
-      #00BCF2,
-      #00B294
-    );
-    background-size: 100%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 28px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.015em;
-    text-transform: uppercase;
+  font-size: 150%;
+  background: linear-gradient(90deg, #00bcf2, #00b294);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
 }
 
 /* ==== NAV LINKS CLUBSNAVBAR ==== */
 
 a.nav-link-ClubsNavbar {
-    font-size: 110%;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    justify-content: center;
-    /* color: rgba(240, 240, 240, 0.65); */
-    display: flex;
-    align-items: center;
-    margin: 0 0.8em;
-    background: rgba(240, 240, 240, 0.65);
-    background-size: 100%;
-    background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+  font-size: 110%;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  /* justify-content: center;
+  
+  display: flex;
+  align-items: center; */
+  margin: 0 0.8em;
+  background: rgba(240, 240, 240, 0.65);
+  background-size: 100%;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 
 a.nav-link-ClubsNavbar.active {
-    background: rgba(240, 240, 240, 1);
-    background-size: 100%;
-    background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+  background: rgba(240, 240, 240, 1);
+  background-size: 100%;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 
 /* ==== MEDIA QUERIES ==== */
 
 @media only screen and (max-width: 1200px) {
-    a.nav-link-ClubsNavbar {
-      font-size: 100%;
-      margin: 0 0.4em;
-    }
+  a.nav-link-ClubsNavbar {
+    font-size: 100%;
+    margin: 0 0.4em;
+  }
 }
-  
+
 @media only screen and (max-width: 1080px) {
-    
 }
-  
+
 @media only screen and (max-width: 800px) {
-    .main-web-name-ClubsNavbar {
-        font-size: 160%;
-        margin: 0 0.2em;
-    }
-    #root > div > div.nav-container-ClubsNavbar {
-        padding: 0 0;
-    }
-    #root > div > div.nav-container-ClubsNavbar > nav > button {
-        padding: 0;
-    }
+  .main-web-name-ClubsNavbar {
+    font-size: 160%;
+    margin: 0 0.2em;
+  }
+  #root > div > div.nav-container-ClubsNavbar {
+    padding: 0 0;
+  }
+  #root > div > div.nav-container-ClubsNavbar > nav > button {
+    padding: 0;
+  }
 }
-  
+
 @media only screen and (max-width: 700px) {
-    
 }
-  
+
 @media only screen and (max-width: 359px) {
-    .main-web-name-ClubsNavbar {
-      font-size: 120%;
-    }
+  .main-web-name-ClubsNavbar {
+    font-size: 120%;
+  }
 }
-  
+
 @media only screen and (max-width: 480px) and (min-width: 360px) {
-    .main-web-name-ClubsNavbar {
-      font-size: 130%;
-      margin: 0 0.1em;
-    }
-    #root > div > div.nav-container-ClubsNavbar {
-      padding: 0 0;
-    }
-    #root > div > div.nav-container-ClubsNavbar > nav > button {
-      padding: 0;
-    }
+  .main-web-name-ClubsNavbar {
+    font-size: 130%;
+    margin: 0 0.1em;
+  }
+  #root > div > div.nav-container-ClubsNavbar {
+    padding: 0 0;
+  }
+  #root > div > div.nav-container-ClubsNavbar > nav > button {
+    padding: 0;
+  }
 }

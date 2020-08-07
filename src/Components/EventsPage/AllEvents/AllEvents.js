@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Loading from '../../ReusableComponents/Loading/Loading';
 import SeparateEvents from '../SeparateEvents';
 import Card from '../EventCard/card';
 import EventIcon from '../eventsPageLogo.png';
@@ -33,37 +34,40 @@ const AllEvents = () => {
   }, []);
 
   return (
-    <div style={classStyle}>
-      {/* {props.data.map(({ events }) =>
-        events.map((item, index) => (
-        ))
-      )} */}
-      {upcomingEvents.length !== 0 ? (
-        <div>
-          <div className="event-card-heading">
-            {' '}
-            <img src={EventIcon} alt="Event" />
-            Upcoming Events
-          </div>
-          {upcomingEvents.map((single) => (
-            <Card key={single._id} single={single} showButton={true} />
-          ))}
-        </div>
-      ) : null}
+    <>
+      <Loading show={loading} />
+      {loading ? (
+        <></>
+      ) : (
+        <div style={classStyle}>
+          {upcomingEvents.length !== 0 ? (
+            <div>
+              <div className="event-card-heading">
+                {' '}
+                <img src={EventIcon} alt="Event" />
+                Upcoming Events
+              </div>
+              {upcomingEvents.map((single) => (
+                <Card key={single._id} single={single} showButton={true} />
+              ))}
+            </div>
+          ) : null}
 
-      {pastEvents.length !== 0 ? (
-        <div>
-          <div className="event-card-heading">
-            {' '}
-            <img src={EventIcon} alt="Event" />
-            Past Events
-          </div>
-          {pastEvents.map((single) => (
-            <Card key={single._id} single={single} showButton={false} />
-          ))}
+          {pastEvents.length !== 0 ? (
+            <div>
+              <div className="event-card-heading">
+                {' '}
+                <img src={EventIcon} alt="Event" />
+                Past Events
+              </div>
+              {pastEvents.map((single) => (
+                <Card key={single._id} single={single} showButton={false} />
+              ))}
+            </div>
+          ) : null}
         </div>
-      ) : null}
-    </div>
+      )}
+    </>
   );
 };
 

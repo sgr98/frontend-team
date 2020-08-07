@@ -21,7 +21,6 @@ const ArticleBody = ({ data, category, clubs }) => {
   if (awardString && awardString.length !== 0) {
     awardWinners = awardString.split('|').map((str) => str.split(','));
   }
-  console.log(awardWinners);
 
   let buttonGroup = null;
 

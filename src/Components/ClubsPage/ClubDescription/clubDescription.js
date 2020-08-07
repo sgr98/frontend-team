@@ -4,6 +4,7 @@ import axios from 'axios';
 import parser from 'html-react-parser';
 import Navigation from '../../Navigation/Navigation';
 import ProjectFooter from '../../ProjectsPage/ProjectFooter/ProjectFooter';
+import Loading from '../../ReusableComponents/Loading/Loading';
 
 const ClubDescription = (props) => {
   const [data, setData] = useState(null);
@@ -22,6 +23,7 @@ const ClubDescription = (props) => {
   return (
     <div>
       <Navigation />
+      <Loading show={loading} />
       <div className="ClubDescrition-heading-HighlightsHeading">
         <div className="ClubDescrition-lineAbove-HighlightsHeading" />
         <h3>{data ? data['Club name'] : 'Club Name'}</h3>

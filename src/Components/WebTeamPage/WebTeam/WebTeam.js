@@ -23,7 +23,7 @@ export const WebTeam = () => {
       tier: 'top',
     },
     {
-      rollNo: 'CS18B013',
+      rollNo: 'CS18B021',
       name: 'Mir Sameed Ali',
       designation: 'front-end head',
       tier: 'top',

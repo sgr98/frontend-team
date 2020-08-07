@@ -28,8 +28,10 @@ const ChallengesPage = () => {
     <div>
       <Navigation />
       <div className="ChallengesPage">
-      <Loading show={loading}/>
-      {loading ? (<></>) : (
+        <Loading show={loading} />
+        {loading ? (
+          <></>
+        ) : (
           <Route
             path="/Challenges/:category"
             exact

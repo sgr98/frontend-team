@@ -27,7 +27,6 @@ const KeywordModal = (props) => {
         axios
           .get(queryRoute)
           .then((res) => {
-            console.log(res.data);
             setData(res.data);
             setLoading(false);
           })
@@ -42,7 +41,6 @@ const KeywordModal = (props) => {
         axios
           .get(queryRoute)
           .then((res) => {
-            console.log(res.data);
             setData(res.data);
             setLoading(false);
           })
@@ -63,8 +61,10 @@ const KeywordModal = (props) => {
         </Modal.Header>
 
         <Modal.Body>
-        <Loading show={loading}/>
-      {loading ? (<></>) : (
+          <Loading show={loading} />
+          {loading ? (
+            <></>
+          ) : (
             <ul>
               {data.map((post) => {
                 if (post) {

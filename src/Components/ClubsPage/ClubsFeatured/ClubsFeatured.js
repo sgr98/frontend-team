@@ -27,7 +27,15 @@ const ClubsFeatured = ({ data, clubName }) => {
               <Link className="ClubsFeatured-button" to={`${clubName}/about`}>
                 About Us
               </Link>
-              <span className="ClubsFeatured-button">Resources</span>
+              <a
+                href={data.resources}
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: 'white' }}
+                className="ClubsFeatured-button"
+              >
+                Resources
+              </a>
 
               <Link className="ClubsFeatured-button" to={`/blogs/${clubName}`}>
                 Blogs

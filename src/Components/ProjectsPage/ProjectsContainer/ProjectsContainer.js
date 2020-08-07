@@ -3,6 +3,8 @@ import './ProjectsContainer.css';
 import axios from 'axios';
 import * as uuid from 'uuid';
 import { Container, Row, Col } from 'react-bootstrap';
+import Loading from '../../ReusableComponents/Loading/Loading';
+
 import ProjectCardData from './ProjectCardData';
 import PaginationComponent from '../../ReusableComponents/Pagination/Pagination';
 
@@ -12,7 +14,6 @@ const ProjectsContainer = ({ url, searchKeyword }) => {
 
   useEffect(() => {
     axios.get(url).then((res) => {
-      console.log(res.data);
       let data = [];
 
       data = res.data.filter((project) => project !== null);
@@ -49,30 +50,37 @@ const ProjectsContainer = ({ url, searchKeyword }) => {
   };
 
   return (
-    <div
-      className="container-ProjectsContainer"
-      style={{ paddingLeft: '4%', paddingRight: '4%' }}
-    >
-      <Container fluid>
-        <Row>
-          {currentPosts.map((project) => (
-            <Col xs={12} key={uuid.v4()}>
-              <ProjectCardData
-                project={project}
-                searchKeyword={searchKeyword}
-              />
-            </Col>
-          ))}
-        </Row>
-      </Container>
-      <PaginationComponent
-        paginate={paginate}
-        postsPerPage={postsPerPage}
-        totalPosts={projects.length}
-        nextPageHandler={nextPageHandler}
-        prevPageHandler={prevPageHandler}
-      />
-    </div>
+    <>
+      <Loading show={loading} />
+      {loading ? (
+        <></>
+      ) : (
+        <div
+          className="container-ProjectsContainer"
+          style={{ paddingLeft: '4%', paddingRight: '4%' }}
+        >
+          <Container fluid>
+            <Row>
+              {currentPosts.map((project) => (
+                <Col xs={12} key={uuid.v4()}>
+                  <ProjectCardData
+                    project={project}
+                    searchKeyword={searchKeyword}
+                  />
+                </Col>
+              ))}
+            </Row>
+          </Container>
+          <PaginationComponent
+            paginate={paginate}
+            postsPerPage={postsPerPage}
+            totalPosts={projects.length}
+            nextPageHandler={nextPageHandler}
+            prevPageHandler={prevPageHandler}
+          />
+        </div>
+      )}
+    </>
   );
 };
 

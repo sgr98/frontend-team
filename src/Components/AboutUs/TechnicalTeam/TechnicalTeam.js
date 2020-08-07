@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { withRouter } from 'react-router';
 import axios from 'axios';
+import Loading from '../../ReusableComponents/Loading/Loading';
 import { Container, Row, Col } from 'react-bootstrap';
 import TechnicalTeamCardData from './TechnicalTeamCardData';
 
@@ -61,9 +62,9 @@ export const TechnicalTeam = () => {
     axios
       .get(`${process.env.REACT_APP_BASE_URL}/front/committee`)
       .then((res) => {
-        console.log(res);
         if (isRendered) {
           setMembers(res.data[0].members);
+          setLoading(false);
         }
         return null;
       })
@@ -76,8 +77,9 @@ export const TechnicalTeam = () => {
 
   return (
     <>
+      <Loading show={loading} />
       {members === null ? (
-        <h1 style={{ color: 'f4f4f4', margin: '1em' }}>Loading</h1>
+        <></>
       ) : (
         <div className="container-TechnicalTeam" style={{ padding: '3% 5%' }}>
           <Container fluid>

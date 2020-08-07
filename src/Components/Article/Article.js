@@ -23,7 +23,6 @@ const Article = (props) => {
         `${process.env.REACT_APP_BASE_URL}/front/${props.category}/${props.match.params.id}`
       )
       .then((res) => {
-        console.log(res);
         if (isRendered) {
           setArticle(res.data);
         }
@@ -34,7 +33,6 @@ const Article = (props) => {
     axios
       .get(`${process.env.REACT_APP_BASE_URL}/front/clubs`)
       .then((res) => {
-        console.log(res);
         if (isRendered) {
           setClubs(res.data);
         }
@@ -54,7 +52,7 @@ const Article = (props) => {
   return (
     <>
       {article === null ? (
-        <Loading />
+        <Loading show={loading} />
       ) : (
         <div>
           {props.category === 'project' ? <Navigation /> : null}
