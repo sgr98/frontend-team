@@ -111,7 +111,7 @@ const Footer = () => (
           </Col>
 
           <Col className="home">
-            <p>Calender Activities</p>
+            <p>Calendar Activities</p>
 
             <p>Amphibians</p>
           </Col>

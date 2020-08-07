@@ -12,7 +12,7 @@ const Loading = ({show}) => {
   };
   return (
     triggerHappy && (
-    <div className="spinner-c-overlay" style={{ animation: `${show ? "simpfadeIn 2s" : "simpfadeOut 1s"}`,animationDelay: "4s" }} onAnimationEnd={onAnimationEnd}>
+    <div className="spinner-c-overlay" style={{ animation: `${show ? "simpfadeIn 2s" : "simpfadeOut 1s"}`}} onAnimationEnd={onAnimationEnd}>
     <div className="row h-100">
       <div className="col-sm-12 my-auto">
         <div className="p-5 mx-auto">

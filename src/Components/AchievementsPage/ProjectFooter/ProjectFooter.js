@@ -32,7 +32,7 @@ const ProjectFooter = () => {
             </div>
             <div className="all ">
               <p>projects</p>
-              <p>calender</p>
+              <p>calendar</p>
             </div>
             <div className="all ">
               <p>infrastructures</p>
