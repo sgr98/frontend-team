@@ -78,7 +78,6 @@ const Card = ({ single, showButton }) => {
 
             {/* {parse(single.description)} */}
             {/* </div> */}
-
             <div className="event-card-date-location">
               <span>{single.date}</span>
               <span>
