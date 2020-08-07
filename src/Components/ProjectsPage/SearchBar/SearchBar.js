@@ -5,7 +5,6 @@ import SearchField from './SearchField/SearchField';
 import ProjectFields from './ProjectFields/ProjectFields';
 import filterIcon from './filter.png';
 import './SearchBar.css';
-import Loading from '../../ReusableComponents/Loading/Loading';
 
 class SearchBar extends Component {
   constructor(props) {

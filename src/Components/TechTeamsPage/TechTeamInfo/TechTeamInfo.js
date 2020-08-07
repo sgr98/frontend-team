@@ -38,7 +38,7 @@ function TechTeamInfo({ data }) {
           <Button
             className="TechTeamInfo-redirect"
             href={'//' + data.ref_link}
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
           >
             Click to check us out
           </Button>

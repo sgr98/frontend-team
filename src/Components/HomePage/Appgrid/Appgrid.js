@@ -78,7 +78,7 @@ export default class Appgrid extends Component {
                   <div className="custom module-border-wrap">
                     <img src={CalendarIcon} alt="Trophy Icon" />
                     <div className="text">
-                      <p>CALENDER EVENTS</p>
+                      <p>CALENDAR EVENTS</p>
                     </div>
                   </div>
                 </Link>

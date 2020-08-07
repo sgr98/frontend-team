@@ -191,7 +191,7 @@ const Calendar = (props) => {
         setLoading(false);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, ['firstDay','month','monthDays']);
 
   return (
     <>

@@ -59,7 +59,9 @@ const ArticleBody = ({ data, category, clubs }) => {
         author={data.creator}
         chiefGuest={data.chief_guest || 'NULL'}
       />
-      {awardWinners.map((arr, index) => (
+      
+      { data.category=="Competition" &&
+      awardWinners.map((arr, index) => (
         <AwardDiv winners={arr} key={arr[0]} position={index + 1} />
       ))}
 

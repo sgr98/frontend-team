@@ -124,7 +124,7 @@ const InnerSlide = (props) => {
                   <Col xs={6} md={4}>
                     <Image
                       id="ClubeSlide-club-image"
-                      src={`${process.env.REACT_APP_BASE_URL}/images/${props.data.dp_url}`}
+                      src={props.data.dp_url?`${process.env.REACT_APP_BASE_URL}/images/${props.data.dp_url}`:""}
                       roundedCircle
                     />
                   </Col>
@@ -167,12 +167,12 @@ const InnerSlide = (props) => {
       </div> */}
       {/* <div className="images-InnerSlide">
         <img
-          src={`${process.env.REACT_APP_BASE_URL}/images/${props.data.logo_url}`}
+          src={props.data.logo_url?`${process.env.REACT_APP_BASE_URL}/images/${props.data.logo_url}`:""}
           alt="logo"
           className="clubLogo-innerSlide"
         />
         <img
-          src="https://www.lstmed.ac.uk/sites/default/files/styles/mc-580-16x9-node/public/content/pages/images/iStock-960268208.jpg?itok=nAmhA9t1"
+          src="https://www.lstmed.ac.uk/sites/default/files/styles/mc-580-16x9-node/public/content/pages/images/iStock-960268208.jpg?itok=nAmhA9t1" //[TODO]
           alt="logo"
           className="resourcesImage-innerSlide"
         />

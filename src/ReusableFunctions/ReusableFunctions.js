@@ -38,6 +38,7 @@ export function getDateToBeDisplayed(date, isDayNameRequired = true) {
     'July',
     'August',
     'September',
+    'October',
     'November',
     'December',
   ];
@@ -57,7 +58,6 @@ export function getDateToBeDisplayed(date, isDayNameRequired = true) {
   else dateString += 'th';
 
   dateString += ` ${months[date.getMonth()]} ${date.getFullYear()}`;
-
   return dateString.toUpperCase();
 }
 
