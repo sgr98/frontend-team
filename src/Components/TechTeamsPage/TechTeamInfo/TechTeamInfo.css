@@ -21,6 +21,9 @@
 .TechTeamInfo-parent {
   width: 40%;
   z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .TechTeamInfo-image {
   width: 100%;

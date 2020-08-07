@@ -9,6 +9,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background: url('https://wallpapercave.com/wp/wp2478972.jpg');
+  padding-bottom: 2%;
 }
 .ClubsFeatured-content {
   width: 55%;
@@ -19,6 +20,9 @@
 }
 .ClubsFeatured-parent {
   width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .ClubsFeatured-image-content-image {
   width: 450px !important;
@@ -170,6 +174,7 @@
   width: 100%;
 
   margin: auto;
+
   overflow: hidden;
 }
 

@@ -103,14 +103,14 @@ const ClubsFeatured = ({ data, clubName }) => {
                     </div>
                   </div>
                 </div>
-                <div className="ClubsFeatured-frame-logo">
+                {/* <div className="ClubsFeatured-frame-logo">
                   <FaGithub color="white" />
                   <div>
                     <FaInstagram color="orange" />
                     <span style={{ marginRight: '4px' }}></span>
                     <FaYoutube color="red" />
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

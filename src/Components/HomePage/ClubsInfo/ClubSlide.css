@@ -180,7 +180,7 @@
   font-size: 21px;
   margin-bottom: 5px;
   margin-top: 10px;
-  width: 30%;
+  width: 200px;
   padding: 4px;
   /* height: 30px; */
 }
@@ -211,6 +211,14 @@
   height: 100px;
 }
 
+.imagesDiv-InnerSlide {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 .images-InnerSlide {
   display: flex;
   justify-content: space-around;
@@ -219,10 +227,12 @@
   align-items: center;
 }
 
-.images-InnerSlide img {
+.clubLogo-InnerSlide,
+.resources-InnerSlide {
   height: 300px;
   width: 400px;
-  margin: 0 100px;
+  margin: 3% auto;
+  border: 2px solid #605e5c;
 }
 
 /* .clubLogo-innerSlide {
@@ -237,9 +247,25 @@
 } */
 
 @media (max-width: 1200px) {
-  .images-InnerSlide img {
+  .images-InnerSlide img,
+  .clubLogo-InnerSlide,
+  .resources-InnerSlide {
     width: 270px;
     margin: 0 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .imagesDiv-InnerSlide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .resources-InnerSlide {
+    display: none;
   }
 }
 
@@ -260,7 +286,8 @@
   .resourcesImage-innerSlide {
     display: none;
   }
-  .images-InnerSlide img {
+  .images-InnerSlide img,
+  .clubLogo-InnerSlide {
     height: 300px;
     width: 80%;
     margin: 0;
@@ -273,6 +300,13 @@
 
   #ClubeSlide-btn {
     font-size: 15px;
-    width: 40%;
+    width: 250px;
+  }
+  .imagesDiv-InnerSlide {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
   }
 }

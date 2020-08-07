@@ -165,7 +165,7 @@ const InnerSlide = (props) => {
           ))}
         </div>
       </div> */}
-      <div className="images-InnerSlide">
+      {/* <div className="images-InnerSlide">
         <img
           src={`${process.env.REACT_APP_BASE_URL}/images/${props.data.logo_url}`}
           alt="logo"
@@ -176,18 +176,21 @@ const InnerSlide = (props) => {
           alt="logo"
           className="resourcesImage-innerSlide"
         />
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-around',
-          alignItems: 'center',
-          width: '100%',
-          marginBottom: '10px',
-        }}
-      >
-        {width < 768 ? (
-          <>
+      </div> */}
+      <div className="imagesDiv-InnerSlide">
+        <>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          >
+            <img
+              src={`${process.env.REACT_APP_BASE_URL}/images/${props.data.logo_url}`}
+              alt="logo"
+              className="clubLogo-InnerSlide"
+            />
             <Button
               id="ClubeSlide-btn"
               variant="outline"
@@ -195,6 +198,19 @@ const InnerSlide = (props) => {
             >
               Visit Our Page
             </Button>
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          >
+            <img
+              src="https://www.lstmed.ac.uk/sites/default/files/styles/mc-580-16x9-node/public/content/pages/images/iStock-960268208.jpg?itok=nAmhA9t1"
+              alt="logo"
+              className="resources-InnerSlide"
+            />
             <Button
               id="ClubeSlide-btn"
               variant="outline"
@@ -204,27 +220,8 @@ const InnerSlide = (props) => {
             >
               Resources
             </Button>
-          </>
-        ) : (
-          <>
-            <Button
-              id="ClubeSlide-btn"
-              variant="outline"
-              onClick={onClickHandler}
-            >
-              Visit Our Page
-            </Button>
-            <Button
-              id="ClubeSlide-btn"
-              variant="outline"
-              onClick={() => {
-                window.open(props.data.resources, '_blank');
-              }}
-            >
-              Resources
-            </Button>
-          </>
-        )}
+          </div>
+        </>
       </div>
     </div>
   );

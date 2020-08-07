@@ -5,7 +5,7 @@ import WebTeamHeading from './WebTeamHeading/WebTeamHeading';
 import ContributorsHeading from './ContributorsHeading/ContributorsHeading';
 import { WebTeam } from './WebTeam/WebTeam';
 import { Contributors } from './Contributors/Contributors';
-import ContributorsDynamic from './ContributorsDynamic/ContributorsDynamic'
+import ContributorsDynamic from './ContributorsDynamic/ContributorsDynamic';
 
 export const WebTeamPage = () => {
   return (
@@ -13,9 +13,9 @@ export const WebTeamPage = () => {
       <Navigation />
       <WebTeamHeading />
       <WebTeam />
-      <ContributorsHeading />
+      {/* <ContributorsHeading />
       <Contributors />
-      <ContributorsDynamic />
+      <ContributorsDynamic /> */}
       <ProjectFooter />
     </div>
   );
