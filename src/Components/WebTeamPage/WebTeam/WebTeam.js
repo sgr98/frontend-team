@@ -5,8 +5,8 @@ import WebTeamCardData from './WebTeamCardData';
 const WebTeam = () => {
   const [members, setMembers] = useState([
     {
-      rollNo: 'CS18B010',
-      name: 'Deep Nithin Maheshwari',
+      rollNo: 'CS18B008',
+      name: 'Deep Nitin Maheshwari',
       designation: ' project lead',
       DPUrl: './WebTeamPhotos/deep.jpeg',
       tier: 'top',
