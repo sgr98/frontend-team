@@ -30,8 +30,8 @@ const ContributorRanker = ({ target }) => {
     return (
       <div className="Contributors-Top-Weekly">
         <div className="center">
-          <div className="heading-Contributors mb-5">
-            <h4>{String(target).toUpperCase()} - Top Weekly</h4>
+          {/* <div className="heading-Contributors mb-5">
+            <h4>{String(target).toUpperCase()} - Weekly Highlights</h4>
           </div>
           <div className="top3">
             <a className="two item" href={data.winners[1].url} target="_blank" rel="noopener noreferrer">
@@ -80,9 +80,9 @@ const ContributorRanker = ({ target }) => {
                 )}
               </div>
             </a>
-          </div>
+          </div> */}
           <div className="heading-Contributors mb-5">
-            <h4>Hall of Fame</h4>
+          <h4>{String(target).toUpperCase()} - Hall of Fame</h4>
           </div>
           <div className="list">
             {data.authors.map((author, index) => (
