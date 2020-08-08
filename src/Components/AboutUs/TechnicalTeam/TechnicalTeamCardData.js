@@ -40,9 +40,9 @@ const TechnicalTeamCardData = ({ member }) => {
           <Card.Text className="email_id-TechnicalTeamCardData">
             {member.email_id}
           </Card.Text>
-          <Card.Text className="contact-TechnicalTeamCardData">
+          {/* <Card.Text className="contact-TechnicalTeamCardData">
             {member.contact}
-          </Card.Text>
+          </Card.Text> */}
         </Card.Body>
       </Card>
     </div>

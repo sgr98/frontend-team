@@ -38,7 +38,8 @@ function TechTeamInfo({ data }) {
           <Button
             className="TechTeamInfo-redirect"
             href={'//' + data.ref_link}
-            target="_blank" rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Click to check us out
           </Button>
@@ -63,9 +64,9 @@ function TechTeamInfo({ data }) {
                   <span className="TechTeamInfo-overlay-headDetails">
                     {data.email_id}
                   </span>
-                  <span className="TechTeamInfo-overlay-headDetails">
+                  {/* <span className="TechTeamInfo-overlay-headDetails">
                     {data.contact}
-                  </span>
+                  </span> */}
                   {/* <span className="TechTeamInfo-overlay-social">
                       <FaInstagram color="orange" /> Instagram
                     </span>

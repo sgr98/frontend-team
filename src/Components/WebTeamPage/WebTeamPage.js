@@ -13,9 +13,9 @@ export const WebTeamPage = () => {
       <Navigation />
       <WebTeamHeading />
       <WebTeam />
-      {/* <ContributorsHeading />
+      <ContributorsHeading />
       <Contributors />
-      <ContributorsDynamic /> */}
+      <ContributorsDynamic />
       <ProjectFooter />
     </div>
   );

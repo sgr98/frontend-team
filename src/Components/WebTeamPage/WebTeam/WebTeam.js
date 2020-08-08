@@ -7,7 +7,7 @@ export const WebTeam = () => {
     {
       rollNo: 'CS18B010',
       name: 'Deep Nithin Maheshwari',
-      designation: 'overall project head',
+      designation: ' project lead',
       tier: 'top',
     },
     {
@@ -17,7 +17,7 @@ export const WebTeam = () => {
       tier: 'top',
     },
     {
-      rollNo: 'CS18B028',
+      rollNo: 'CS18B034',
       name: 'Shubankar Bhadra',
       designation: 'back-end head',
       tier: 'top',
@@ -36,13 +36,13 @@ export const WebTeam = () => {
       tier: 'middle',
     },
     {
-      rollNo: 'CH18B003',
+      rollNo: 'CH18B002',
       name: 'Abhishek Kumar Gupta',
       designation: 'frontend core',
       tier: 'middle',
     },
     {
-      rollNo: 'CH19B033',
+      rollNo: 'CH19B023',
       name: 'Noble Mathews',
       designation: 'full stack',
       tier: 'middle',

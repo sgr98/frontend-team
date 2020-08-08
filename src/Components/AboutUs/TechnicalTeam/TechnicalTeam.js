@@ -63,6 +63,7 @@ export const TechnicalTeam = () => {
       .get(`${process.env.REACT_APP_BASE_URL}/front/committee`)
       .then((res) => {
         if (isRendered) {
+          console.log(res.data[0].members);
           setMembers(res.data[0].members);
           setLoading(false);
         }
