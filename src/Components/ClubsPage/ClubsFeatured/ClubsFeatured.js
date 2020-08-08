@@ -28,7 +28,7 @@ const ClubsFeatured = ({ data, clubName }) => {
                 About Us
               </Link>
               <a
-                href={data.resources}
+                href={data['Club resources']}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: 'white' }}
@@ -65,7 +65,8 @@ const ClubsFeatured = ({ data, clubName }) => {
                         <a
                           className="ClubsFeatured-overlay-social"
                           href={data['Club Instagram page']}
-                          target="_blank" rel="noopener noreferrer"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <span>
                             <FaInstagram color="orange" /> Instagram
@@ -76,7 +77,8 @@ const ClubsFeatured = ({ data, clubName }) => {
                         <a
                           className="ClubsFeatured-overlay-social"
                           href={data['Club Github page']}
-                          target="_blank" rel="noopener noreferrer"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <span>
                             <FaGithub /> Github
@@ -87,7 +89,8 @@ const ClubsFeatured = ({ data, clubName }) => {
                         <a
                           className="ClubsFeatured-overlay-social"
                           href={data['Club Youtube channel']}
-                          target="_blank" rel="noopener noreferrer"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <span>
                             <FaYoutube color="red" /> Youtube

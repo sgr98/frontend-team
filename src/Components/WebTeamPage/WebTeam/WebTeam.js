@@ -6,7 +6,7 @@ const WebTeam = () => {
   const [members, setMembers] = useState([
     {
       rollNo: 'CS18B008',
-      name: 'Deep Nitin Maheshwari',
+      name: 'Deep Maheshwari',
       designation: ' project lead',
       DPUrl: './WebTeamPhotos/deep.jpeg',
       tier: 'top',
@@ -50,7 +50,7 @@ const WebTeam = () => {
     {
       rollNo: 'CH19B023',
       name: 'Noble Mathews',
-      DPUrl: './WebTeamPhotos/default.png',
+      DPUrl: './WebTeamPhotos/noble.jpg',
       designation: 'full stack',
       tier: 'middle',
     },
@@ -78,7 +78,7 @@ const WebTeam = () => {
     {
       rollNo: 'CE19B030',
       name: 'Shubham Raj',
-      DPUrl: './WebTeamPhotos/default.png',
+      DPUrl: './WebTeamPhotos/shubham.jpeg',
       designation: 'front end',
       tier: 'bottom',
     },

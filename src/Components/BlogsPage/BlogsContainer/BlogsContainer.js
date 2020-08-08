@@ -59,16 +59,15 @@ const BlogsContainer = (props) => {
           .replace(/\s+/g, '%20')}${queryEndPoint}`
       )
       .then((res) => {
-        console.log(res);
         setPosts(Object.keys(res.data).length !== 0 ? res.data : []);
         setLoading(false);
       });
-  }, [clubName,queryEndPoint]);
+  }, [clubName, queryEndPoint]);
 
   useLayoutEffect(() => {
     // console.log('currentPage, posts');
     setCurrentPosts(posts.slice(indexOfFirstPost, indexOfLastPost));
-  }, [indexOfFirstPost, indexOfLastPost,currentPage, posts]);
+  }, [indexOfFirstPost, indexOfLastPost, currentPage, posts]);
 
   useLayoutEffect(() => {
     // console.log('blogsList');
@@ -102,7 +101,7 @@ const BlogsContainer = (props) => {
     setBlogList(blogsShown);
 
     if (blogFeatured) setFeaturedBlog(blogFeatured);
-  }, [currentPage,currentPosts]);
+  }, [currentPage, currentPosts]);
 
   // console.log('blogs', blogsList, loading, posts);
   // console.log(props);
@@ -114,8 +113,10 @@ const BlogsContainer = (props) => {
         searchKeyword={searchKeyword}
       />
       <div className="BlogsContainer">
-      <Loading show={loading}/>
-      {loading ? (<></>): blogsList.length !== 0 ? (
+        <Loading show={loading} />
+        {loading ? (
+          <></>
+        ) : blogsList.length !== 0 ? (
           <>
             {currentPage === 1 ? (
               <div className="Top-Row-BlogsContainer-desktop">

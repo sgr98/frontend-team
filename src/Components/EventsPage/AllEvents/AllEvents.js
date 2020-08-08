@@ -20,7 +20,6 @@ const AllEvents = () => {
     axios
       .get(`${process.env.REACT_APP_BASE_URL}/front/events/all`)
       .then((res) => {
-        console.log(res);
         const [upcomingEventsArray, pastEventsArray] = SeparateEvents(
           res.data,
           true

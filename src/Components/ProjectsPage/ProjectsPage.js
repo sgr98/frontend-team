@@ -88,7 +88,7 @@ class ProjectsPage extends Component {
       selectedClubs,
       selectedDegrees
     );
-    console.log(url);
+
     this.setState({
       currentUrl: url,
       selectedBranches,

@@ -19,7 +19,6 @@ const TechTeamsPage = (props) => {
         `${process.env.REACT_APP_BASE_URL}/front/tech_team/${props.match.params.id}`
       )
       .then((res) => {
-        console.log(res.data);
         setData(res.data);
         setLoading(false);
       })
@@ -28,8 +27,10 @@ const TechTeamsPage = (props) => {
   return (
     <div className="TechTeamsPage">
       <Navigation />
-      <Loading show={loading}/>
-      {loading ? (<></>) : (
+      <Loading show={loading} />
+      {loading ? (
+        <></>
+      ) : (
         <>
           <TechTeamInfo data={data} />
           <CustomHR />
