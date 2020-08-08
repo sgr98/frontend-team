@@ -63,6 +63,9 @@ p.synopsis-ProjectCardData div.read-more-button,
   overflow: scroll;
   padding-right: 3px;
 }
+.synopsis-ProjectCardData pre {
+  color: #e0e0e0;
+}
 
 p.synopsis-ProjectCardData div.read-more-button {
   color: #028edc;
