@@ -72,6 +72,15 @@ const ChallengeCard = ({ data }) => {
 
   return (
     <div className="root-ChallengeCard" onClick={onClickHandler}>
+      {data.photo.length !== 0 ? (
+        <div className="logoContainer-ChallengeCard">
+          <img
+            className="logo-ChallengeCard"
+            src={`${process.env.REACT_APP_BASE_URL}/images/${data.photo}`}
+            alt="logo"
+          />
+        </div>
+      ) : null}
       <p className="title-ChallengeCard">{data.name}</p>
       <div className="description-ChallengeCard">{parse(data.description)}</div>
       {/* <a

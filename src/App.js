@@ -17,6 +17,7 @@ import GalleryPage from './Components/ClubsPage/GalleryPage/GalleryPage';
 import WebTeamPage from './Components/WebTeamPage/WebTeamPage';
 import TechTeamsPage from './Components/TechTeamsPage/TechTeamsPage';
 import ClubDescription from './Components/ClubsPage/ClubDescription/clubDescription';
+import ErrorPage from './Components/ErrorPage/ErrorPage';
 
 function App() {
   return (
@@ -50,7 +51,7 @@ function App() {
           <Route path="/Challenges" component={ChallengesPage} />
           <Route path="/WebTeam" component={WebTeamPage} />
           <Route path="/TechTeam/:id" component={TechTeamsPage} />
-          <Route component={() => <h1>ERROR</h1>} />
+          <Route component={ErrorPage} />
         </Switch>
         {/* <Footer /> */}
       </div>

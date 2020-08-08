@@ -109,6 +109,7 @@
 .displayPicture-WebTeamCardData {
   border-radius: 50%;
   border: 2px solid transparent;
+  height: 100%;
 }
 /* dp styling for top tier heads */
 .top-dPicture-border-WebTeamCardData,
@@ -117,6 +118,7 @@
   position: relative;
   margin: auto 2% auto 5%;
   width: 17.5vw;
+  height: 80%;
   border-radius: 50%;
   background: linear-gradient(to bottom, #e3008c, #724dff);
   display: flex;

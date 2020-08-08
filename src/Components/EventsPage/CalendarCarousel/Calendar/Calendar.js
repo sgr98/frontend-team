@@ -191,12 +191,14 @@ const Calendar = (props) => {
         setLoading(false);
       })
       .catch((err) => console.log(err));
-  }, ['firstDay','month','monthDays']);
+  }, ['firstDay', 'month', 'monthDays']);
 
   return (
     <>
-      <Loading show={loading}/>
-      {loading ? (<></>) : (
+      <Loading show={loading} />
+      {loading ? (
+        <></>
+      ) : (
         <div className="calendar-container">
           {/* <p className="heading-calendar">Calendar Activities</p> */}
           <p className="month-name-calendar">
