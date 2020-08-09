@@ -118,7 +118,7 @@ const BlogsContainer = (props) => {
           <></>
         ) : blogsList.length !== 0 ? (
           <>
-            {currentPage === 1 ? (
+            {currentPage === 1 && featuredBlog !== null ? (
               <div className="Top-Row-BlogsContainer-desktop">
                 <div className="column1-Top-Row-BlogsContainer">
                   {featuredBlog}
@@ -129,7 +129,7 @@ const BlogsContainer = (props) => {
               </div>
             ) : null}
             <div>
-              {currentPage === 1 ? (
+              {currentPage === 1 && featuredBlog !== null ? (
                 <>
                   <div className="Top-Row-BlogsContainer-mobile">
                     {blogsList.slice(0, 3)}

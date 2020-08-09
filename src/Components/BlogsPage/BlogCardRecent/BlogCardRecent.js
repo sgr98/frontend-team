@@ -8,7 +8,7 @@ import Remark from '../../ReusableComponents/Remark/Remark';
 const BlogCardRecent = ({ data, history }) => {
   const redirectionHandler = () => {
     history.push({
-      pathname: `${data._id}`,
+      pathname: `/blogs/${data._id}`,
     });
   };
   return (

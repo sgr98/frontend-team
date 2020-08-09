@@ -38,7 +38,7 @@ const ProjectFooter = () => {
             </div>
 
             <div className="all">
-              <Link to="WebTeam">Web Team</Link>
+              <Link to="/WebTeam">Web Team</Link>
               <Link
                 to="/Events/CalendarEvents"
                 className="CalendarLink-ProjectFooter"
