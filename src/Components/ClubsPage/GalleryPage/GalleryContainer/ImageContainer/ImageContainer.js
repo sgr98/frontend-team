@@ -13,7 +13,7 @@ const ImageContainer = ({ galleryStr }) => {
 
   return (
     <div className="Gallery-ImageContainer">
-      <Modal show={show} onHide={handleClose} className="achievements-Modal">
+      <Modal size="xl" show={show} onHide={handleClose} className="achievements-Modal">
         <Modal.Header closeButton>
           <Modal.Title>Event Highlights</Modal.Title>
         </Modal.Header>

@@ -74,6 +74,7 @@ const LeftTeamCard = (props) => {
     <>
       <Modal
         show={show}
+        size="xl"
         onHide={handleClose}
         className="achievements-Modal"
       >

@@ -86,7 +86,7 @@ const RightTeamCard = (props) => {
 
   return (
     <>
-      <Modal show={show} onHide={handleClose} className="achievements-Modal">
+      <Modal size="xl" show={show} onHide={handleClose} className="achievements-Modal">
         <Modal.Header closeButton>
           <Modal.Title>Achievement Highlights</Modal.Title>
         </Modal.Header>
