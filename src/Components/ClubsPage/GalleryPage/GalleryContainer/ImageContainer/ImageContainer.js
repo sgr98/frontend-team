@@ -20,16 +20,9 @@ const ImageContainer = ({ galleryStr }) => {
         <div className="CustomHR" />
         <Modal.Body>
           <img
-            className="d-block w-100"
+            className="img-fluid"
             // src={`${process.env.REACT_APP_BASE_URL}/images/${single}`}
             src={`${gallery}`}
-            style={{
-              display: 'block',
-              maxWidth: '85vw',
-              maxHeight: '70vh',
-              width: 'auto',
-              height: 'auto',
-            }}
             alt={'Event Pic'}
           />
         </Modal.Body>

@@ -96,15 +96,8 @@ const RightTeamCard = (props) => {
             {gallery.map((single, index) => (
               <Carousel.Item key={'Car' + index}>
                 <img
-                  className="d-block w-100"
+                  className="img-fluid"
                   src={`${process.env.REACT_APP_BASE_URL}/images/${single}`}
-                  style={{
-                    display: 'block',
-                    maxWidth: '85vw',
-                    maxHeight: '70vh',
-                    width: 'auto',
-                    height: 'auto',
-                  }}
                   alt={'Highlights Pic#' + index}
                 />
               </Carousel.Item>
