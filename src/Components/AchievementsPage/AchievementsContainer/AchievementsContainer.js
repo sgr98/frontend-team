@@ -27,6 +27,7 @@ const AchievementsContainer = ({ achievementsData = [], year = '' }) => {
         <div>
           <Modal
             show={show}
+            size="xl"
             onHide={handleClose}
             className="achievements-Modal"
           >
