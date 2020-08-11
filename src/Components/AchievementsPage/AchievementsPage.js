@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import ProjectFooter from './ProjectFooter/ProjectFooter';
+import ProjectFooter from '../ProjectsPage/ProjectFooter/ProjectFooter';
 import Loading from '../ReusableComponents/Loading/Loading';
 import YearlyTabs from './yearlyTabs/yearlyTabs';
 import Navigation from '../Navigation/Navigation';

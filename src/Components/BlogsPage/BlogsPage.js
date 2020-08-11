@@ -1,15 +1,14 @@
 /* eslint-disable indent */
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import Article from '../Article/Article';
-import axios from 'axios';
+
 import Loading from '../ReusableComponents/Loading/Loading';
 import './BlogsPage.css';
 import BlogsContainer from './BlogsContainer/BlogsContainer';
 import Navigation from '../Navigation/Navigation';
 
-// import BlogsNavbar from './BlogsNavbar/BlogsNavbar';
-import Footer from '../Footer/Footer';
 import ProjectFooter from '../ProjectsPage/ProjectFooter/ProjectFooter';
 
 const BlogsPage = () => {
@@ -27,8 +26,10 @@ const BlogsPage = () => {
   return (
     <>
       <Navigation />
-      <Loading show={loading}/>
-      {loading ? (<></>) : (
+      <Loading show={loading} />
+      {loading ? (
+        <></>
+      ) : (
         <div className="BlogsPage">
           {/* <BlogsNavbar /> */}
 
