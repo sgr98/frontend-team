@@ -58,6 +58,7 @@ const ArticleBody = ({ data, category, clubs }) => {
         teamMembers={data.team_members}
         author={data.creator}
         chiefGuest={data.chief_guest || 'NULL'}
+        chiefImg={data.chief_guest_url || ""}
       />
       
       { data.category=="Competition" &&
