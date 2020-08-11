@@ -83,6 +83,20 @@ export const TechnicalTeam = () => {
       ) : (
         <div className="container-TechnicalTeam" style={{ padding: '3% 5%' }}>
           <Container fluid>
+            <Row>
+              <Col sm={{ span: 10, offset: 1 }} md={{ span: 6, offset: 3 }}>
+                <TechnicalTeamCardData
+                  member={{
+                    name: 'Dr. Sridhar Chimalakonda',
+                    position: 'Technical Advisor',
+                    email_id: 'ch@iittp.ac.in',
+                    roll_num: 'Faculty',
+                    dp_url:
+                      'https://iittp.ac.in/images/demo/iit/chimalakonda.jpg',
+                  }}
+                />
+              </Col>
+            </Row>
             {topHeads}
             {bottomHeads}
           </Container>

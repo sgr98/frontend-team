@@ -47,7 +47,13 @@ const ProjectFooter = () => {
               </Link>
             </div>
             <div className="all">
-              <Link to="/">Support</Link>
+              <a
+                href="https://forms.gle/ZGPcJSZb6qxiS9adA"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Report Error
+              </a>
             </div>
           </div>
           {/* <div className="cont col-md-10 col-12 mobileProjectFooter">
