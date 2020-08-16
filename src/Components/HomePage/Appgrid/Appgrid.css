@@ -32,7 +32,7 @@
 }
 
 .text {
-  margin-top: 5px;
+  margin-top: 5%;
 }
 
 .custom:hover {
@@ -54,6 +54,8 @@
 
 .custom img {
   margin-top: 7px;
+  height: 55%;
+  margin-bottom: 2%;
 }
 .full {
   background-color: inherit;
@@ -106,6 +108,12 @@
 
 @media screen and (max-width: 690px) {
   .Heading-AppGrid {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .calendarEvents-Appgrid {
     display: none;
   }
 }

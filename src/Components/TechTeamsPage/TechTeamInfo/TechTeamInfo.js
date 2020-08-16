@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+
 import parse from 'html-react-parser';
+import { Button } from 'react-bootstrap';
 import './TechTeamInfo.css';
 import { FaGithub, FaYoutube, FaInstagram } from 'react-icons/fa';
 
@@ -32,55 +34,16 @@ function TechTeamInfo({ data }) {
         <div className="TechTeamInfo-description">
           {parse(data.description)}
         </div>
-        {readMore ? (
-          <>
-            <div className="TechTeamInfo-title">TECHMANIACS</div>
-            <div className="TechTeamInfo-subtitle">
-              The Electronics and Robotics Club of IIT Tirupati
-            </div>
-            <div className="TechTeamInfo-description">
-              The Robotics and Electronics club was formed in 1.5008, with a
-              vision to raise the level of Robotics in the institute to an
-              international standard by developing an integrated knowledge base
-              in the field of Robotics. It is one of the most active clubs in
-              CFI, comprising of 600 members from all years. The Robotics and
-              Electronics club is striving to inspire and enable the students to
-              explore their creativity and engineering skills through robotics
-              by engaging them in exciting mentor based program which teaches
-              them both technical skills, teamwork and leadership. iBot club is
-              not leaving any stone unturned in the process of becoming a
-              self-sustained student robotics hub.
-            </div>
-            <div className="TechTeamInfo-title">TECHMANIACS</div>
-            <div className="TechTeamInfo-subtitle">
-              The Electronics and Robotics Club of IIT Tirupati
-            </div>
-            <div className="TechTeamInfo-description">
-              The Robotics and Electronics club was formed in 1.5008, with a
-              vision to raise the level of Robotics in the institute to an
-              international standard by developing an integrated knowledge base
-              in the field of Robotics. It is one of the most active clubs in
-              CFI, comprising of 600 members from all years. The Robotics and
-              Electronics club is striving to inspire and enable the students to
-              explore their creativity and engineering skills through robotics
-              by engaging them in exciting mentor based program which teaches
-              them both technical skills, teamwork and leadership. iBot club is
-              not leaving any stone unturned in the process of becoming a
-              self-sustained student robotics hub.
-            </div>
-          </>
-        ) : null}
-        {/* <div className="TechTeamInfo-links">
-          <span
-            className="TechTeamInfo-button"
-            onClick={() => setReadMore(!readMore)}
+        {data.ref_link && (
+          <Button
+            className="TechTeamInfo-redirect"
+            href={'//' + data.ref_link}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            {!readMore ? 'Read More About Us' : 'Show Less'}
-          </span>
-          <span className="TechTeamInfo-button">Projects</span>
-          <span className="TechTeamInfo-button">Resources</span>
-          <span className="TechTeamInfo-button">Blogs</span>
-        </div> */}
+            Click to check us out
+          </Button>
+        )}
       </div>
 
       <div className="TechTeamInfo-parent">
@@ -101,9 +64,9 @@ function TechTeamInfo({ data }) {
                   <span className="TechTeamInfo-overlay-headDetails">
                     {data.email_id}
                   </span>
-                  <span className="TechTeamInfo-overlay-headDetails">
+                  {/* <span className="TechTeamInfo-overlay-headDetails">
                     {data.contact}
-                  </span>
+                  </span> */}
                   {/* <span className="TechTeamInfo-overlay-social">
                       <FaInstagram color="orange" /> Instagram
                     </span>

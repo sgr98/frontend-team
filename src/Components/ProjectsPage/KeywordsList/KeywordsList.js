@@ -5,26 +5,6 @@ import * as uuid from 'uuid';
 import './KeywordsList.css';
 
 const KeywordsList = ({ data, searchKeyword }) => {
-  const [keywords, setKeywords] = useState([
-    'AI',
-    'Robotics',
-    'Arduino',
-    '3D',
-    'Design',
-    'CNC',
-    'AI',
-    'Robotics',
-    'Arduino',
-    '3D',
-    'Design',
-    'CNC',
-    'AI',
-    'Robotics',
-    'Arduino',
-    '3D',
-    'Design',
-    'CNC',
-  ]);
   return (
     <div className="container-keyword-KeywordsList">
       {data.map((keyword) => {

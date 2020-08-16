@@ -4,8 +4,8 @@
 /* ==== CARD VIEW ==== */
 .data-container-TechnicalTeamCardData {
   position: relative;
-  height: 6rem;
-  margin: 1.5% 0;
+  height: 7.5rem;
+  margin: 1% 0;
   border: 4px solid #201f1e;
   box-sizing: border-box;
   box-shadow: -2px -2px 2px rgba(191, 189, 200, 0.08),
@@ -27,7 +27,7 @@
   align-items: center;
   overflow: auto;
 
-  padding-top: 2.5%;
+  padding-top: 0.5%;
   padding-right: 1%;
   padding-bottom: 1px;
   padding-left: 1%;
@@ -51,7 +51,7 @@
   font-size: 1.1rem;
 }
 
-.designation-TechnicalTeamCardData {
+.position-TechnicalTeamCardData {
   align-self: flex-start;
   text-align: left;
   margin: 1px;
@@ -60,8 +60,17 @@
   font-family: Roboto, 'Segoe UI', 'Helvetica Neue', sans-serif;
   font-weight: 500;
 }
+.email_id-TechnicalTeamCardData,
+.contact-TechnicalTeamCardData {
+  align-self: flex-start;
+  text-align: left;
+  margin: 1px;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.2em;
+}
 
-/* background based on Designation */
+/* background based on position */
 .Top-TechnicalTeamCardData {
   background: linear-gradient(
       90deg,
@@ -85,7 +94,7 @@
   box-sizing: border-box;
   position: relative;
   margin: auto 2% auto 5%;
-  width: 4rem;
+  width: 17vw;
   border-radius: 50%;
   background: linear-gradient(to bottom, #e3008c, #724dff);
   display: flex;
@@ -94,6 +103,8 @@
 }
 
 .displayPicture-TechnicalTeamCardData {
+  width: 17vw;
+  height: 17vw;
   border-radius: 50%;
   border: 2px solid transparent;
 }
@@ -102,15 +113,19 @@
 
 @media only screen and (min-width: 576px) {
   .data-container-TechnicalTeamCardData {
-    height: 6.7rem;
-    margin: 2% 0;
+    height: 8.4rem;
+    margin: 1% 0;
   }
   .dPicture-border-TechnicalTeamCardData {
-    width: 5.2rem;
+    width: 6rem;
+  }
+  .displayPicture-TechnicalTeamCardData {
+    width: 6rem;
+    height: 6rem;
   }
   /* text sizing */
   .textBody-TechnicalTeamCardData {
-    padding-top: 10px;
+    padding-top: 3px;
     padding-left: 6%;
   }
   .rollNo-TechnicalTeamCardData {
@@ -119,32 +134,40 @@
   .name-TechnicalTeamCardData {
     font-size: 1.3rem;
   }
-  .designation-TechnicalTeamCardData {
+  .position-TechnicalTeamCardData {
+    font-size: 1rem;
+  }
+  .email_id-TechnicalTeamCardData,
+  .contact-TechnicalTeamCardData {
     font-size: 1rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .data-container-TechnicalTeamCardData {
-    height: 6.9rem;
+    height: 8.8rem;
   }
   .textBody-TechnicalTeamCardData {
-    padding-top: 4%;
+    padding-top: 2%;
     padding-left: 3%;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .data-container-TechnicalTeamCardData {
-    height: 8.7rem;
+    height: 10rem;
   }
   .dPicture-border-TechnicalTeamCardData {
-    width: 5.9rem;
+    width: 7.2rem;
     margin: auto 3% auto 7%;
+  }
+  .displayPicture-TechnicalTeamCardData {
+    width: 7.2rem;
+    height: 7.2rem;
   }
   /* text sizing */
   .textBody-TechnicalTeamCardData {
-    padding-top: 4%;
+    padding-top: 2%;
     padding-left: 6%;
   }
   .rollNo-TechnicalTeamCardData {
@@ -153,21 +176,28 @@
   .name-TechnicalTeamCardData {
     font-size: 1.6rem;
   }
-  .designation-TechnicalTeamCardData {
+  .position-TechnicalTeamCardData {
     font-size: 1.13rem;
+  }
+  .email_id-TechnicalTeamCardData,
+  .contact-TechnicalTeamCardData {
+    font-size: 1.1rem;
   }
 }
 @media only screen and (min-width: 1200px) {
   .data-container-TechnicalTeamCardData {
-    height: 9.7rem;
+    height: 11rem;
   }
   .dPicture-border-TechnicalTeamCardData {
-    width: 7.8rem;
+    width: 8rem;
   }
-
+  .displayPicture-TechnicalTeamCardData {
+    width: 8rem;
+    height: 8rem;
+  }
   /* text sizing */
   .textBody-TechnicalTeamCardData {
-    padding-top: 3.5%;
+    padding-top: 1.5%;
     padding-left: 3.5%;
   }
   .rollNo-TechnicalTeamCardData {
@@ -176,7 +206,11 @@
   .name-TechnicalTeamCardData {
     font-size: 1.8rem;
   }
-  .designation-TechnicalTeamCardData {
+  .position-TechnicalTeamCardData {
     font-size: 1.3rem;
+  }
+  .email_id-TechnicalTeamCardData,
+  .contact-TechnicalTeamCardData {
+    font-size: 1.2rem;
   }
 }

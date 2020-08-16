@@ -59,22 +59,21 @@
 }
 .heading-RightTeamCard,
 .heading-RightTeamCard-Mobile {
-  padding: 0%;
+  padding: 0;
   padding-top: 1%;
   font-family: 'Roboto Slab', sans-serif;
-  line-height: 100%;
+
   margin: 0;
+
   font-size: 3.7vw;
   font-weight: 300;
   background: linear-gradient(to right, #00bcf2, #b4a0ff);
   letter-spacing: -0.015em;
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   width: fit-content;
-
   align-items: center;
-  text-align: justify;
+  text-align: start;
 }
 
 .secondary-heading-RightTeamCard,

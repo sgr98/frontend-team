@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Route } from 'react-router-dom';
 import axios from 'axios';
+
 import './ChallengesPage.css';
+import Loading from '../ReusableComponents/Loading/Loading';
 import ProjectFooter from '../ProjectsPage/ProjectFooter/ProjectFooter';
 import Navigation from '../Navigation/Navigation';
 import ChallengesContainer from './ChallengesContainer/ChallengesContainer';
@@ -26,8 +28,9 @@ const ChallengesPage = () => {
     <div>
       <Navigation />
       <div className="ChallengesPage">
+        <Loading show={loading} />
         {loading ? (
-          <h1>Loading..</h1>
+          <></>
         ) : (
           <Route
             path="/Challenges/:category"
@@ -35,7 +38,6 @@ const ChallengesPage = () => {
             component={() => (
               <>
                 <ChallengesDropdown categoryNames={categoryNames} />
-
                 <ChallengesContainer />
               </>
             )}

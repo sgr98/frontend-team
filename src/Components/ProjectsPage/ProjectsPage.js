@@ -88,6 +88,7 @@ class ProjectsPage extends Component {
       selectedClubs,
       selectedDegrees
     );
+
     this.setState({
       currentUrl: url,
       selectedBranches,
@@ -97,7 +98,6 @@ class ProjectsPage extends Component {
   };
 
   render() {
-    console.log(this.state.currentUrl);
     return (
       <div className="root-ProjectsPage">
         <Navigation />

@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import ProjectFooter from '../ProjectsPage/ProjectFooter/ProjectFooter';
 import './TechTeamsPage.css';
+import Loading from '../ReusableComponents/Loading/Loading';
 import TechTeamMembers from './TechTeamMembers/TechTeamMembers';
 import TechTeamInfo from './TechTeamInfo/TechTeamInfo';
 import CustomHR from '../ReusableComponents/CustomHR/CustomHR';
@@ -18,7 +19,6 @@ const TechTeamsPage = (props) => {
         `${process.env.REACT_APP_BASE_URL}/front/tech_team/${props.match.params.id}`
       )
       .then((res) => {
-        console.log(res.data);
         setData(res.data);
         setLoading(false);
       })
@@ -27,8 +27,9 @@ const TechTeamsPage = (props) => {
   return (
     <div className="TechTeamsPage">
       <Navigation />
+      <Loading show={loading} />
       {loading ? (
-        <h1>Loading..</h1>
+        <></>
       ) : (
         <>
           <TechTeamInfo data={data} />

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { withRouter } from 'react-router';
 import axios from 'axios';
+import Loading from '../../ReusableComponents/Loading/Loading';
 import { Container, Row, Col } from 'react-bootstrap';
 import TechnicalTeamCardData from './TechnicalTeamCardData';
 
@@ -17,7 +18,7 @@ export const TechnicalTeam = () => {
     const topHeadsArray = (
       <Row>
         {members.map((member) => {
-          if (member.position.toLowerCase() === 'technical secretary') {
+          if (member.position.toLowerCase() === 'technical affairs secretary') {
             return (
               <Col
                 sm={{ span: 10, offset: 1 }}
@@ -35,12 +36,12 @@ export const TechnicalTeam = () => {
     const bottomHeadsArray = (
       <Row>
         {members.map((member) => {
-          if (member.position.toLowerCase() !== 'technical secretary') {
+          if (member.position.toLowerCase() !== 'technical affairs secretary') {
             return (
               <Col
                 sm={{ span: 10, offset: 1 }}
                 md={{ span: 6, offset: 0 }}
-                key={Math.random()}
+                key={member._id}
               >
                 <TechnicalTeamCardData member={member} />
               </Col>
@@ -61,9 +62,9 @@ export const TechnicalTeam = () => {
     axios
       .get(`${process.env.REACT_APP_BASE_URL}/front/committee`)
       .then((res) => {
-        console.log(res);
         if (isRendered) {
           setMembers(res.data[0].members);
+          setLoading(false);
         }
         return null;
       })
@@ -76,11 +77,26 @@ export const TechnicalTeam = () => {
 
   return (
     <>
+      <Loading show={loading} />
       {members === null ? (
-        <h1 style={{ color: 'f4f4f4', margin: '1em' }}>Loading</h1>
+        <></>
       ) : (
         <div className="container-TechnicalTeam" style={{ padding: '3% 5%' }}>
           <Container fluid>
+            <Row>
+              <Col sm={{ span: 10, offset: 1 }} md={{ span: 6, offset: 3 }}>
+                <TechnicalTeamCardData
+                  member={{
+                    name: 'Dr. Sridhar Chimalakonda',
+                    position: 'Technical Advisor',
+                    email_id: 'ch@iittp.ac.in',
+                    roll_num: 'Faculty',
+                    dp_url:
+                      'https://iittp.ac.in/images/demo/iit/chimalakonda.jpg',
+                  }}
+                />
+              </Col>
+            </Row>
             {topHeads}
             {bottomHeads}
           </Container>
@@ -93,12 +109,10 @@ export default withRouter(TechnicalTeam);
 
 // Static Data
 
-// {
-//   "_id": "5f1561ce20208b4ac85bb595",
-//   "name": "arpit",
-//   "position": "nothing he can do!",
-//   "roll_num": "cs18b0xx",
-//   "email_id": "arpibadejiya@gmail.com",
-//   "contact": 9411890675,
-//   "dp_url": "d2f5997ca0fcdfc9abfc9be92146309b.png"
-// }
+// contact: 9411890675
+// dp_url: "d2f5997ca0fcdfc9abfc9be92146309b.png"
+// email_id: "arpibadejiya@gmail.com"
+// name: "arpit"
+// position: "TECHNICAL AFFAIRS SECRETARY"
+// roll_num: "cs18b0xx"
+// _id: "5f26bab7121517001786a932"

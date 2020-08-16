@@ -13,13 +13,28 @@
   cursor: pointer;
   display: inline-block;
   height: 25rem;
-  overflow: scroll;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
-
+.root-ChallengeCard::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
 .root-ChallengeCard:hover {
   border: 3px solid #00b7c3;
 }
+.logoContainer-ChallengeCard {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 2%;
+}
 
+.logo-ChallengeCard {
+  width: 30%;
+  border: 2px solid rgba(224, 224, 224, 0.2);
+}
 .title-ChallengeCard {
   font-family: Roboto;
   font-style: normal;

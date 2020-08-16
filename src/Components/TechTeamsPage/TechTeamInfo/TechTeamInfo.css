@@ -21,6 +21,9 @@
 .TechTeamInfo-parent {
   width: 40%;
   z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .TechTeamInfo-image {
   width: 100%;
@@ -113,7 +116,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
-  font-size: 2vw;
+  font-size: 30px;
   display: flex;
   align-items: center;
   letter-spacing: 0.05em;
@@ -145,15 +148,42 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+@media (max-width: 768px) {
+  .TechTeamInfo-redirect {
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+}
+
+@media (min-width: 768px) {
+  .TechTeamInfo-redirect {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+@media (min-width: 992px) {
+  .TechTeamInfo-redirect {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .TechTeamInfo-redirect {
+    padding: 10px 16px;
+    font-size: 18px;
+  }
+}
+
 .TechTeamInfo-overlay-headDetails {
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
-  font-size: 1.2vw;
+  font-size: 15px;
   display: flex;
   align-items: center;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
 
   background: rgb(120, 155, 251);
   background: -moz-linear-gradient(
@@ -299,6 +329,33 @@
 .fadeIn-bottom {
   top: 80%;
 }
+@media (max-width: 768px) {
+  .TechTeamInfo-redirect {
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+}
+
+@media (min-width: 768px) {
+  .TechTeamInfo-redirect {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+@media (min-width: 992px) {
+  .TechTeamInfo-redirect {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .TechTeamInfo-redirect {
+    padding: 10px 16px;
+    font-size: 18px;
+  }
+}
 @media (max-width: 960px) {
   .TechTeamInfo-container {
     flex-direction: column;
@@ -315,13 +372,19 @@
   .TechTeamInfo-image {
     width: 80%;
   }
+  .TechTeamInfo-title {
+    font-size: 50px;
+  }
 
   .TechTeamInfo-description {
-    line-height: 20px;
+    font-size: 20px;
   }
 }
 @media (max-width: 600px) {
   .TechTeamInfo-description {
-    line-height: 10px;
+    font-size: 20px;
+  }
+  .TechTeamInfo-title {
+    font-size: 40px;
   }
 }

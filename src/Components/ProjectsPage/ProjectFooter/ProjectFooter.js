@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ProjectFooter.css';
 import { FaInstagram } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa';
@@ -15,38 +16,63 @@ const ProjectFooter = () => {
           </div>
           <div className="cont col-md-10 col-12">
             <div className="all ">
-              <p>home</p>
-              <p>events</p>
+              <Link to="/">Home</Link>
+              <Link to="/Events">Events</Link>
             </div>
             <div className="all ">
-              <p>tac 2020</p>
-              <p>Activities</p>
+              <Link to="/TechnicalCommittee">TAC 2020</Link>
+              <Link to="/Events/Activities">Activities</Link>
             </div>
             <div className="all ">
-              <p>alumini</p>
-              <p>workshop</p>
+              <Link to="/Events/Workshops">Workshops</Link>
+              <Link to="/Events/Talks">Talks</Link>
+            </div>
+
+            <div className="all ">
+              <Link to="/Projects">Projects</Link>
+              <Link to="/Blogs">Blogs</Link>
             </div>
             <div className="all ">
-              <p>faq</p>
-              <p>talks</p>
+              <Link to="/Challenges/all">Challenges</Link>
+              <Link to="/Events/Competitions">Competitions</Link>
             </div>
-            <div className="all ">
-              <p>projects</p>
-              <p>calender</p>
-            </div>
-            <div className="all ">
-              <p>infrastructures</p>
-              <p>challenges</p>
-            </div>
-            <div className="all fac">
-              <p>Faculty advisors</p>
-              <p>competitions</p>
+
+            <div className="all">
+              <Link to="/WebTeam">Web Team</Link>
+              <Link
+                to="/Events/CalendarEvents"
+                className="CalendarLink-ProjectFooter"
+              >
+                Calendar
+              </Link>
             </div>
             <div className="all">
-              <p>blogs</p>
-              <p>webteam</p>
+              <a
+                href="https://forms.gle/ZGPcJSZb6qxiS9adA"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Report Error
+              </a>
             </div>
           </div>
+          {/* <div className="cont col-md-10 col-12 mobileProjectFooter">
+            <div className="all ">
+              <Link to="/">Home</Link>
+              <Link to="/Events">Events</Link>
+              <Link to="/TechnicalCommittee">TAC 2020</Link>
+              <Link to="/Events/Activities">Activities</Link>
+              <Link to="/Events/Workshops">Workshops</Link>
+              <Link to="/Events/Talks">Talks</Link>
+              <Link to="/Projects">Projects</Link>
+              <Link to="/Events/CalendarEvents">Calendar</Link>
+              <Link to="/Challenges/all">Challenges</Link>
+              <Link to="/Events/Competitions">Competitions</Link>
+              <Link to="/Blogs">Blogs</Link>
+              <Link to="WebTeam">Web Team</Link>
+              <Link to="/">Support</Link>
+            </div>
+          </div> */}
         </div>
         <br />
         <div className="row bottom">

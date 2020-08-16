@@ -3,9 +3,11 @@ import './CustomButton.css';
 
 const CustomButton = (props) => {
   return (
-    <div className="border-div-button">
-      <div className="Button-Custom">{props.text}</div>
-    </div>
+    <>
+      <div className="border-div-button" onClick={props.onClickHandler}>
+        <div className="Button-Custom">{props.text}</div>
+      </div>
+    </>
   );
 };
 

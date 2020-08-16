@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import SubmitFormButton from '../../ReusableComponents/SubmitFormButton/SubmitFormButton';
 import SearchField from './SearchField/SearchField';
 import ProjectFields from './ProjectFields/ProjectFields';
@@ -12,7 +13,40 @@ class SearchBar extends Component {
       selectedClubs: [],
       selectedBranches: [],
       selectedDegrees: [],
+      loading: true,
+      clubNames: [],
+      branchNames: [],
     };
+  }
+
+  componentDidMount() {
+    let clubs = [];
+    let branches = [];
+    axios
+      .get(`${process.env.REACT_APP_BASE_URL}/front/clubs`)
+      .then((res) => {
+        clubs = res.data;
+        axios
+          .get(
+            `${process.env.REACT_APP_BASE_URL}/front/categories/challenge?all=1`
+          )
+          .then((res2) => {
+            branches = res2.data.filter((name) => {
+              return (
+                name.toLowerCase() !== 'coding' && name.toLowerCase() !== 'open'
+              );
+            });
+            this.setState({
+              clubNames: clubs,
+              branchNames: branches,
+              loading: false,
+            });
+          })
+          .catch((err2) => console.log(err2));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   updateClubs = (clubs) => {
@@ -28,20 +62,16 @@ class SearchBar extends Component {
   };
 
   render() {
-    return (
+    return this.state.loading ? (
+      <></>
+    ) : (
       <div className="searchbar-container-ProjectsPage">
         <div>
           <SearchField search={this.props.searchKeyword} />
           <ProjectFields
             category="BRANCH"
             updateArray={this.updateBranches}
-            filterNames={[
-              'Mechanical',
-              'Computer Science',
-              'Chemical',
-              'Civil',
-              'Electrical',
-            ]}
+            filterNames={this.state.branchNames}
           />
           <ProjectFields
             category="DEGREE"
@@ -51,7 +81,7 @@ class SearchBar extends Component {
           <ProjectFields
             category="CLUB"
             updateArray={this.updateClubs}
-            filterNames={['TechManiacs', 'Digital Wizards']}
+            filterNames={this.state.clubNames.map(({ name }) => name)}
           />
         </div>
         {/* The Styling for the below button is similar to the above buttons */}

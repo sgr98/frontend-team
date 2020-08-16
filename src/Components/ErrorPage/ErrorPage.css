@@ -1,0 +1,26 @@
+.container-ErrorPage {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-ErrorPage h1 {
+  font-size: 400%;
+  display: block;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+  width: fit-content;
+  background: linear-gradient(
+    90deg,
+    rgb(0, 185, 214),
+    rgb(3, 167, 177),
+    rgb(3, 163, 137)
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}

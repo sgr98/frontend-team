@@ -60,7 +60,11 @@ p.synopsis-ProjectCardData div.read-more-button,
   box-sizing: border-box;
   max-height: 7.2em;
   text-overflow: ellipsis;
-  overflow: hidden;
+  overflow: scroll;
+  padding-right: 3px;
+}
+.synopsis-ProjectCardData pre {
+  color: #e0e0e0;
 }
 
 p.synopsis-ProjectCardData div.read-more-button {
@@ -187,4 +191,18 @@ p.synopsis-ProjectCardData div.read-more-button {
     margin: 4%;
     margin-bottom: 0%;
   }
+}
+
+.synopsis-ProjectCardData::-webkit-scrollbar {
+  width: 2px;
+  height: 3px;
+}
+
+.synopsis-ProjectCardData::-webkit-scrollbar-track {
+  background-color: inherit;
+}
+
+.synopsis-ProjectCardData::-webkit-scrollbar-thumb {
+  background: #f0f0f0;
+  border-radius: 3px;
 }

@@ -11,6 +11,29 @@
   color: #00bcf2;
 }
 
+.articleContent-ArticleBody pre {
+  color: #00bcf2;
+}
+
+.articleContent-ArticleBody blockquote {
+  background: inherit;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: '\201C''\201D''\2018''\2019';
+}
+.articleContent-ArticleBody blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+.articleContent-ArticleBody blockquote p {
+  display: inline;
+}
+
 .attachment-ArticleBody {
   border: 2px solid #00b294;
   box-sizing: border-box;

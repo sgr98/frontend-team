@@ -19,7 +19,7 @@ const Card = (props) => {
     // console.log(single._id);
 
     props.history.push({
-      pathname: `${single._id}`,
+      pathname: `/blogs/${single._id}`,
     });
   };
   // console.log(single);
@@ -30,7 +30,7 @@ const Card = (props) => {
         <div className="event-card-absolute">
           {' '}
           <p className="blog-card-title">{single.title}</p>
-          <span className="card-topic-BlogCard">Mir Sameed Ali</span>
+          <span className="card-topic-BlogCard">{single.creator}</span>
         </div>
         <div className="event-card-content-overlay" />
         <img
@@ -57,7 +57,7 @@ const Card = (props) => {
             className="event-card-topic"
             style={{ display: 'flex', justifyContent: 'center' }}
           >
-            Author: Mir Sameed Ali
+            Author: {single.creator}
           </p>
 
           <div className="card-btn-container-BlogCard">

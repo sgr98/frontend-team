@@ -8,14 +8,26 @@
   -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
-  background: url("https://wallpapercave.com/wp/wp2478972.jpg");
+  background: url('https://wallpapercave.com/wp/wp2478972.jpg');
+  padding-bottom: 2%;
 }
 .ClubsFeatured-content {
   width: 55%;
   padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .ClubsFeatured-parent {
   width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ClubsFeatured-image-content-image {
+  width: 450px !important;
+  height: 320px !important;
+  /* min-width: 400px; */
 }
 .ClubsFeatured-image {
   width: 100%;
@@ -25,9 +37,7 @@
   font-style: normal;
   font-weight: normal;
   font-size: 5vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   letter-spacing: 0.09em;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background: linear-gradient(to right, #00bcf2, #b4a0ff);
@@ -90,6 +100,8 @@
 }
 .ClubsFeatured-button:hover {
   background: linear-gradient(to right, #055a6f, #00bcf2);
+  text-decoration: none;
+  color: #fafafa;
 }
 .ClubsFeatured-image {
   margin-top: 10px;
@@ -108,7 +120,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
-  font-size: 1.5vw;
+  font-size: 1.4vw;
   display: flex;
   align-items: center;
   letter-spacing: 0.05em;
@@ -131,10 +143,12 @@
   padding: 8px;
   color: #ffffff;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  text-decoration-line: none;
 }
 .ClubsFeatured-overlay-social:hover {
   color: #000;
   background: #fff;
+  text-decoration: none;
 }
 
 .center {
@@ -160,6 +174,7 @@
   width: 100%;
 
   margin: auto;
+
   overflow: hidden;
 }
 
@@ -227,7 +242,7 @@
 }
 @media (max-width: 960px) {
   .ClubsFeatured-container {
-    flex-direction: column;
+    /* flex-direction: column; */
   }
   .ClubsFeatured-content {
     width: 100%;
@@ -242,7 +257,7 @@
     width: 80%;
   }
   .ClubsFeatured-title {
-    font-size: 4vw;
+    font-size: 7vw;
   }
   .ClubsFeatured-subtitle {
     font-size: 2vw;
@@ -253,19 +268,14 @@
     font-size: 1.5vw;
     line-height: 3vh;
   }
+  .ClubsFeatured-image-content-image {
+    width: 380px !important;
+    height: 290px !important;
+  }
 }
-@media (max-width: 600px) {
-  .ClubsFeatured-title {
-    font-size: 18px;
-    text-align: center;
-  }
-  .ClubsFeatured-subtitle {
-    font-size: 12px;
-    text-align: center;
-  }
-  .ClubsFeatured-description {
-    font-size: 9px;
-    line-height: 2vh;
+@media (max-width: 660px) {
+  .ClubsFeatured-container {
+    flex-direction: column;
   }
   .ClubsFeatured-button {
     font-size: 9px;
@@ -279,8 +289,27 @@
     align-items: center;
     text-align: center;
   }
-  .ClubsFeatured-parent {
+}
+@media (max-width: 600px) {
+  .ClubsFeatured-title {
+    font-size: 13vw;
+    text-align: center;
+  }
+  .ClubsFeatured-subtitle {
+    font-size: 12px;
+    text-align: center;
+  }
+  .ClubsFeatured-description {
+    font-size: 9px;
+    line-height: 2vh;
+  }
+
+  /* .ClubsFeatured-parent {
     visibility: hidden;
     width: 0;
+  } */
+  .ClubsFeatured-image-content-image {
+    width: 280px !important;
+    height: 190px !important;
   }
 }

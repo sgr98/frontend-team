@@ -1,3 +1,23 @@
+export const covertTimeToIST = (eventTime) => {
+  let time = eventTime;
+  let hours = time[0] + time[1];
+  if (hours > 12) {
+    hours -= 12;
+
+    time = hours + time.slice(2);
+
+    time += ' PM';
+  } else if (hours === '00') {
+    time = `12${time.slice(2)}`;
+    time += ' AM';
+  } else if (hours !== '12') {
+    time += ' AM';
+  } else {
+    time += ' PM';
+  }
+  return time;
+};
+
 export function getDateToBeDisplayed(date, isDayNameRequired = true) {
   const days = [
     'Sunday',
@@ -18,6 +38,7 @@ export function getDateToBeDisplayed(date, isDayNameRequired = true) {
     'July',
     'August',
     'September',
+    'October',
     'November',
     'December',
   ];
@@ -37,7 +58,6 @@ export function getDateToBeDisplayed(date, isDayNameRequired = true) {
   else dateString += 'th';
 
   dateString += ` ${months[date.getMonth()]} ${date.getFullYear()}`;
-
   return dateString.toUpperCase();
 }
 

@@ -32,11 +32,14 @@ export default function SeparateEvents(data, CalledFromAllEvents) {
     categories.forEach((key) => {
       const Events = data[key];
       Events.forEach((event) => {
-        const eventDate = new Date(event.date);
         const eventTimeString = event.date.slice(
           event.date.indexOf('T') + 1,
           event.date.indexOf('T') + 6
         );
+
+        const eventDateString = event.date.slice(0, event.date.indexOf('T'));
+
+        const eventDate = new Date(eventDateString);
         // After seeing the data from server, time always occur after 'T'
         const eventTime = covertTimeToIST(eventTimeString);
 
@@ -56,15 +59,19 @@ export default function SeparateEvents(data, CalledFromAllEvents) {
     });
   } else {
     data.forEach((event) => {
-      const eventDate = new Date(event.date);
-
-      const dateToBeDisplayed = getDateToBeDisplayed(eventDate);
-
-      const eventData = { ...event };
       const eventTimeString = event.date.slice(
         event.date.indexOf('T') + 1,
         event.date.indexOf('T') + 6
       );
+
+      const eventDateString = event.date.slice(0, event.date.indexOf('T'));
+
+      const eventDate = new Date(eventDateString);
+
+      const dateToBeDisplayed = getDateToBeDisplayed(eventDate);
+
+      const eventData = { ...event };
+
       const eventTime = covertTimeToIST(eventTimeString);
       eventData.date = dateToBeDisplayed;
       eventData.time = eventTime;

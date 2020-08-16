@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { withRouter } from 'react-router-dom';
 import Swiper from 'swiper';
 import { Container, Row, Col, Image, Button } from 'react-bootstrap';
 
@@ -7,6 +8,10 @@ const InnerSlide = (props) => {
     window.innerWidth ||
     document.documentElement.clientWidth ||
     document.body.clientWidth;
+
+  const onClickHandler = () => {
+    props.history.push(`/clubs/${props.data.name}`);
+  };
 
   useEffect(() => {
     //Outer Container
@@ -92,25 +97,23 @@ const InnerSlide = (props) => {
             <Container>
               <Row>
                 <Col>
-                  <Image
+                  {/* <Image
                     id="ClubeSlide-club-image"
-                    src={props.data.clubLogo}
+                    src={props.data}
                     rounded
-                  />
+                  /> */}
                 </Col>
               </Row>
             </Container>
           </div>
-          <div id="ClubeSlide-club-title">{props.data.clubName}</div>
+          <div id="ClubeSlide-club-title">{props.data.name}</div>
         </div>
         <hr />
         {width <= 768 ? (
           <div>
-            <span id="ClubeSlide-club-cordinator-title">
-              {props.data.clubCordinator}
-            </span>
+            <span id="ClubeSlide-club-cordinator-title">{props.data.head}</span>
             <br />
-            <span>Club Cordinator</span>
+            <span>Club Head</span>
           </div>
         ) : null}
         {width > 768 ? (
@@ -121,7 +124,7 @@ const InnerSlide = (props) => {
                   <Col xs={6} md={4}>
                     <Image
                       id="ClubeSlide-club-image"
-                      src={props.data.cordinatorImage}
+                      src={props.data.dp_url?`${process.env.REACT_APP_BASE_URL}/images/${props.data.dp_url}`:""}
                       roundedCircle
                     />
                   </Col>
@@ -135,16 +138,14 @@ const InnerSlide = (props) => {
                 paddingRight: 3,
               }}
             >
-              <span id="ClubeSlide-club-cordinator-title">
-                {props.data.clubCordinator}
-              </span>
-              <span>Club Cordinator</span>
+              <span id="ClubeSlide-club-cordinator-title">Club Head</span>
+              <span>{props.data.head}</span>
             </div>
           </div>
         ) : null}
       </div>
-      <p id="ClubeSlide-description">{props.data.clubDescription}</p>
-      <div
+
+      {/* <div
         className={`swiper-container ClubeSlideInner-container${props.index}`}
         id="ClubeSlideInner-container"
       >
@@ -163,42 +164,67 @@ const InnerSlide = (props) => {
             </div>
           ))}
         </div>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-          width: "100%",
-          marginBottom: "10px",
-        }}
-      >
-        {width < 768 ? (
-          <Button
-            href={props.data.buttonUrl[0].url}
-            id="ClubeSlide-btn"
-            variant="outline"
+      </div> */}
+      {/* <div className="images-InnerSlide">
+        <img
+          src={props.data.logo_url?`${process.env.REACT_APP_BASE_URL}/images/${props.data.logo_url}`:""}
+          alt="logo"
+          className="clubLogo-innerSlide"
+        />
+        <img
+          src="https://www.lstmed.ac.uk/sites/default/files/styles/mc-580-16x9-node/public/content/pages/images/iStock-960268208.jpg?itok=nAmhA9t1" //[TODO]
+          alt="logo"
+          className="resourcesImage-innerSlide"
+        />
+      </div> */}
+      <div className="imagesDiv-InnerSlide">
+        <>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
           >
-            {props.data.buttonUrl[0].name}
-          </Button>
-        ) : (
-          props.data.buttonUrl.map(({ name, url }, index) => (
+            <img
+              src={`${process.env.REACT_APP_BASE_URL}/images/${props.data.logo_url}`}
+              alt="logo"
+              className="clubLogo-InnerSlide"
+            />
             <Button
-              href={url}
-              key={index}
               id="ClubeSlide-btn"
               variant="outline"
+              onClick={onClickHandler}
             >
-              {name}
+              Visit Our Page
             </Button>
-          ))
-        )}
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          >
+            <img
+              src="https://www.lstmed.ac.uk/sites/default/files/styles/mc-580-16x9-node/public/content/pages/images/iStock-960268208.jpg?itok=nAmhA9t1"
+              alt="logo"
+              className="resources-InnerSlide"
+            />
+            <Button
+              id="ClubeSlide-btn"
+              variant="outline"
+              onClick={() => {
+                window.open(props.data.resources, '_blank');
+              }}
+            >
+              Resources
+            </Button>
+          </div>
+        </>
       </div>
-      <div
-        className={`swiper-pagination swiper-pagination-inner swiper-pagination-inner${props.index}`}
-      ></div>
     </div>
   );
 };
 
-export default InnerSlide;
+export default withRouter(InnerSlide);

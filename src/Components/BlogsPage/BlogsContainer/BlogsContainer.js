@@ -1,7 +1,8 @@
 /* eslint-disable no-nested-ternary */
-import React, { useState, useEffect, useLayoutEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { withRouter } from 'react-router';
 import './BlogsContainer.css';
+import Loading from '../../ReusableComponents/Loading/Loading';
 import axios from 'axios';
 import SearchBar from '../SearchBar/SearchBar';
 import BlogCard from '../BlogCard/BlogCard';
@@ -58,16 +59,15 @@ const BlogsContainer = (props) => {
           .replace(/\s+/g, '%20')}${queryEndPoint}`
       )
       .then((res) => {
-        console.log(res);
         setPosts(Object.keys(res.data).length !== 0 ? res.data : []);
         setLoading(false);
       });
-  }, [queryEndPoint]);
+  }, [clubName, queryEndPoint]);
 
   useLayoutEffect(() => {
     // console.log('currentPage, posts');
     setCurrentPosts(posts.slice(indexOfFirstPost, indexOfLastPost));
-  }, [currentPage, posts]);
+  }, [indexOfFirstPost, indexOfLastPost, currentPage, posts]);
 
   useLayoutEffect(() => {
     // console.log('blogsList');
@@ -101,7 +101,7 @@ const BlogsContainer = (props) => {
     setBlogList(blogsShown);
 
     if (blogFeatured) setFeaturedBlog(blogFeatured);
-  }, [currentPosts]);
+  }, [currentPage, currentPosts]);
 
   // console.log('blogs', blogsList, loading, posts);
   // console.log(props);
@@ -113,11 +113,12 @@ const BlogsContainer = (props) => {
         searchKeyword={searchKeyword}
       />
       <div className="BlogsContainer">
+        <Loading show={loading} />
         {loading ? (
-          <h1>Loading</h1>
+          <></>
         ) : blogsList.length !== 0 ? (
           <>
-            {currentPage === 1 ? (
+            {currentPage === 1 && featuredBlog !== null ? (
               <div className="Top-Row-BlogsContainer-desktop">
                 <div className="column1-Top-Row-BlogsContainer">
                   {featuredBlog}
@@ -128,7 +129,7 @@ const BlogsContainer = (props) => {
               </div>
             ) : null}
             <div>
-              {currentPage === 1 ? (
+              {currentPage === 1 && featuredBlog !== null ? (
                 <>
                   <div className="Top-Row-BlogsContainer-mobile">
                     {blogsList.slice(0, 3)}

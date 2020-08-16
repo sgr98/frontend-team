@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import DisplayPicture from './display picture.png';
+
 import './WebTeamCardData.css';
 
 const WebTeamCardData = ({ member }) => {
@@ -40,7 +40,7 @@ const WebTeamCardData = ({ member }) => {
       <Card className={memberStyle}>
         <p className={dpClassName}>
           <Card.Img
-            src={DisplayPicture}
+            src={require(`${member.DPUrl}`)}
             alt="DisplayPicture"
             className="displayPicture-WebTeamCardData"
           />

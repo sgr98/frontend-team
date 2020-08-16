@@ -1,6 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState, useRef } from 'react';
 import { withRouter } from 'react-router';
+import Loading from '../ReusableComponents/Loading/Loading';
 import axios from 'axios';
 import ProjectFooter from '../ProjectsPage/ProjectFooter/ProjectFooter';
 import Navigation from '../Navigation/Navigation';
@@ -22,7 +23,6 @@ const Article = (props) => {
         `${process.env.REACT_APP_BASE_URL}/front/${props.category}/${props.match.params.id}`
       )
       .then((res) => {
-        console.log(res);
         if (isRendered) {
           setArticle(res.data);
         }
@@ -33,7 +33,6 @@ const Article = (props) => {
     axios
       .get(`${process.env.REACT_APP_BASE_URL}/front/clubs`)
       .then((res) => {
-        console.log(res);
         if (isRendered) {
           setClubs(res.data);
         }
@@ -53,7 +52,7 @@ const Article = (props) => {
   return (
     <>
       {article === null ? (
-        <h1>Loading</h1>
+        <Loading show={loading} />
       ) : (
         <div>
           {props.category === 'project' ? <Navigation /> : null}

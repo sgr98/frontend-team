@@ -1,4 +1,5 @@
 import React from 'react';
+import parse from 'html-react-parser';
 import { getDateToBeDisplayed } from '../../../../ReusableFunctions/ReusableFunctions';
 import './ChallengeCard.css';
 
@@ -71,8 +72,17 @@ const ChallengeCard = ({ data }) => {
 
   return (
     <div className="root-ChallengeCard" onClick={onClickHandler}>
+      {data.photo.length !== 0 ? (
+        <div className="logoContainer-ChallengeCard">
+          <img
+            className="logo-ChallengeCard"
+            src={`${process.env.REACT_APP_BASE_URL}/images/${data.photo}`}
+            alt="logo"
+          />
+        </div>
+      ) : null}
       <p className="title-ChallengeCard">{data.name}</p>
-      <p className="description-ChallengeCard">{data.description}</p>
+      <div className="description-ChallengeCard">{parse(data.description)}</div>
       {/* <a
         href="https://www.hackerrank.com/contests/projecteuler/"
         className="url-ChallengeCard"

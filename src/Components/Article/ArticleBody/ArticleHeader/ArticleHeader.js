@@ -16,7 +16,11 @@ const ArticleHeader = (props) => {
       ) : null}
       {props.chiefGuest !== 'NULL' ? (
         <p className="teamMembers-ArticleHeader">
-          Chief Guest: {props.chiefGuest}
+          <figure class="figure p-4" style={{margin:"0px"}}>
+          <img src={`${process.env.REACT_APP_BASE_URL}/images/${props.chiefImg}`} style={{maxHeight:"150px"}} alt="Chief Guest" class="img-thumbnail"/>
+          {console.log(props)}
+          <figcaption class="p-2"><b>Chief Guest:</b> {props.chiefGuest}</figcaption>
+          </figure>
         </p>
       ) : null}
     </div>

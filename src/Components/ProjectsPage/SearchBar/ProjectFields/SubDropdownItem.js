@@ -24,11 +24,7 @@ const SubDropdownMenuItemProjectsPage = (props) => {
       >
         <div className="dropdown-sub-box-ProjectsPage">
           <div>
-            <img
-              id="checkbox-dropdown-ProjectsPage"
-              src={selected ? checkedBox : uncheckedBox}
-              alt="Check Box"
-            />
+            <img src={selected ? checkedBox : uncheckedBox} alt="Check Box" />
             <span className="categoryName-ProjectsPage">{props.text}</span>
           </div>
         </div>

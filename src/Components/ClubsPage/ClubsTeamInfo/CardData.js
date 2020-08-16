@@ -1,60 +1,38 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Card from 'react-bootstrap/Card';
-import DisplayPicture from './display picture.png';
 import './CardData.css';
 
 export const CardData = ({ member }) => {
-  // assign type of member
+  // Assign club head/co-cordinator
   let memberStyle = '';
-  switch (member.designation) {
-    case 'Coordinator':
-      memberStyle = 'data-container-CardData Coordinator-CardData';
+  switch (member.position.toLowerCase()) {
+    case 'club head':
+      memberStyle = 'data-container-CardData ClubHead-CardData';
       break;
-    case 'Co-Coordinator':
+    case 'co-coordinator':
       memberStyle = 'data-container-CardData Co-Coordinator-CardData';
-      break;
-    case 'Alumini':
-      memberStyle = 'data-container-CardData Alumini-CardData';
       break;
     default:
       memberStyle = 'data-container-CardData Co-Coordinator-CardData';
   }
-  // Alumini
-  if (memberStyle === 'data-container-CardData Alumini-CardData') {
-    return (
-      <div>
-        <Card className={memberStyle}>
-          <Card.Body className="alumini-textBody-CardData">
-            <Card.Title className="meet-our-alumini-CardData">
-              {member.name}
-            </Card.Title>
-          </Card.Body>
-        </Card>
-      </div>
-    );
-  }
 
-  //   Cooordinator , Co-Coridinator
-  else {
-    return (
-      <div>
-        <Card className={memberStyle}>
-          <p className="dPicture-border-CardData">
-            <Card.Img
-              src={DisplayPicture}
-              alt="DisplayPicture"
-              className="displayPicture-CardData"
-            />
-          </p>
-          <Card.Body className="textBody-CardData">
-            <Card.Text className="rollNo-CardData">{member.rollNo}</Card.Text>
-            <Card.Title className="name-CardData">{member.name}</Card.Title>
-            <Card.Text className="designation-CardData">
-              {member.designation}
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <Card className={memberStyle}>
+        <p className="dPicture-border-CardData">
+          <Card.Img
+            src={`${process.env.REACT_APP_BASE_URL}/images/${member.dp_url}`}
+            alt="DisplayPicture"
+            className="displayPicture-CardData"
+          />
+        </p>
+        <Card.Body className="textBody-CardData">
+          <Card.Title className="name-CardData">{member.name}</Card.Title>
+          <Card.Text className="position-CardData">{member.position}</Card.Text>
+          <Card.Text className="email_id-CardData">{member.email_id}</Card.Text>
+          {/* <Card.Text className="contact-CardData">{member.contact}</Card.Text> */}
+        </Card.Body>
+      </Card>
+    </div>
+  );
 };

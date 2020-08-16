@@ -2,29 +2,33 @@ import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import WebTeamCardData from './WebTeamCardData';
 
-export const WebTeam = () => {
+const WebTeam = () => {
   const [members, setMembers] = useState([
     {
-      rollNo: 'CS18B010',
-      name: 'Deep Nithin Maheshwari',
-      designation: 'overall project head',
+      rollNo: 'CS18B008',
+      name: 'Deep Maheshwari',
+      designation: ' project lead',
+      DPUrl: './WebTeamPhotos/deep.jpeg',
       tier: 'top',
     },
     {
       rollNo: 'ME18B018',
       name: 'Natesh Aravind S.',
+      DPUrl: './WebTeamPhotos/natesh.jpeg',
       designation: 'content and design head',
       tier: 'top',
     },
     {
-      rollNo: 'CS18B028',
+      rollNo: 'CS18B034',
       name: 'Shubankar Bhadra',
+      DPUrl: './WebTeamPhotos/shubhankar.jpg',
       designation: 'back-end head',
       tier: 'top',
     },
     {
-      rollNo: 'CS18B013',
+      rollNo: 'CS18B021',
       name: 'Mir Sameed Ali',
+      DPUrl: './WebTeamPhotos/sameed.jpeg',
       designation: 'front-end head',
       tier: 'top',
     },
@@ -32,54 +36,63 @@ export const WebTeam = () => {
     {
       rollNo: 'CS18B003',
       name: 'Arpit Bandejiya',
+      DPUrl: './WebTeamPhotos/arpit.jpg',
       designation: 'Backend core',
       tier: 'middle',
     },
     {
-      rollNo: 'CH18B003',
+      rollNo: 'CH18B002',
       name: 'Abhishek Kumar Gupta',
+      DPUrl: './WebTeamPhotos/abhishek.jpeg',
       designation: 'frontend core',
       tier: 'middle',
     },
     {
-      rollNo: 'CH19B033',
+      rollNo: 'CH19B023',
       name: 'Noble Mathews',
+      DPUrl: './WebTeamPhotos/noble.jpg',
       designation: 'full stack',
       tier: 'middle',
     },
     {
-      rollNo: 'CS19B003',
-      name: 'Amit Kesari',
-      designation: 'front end',
-      tier: 'bottom',
-    },
-    {
-      rollNo: 'CS19B003',
-      name: 'Amit Kesari',
-      designation: 'front end',
-      tier: 'bottom',
-    },
-    {
-      rollNo: 'CS19B003',
-      name: 'Amit Kesari',
-      designation: 'front end',
-      tier: 'bottom',
-    },
-    {
-      rollNo: 'CS19B003',
-      name: 'Amit Kesari',
+      rollNo: 'ee18b043',
+      name: 'Nuthakki Nishanth',
+      DPUrl: './WebTeamPhotos/nishanth.jpg',
       designation: 'back end',
       tier: 'bottom',
     },
     {
       rollNo: 'CS19B003',
       name: 'Amit Kesari',
-      designation: 'back end',
+      DPUrl: './WebTeamPhotos/amit.jpg',
+      designation: 'front end',
       tier: 'bottom',
     },
     {
-      rollNo: 'CS19B003',
-      name: 'Amit Kesari',
+      rollNo: 'CS19B038',
+      name: 'Sagar Singh',
+      DPUrl: './WebTeamPhotos/default.png',
+      designation: 'front end',
+      tier: 'bottom',
+    },
+    {
+      rollNo: 'CE19B030',
+      name: 'Shubham Raj',
+      DPUrl: './WebTeamPhotos/shubham.jpeg',
+      designation: 'front end',
+      tier: 'bottom',
+    },
+    {
+      rollNo: 'ME19B040',
+      name: 'Talha Shamim',
+      DPUrl: './WebTeamPhotos/default.png',
+      designation: 'front end',
+      tier: 'bottom',
+    },
+    {
+      rollNo: 'CS19B025',
+      name: 'Aashrith',
+      DPUrl: './WebTeamPhotos/default.png',
       designation: 'back end',
       tier: 'bottom',
     },
@@ -146,3 +159,5 @@ export const WebTeam = () => {
     </div>
   );
 };
+
+export default WebTeam;
